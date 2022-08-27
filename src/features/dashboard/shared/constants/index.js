@@ -7,4 +7,5 @@ export const SLUGS = {
   SportsPartner: 'sports-partner',
   Friends: 'friends',
   Settings: 'setting',
+  Chat: 'chat',
 };

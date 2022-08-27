@@ -1,14 +1,20 @@
-import { useState, useRef } from "react";
+import { useState, useRef } from 'react';
+import { Navigate, Link } from 'react-router-dom';
 
-import Button from "shared/components/Button";
+import { Button, ErrorMessage } from 'shared/components';
+import { SLUGS } from 'shared/constants';
 
-import userdp from "./assets/images/user.png";
-import upload from "./assets/images/upload.png";
+import userdp from '../assets/images/user.png';
+import upload from '../assets/images/upload.png';
+import { useUploadProfileImageMutation } from '../services/userApi';
+import PageLayout from '../components/PageLayout';
 
-const YourProfile = ({ handleForm }) => {
+const AddProfileImg = () => {
+  const [updateProfile, { isSuccess, error }] = useUploadProfileImageMutation();
+
   const [img, setImg] = useState(userdp);
   const imageUploader = useRef(null);
-  console.log(img, "img");
+
   const handleImageUpload = (e) => {
     const [file] = e.target.files;
     if (file) {
@@ -19,29 +25,25 @@ const YourProfile = ({ handleForm }) => {
       reader.readAsDataURL(file);
     }
   };
-  const submitImage = () => {
-    const data = {
-      image: img,
-    };
-    const requestOptions = {
-      method: "POST",
-      body: JSON.stringify(data),
-    };
-    // fetch(BASE_URL + "/users/user/profileImg", requestOptions)
-    //   .then((response) => response.json())
-    //   .then((data) => console.log(data));
-    setTimeout(() => {
-      () => handleForm("login", 0);
-    }, 2000);
+  const onSubmit = (e) => {
+    e.preventDefault();
+    const formData = new FormData();
+    formData.append('image', img);
+    updateProfile(formData);
   };
 
+  if (isSuccess) {
+    return <Navigate to={'/' + SLUGS.dashboard} replace={true} />;
+  }
+
   return (
-    <div className="w-full py-[56px]">
+    <PageLayout>
       <div className="max-w-[485px] mx-auto w-full">
         <div className="flex flex-col">
-          <h3 className="text-[28px] w-full md:text-left text-center md:text-[38px] text-primary font-semibold mb-[45px] md:mb-[18px]">
+          <h3 className="text-[28px] w-full md:text-left text-center md:text-[38px] text-primary font-semibold mb-[18px]">
             Jazz up your profile
           </h3>
+
           <p className="text-[#9A9A9A] md:block hidden md:text-xl mb-[42px]">
             Add your photo otherwise only avatar will be
             <br /> shown
@@ -50,22 +52,13 @@ const YourProfile = ({ handleForm }) => {
           <form>
             <div className="flex md:flex-row flex-col gap-[26px] md:gap-[40px] items-center">
               <div>
-                <img
-                  className="rounded-full"
-                  src={img}
-                  width={150}
-                  height={150}
-                  alt="user"
-                />
-              </div>{" "}
+                <img className="rounded-full" src={img} width={150} height={150} alt="user" />
+              </div>{' '}
               <p className="text-[#9A9A9A] text-center md:hidden block md:text-xl mb-[42px]">
                 Add your photo otherwise only avatar will be shown
               </p>
               <div className="flex gap-[13px] items-center">
-                <div
-                  className="cursor-pointer"
-                  onClick={() => imageUploader.current.click()}
-                >
+                <div className="cursor-pointer" onClick={() => imageUploader.current.click()}>
                   <img src={upload} alt="upload" />
                 </div>
                 <input
@@ -76,16 +69,15 @@ const YourProfile = ({ handleForm }) => {
                   className="hidden"
                 />
 
-                <p className="text-lg font-semibold text-[#505050]">
-                  Upload profile picture
-                </p>
+                <p className="text-lg font-semibold text-[#505050]">Upload profile picture</p>
               </div>
             </div>
-
+            {error?.data?.errors && <ErrorMessage apiErrors={error.data.errors} />}
             <Button
-              onClick={() => submitImage()}
-              bg={"#04A5C2"}
-              className={`mt-[36px] md:mt-[110px] text-white w-full min-h-[60px]`}
+              onClick={onSubmit}
+              bg="#04A5C2"
+              className="mt-[36px] md:mt-[110px] text-white w-full min-h-[60px]"
+              type="submit"
             >
               Next
             </Button>
@@ -100,12 +92,15 @@ const YourProfile = ({ handleForm }) => {
 
         <div className="flex justify-center w-full">
           <p className="text-lg font-semibold">
-            <a className="text-primary">Skip</a> and add later!
+            <Link to={'/' + SLUGS.dashboard} className="text-primary">
+              Skip
+            </Link>{' '}
+            and add later!
           </p>
         </div>
       </div>
-    </div>
+    </PageLayout>
   );
 };
 
-export default YourProfile;
+export default AddProfileImg;

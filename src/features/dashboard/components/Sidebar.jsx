@@ -1,16 +1,17 @@
 import React from 'react';
 import { Link, NavLink } from 'react-router-dom';
 
-import { SLUGS } from '../../shared/constants';
-import logo from '../../assets/images/logo.svg';
-import homeIcon from '../../assets/images/fluent_home-16-regular.svg';
-import userProfileIcon from '../../assets/images/user.svg';
-import eventListIcon from '../../assets/images/calnder.svg';
-import eventsMapIcon from '../../assets/images/pin.svg';
-import createEventIcon from '../../assets/images/events.svg';
-import sportsPartnerIcon from '../../assets/images/users.svg';
-import friendsIcon from '../../assets/images/friends.svg';
-import settingsIcon from '../../assets/images/settings.svg';
+import { SLUGS } from '../shared/constants';
+import logo from '../assets/images/logo.svg';
+import homeIcon from '../assets/images/fluent_home-16-regular.svg';
+import userProfileIcon from '../assets/images/user.svg';
+import eventListIcon from '../assets/images/calnder.svg';
+import eventsMapIcon from '../assets/images/pin.svg';
+import createEventIcon from '../assets/images/events.svg';
+import sportsPartnerIcon from '../assets/images/users.svg';
+import friendsIcon from '../assets/images/friends.svg';
+import settingsIcon from '../assets/images/settings.svg';
+import chatIcon from '../assets/images/chat.svg';
 
 const Sidebar = () => {
   return (
@@ -73,6 +74,11 @@ const links = [
     title: 'Friends',
     slug: SLUGS.Friends,
     icon: friendsIcon,
+  },
+  {
+    title: 'Chat',
+    slug: SLUGS.Chat,
+    icon: chatIcon,
   },
   {
     title: 'Settings',

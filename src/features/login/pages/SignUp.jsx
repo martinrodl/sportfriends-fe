@@ -1,20 +1,24 @@
 import { useFormik } from 'formik';
 import * as yup from 'yup';
 import { useDispatch } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
 
 import { Button, ErrorMessage } from 'shared/components';
+import { SLUGS } from 'shared/constants';
+import { setCredentials } from 'store/slices';
 
-import { useSignupUserMutation } from './services/authApi';
-import { setCredentials } from './store';
+import { useSignupUserMutation } from '../services/authApi';
+import PageLayout from '../components/PageLayout';
 
-const SignUp = ({ handleForm }) => {
+const SignUp = () => {
   const [signupUser, { data, isSuccess, error }] = useSignupUserMutation();
   const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   if (isSuccess) {
     const { user, accessToken } = data;
     dispatch(setCredentials({ accessToken, ...user }));
-    handleForm('moreInfo', 1);
+    navigate('/' + SLUGS.moreinfo, { replace: true });
   }
 
   const formik = useFormik({
@@ -42,7 +46,7 @@ const SignUp = ({ handleForm }) => {
   });
 
   return (
-    <div className="w-full py-[56px]">
+    <PageLayout>
       <div className="max-w-[485px] mx-auto w-full">
         <div className="flex flex-col">
           <div className="">
@@ -112,7 +116,7 @@ const SignUp = ({ handleForm }) => {
           </form>
         </div>
       </div>
-    </div>
+    </PageLayout>
   );
 };
 

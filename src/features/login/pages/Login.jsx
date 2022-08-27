@@ -3,11 +3,13 @@ import * as yup from 'yup';
 import { Link } from 'react-router-dom';
 
 import { Button, ErrorMessage } from 'shared/components';
+import { SLUGS } from 'shared/constants';
+import { setCredentials } from 'store/slices';
 
-import { useSigninUserMutation } from './services/authApi';
-import { setCredentials } from './store';
+import { useSigninUserMutation } from '../services/authApi';
+import PageLayout from '../components/PageLayout';
 
-const Login = ({ handleForm }) => {
+const Login = () => {
   const [signinUser, { data, isSuccess, error }] = useSigninUserMutation();
 
   const formik = useFormik({
@@ -33,7 +35,7 @@ const Login = ({ handleForm }) => {
   }
 
   return (
-    <div className="w-full py-[56px]">
+    <PageLayout>
       <div className="max-w-[485px] mx-auto w-full">
         <div className="flex flex-col">
           <h3 className="text-[28px] md:text-[38px] text-primary font-semibold mb-[18px]">Welcome!</h3>
@@ -86,14 +88,14 @@ const Login = ({ handleForm }) => {
           <div className="ml-auto md:mr-0 mr-auto mt-[62px] md:mt-[18px]">
             <p className="font-semibold text-sm  md:text-lg cursor-pointer">
               Not Registered yet?{' '}
-              <button onClick={() => handleForm('signup', 0)} className="text-primary">
+              <Link to={SLUGS.signup} className="text-primary">
                 Register now!
-              </button>
+              </Link>
             </p>
           </div>
         </div>
       </div>
-    </div>
+    </PageLayout>
   );
 };
 

@@ -4,19 +4,19 @@ import { FiChevronDown } from 'react-icons/fi';
 import { GrMapLocation } from 'react-icons/gr';
 import { useFormik } from 'formik';
 import * as yup from 'yup';
+import { useNavigate, Link } from 'react-router-dom';
 
 import { Button, Map, ErrorMessage } from 'shared/components';
+import { SLUGS } from 'shared/constants';
 
-import { useUpdateProfileMutation } from './services/userApi';
+import { useUpdateProfileMutation } from '../services/userApi';
+import PageLayout from '../components/PageLayout';
 
-const MoreInfo = ({ handleForm }) => {
+const MoreInfo = () => {
+  const navigate = useNavigate();
   const [updateProfile, { isSuccess, error }] = useUpdateProfileMutation();
 
   const [isMapOpen, setIsMapOpen] = useState(false);
-
-  if (isSuccess) {
-    handleForm('yourProfile', 2);
-  }
 
   const formik = useFormik({
     initialValues: {
@@ -24,7 +24,10 @@ const MoreInfo = ({ handleForm }) => {
       gender: 'default',
       country: '',
       city: '',
-      address: '',
+      address: {
+        address: '',
+        coordinates: { lat: 0, lng: 0 },
+      },
       description: '',
     },
     onSubmit: (formData) => {
@@ -35,14 +38,17 @@ const MoreInfo = ({ handleForm }) => {
       address: yup.object().required('Address is required'),
     }),
   });
-
   const onAddressSet = (address) => {
     formik.setFieldValue('address', address);
   };
 
+  if (isSuccess) {
+    navigate('/' + SLUGS.addprofileimg, { replace: true });
+  }
+
   return (
-    <div className="w-full py-[56px]">
-      <Map isOpen={isMapOpen} setIsOpen={setIsMapOpen} setAddress={onAddressSet} />
+    <PageLayout>
+      <Map isOpen={isMapOpen} setIsOpen={setIsMapOpen} address={formik.values.address} setAddress={onAddressSet} />
       <div className="max-w-[485px] mx-auto w-full">
         <div className="flex flex-col">
           <div className="md:block hidden">
@@ -138,14 +144,14 @@ const MoreInfo = ({ handleForm }) => {
 
         <div className="flex justify-center w-full">
           <p className="text-lg font-semibold">
-            <button onClick={() => handleForm('yourProfile', 2)} className="text-primary cursor-pointer">
+            <Link to="/dashboard" className="text-primary cursor-pointer">
               Skip
-            </button>{' '}
+            </Link>{' '}
             and add later!
           </p>
         </div>
       </div>
-    </div>
+    </PageLayout>
   );
 };
 

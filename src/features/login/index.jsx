@@ -1,33 +1,45 @@
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, Routes, Route, useLocation } from 'react-router-dom';
 
-import Form from './Form';
-import Slider from './Slider';
-import Steps from './Steps';
+import { SLUGS } from 'shared/constants';
+import { ProtectedRoutes } from 'shared/components';
+
+import Login from './pages/Login';
+import SignUp from './pages/SignUp';
+import MoreInfo from './pages/MoreInfo';
+import AddProfileImg from './pages/AddProfileImg';
+import Slider from './components/Slider';
+import Steps from './components/Steps';
 import logo from './assets/images/logo.png';
 
 const HomeIndex = () => {
   const [index, setIndex] = useState(0);
-  const [component, setComponent] = useState('login');
-
-  const handleForm = (component, slide) => {
-    setComponent(component);
-    setIndex(slide);
-  };
+  const location = useLocation();
 
   return (
     <div className="overflow-hidden relative md:pb-0 pb-6">
       <div className="grid overflow-hidden grid-cols-1 md:grid-cols-2 min-h-screen">
-        <div className="max-w-[485px] mx-auto w-full md:pt-[56px] md:order-none order-last">
-          <Link to="/" className="md:block hidden px-5">
-            <img src={logo} alt="logo" />
+        <div className="px-5 max-w-[485px] mx-auto w-full md:mt-[56px] md:order-none order-last">
+          <Link to={SLUGS.home}>
+            <img src={logo} alt="logo" className="md:mb-0 mb-10" />
           </Link>
-          <div className="px-5 flex items-center">
-            <Form component={component} setIndex={setIndex} handleForm={handleForm} index={index} />
+          <div className=" flex items-center">
+            <Routes>
+              <Route path={SLUGS.all} index element={<Login />} />
+              <Route path={SLUGS.signup} element={<SignUp />} />
+              <Route element={<ProtectedRoutes />}>
+                <Route path={SLUGS.moreinfo} element={<MoreInfo />} />
+                <Route path={SLUGS.addprofileimg} element={<AddProfileImg />} />
+              </Route>
+            </Routes>
           </div>
         </div>
         <div className="overflow-hidden">
-          {component === 'login' ? <Slider /> : <Steps setIndex={setIndex} index={index} />}
+          {location.pathname !== SLUGS.home ? (
+            <Steps setIndex={setIndex} index={index} />
+          ) : (
+            <Slider setIndex={setIndex} index={index} />
+          )}
         </div>
       </div>
     </div>

@@ -4,7 +4,11 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { Provider } from 'react-redux';
 
 import './index.css';
-import LoginForm from './features/login';
+import { SLUGS } from 'shared/constants';
+import { ProtectedRoutes } from 'shared/components';
+
+import Dashboard from './features/dashboard';
+import Login from './features/login';
 import { store } from './store';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -13,8 +17,10 @@ root.render(
     <Provider store={store}>
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<LoginForm />} />
-          {/* <Route path="dashboard/*" element={<Dashboard />} /> */}
+          <Route element={<ProtectedRoutes />}>
+            <Route path={SLUGS.dashboard + '/*'} element={<Dashboard />} />
+          </Route>
+          <Route path={SLUGS.all} element={<Login />} />
         </Routes>
       </BrowserRouter>
     </Provider>

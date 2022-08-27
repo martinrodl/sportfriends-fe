@@ -1,7 +1,8 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
 
 // import { BASE_URL } from "../constants";
-export const BASE_URL = 'http://martinrodl.me';
+const BASE_URL = 'http://kubernetes.docker.internal:32668';
+// export const BASE_URL = 'http://martinrodl.me';
 
 // Define a service using a base URL and expected endpoints
 export const userApi = createApi({
@@ -31,6 +32,9 @@ export const userApi = createApi({
           url: 'profileimg',
           method: 'POST',
           body: data,
+          headers: {
+            'content-type': 'multipart/form-data',
+          },
         };
       },
     }),
