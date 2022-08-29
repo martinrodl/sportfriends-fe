@@ -1,11 +1,12 @@
 export const SLUGS = {
   Home: '',
-  UserProfile: 'profile',
+  MyActions: 'my-actions',
   Events: 'events',
   EventsMap: 'event-map',
   CreateEvent: 'create-event',
   SportsPartner: 'sports-partner',
   Friends: 'friends',
-  Settings: 'setting',
+  Settings: 'settings',
+  UserProfile: 'user-profile',
   Chat: 'chat',
 };

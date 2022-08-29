@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function ErrorMessage({ message, apiErrors }) {
   const renderMessage = (message, key = 'error') => (
-    <p className="text-[13px] text-error absolute left-0 -bottom-5" key={key}>{`* ${message}`}</p>
+    <p className="text-[13px] text-error" key={key}>{`* ${message}`}</p>
   );
 
   const renderApiErrors = () => {

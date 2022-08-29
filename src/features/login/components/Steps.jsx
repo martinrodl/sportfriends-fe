@@ -1,5 +1,3 @@
-import { useEffect } from 'react';
-
 import slide1 from '../assets/images/slide1.png';
 import slide2 from '../assets/images/slide2.png';
 import slide3 from '../assets/images/slide3.png';
@@ -23,7 +21,7 @@ const slides = [
     id: 3,
     mobileTitle: 'Jazz up you profile',
     img: slide3,
-    title: 'FInd easy your favourite sport',
+    title: 'Find easy your favourite sport',
     desc: 'Lorem ipsum lorem ipsum Lorem ipsum lorem ipsum Lorem ipsum lorem ipsum Lorem ipsum lorem ipsum Lorem ipsum lorem ipsum Lorem ',
   },
 ];

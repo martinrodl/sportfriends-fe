@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Navigate } from 'react-router-dom';
 import { BsCalendar3Week } from 'react-icons/bs';
 import { FiChevronDown } from 'react-icons/fi';
 import { GrMapLocation } from 'react-icons/gr';
@@ -13,7 +14,14 @@ import { DateTimePicker } from '@mui/x-date-pickers/DateTimePicker';
 import { DesktopDatePicker } from '@mui/x-date-pickers/DesktopDatePicker';
 import { MobileDatePicker } from '@mui/x-date-pickers/MobileDatePicker';
 
-const CreateEvent = () => {
+import { useCreateEventMutation } from 'services/eventApi';
+import { ErrorMessage } from 'shared/components';
+
+import { SLUGS } from '../shared/constants';
+
+const CreateEventForm = () => {
+  const [createEvent, { isSuccess, error, isLoading }] = useCreateEventMutation();
+
   const [eventName, setEventName] = useState('');
   const [sportName, setSportName] = useState('');
   const [startTime, setStartTime] = useState();
@@ -23,15 +31,13 @@ const CreateEvent = () => {
   const [description, setDescription] = useState();
   const [outDoor, setOutDoor] = useState(false);
   const [address, setAddress] = useState('');
-  const [loading, setIsLoading] = useState(false);
   const handleStartTime = (newValue) => {
     setStartTime(newValue);
   };
   const handleEndTime = (newValue) => {
     setEndTime(newValue);
   };
-  const createEvent = async () => {
-    setIsLoading(true);
+  const handleSubmit = async () => {
     const dataObject = {
       title: eventName,
       sport: sportName,
@@ -47,22 +53,18 @@ const CreateEvent = () => {
       },
     };
 
-    // await fetch(BASE_URL + "/event/event", dataObject, {
-    //   headers: {
-    //     Authorization:
-    //       "Basic " +
-    //       base64.encode(`${process.env.USERNAME}:${process.env.PASSWORD}`),
-    //   },
-    // })
-    //   .then((response) => response.json())
-    //   .then((json) => console.log(json));
-    // setIsLoading(false);
+    createEvent(dataObject);
   };
+
+  if (isSuccess) {
+    <Navigate to={'/dashboard/' + SLUGS.MyActions} />;
+  }
+
   return (
     <div className="w-full min-h-screen md:px-10 px-5 md:py-20 py-14 max-w-7xl mx-auto">
       <h1 className="text-[22px] text-xl font-semibold text-[#505050] text-center mb-4">Create an Event</h1>
       <p className="text-xl text-center font-normal text-[#9A9A9A] mb-10 max-w-[525px] mx-auto">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Turpis cras consequat
+        Fill neccessary details of the event and get sport buddies to joined you.
       </p>
       <LocalizationProvider dateAdapter={AdapterDateFns}>
         <div className="max-w-[675px] mx-auto">
@@ -177,12 +179,13 @@ const CreateEvent = () => {
               onChange={(e) => setDescription(e.target.value)}
             />
           </div>
+          {error?.data?.errors && <ErrorMessage apiErrors={error.data.errors} />}
           <div className="flex justify-center w-full">
             <a
-              onClick={createEvent}
+              onClick={handleSubmit}
               className="flex justify-center w-full text-center py-5 rounded-md transition-all hover:shadow-md bg-[#04A5C2] text-white font-semibold cursor-pointer"
             >
-              {loading ? 'Creating Event...' : 'Create Event'}
+              {isLoading ? 'Creating Event...' : 'Create Event'}
             </a>
           </div>
         </div>
@@ -191,4 +194,4 @@ const CreateEvent = () => {
   );
 };
 
-export default CreateEvent;
+export default CreateEventForm;

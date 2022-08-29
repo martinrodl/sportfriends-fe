@@ -17,9 +17,9 @@ root.render(
     <Provider store={store}>
       <BrowserRouter>
         <Routes>
-          <Route element={<ProtectedRoutes />}>
-            <Route path={SLUGS.dashboard + '/*'} element={<Dashboard />} />
-          </Route>
+          {/* <Route element={<ProtectedRoutes />}> */}
+          <Route path={SLUGS.dashboard + '/*'} element={<Dashboard />} />
+          {/* </Route> */}
           <Route path={SLUGS.all} element={<Login />} />
         </Routes>
       </BrowserRouter>

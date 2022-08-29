@@ -3,10 +3,10 @@ import { Navigate, Link } from 'react-router-dom';
 
 import { Button, ErrorMessage } from 'shared/components';
 import { SLUGS } from 'shared/constants';
+import { useUploadProfileImageMutation } from 'services/userApi';
 
 import userdp from '../assets/images/user.png';
 import upload from '../assets/images/upload.png';
-import { useUploadProfileImageMutation } from '../services/userApi';
 import PageLayout from '../components/PageLayout';
 
 const AddProfileImg = () => {

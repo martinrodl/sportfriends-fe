@@ -46,8 +46,8 @@ const links = [
     icon: homeIcon,
   },
   {
-    title: 'User profile',
-    slug: SLUGS.UserProfile,
+    title: 'My Actions',
+    slug: SLUGS.MyActions,
     icon: userProfileIcon,
   },
   {
