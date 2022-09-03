@@ -1,7 +1,7 @@
 import React from 'react';
 
-import Header from './Header';
-import PartnerCard from './PartnerCard';
+import Header from '../../../components/events/Header';
+import PartnerCard from '../../../components/events/PartnerCard';
 
 const SportsPartner = () => {
   return (

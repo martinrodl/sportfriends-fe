@@ -1,51 +1,58 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import { useGetUserEventsQuery } from 'services/eventApi';
+import { useGetUserDatingPostsQuery } from 'services/datingApi';
 
-import EventsList from './EventsList';
+import { SLUGS } from '../shared/constants';
+import Event from '../components/events/Event';
+import ListHeader from '../components/ListHeader';
+import bandyIcon from '../assets/images/bandy.svg';
+import sportsPartnerIcon from '../assets/images/users.svg';
+import Partner from '../components/Partner';
 
 const MyActions = () => {
-  const { data = { created: [], participated: [] }, isSuccess, error } = useGetUserEventsQuery();
-  return (
-    <div className="w-full mx-auto px-4 mt-12">
-      <div className="">
-        <div className="flex justify-end w-full px-4 py-4">
-          <img className="cursor-pointer" src="/imgs/dropdown.svg" alt="" />
-        </div>
+  const { data: eventsData = { created: [], participated: [] }, isSuccess, error } = useGetUserEventsQuery();
+  const { data: datingPosts, isSuccess: datingSuccess, error: datingError } = useGetUserDatingPostsQuery();
 
-        <EventsList title="Created Events" events={data.created} addButton />
-        <EventsList title="Joined Events" events={data.created} icon />
-        {/* <div className="flex justify-end w-full px-4 py-4 mt-12">
-          <img className="cursor-pointer" src="/imgs/dropdown.svg" alt="" />
+  return (
+    <div className="max-w-[920px] mx-auto px-4 mt-12">
+      <div className="">
+        <div className="mb-10">
+          <ListHeader
+            title="Sport Partner"
+            icon={
+              <Link to={'/dashboard/' + SLUGS.SportsPartner}>
+                <img className="h-8" src={sportsPartnerIcon} alt="group" />
+              </Link>
+            }
+          />
+          <Partner />
         </div>
-        <div className="md:mx-20 flex items-center justify-between bg-[#04A5C2] md:py-10 py-3 px-10 rounded-lg">
-          <h1 className="md:text-[26px] text-lg font-semibold text-white">Joined Events</h1>
-          <img src="/imgs/bandy.svg" />
+        <div className="mb-10">
+          <ListHeader
+            title="Created Events"
+            icon={
+              <Link to={'/dashboard/' + SLUGS.CreateEvent}>
+                <h2 className="text-[14px] font-normal text-[#04A5C2] px-10 py-2 rounded-full bg-white">Add</h2>
+              </Link>
+            }
+          />
+          <Event />
+          <Event />
         </div>
-        <div className="flex lg:flex-row flex-col justify-between px-10 bg-[#fafafa] md:mx-20 my-4 rounded-xl drop-shadow-xl">
-          <div className="">
-            <div className="py-8 ">
-              <h1 className="text-2xl font-bold">Saturday Night Play</h1>
-            </div>
-            <div className="flex gap-6 py-4">
-              <img className="cursor-pointer" src="/imgs/Vector.svg" alt="" />
-              <h1 className="text-2xl font-normal ">Football</h1>
-              <h1 className="text-xl font-normal  ml-14">7/32</h1>
-            </div>
-          </div>
-          <div className="">
-            <div className="flex gap-6 py-8">
-              <img className="cursor-pointer" src="/imgs/placeholder 1 copy.svg" alt="" />
-              <h1 className="text-2xl font-normal ">Event Address</h1>
-            </div>
-            <div className="flex bg-[#54D2E0] 2xl:px-12 px-8 py-4 gap-8 mb-8 rounded-xl">
-              <h1 className="text-xl font-black text-white">29 Aug </h1>
-              <h1 className="text-xl font-medium">22:08</h1>
-              <h1 className="text-xl font-medium">-</h1>
-              <h1 className="text-xl font-medium">01:08</h1>
-            </div>
-          </div>
-        </div> */}
+        <div className="mb-10">
+          <ListHeader
+            title="Joined Events"
+            icon={
+              <Link to={'/dashboard/' + SLUGS.EventsMap}>
+                <img className="h-8" src={bandyIcon} alt="group" />
+              </Link>
+            }
+          />
+          <Event />
+          <Event />
+        </div>
       </div>
     </div>
   );

@@ -1,7 +1,7 @@
 import { configureStore } from '@reduxjs/toolkit';
 import { setupListeners } from '@reduxjs/toolkit/query';
 
-import { authApi, userApi, eventApi } from 'services';
+import { authApi, userApi, eventApi, datingApi } from 'services';
 
 import { authReducer } from './slices';
 
@@ -11,9 +11,10 @@ export const store = configureStore({
     [authApi.reducerPath]: authApi.reducer,
     [userApi.reducerPath]: userApi.reducer,
     [eventApi.reducerPath]: eventApi.reducer,
+    [datingApi.reducerPath]: datingApi.reducer,
   },
   middleware: (getDefaultMiddleware) =>
-    getDefaultMiddleware().concat([authApi.middleware, userApi.middleware, eventApi.middleware]),
+    getDefaultMiddleware().concat([authApi.middleware, userApi.middleware, eventApi.middleware, datingApi.middleware]),
 });
 
 setupListeners(store.dispatch);

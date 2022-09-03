@@ -26,3 +26,9 @@ export default function TimePickerInput({ label, props }) {
     </>
   );
 }
+
+//  <input
+//    className="text-xs md:text-lg px-4 md:px-6 py-4 bg-transparent w-full focus:outline-none"
+//    name="time"
+//    type="time"
+//  />;

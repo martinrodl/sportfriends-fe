@@ -24,7 +24,7 @@ const DatePickerInput = ({ label, ...otherProps }) => {
   }
 
   return (
-    <div className="relative border-[#DADADA] border w-full rounded-[5px] mb-8">
+    <div className="relative border-[#DADADA] border w-full rounded-[5px]">
       <input
         className="text-xs md:text-lg px-4 md:px-6 py-4 bg-transparent w-full focus:outline-none"
         {...configDateTimePicker}
