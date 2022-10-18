@@ -3,7 +3,7 @@ import React from 'react';
 import AvaratIMG from '../../assets/images/avatar.png';
 import PlaceholderSVG from '../../assets/images/placeholder.svg';
 
-const PartnerCard = () => {
+const PartnerCard = ({ title, description, address, sport }) => {
   return (
     <div>
       <div className="w-full bg-[#FAFAFA] shadow-xl rounded-md mb-12">
@@ -13,15 +13,13 @@ const PartnerCard = () => {
               <img src={AvaratIMG} />
             </div>
             <div className="px-10 col-span-3 flex flex-col self-center">
-              <h1 className="md:text-left text-center text-base md:text-2xl font-bold text-[#000] md:pb-4">
-                Lorem ipsum dolor sit amet
-              </h1>
-              <button className="md:text-left text-center text-[12px] md:text-xl font-normal text-[#9A9A9A] py-5">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Turpis cras consequat Lorem ipsum{' '}
-              </button>
+              <h1 className="md:text-left text-center text-base md:text-2xl font-bold text-[#000] md:pb-4">{title}</h1>
+              <p className="md:text-left text-center text-[12px] md:text-xl font-normal text-[#9A9A9A] py-5">
+                {description}
+              </p>
             </div>
             <div className="text-center">
-              <h1 className="text-[12px] md:text-xl font-normal text-black ">Football</h1>
+              <h1 className="text-[12px] md:text-xl font-normal text-black ">{sport}</h1>
               <div className="flex justify-center  my-6">
                 <button className="bg-primary text-white rounded-full md:min-w-[148px] md:min-h-[43px] min-w-[120px] min-h-[35px] text-center transition-all cursor-pointer flex items-center justify-center duration-300 hover:shadow-lg">
                   Send
@@ -29,7 +27,7 @@ const PartnerCard = () => {
               </div>
               <div className="flex justify-center gap-2">
                 <img src={PlaceholderSVG} />
-                <p className="text-[14px] md:text-2xl font-medium text-[#E50027]">Address</p>
+                <p className="text-[14px] md:text-m font-medium text-[#E50027]">{address}</p>
               </div>
             </div>
           </div>

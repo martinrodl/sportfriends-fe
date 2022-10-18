@@ -10,10 +10,11 @@ import SportsPartner from './pages/SportPartner';
 import Settings from './features/settings/SetProfile';
 import MyAccount from './features/settings/MyAccount';
 import CreateEventForm from './pages/CreateEventForm';
-import EventMap from './features/events/EventMap';
-import Chat from './features/chat/Chat';
+import EventMap from './pages/EventsMap';
+import Chat from './pages/Chat';
 import MyActions from './pages/MyActions';
 import CreateSportsPartnerForm from './pages/CreateSportsPartnerForm';
+import EventDetail from './pages/EventDetail';
 
 const Dashboard = () => {
   return (
@@ -30,6 +31,7 @@ const Dashboard = () => {
         <Route path={SLUGS.Chat} element={<Chat />} />
         <Route path={SLUGS.Settings} element={<Settings />} />
         <Route path={SLUGS.UserProfile} element={<MyAccount />} />
+        <Route path={SLUGS.Event + '/:id'} element={<EventDetail />} />
       </Routes>
     </DashboardLayout>
   );

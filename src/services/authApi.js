@@ -1,7 +1,7 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
 
-// import { BASE_URL } from "../constants";
-export const BASE_URL = 'http://kubernetes.docker.internal:30471';
+import { BASE_URL } from 'shared/constants';
+//const BASE_URL = 'http://kubernetes.docker.internal:30471';
 
 // Define a service using a base URL and expected endpoints
 export const authApi = createApi({

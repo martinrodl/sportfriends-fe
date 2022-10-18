@@ -2,6 +2,7 @@ import React from 'react';
 import { Navigate } from 'react-router-dom';
 import { Formik, Form } from 'formik';
 import * as Yup from 'yup';
+import moment from 'moment';
 
 import { useCreateEventMutation } from 'services/eventApi';
 import {
@@ -9,20 +10,20 @@ import {
   DatePickerInput,
   MapInput,
   CheckboxInput,
-  TimePickerInput,
   SelectSearchInput,
   TextAreaInput,
   SubmitButton,
   ErrorMessage,
+  TimeRangeInput,
 } from 'shared/components';
 
-import { SLUGS } from '../shared/constants';
+import { SLUGS } from '../../../shared/constants';
 
 const CreateEventForm = () => {
   const [createEvent, { isSuccess, error, isLoading }] = useCreateEventMutation();
 
   if (isSuccess) {
-    <Navigate to={'/dashboard/' + SLUGS.MyActions} />;
+    return <Navigate to={'/dashboard/' + SLUGS.MyActions} replace={true} />;
   }
 
   return (
@@ -36,10 +37,7 @@ const CreateEventForm = () => {
           title: '',
           sport: '',
           date: '',
-          address: {
-            address: '',
-            coordinates: { lat: 0, lng: 0 },
-          },
+          address: { coordinates: { lat: 0, lng: 0 }, address: '' },
           outdoor: false,
           startTime: '',
           endTime: '',
@@ -52,12 +50,23 @@ const CreateEventForm = () => {
           sport: Yup.string().required('Required'),
           date: Yup.date().required('Required'),
           outdoor: Yup.boolean(),
-          startTime: Yup.date().required('Required'),
-          endTime: Yup.date().required('Required'),
+          // startTime: Yup.date().required('Required'),
+          // endTime: Yup.date().required('Required'),
         })}
         onSubmit={(formData) => {
-          console.log(formData);
-          createEvent(formData);
+          const event = {
+            title: formData.title,
+            sport: formData.sport,
+            address: formData.address.address,
+            coordinates: formData.address.coordinates,
+            outdoor: formData.outdoor,
+            timeStart: moment(formData.date + formData.endTime, 'YYYY-MM-DDhh:mm').toISOString(),
+            timeEnd: moment(formData.date + '-' + formData.endTime, 'YYYY-MM-DD-hh:mm').toISOString(),
+            minParticipants: formData.minParticipants,
+            maxParticipants: formData.maxParticipants,
+            description: formData.description,
+          };
+          createEvent(event);
         }}
       >
         <Form>
@@ -71,20 +80,16 @@ const CreateEventForm = () => {
             <div className="mb-8">
               <DatePickerInput label="date" />
             </div>
-            <MapInput name="address" label="address" />
+            <div className="mb-8">
+              <MapInput name="address" label="address" />
+            </div>
             <div className="mb-8">
               <CheckboxInput label="outdoor" labelText="Outdoor" />
             </div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-4 ">
-              <div className="mb-8">
-                <p className="text-[#9A9A9A] text-lg font-normal block pb-2">Start Time</p>
-                <TimePickerInput label="startTime" />
-              </div>
-              <div className="mb-8">
-                <p className="text-[#9A9A9A] text-lg font-normal block pb-2">End Time</p>
-                <TimePickerInput label="endTime" />
-              </div>
+            <div className="w-full mb-8">
+              <TimeRangeInput label1="startTime" label2="endTime" />
             </div>
+
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-4 mb-8">
               <div>
                 <p className="text-[#9A9A9A] text-lg font-normal block pb-2">Min Participants</p>

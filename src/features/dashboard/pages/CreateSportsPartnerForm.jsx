@@ -4,7 +4,7 @@ import { Formik, Form } from 'formik';
 import * as Yup from 'yup';
 
 import { useCreateDatingPostMutation } from 'services/datingApi';
-import { TextInput, MapInput, SelectSearchInput, TextAreaInput, SubmitButton, ErrorMessage } from 'shared/components';
+import { TextInput, SelectSearchInput, TextAreaInput, SubmitButton, ErrorMessage } from 'shared/components';
 
 import { SLUGS } from '../shared/constants';
 
@@ -12,7 +12,7 @@ export default function CreateSportsPartnerForm() {
   const [createPost, { isSuccess, error, isLoading }] = useCreateDatingPostMutation();
 
   if (isSuccess) {
-    <Navigate to={'/dashboard/' + SLUGS.MyActions} />;
+    return <Navigate to={'/dashboard/' + SLUGS.MyActions} replace={true} />;
   }
   return (
     <div className="w-full min-h-screen md:px-10 px-5 md:py-20 py-14 max-w-7xl mx-auto">
@@ -25,19 +25,18 @@ export default function CreateSportsPartnerForm() {
           title: '',
           sport: '',
           description: '',
-          address: {
-            address: '',
-            coordinates: { lat: 0, lng: 0 },
-          },
         }}
         validationSchema={Yup.object({
-          title: Yup.string().max(20, 'Must be 20 characters or less').required('Required'),
+          title: Yup.string()
+            .min(4, 'Must be 250 characters or less')
+            .max(250, 'Must be at least 4 characters')
+            .required('Required'),
           sport: Yup.string().required('Required'),
           description: Yup.string().min(20, 'Must be at least 20 characters').required('Required'),
         })}
         onSubmit={(formData) => {
-          console.log(formData);
-          createPost(formData);
+          const data = { title: formData.title, description: formData.description, sports: [formData.sport] };
+          createPost(data);
         }}
       >
         <Form>
@@ -48,7 +47,6 @@ export default function CreateSportsPartnerForm() {
             <div className="mb-8">
               <SelectSearchInput placeholder="Type of Sport" label="sport" />
             </div>
-            <MapInput name="address" label="address" />
             <TextAreaInput label="description" placeholder="Description" />
             {error?.data?.errors && <ErrorMessage apiErrors={error.data.errors} />}
             <SubmitButton text="Submit" isLoading={isLoading} />

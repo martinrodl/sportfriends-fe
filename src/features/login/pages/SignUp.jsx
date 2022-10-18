@@ -3,7 +3,7 @@ import * as Yup from 'yup';
 import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 
-import { ErrorMessage, SubmitButton, TextInput } from 'shared/components';
+import { ErrorMessage, SubmitButton, TextInput, MapInput } from 'shared/components';
 import { SLUGS } from 'shared/constants';
 import { setCredentials } from 'store/slices';
 import { useSignupUserMutation } from 'services/authApi';
@@ -16,8 +16,8 @@ const SignUp = () => {
   const navigate = useNavigate();
 
   if (isSuccess) {
-    const { user, accessToken } = data;
-    dispatch(setCredentials({ accessToken, ...user }));
+    const { id, email, accessToken } = data;
+    dispatch(setCredentials({ accessToken, email, id }));
     navigate('/' + SLUGS.moreinfo, { replace: true });
   }
 
@@ -39,22 +39,29 @@ const SignUp = () => {
             initialValues={{
               email: '',
               name: '',
+              address: {
+                address: '',
+                coordinates: { lat: 0, lng: 0 },
+              },
               password: '',
               confirmPassword: '',
             }}
             validationSchema={Yup.object({
               email: Yup.string().max(50, 'Must be 20 chracters or less').required('Email is required'),
               name: Yup.string().max(20, 'Must be 10 chracters or less').required('Name is required'),
+              address: Yup.object().required('Address is required'),
               password: Yup.string().required('Password is required'),
               confirmPassword: Yup.string().oneOf([Yup.ref('password'), null], 'Passwords must match'),
             })}
             onSubmit={(values) => {
-              const credetials = {
+              const credentials = {
                 email: values.email,
                 name: values.name,
+                address: values.address.address,
+                coordinates: values.address.coordinates,
                 password: values.password,
               };
-              signupUser(credetials);
+              signupUser(credentials);
             }}
           >
             <Form>
@@ -63,6 +70,9 @@ const SignUp = () => {
               </div>
               <div className="mb-5">
                 <TextInput label="name" placeholder="Name" />
+              </div>
+              <div className="mb-5">
+                <MapInput label="address" />
               </div>
               <div className="mb-5">
                 <TextInput label="password" placeholder="Password" type="password" />

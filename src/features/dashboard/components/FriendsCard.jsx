@@ -23,14 +23,14 @@ export default function FriendsCard({ item, index }) {
           </AvatarGroup>
           <h1 className="text-[10px] font-normal text-[#2D3F65] ml-3">{item.mutualFriend}</h1>
         </div>
-        <a className="bg-[#04A5C2] text-white rounded-sm min-w-[133px] min-h-[29px] text-[9px] font-normal text-center transition-all cursor-pointer flex items-center justify-center duration-300 hover:shadow-lg mb-2">
+        <button className="bg-[#04A5C2] text-white rounded-sm min-w-[133px] min-h-[29px] text-[9px] font-normal text-center transition-all cursor-pointer flex items-center justify-center duration-300 hover:shadow-lg mb-2">
           {' '}
           Confirm{' '}
-        </a>
-        <a className="bg-[#DADADA] text-white rounded-sm min-w-[133px] min-h-[29px] text-[9px] font-normal text-center transition-all cursor-pointer flex items-center justify-center duration-300 hover:shadow-lg">
+        </button>
+        <button className="bg-[#DADADA] text-white rounded-sm min-w-[133px] min-h-[29px] text-[9px] font-normal text-center transition-all cursor-pointer flex items-center justify-center duration-300 hover:shadow-lg">
           {' '}
           Delete{' '}
-        </a>
+        </button>
       </div>
     </div>
   );

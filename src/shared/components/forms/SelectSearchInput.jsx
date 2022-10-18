@@ -10,7 +10,7 @@ export default function SelectSearchInput({ label, placeholder, ...props }) {
   const [field, meta] = useField(label);
 
   return (
-    <>
+    <div>
       <Autocomplete
         disablePortal
         id="combo-box-demo"
@@ -22,7 +22,7 @@ export default function SelectSearchInput({ label, placeholder, ...props }) {
         {...props}
       />
       {(meta.touched && meta.error && <ErrorMessage message={meta.error} />) || null}
-    </>
+    </div>
   );
 }
 

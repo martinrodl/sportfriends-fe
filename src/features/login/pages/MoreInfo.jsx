@@ -1,9 +1,8 @@
 import { Formik, Form } from 'formik';
-import * as Yup from 'yup';
 import { useNavigate, Link } from 'react-router-dom';
 
-import { Button, TextAreaInput, MapInput, ErrorMessage, SelectInput, DatePickerInput } from 'shared/components';
-import { SLUGS } from 'shared/constants';
+import { Button, TextAreaInput, ErrorMessage, SelectInput, DatePickerInput } from 'shared/components';
+import { SLUGS, selectGenderInputs } from 'shared/constants';
 import { useUpdateProfileMutation } from 'services/userApi';
 
 import PageLayout from '../components/PageLayout';
@@ -15,12 +14,6 @@ const MoreInfo = () => {
   if (isSuccess) {
     navigate('/' + SLUGS.addprofileimg, { replace: true });
   }
-
-  const selectGenderInputs = [
-    { value: 'Male', label: 'Male' },
-    { value: 'Female', label: 'Female' },
-    { value: 'Other', label: 'Other' },
-  ];
 
   return (
     <PageLayout>
@@ -39,23 +32,19 @@ const MoreInfo = () => {
             initialValues={{
               dateOfBirth: '',
               gender: 'default',
-              address: {
-                address: '',
-                coordinates: { lat: 0, lng: 0 },
-              },
               description: '',
             }}
-            validationSchema={Yup.object({
-              address: Yup.object().required('Address is required'),
-            })}
             onSubmit={(formData) => {
               updateProfile(formData);
             }}
           >
             <Form>
-              <DatePickerInput label="dateOfBirth" />
-              <SelectInput label="gender" inputs={selectGenderInputs} />
-              <MapInput label="address" />
+              <div className="mb-5">
+                <DatePickerInput label="dateOfBirth" />
+              </div>
+              <div className="mb-5">
+                <SelectInput label="gender" inputs={selectGenderInputs} />
+              </div>
               <div className="relative">
                 <TextAreaInput label="description" placeholder="Description" rows={3} />
               </div>

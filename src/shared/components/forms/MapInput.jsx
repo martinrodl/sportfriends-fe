@@ -19,7 +19,7 @@ export default function MapInput({ label, ...props }) {
   return (
     <>
       <Map isOpen={isMapOpen} setIsOpen={setIsMapOpen} address={address} setAddress={setAddress} />
-      <div className="relative border-[#DADADA] border w-full rounded-[5px] mb-5">
+      <div className="relative border-[#DADADA] border w-full rounded-[5px]">
         <input
           className="text-xs md:text-lg px-4 md:px-6 py-4 bg-transparent w-full focus:outline-none"
           {...field}

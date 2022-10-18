@@ -1,6 +1,7 @@
 export const SLUGS = {
   Home: '',
   MyActions: 'my-actions',
+  Event: 'event',
   Events: 'events',
   EventsMap: 'event-map',
   CreateEvent: 'create-event',
@@ -10,4 +11,5 @@ export const SLUGS = {
   Settings: 'settings',
   UserProfile: 'user-profile',
   Chat: 'chat',
+  Dashboard: 'dashboard',
 };

@@ -1,36 +1,33 @@
 import React, { useState } from 'react';
-import { BsSearch } from 'react-icons/bs';
-import { useDetectClickOutside } from 'react-detect-click-outside';
+import { useNavigate } from 'react-router-dom';
+import { FiLogOut } from 'react-icons/fi';
+
+import { setCredentials } from 'store/slices';
+import { useGetUserQuery } from 'services/userApi';
 
 import userAvatar from '../assets/images/user.svg';
+import userImg from '../assets/images/avatar.png';
 import bellImg from '../assets/images/bell.svg';
 import notificationCircle from '../assets/images/ion_notifications-circle.svg';
-import searchImg from '../assets/images/fe_search.svg';
-import bubbleImg from '../assets/images/bubble.svg';
 import horidotImg from '../assets/images/horidot.svg';
-import ellipseImg from '../assets/images/Ellipse 53.svg';
 
 const Navbar = () => {
-  const [showNotification, setShowNotification] = useState(false);
+  const { data: userData } = useGetUserQuery();
+  const { name, profileImg } = userData || {};
 
-  const closeDropdown = () => {
-    setShowNotification(false);
+  const [showNotification, setShowNotification] = useState(false);
+  const navigate = useNavigate();
+
+  const onLogout = () => {
+    setCredentials({ accessToken: '' });
+    navigate('/');
   };
-  const ref = useDetectClickOutside({ onTriggered: closeDropdown });
+
   return (
-    <div className="w-full md:px-10 px-4 md:pt-8 pb-2 pt-6" ref={ref}>
+    <div className="w-full md:px-10 px-4 md:pt-8 pb-2 pt-6">
       <div>
         <div className="flex justify-between">
-          <div>
-            <div className="relative lg:block hidden border-2 border-primary rounded-md">
-              <input
-                type="text"
-                placeholder="Search friends...."
-                className="pl-8 pr-3 py-3 text-[#8695A0]  focus-within:outline-none"
-              />
-              <img src={searchImg} alt="" className="absolute top-[10px] " />
-            </div>
-          </div>
+          <div />
           <div className="lg:border-l border-l-[#DADADA] md:px-10">
             <div className="flex gap-x-2 items-center">
               <img src={notificationCircle} alt="" className="cursor-pointer" />
@@ -41,11 +38,12 @@ const Navbar = () => {
                 onClick={() => setShowNotification(!showNotification)}
               />
               <div className="flex self-center  gap-x-2">
-                <img src={ellipseImg} alt="" className="cursor-pointer md:block  hidden" />
-                <span className="hidden text-base font-semibold md:flex self-center">Smith</span>
-                <BsSearch className="w-full cursor-pointer -mt-2 text-2xl text-white flex self-center" />
+                <img src={profileImg || userImg} alt="" className="cursor-pointer md:block w-10 h-10 hidden" />
+                <span className="hidden text-base font-semibold md:flex self-center">{'' || name}</span>
               </div>
-              <img src={bubbleImg} alt="" className="pl-4 cursor-pointer  md:block  hidden" />
+              <button onClick={onLogout}>
+                <FiLogOut className="h-6 w-6 ml-6" style={{ color: '#303030' }} />
+              </button>
             </div>
           </div>
         </div>

@@ -15,8 +15,8 @@ const Login = () => {
   const [signinUser, { data, isSuccess, error }] = useSigninUserMutation();
 
   if (isSuccess) {
-    const { user, accessToken } = data;
-    dispatch(setCredentials({ accessToken, ...user }));
+    const { id, email, accessToken } = data;
+    dispatch(setCredentials({ accessToken, id, email }));
     return <Navigate to={SLUGS.dashboard} replace={true} />;
   }
 

@@ -1,5 +1,6 @@
 import React from 'react';
-import { Link, NavLink } from 'react-router-dom';
+import { Link, NavLink, useLocation } from 'react-router-dom';
+import { BsChat } from 'react-icons/bs';
 
 import { SLUGS } from '../shared/constants';
 import logo from '../assets/images/logo.svg';
@@ -11,9 +12,15 @@ import createEventIcon from '../assets/images/events.svg';
 import sportsPartnerIcon from '../assets/images/users.svg';
 import friendsIcon from '../assets/images/friends.svg';
 import settingsIcon from '../assets/images/settings.svg';
-import chatIcon from '../assets/images/chat.svg';
+import chatIcon from '../assets/images/BsChat.svg';
 
 const Sidebar = () => {
+  const location = useLocation();
+  const getMatch = (slug) => {
+    const re = new RegExp(slug);
+    return Boolean(location?.pathname.match(re));
+  };
+
   return (
     <div className=" bg-[#04A5C2] h-full pl-2  py-10">
       <Link to="/">
@@ -26,7 +33,9 @@ const Sidebar = () => {
           <div key={index}>
             <NavLink
               to={item.slug}
-              className="flex px-4 py-3 gap-x-3 transition-all rounded-l-full duration-300 hover:bg-[#50bbce]"
+              className={`flex px-4 py-3 gap-x-3 transition-all rounded-l-full duration-300 bg-${
+                getMatch(item.slug) ? '[#50bbce]' : 'current'
+              } hover:bg-[#50bbce]`}
             >
               <img src={item.icon} alt="" />
               <span className="text-white text-base font-semibold flex self-center">{item.title}</span>
@@ -40,11 +49,11 @@ const Sidebar = () => {
 
 export default Sidebar;
 const links = [
-  {
-    title: 'Home',
-    slug: SLUGS.Home,
-    icon: homeIcon,
-  },
+  // {
+  //   title: 'Home',
+  //   slug: SLUGS.Home,
+  //   icon: homeIcon,
+  // },
   {
     title: 'My Actions',
     slug: SLUGS.MyActions,
@@ -70,19 +79,19 @@ const links = [
     slug: SLUGS.SportsPartner,
     icon: sportsPartnerIcon,
   },
-  {
-    title: 'Friends',
-    slug: SLUGS.Friends,
-    icon: friendsIcon,
-  },
+  // {
+  //   title: 'Friends',
+  //   slug: SLUGS.Friends,
+  //   icon: friendsIcon,
+  // },
   {
     title: 'Chat',
     slug: SLUGS.Chat,
     icon: chatIcon,
   },
-  {
-    title: 'Settings',
-    slug: SLUGS.Settings,
-    icon: settingsIcon,
-  },
+  // {
+  //   title: 'Settings',
+  //   slug: SLUGS.Settings,
+  //   icon: settingsIcon,
+  // },
 ];

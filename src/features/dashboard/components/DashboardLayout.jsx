@@ -1,51 +1,13 @@
 import React, { Fragment, useState } from 'react';
-import { Dialog, Menu, Transition } from '@headlessui/react';
-import {
-  BellIcon,
-  CalendarIcon,
-  ChartBarIcon,
-  FolderIcon,
-  HomeIcon,
-  InboxIcon,
-  MenuAlt2Icon,
-  UsersIcon,
-  XIcon,
-} from '@heroicons/react/outline';
-import { SearchIcon } from '@heroicons/react/solid';
+import { Dialog, Transition } from '@headlessui/react';
+import { MenuAlt2Icon, XIcon } from '@heroicons/react/outline';
 
 import Navbar from './Navbar';
 import Sidebar from './Sidebar';
 
-const navigation = [
-  { name: 'Dashboard', href: '#', icon: HomeIcon, current: true },
-  { name: 'Team', href: '#', icon: UsersIcon, current: false },
-  { name: 'Projects', href: '#', icon: FolderIcon, current: false },
-  { name: 'Calendar', href: '#', icon: CalendarIcon, current: false },
-  { name: 'Documents', href: '#', icon: InboxIcon, current: false },
-  { name: 'Reports', href: '#', icon: ChartBarIcon, current: false },
-];
-const userNavigation = [
-  { name: 'Your Profile', href: '#' },
-  { name: 'Settings', href: '#' },
-  { name: 'Sign out', href: '#' },
-];
-
-function classNames(...classes) {
-  return classes.filter(Boolean).join(' ');
-}
-
 const DashboardLayout = ({ children }) => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
   return (
-    // <div className="flex">
-    //   <div className="w-[16%]">
-    //     <Sidebar />
-    //   </div>
-    //   <div className="w-full">
-    //     <Navbar />
-    //     {children}
-    //   </div>
-    // </div>
     <div>
       <Transition.Root show={sidebarOpen} as={Fragment}>
         <Dialog as="div" className="relative z-40 md:hidden" onClose={setSidebarOpen}>
@@ -114,7 +76,7 @@ const DashboardLayout = ({ children }) => {
       <div className="md:pl-64">
         <div className="mx-auto flex flex-col ">
           <div className="sticky md:bg-white bg-[#04A5C2] top-0 z-10 flex-shrink-0 h-24 border-b border-b-[#DADADA]  flex">
-            <button type="button" className=" md:hidden" onClick={() => setSidebarOpen(true)}>
+            <button type="button" className="ml-4 md:hidden" onClick={() => setSidebarOpen(true)}>
               <span className="sr-only">Open sidebar</span>
               <MenuAlt2Icon className="h-8 w-8 text-white" aria-hidden="true" />
             </button>

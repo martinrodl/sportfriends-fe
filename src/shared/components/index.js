@@ -1,7 +1,9 @@
 export { default as Button } from './Button';
 export { default as TextInput } from './forms/TextInput';
+export { default as RangeInput } from './forms/RangeInput';
 export { default as SelectInput } from './forms/SelectInput';
 export { default as SelectSearchInput } from './forms/SelectSearchInput';
+export { default as TimeRangeInput } from './forms/TimeRangeInput';
 export { default as TextAreaInput } from './forms/TextAreaInput';
 export { default as DatePickerInput } from './forms/DatePickerInput';
 export { default as TimePickerInput } from './forms/TimePickerInput';
