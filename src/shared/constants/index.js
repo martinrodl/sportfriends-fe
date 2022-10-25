@@ -9,4 +9,4 @@ export const selectGenderInputs = [
 export const BASE_URL = 'http://martinrodl.me';
 // export const BASE_URL = '192.168.0.45';
 
-export const MAX_ZOOM = 17;
+export const MAX_ZOOM = 16;

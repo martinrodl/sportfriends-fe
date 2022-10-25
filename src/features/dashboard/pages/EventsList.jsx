@@ -5,7 +5,7 @@ import { useGetEventsQuery } from 'services/eventApi';
 import { selectFilter } from 'store/slices';
 import { objectToParametrs } from 'shared/utils';
 
-import EventFull from '../components/EventFull';
+import EventFullCard from '../components/EventFullCard';
 import Filter from '../components/filter/Filter';
 
 const Events = () => {
@@ -17,7 +17,7 @@ const Events = () => {
         <div className="mb-8">
           <Filter enableFilters={['sport', 'distance', 'date', 'startTime']} />
         </div>
-        {Array.isArray(events) && events.map((event) => <EventFull event={event} key={event.id} />)}
+        {Array.isArray(events) && events.map((event) => <EventFullCard event={event} key={event.id} />)}
       </div>
     </div>
   );

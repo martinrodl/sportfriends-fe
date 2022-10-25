@@ -1,5 +1,6 @@
 import React from 'react';
-import { useField, Field } from 'formik';
+import { useField } from 'formik';
+import TextField from '@mui/material/TextField';
 
 import { ErrorMessage } from 'shared/components';
 
@@ -9,10 +10,10 @@ const TextAreaInput = ({ label, rows = 6, placeholder, ...props }) => {
   return (
     <div>
       <div className="relative border-[#DADADA] border w-full rounded-[5px] mb-8">
-        <Field
-          as="textarea"
+        <TextField
           className="text-xs md:text-lg px-4 md:px-6 py-4 bg-transparent w-full focus:outline-none"
           placeholder={placeholder}
+          multiline
           rows={rows}
           {...field}
           {...props}

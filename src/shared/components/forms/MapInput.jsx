@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useField } from 'formik';
 import { GrMapLocation } from 'react-icons/gr';
+import TextField from '@mui/material/TextField';
 
 import { Map, ErrorMessage } from 'shared/components';
 
@@ -20,11 +21,11 @@ export default function MapInput({ label, ...props }) {
     <>
       <Map isOpen={isMapOpen} setIsOpen={setIsMapOpen} address={address} setAddress={setAddress} />
       <div className="relative border-[#DADADA] border w-full rounded-[5px]">
-        <input
+        <TextField
           className="text-xs md:text-lg px-4 md:px-6 py-4 bg-transparent w-full focus:outline-none"
           {...field}
           {...props}
-          placeholder="Click Icon to Set Address"
+          placeholder="Click Set Address on Map"
           value={address.address}
           onFocus={() => {
             setIsMapOpen(true);

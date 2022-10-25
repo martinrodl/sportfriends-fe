@@ -3,7 +3,7 @@ import React from 'react';
 export default function ChatList({ chats = [], setActiveChat }) {
   return (
     <div>
-      <h1 className="text-xl text-[#2D3F65] pb-4 pt-2">Recent</h1>
+      <h1 className="text-xl text-[#2D3F65] pb-4 pt-2">Conversations</h1>
       {chats.map((item, index) => (
         <ChatBlock setActiveChat={setActiveChat} item={item} index={index} key={'chatblock - ' + index} />
       ))}

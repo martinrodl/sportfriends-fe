@@ -181,7 +181,7 @@ const ChatBox = () => {
       </div>
       <div className=" order-first lg:order-last">
         <div>
-          <h1 className="text-xl text-[#2D3F65] pb-4 pt-2">Recent</h1>
+          <h1 className="text-xl text-[#2D3F65] pb-4 pt-2">Conversations</h1>
           {msgs.map((item, index) => {
             return (
               <div

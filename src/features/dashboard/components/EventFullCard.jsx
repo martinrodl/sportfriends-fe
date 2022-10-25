@@ -10,7 +10,7 @@ import { selectAuthId } from 'store/slices';
 import { SLUGS } from '../shared/constants';
 import placeholderSVG from '../assets/images/placeholder.svg';
 
-const EventFull = ({ event }) => {
+const EventFullCard = ({ event }) => {
   const userId = useSelector(selectAuthId);
   const { title, address, timeStart, timeEnd, participants, maxParticipants, sport, id } = event;
   const [joinEvent, { error: joinError, isLoading: joinLoading }] = useJoinEventMutation();
@@ -25,7 +25,7 @@ const EventFull = ({ event }) => {
   };
 
   return (
-    <div className="w-full bg-[#FAFAFA] mb-4 mt-6 py-6">
+    <div className="w-full bg-[#FAFAFA] shadow-xl rounded-md mb-4 mt-6 py-6">
       <div className="flex justify-between px-4 md:px-20">
         <div>
           <div className="mb-8">
@@ -92,4 +92,4 @@ const EventFull = ({ event }) => {
   );
 };
 
-export default EventFull;
+export default EventFullCard;

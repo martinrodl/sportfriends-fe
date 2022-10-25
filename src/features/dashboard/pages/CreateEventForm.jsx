@@ -17,7 +17,7 @@ import {
   TimeRangeInput,
 } from 'shared/components';
 
-import { SLUGS } from '../../../shared/constants';
+import { SLUGS } from '../shared/constants';
 
 const CreateEventForm = () => {
   const [createEvent, { isSuccess, error, isLoading }] = useCreateEventMutation();

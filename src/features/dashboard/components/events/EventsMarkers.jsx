@@ -87,7 +87,24 @@ const EventsMarkers = ({ data }) => {
                 },
               }}
             >
-              {zoom === MAX_ZOOM && <Popup>{<MarkerPopupTable data={supercluster.getLeaves(cluster.id)} />}</Popup>}
+              {zoom >= MAX_ZOOM && <Popup>{<MarkerPopupTable data={supercluster.getLeaves(cluster.id)} />}</Popup>}
+            </Marker>
+          );
+        } else {
+          return (
+            <Marker
+              key={`event-${cluster.properties.eventId}`}
+              position={[latitude, longitude]}
+              icon={fetchIcon(1, 10 + (1 / points.length) * 40)}
+              eventHandlers={{
+                click: () => {
+                  map.setView([latitude, longitude], MAX_ZOOM, {
+                    animate: true,
+                  });
+                },
+              }}
+            >
+              {zoom >= MAX_ZOOM && <Popup>{<MarkerPopupTable data={[{ event: cluster.event }]} />}</Popup>}
             </Marker>
           );
         }

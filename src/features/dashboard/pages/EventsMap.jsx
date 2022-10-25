@@ -37,7 +37,7 @@ export default function EventsMap() {
             zoom={11}
             scrollWheelZoom={false}
             maxZoom={MAX_ZOOM}
-            className="h-screen w-full z-10"
+            className="h-[70vh] w-full z-10"
           >
             <TileLayer
               attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'

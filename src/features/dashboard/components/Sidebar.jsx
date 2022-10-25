@@ -34,7 +34,7 @@ const Sidebar = () => {
             <NavLink
               to={item.slug}
               className={`flex px-4 py-3 gap-x-3 transition-all rounded-l-full duration-300 bg-${
-                getMatch(item.slug) ? '[#50bbce]' : 'current'
+                getMatch(item.slug) ? '[#50bbce]' : ''
               } hover:bg-[#50bbce]`}
             >
               <img src={item.icon} alt="" />

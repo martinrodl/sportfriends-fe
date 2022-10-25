@@ -11,16 +11,24 @@ export default function SelectSearchInput({ label, placeholder, ...props }) {
 
   return (
     <div>
-      <Autocomplete
-        disablePortal
-        id="combo-box-demo"
-        options={sports}
-        renderInput={(params) => <TextField placeholder={placeholder} {...params} />}
-        onChange={(e, val) => {
-          setFieldValue(field.name, val.value);
-        }}
-        {...props}
-      />
+      <div className="relative border-[#DADADA] border w-full rounded-[5px]">
+        <Autocomplete
+          disablePortal
+          id="combo-box-demo"
+          options={sports}
+          renderInput={(params) => (
+            <TextField
+              className="text-xs md:text-lg px-4 md:px-6 py-4 bg-transparent w-full focus:outline-none"
+              placeholder={placeholder}
+              {...params}
+            />
+          )}
+          onChange={(e, val) => {
+            setFieldValue(field.name, val.value);
+          }}
+          {...props}
+        />
+      </div>
       {(meta.touched && meta.error && <ErrorMessage message={meta.error} />) || null}
     </div>
   );

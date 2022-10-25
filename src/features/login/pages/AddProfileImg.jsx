@@ -10,7 +10,7 @@ import upload from '../assets/images/upload.png';
 import PageLayout from '../components/PageLayout';
 
 const AddProfileImg = () => {
-  const [updateProfile, { isSuccess, error }] = useUploadProfileImageMutation();
+  const [updateProfile, { isSuccess, error, isError }] = useUploadProfileImageMutation();
 
   const [img, setImg] = useState(userdp);
   const imageUploader = useRef(null);
@@ -35,6 +35,7 @@ const AddProfileImg = () => {
   if (isSuccess) {
     return <Navigate to={'/' + SLUGS.dashboard} replace={true} />;
   }
+  console.log(error, isError);
 
   return (
     <PageLayout>
@@ -81,6 +82,7 @@ const AddProfileImg = () => {
             >
               Next
             </Button>
+            <div>{isError && <ErrorMessage message={'Skip it and try it later'} />}</div>
           </form>
         </div>
 
