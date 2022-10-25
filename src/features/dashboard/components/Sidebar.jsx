@@ -33,9 +33,8 @@ const Sidebar = () => {
           <div key={index}>
             <NavLink
               to={item.slug}
-              className={`flex px-4 py-3 gap-x-3 transition-all rounded-l-full duration-300 bg-${
-                getMatch(item.slug) ? '[#50bbce]' : ''
-              } hover:bg-[#50bbce]`}
+              className={`flex px-4 py-3 gap-x-3 transition-all rounded-l-full duration-300 hover:bg-[#50bbce]`}
+              style={{ backgroundColor: getMatch(item.slug) ? '#50bbce' : '' }}
             >
               <img src={item.icon} alt="" />
               <span className="text-white text-base font-semibold flex self-center">{item.title}</span>
