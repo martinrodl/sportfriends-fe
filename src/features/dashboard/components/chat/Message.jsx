@@ -1,6 +1,8 @@
 import React from 'react';
 
-export default function Message({ id, index, type, message, user, status }) {
+import avaratSvg from '../../assets/images/avatar.png';
+
+export default function Message({ id, index, type, message, name, status }) {
   return (
     <div
       key={index}
@@ -10,7 +12,7 @@ export default function Message({ id, index, type, message, user, status }) {
     >
       <div className="relative">
         <div>
-          <img width={60} height={60} src={user.dp} alt={user.name} />
+          <img width={60} height={60} src={avaratSvg} alt={name} />
         </div>
         <div className={` absolute bottom-2 text-xl right-1`}>
           <div

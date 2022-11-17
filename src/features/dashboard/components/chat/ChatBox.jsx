@@ -2,35 +2,39 @@ import React, { useState, useEffect, useRef } from 'react';
 import { IoMdSend } from 'react-icons/io';
 import { AiOutlinePaperClip, AiOutlineCamera } from 'react-icons/ai';
 import { BsEmojiSmileUpsideDown } from 'react-icons/bs';
+import ObjectID from 'bson-objectid';
 
 import avaratSvg from '../../assets/images/avatar.png';
 import Message from './Message';
 
-export default function ChatBox({ msgs }) {
+export default function ChatBox({ chat, userId, socket }) {
   const [msgValue, setMsgValue] = useState('');
-  const [messages, setMessages] = useState(msgs);
+  const [messages, setMessages] = useState(chat.messages);
+  // const [isConnected, setIsConnected] = useState(socket.connected);
   const msgBodyRef = useRef(null);
 
   const msgHandler = (e) => {
     setMsgValue(e.target.value);
   };
 
-  const sendmsg = () => {
-    if (msgValue != '') {
-      setMessages((crnt) => [
-        ...crnt,
-        {
-          id: 5,
-          user: { dp: avaratSvg, name: 'smith' },
-          type: 'send',
-          time: 'Online - Last seen, 2.02pm',
-          status: 'active',
-          message: msgValue,
-        },
-      ]);
-
-      setMsgValue('');
+  const sendmsg = (message) => {
+    if (!chat.id) {
+      socket.emit('newChat', ObjectID(), chat.participants, message);
+    } else {
+      socket.emit('newMessage', chat.id, message, (response) => {
+        console.log(response.status); // ok
+      });
     }
+
+    setMsgValue('');
+    setMessages((prevMessages) => [
+      ...prevMessages,
+      {
+        id: ObjectID(),
+        author: userId,
+        message: message,
+      },
+    ]);
   };
 
   useEffect(() => {
@@ -39,17 +43,17 @@ export default function ChatBox({ msgs }) {
 
   return (
     <div className="relative border rounded-3xl shadow-xl lg:col-span-2 order-last lg:order-first">
-      <Header item={msgs[0]} />
+      <Header name={chat.participants[0].name} avatar={avaratSvg} />
 
       <div>
         <div ref={msgBodyRef} className="h-[58vh] flex flex-col overflow-y-auto  relative px-4 2xl:px-6 ">
           <div className="w-full mt-auto mb-[20px]  h-max flex flex-col gap-4">
             {messages.map((msg, index) => (
               <Message
-                type={msg.type}
+                type={msg.author === userId ? 'sent' : 'received'}
                 message={msg.message}
-                user={msg.user}
-                status={msg.status}
+                user={chat.participants[0].name}
+                status={'active'}
                 index={index}
                 key={'message ' + index}
               />
@@ -95,16 +99,16 @@ export default function ChatBox({ msgs }) {
   );
 }
 
-function Header({ item }) {
+function Header({ name, avatar }) {
   return (
     <div className="flex justify-between px-6 pt-6 border-b pb-5">
       <div className="flex gap-x-4">
         <div>
-          <img src={item.user.dp} alt="" className="w-[50px] h-[50px] rounded-full" />
+          <img src={name} alt="" className="w-[50px] h-[50px] rounded-full" />
         </div>
         <div className="flex flex-col self-center">
-          <h2 className="text-xl">{item.user.name}</h2>
-          <p className="text-sm font-light">{item.time}</p>
+          <h2 className="text-xl">{avatar}</h2>
+          {/* <p className="text-sm font-light">{item.time}</p> */}
         </div>
       </div>
     </div>

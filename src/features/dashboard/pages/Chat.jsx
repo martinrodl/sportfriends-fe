@@ -1,45 +1,54 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
+import { io } from 'socket.io-client';
+import { useSelector } from 'react-redux';
+
+import { selectAuth } from 'store/slices';
+import { useGetUserChatsQuery } from 'services/chatApi';
 
 import avaratSvg from '../assets/images/avatar.png';
 import ChatList from '../components/chat/ChatList';
 import ChatBox from '../components/chat/ChatBox';
 
 export default function Chat() {
+  const auth = useSelector(selectAuth);
+  const { data, isSuccess, error } = useGetUserChatsQuery();
+  const { chats } = data || {};
+  const location = useLocation();
   const [activeChat, setActiveChat] = useState();
 
-  const msgs = [
-    {
-      id: 1,
-      user: { dp: avaratSvg, name: 'smith' },
-      type: 'send',
-      time: 'Last seen, 5.02pm',
-      status: 'active',
-      message: 'hello how are you?',
+  const socket = io('ws://martinrodl.me/api/socket/chat', {
+    reconnectionDelayMax: 10000,
+    auth: {
+      token: auth.accessToken,
     },
-    {
-      id: 2,
-      user: { dp: avaratSvg, name: 'bacha' },
-      type: 'send',
-      time: 'Online',
-      status: 'active',
-      message: 'waiting for you',
-    },
-    {
-      id: 3,
-      user: { dp: avaratSvg, name: 'chikna' },
-      type: 'received',
-      time: 'Last seen, 10.52am',
-      status: 'active',
-      message: 'I am in class',
-    },
-  ];
+  });
+
+  const createNewChat = (newUserId) => {
+    return {
+      messages: [],
+      participants: [newUserId, auth.id],
+    };
+  };
+
+  useEffect(() => {
+    if (isSuccess) {
+      if (location.state?.userId) {
+        const newChat = createNewChat(location.state.userId);
+        setActiveChat(newChat);
+      } else {
+        console.log('**', activeChat);
+        setActiveChat(chats[0]);
+      }
+    }
+  }, [isSuccess]);
 
   return (
     <div className="relative rounded-[30px] bg-smokeGray">
       <div className="py-5 ">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 px-6">
-          <ChatBox msgs={msgs} />
-          <ChatList chats={msgs} setActiveChat={setActiveChat} />
+          {activeChat ? <ChatBox chat={activeChat} socket={socket} userId={auth.id} /> : null}
+          <ChatList chats={chats} setActiveChat={setActiveChat} />
         </div>
       </div>
     </div>

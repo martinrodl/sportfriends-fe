@@ -20,8 +20,6 @@ const MyActions = () => {
   } = useGetUserEventsQuery();
   const { data: datingPosts, isSuccess: datingSuccess, error: datingError } = useGetUserDatingPostsQuery();
 
-  console.log('eventsData ', eventsData);
-
   return (
     <div className="max-w-[920px] mx-auto px-4 mt-12">
       <div className="">

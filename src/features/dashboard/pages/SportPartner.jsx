@@ -16,6 +16,7 @@ export default function SportPartner() {
     isSuccess: datingSuccess,
     error: datingError,
   } = useGetDatingPostsQuery(objectToParametrs(filters));
+  console.log(datingPosts);
 
   return (
     <div className="w-full min-h-screen">
@@ -33,6 +34,7 @@ export default function SportPartner() {
               sport={post.sports[0]}
               address={post.address}
               key={post.id}
+              author={post.author}
             />
           ))}
       </div>

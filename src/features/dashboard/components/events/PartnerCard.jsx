@@ -1,9 +1,20 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
+import { SLUGS } from '../../shared/constants';
 import AvaratIMG from '../../assets/images/avatar.png';
 import PlaceholderSVG from '../../assets/images/placeholder.svg';
 
-const PartnerCard = ({ title, description, address, sport }) => {
+const PartnerCard = ({ title, description, address, sport, author }) => {
+  const navigate = useNavigate();
+  const navigateToChat = () => {
+    navigate(`/dashboard/${SLUGS.Chat}`, {
+      state: {
+        userId: author.id,
+        userName: author.name,
+      },
+    });
+  };
   return (
     <div>
       <div className="w-full bg-[#FAFAFA] shadow-xl rounded-md mb-12">
@@ -21,8 +32,11 @@ const PartnerCard = ({ title, description, address, sport }) => {
             <div className="text-center">
               <h1 className="text-[12px] md:text-xl font-normal text-black ">{sport}</h1>
               <div className="flex justify-center  my-6">
-                <button className="bg-primary text-white rounded-full md:min-w-[148px] md:min-h-[43px] min-w-[120px] min-h-[35px] text-center transition-all cursor-pointer flex items-center justify-center duration-300 hover:shadow-lg">
-                  Send
+                <button
+                  onClick={navigateToChat}
+                  className="bg-primary text-white rounded-full md:min-w-[148px] md:min-h-[43px] min-w-[120px] min-h-[35px] text-center transition-all cursor-pointer flex items-center justify-center duration-300 hover:shadow-lg"
+                >
+                  Send message
                 </button>
               </div>
               <div className="flex justify-center gap-2">
