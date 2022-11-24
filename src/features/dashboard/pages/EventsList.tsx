@@ -5,7 +5,7 @@ import { useGetEventsQuery } from 'services/eventApi';
 import { selectFilter } from 'store/slices';
 import { objectToParametrs } from 'shared/utils';
 
-import EventFullCard from '../components/EventFullCard';
+import EventFullCard from '../components/events/EventFullCard';
 import Filter from '../components/filter/Filter';
 
 const Events = () => {

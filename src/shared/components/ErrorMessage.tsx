@@ -1,6 +1,11 @@
 import React from 'react';
 
-export default function ErrorMessage({ message, apiErrors }) {
+interface ErrorMessagePropsI {
+  message?: string;
+  apiErrors?: { message: string }[];
+}
+
+export default function ErrorMessage({ message, apiErrors }: ErrorMessagePropsI) {
   const renderMessage = (message, key = 'error') => (
     <p className="text-[13px] text-error" key={key}>{`* ${message}`}</p>
   );

@@ -13,3 +13,4 @@ export { default as MapInput } from './forms/MapInput';
 export { default as ErrorMessage } from './ErrorMessage';
 export { default as Map } from './Map';
 export { default as ProtectedRoutes } from './ProtectedRoutes';
+export { default as SwitchMenu } from './SwitchMenu';

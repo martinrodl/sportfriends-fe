@@ -3,7 +3,13 @@ module.exports = {
     browser: true,
     es2021: true,
   },
-  extends: ['eslint:recommended', 'plugin:react/recommended'],
+  extends: [
+    'eslint:recommended',
+    'plugin:react/recommended',
+    'plugin:@typescript-eslint/eslint-recommended',
+    'plugin:@typescript-eslint/recommended',
+  ],
+  parser: '@typescript-eslint/parser',
   parserOptions: {
     ecmaFeatures: {
       jsx: true,
@@ -11,14 +17,14 @@ module.exports = {
     ecmaVersion: 'latest',
     sourceType: 'module',
   },
-  plugins: ['react', 'prettier', 'import'],
+  plugins: ['react', 'prettier', 'import', '@typescript-eslint'],
   settings: {
     react: {
       version: 'detect',
     },
     'import/resolver': {
       node: {
-        extensions: ['.js', '.jsx'],
+        extensions: ['.js', '.jsx', '.ts', '.tsx'],
         moduleDirectory: ['node_modules', 'src'],
         paths: ['src'],
       },
@@ -26,13 +32,9 @@ module.exports = {
   },
   rules: {
     'react/react-in-jsx-scope': 'off',
+    'react/jsx-filename-extension': ['warn', { extensions: ['.tsx', '.jsx'] }],
     'no-console': 'warn',
-    'no-unused-vars': [
-      'warn',
-      {
-        argsIgnorePattern: '^_',
-      },
-    ],
+    'no-unused-vars': 'off',
     'react/prop-types': 'off',
     'import/no-unresolved': ['error', { commonjs: true, amd: true }],
     'import/named': 'error',
