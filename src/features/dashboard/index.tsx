@@ -1,4 +1,3 @@
-import React from 'react';
 import { Route, Routes } from 'react-router-dom';
 
 import { SLUGS } from './shared/constants';
@@ -20,7 +19,7 @@ const Dashboard = () => {
   return (
     <DashboardLayout>
       <Routes>
-        <Route index path={SLUGS.Home} element={<Home />} />
+        <Route path={SLUGS.Home} element={<Home />} />
         <Route path={SLUGS.MyActions} element={<MyActions />} />
         <Route path={SLUGS.Events} element={<EventsList />} />
         <Route path={SLUGS.EventsMap} element={<EventMap />} />

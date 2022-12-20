@@ -1,5 +1,5 @@
 export const SLUGS = {
-  Home: '',
+  Home: 'home',
   MyActions: 'my-actions',
   Event: 'event',
   Events: 'events',

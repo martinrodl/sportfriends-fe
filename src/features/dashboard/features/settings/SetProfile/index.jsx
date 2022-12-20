@@ -5,7 +5,7 @@ import FormControlLabel from '@mui/material/FormControlLabel';
 import Checkbox from '@mui/material/Checkbox';
 import { FiChevronDown } from 'react-icons/fi';
 
-const Index = ({ Name }) => {
+const Index = () => {
   return (
     <div className="w-full mx-auto px-10">
       <div>

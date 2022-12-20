@@ -21,7 +21,7 @@ interface EventPropsI {
 const EventCard = ({ event }: EventPropsI) => {
   const { id, title, address, sport, timeEnd, timeStart, maxParticipants, participants } = event;
   return (
-    <Link to={'/dashboard/' + id}>
+    <Link to={'/dashboard/event/' + id}>
       <div className="grid grid-cols-2 border border-gray-200 p-6 shadow mb-4">
         <h2 className="col-span-2 text-xl font-semibold mb-2">{title}</h2>
         <p className="text-sm font-medium mb-4">{sport}</p>
