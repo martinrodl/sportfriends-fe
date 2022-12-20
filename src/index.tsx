@@ -13,7 +13,7 @@ import Dashboard from './features/dashboard';
 import Login from './features/login';
 import { store } from './store';
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById('root')!);
 root.render(
   <React.StrictMode>
     <ThemeProvider theme={theme}>

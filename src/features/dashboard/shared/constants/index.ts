@@ -6,7 +6,7 @@ export const SLUGS = {
   EventsMap: 'event-map',
   CreateEvent: 'create-event',
   SportsPartner: 'sports-partner',
-  CreateSportsPartnerPost: 'create-sports-partner-post',
+  CreateSportsPartnerPost: 'create-partner-post',
   Friends: 'friends',
   Settings: 'settings',
   UserProfile: 'user-profile',
