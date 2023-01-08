@@ -1,41 +1,22 @@
-import React from 'react';
+import { ReactNode } from 'react';
 
-const Button = ({
-  position,
-  width,
-  height,
-  children,
-  onClick,
-  className,
-  type,
-  fontSize,
-  fontWeight,
-  bg,
-  brColor,
-  icon,
-  iconSize,
-  brRadius,
-  px,
-  ...props
-}) => {
+interface ButtonProps {
+  onClick?: (e: any) => void;
+  className: string;
+  px?: number;
+  icon?: ReactNode;
+  iconSize?: number;
+  children: ReactNode;
+  type: 'button' | 'submit' | 'reset';
+}
+const Button = ({ onClick, className, px, iconSize, children, icon, type }: ButtonProps) => {
   return (
     <button
-      type={type}
       onClick={onClick}
-      style={{
-        maxWidth: width,
-        height: height,
-        fontSize: fontSize,
-        fontWeight: fontWeight,
-        background: bg,
-        border: brColor,
-        position: position,
-        borderRadius: brRadius,
-      }}
+      type={type}
       className={`${className} ${
         px === undefined ? 'px-[20px]' : px
       } relative inline-flex   text-primary justify-center gap-x-[10px] font-semibold items-center w-full overflow-hidden border-2 rounded-[5px] transition-all duration-300 ease-in-out border-primary`}
-      {...props}
     >
       {icon != undefined && <span className={`${iconSize}  h-min flex items-center`}>{icon}</span>}
       <span>{children}</span>

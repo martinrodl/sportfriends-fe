@@ -74,12 +74,7 @@ const AddProfileImg = () => {
               </div>
             </div>
             {error?.data?.errors && <ErrorMessage apiErrors={error.data.errors} />}
-            <Button
-              onClick={onSubmit}
-              bg="#04A5C2"
-              className="mt-[36px] md:mt-[110px] text-white w-full min-h-[60px]"
-              type="submit"
-            >
+            <Button onClick={onSubmit} className="mt-[36px] md:mt-[110px] text-white w-full min-h-[60px]" type="submit">
               Next
             </Button>
             <div>{isError && <ErrorMessage message={'Skip it and try it later'} />}</div>

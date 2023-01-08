@@ -49,7 +49,7 @@ const MoreInfo = () => {
                 <TextAreaInput label="description" placeholder="Description" rows={3} />
               </div>
               {error?.data?.errors && <ErrorMessage apiErrors={error.data.errors} />}
-              <Button type="submit" bg="#04A5C2" className="mt-[40px] text-white w-full min-h-[60px]">
+              <Button type="submit" className="mt-[40px] text-white w-full min-h-[60px]">
                 ALMOST DONE!
               </Button>
             </Form>

@@ -1,6 +1,6 @@
 import { useGetUserEventsQuery } from 'services/eventApi';
 
-import EventCard from './components/EventCard';
+import EventCard from './EventCard';
 
 interface EventsPropsI {
   type: 'joined' | 'created';

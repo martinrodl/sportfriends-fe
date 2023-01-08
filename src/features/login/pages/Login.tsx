@@ -1,6 +1,7 @@
+import { useEffect } from 'react';
 import { Formik, Form } from 'formik';
 import * as Yup from 'yup';
-import { Link, Navigate } from 'react-router-dom';
+import { Link, Navigate, useNavigate } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 
 import { SubmitButton, ErrorMessage, TextInput, CheckboxInput } from 'shared/components';
@@ -12,13 +13,16 @@ import PageLayout from '../components/PageLayout';
 
 const Login = () => {
   const dispatch = useDispatch();
+  const navigate = useNavigate();
   const [signinUser, { data, isSuccess, error }] = useSigninUserMutation();
 
-  if (isSuccess) {
-    const { id, email, accessToken } = data;
-    dispatch(setCredentials({ accessToken, id, email }));
-    return <Navigate to={SLUGS.dashboard} replace={true} />;
-  }
+  useEffect(() => {
+    if (isSuccess) {
+      const { id, email, accessToken } = data;
+      dispatch(setCredentials({ accessToken, id, email }));
+      navigate(SLUGS.dashboard);
+    }
+  }, [isSuccess]);
 
   return (
     <PageLayout>
@@ -53,7 +57,7 @@ const Login = () => {
               </div>
               <div className="flex justify-between mt-[20px] items-center">
                 <div className="flex items-center gap-1">
-                  <CheckboxInput label="remember" />
+                  <CheckboxInput label="remember" labelText="" />
                   <h4 className="text-[#505050] font-semibold text-[14px]">Remember me</h4>
                 </div>
                 <Link to="/" className="text-primary text-sm font-semibold underline h-max">

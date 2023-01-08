@@ -1,12 +1,12 @@
-import { Route, Routes } from 'react-router-dom';
+import { Route, Routes, Navigate } from 'react-router-dom';
 
 import { SLUGS } from './shared/constants';
 import DashboardLayout from './components/DashboardLayout';
-import Home from './features/home/Home';
+import Home from './pages/Home';
 import EventsList from './pages/EventsList';
 import Friends from './pages/Friends';
 import SportsPartner from './pages/SportPartner';
-import Settings from './features/settings/SetProfile';
+import Settings from './pages/Settings';
 import MyAccount from './features/settings/MyAccount';
 import CreateEventForm from './pages/CreateEventForm';
 import EventMap from './pages/EventsMap';
@@ -31,6 +31,7 @@ const Dashboard = () => {
         <Route path={SLUGS.Settings} element={<Settings />} />
         <Route path={SLUGS.UserProfile} element={<MyAccount />} />
         <Route path={SLUGS.Event + '/:id'} element={<EventDetail />} />
+        <Route path="*" element={<Navigate to={SLUGS.Home} />} />
       </Routes>
     </DashboardLayout>
   );

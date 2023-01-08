@@ -23,9 +23,7 @@ const Sidebar = () => {
   return (
     <div className=" bg-[#04A5C2] h-full pl-2  py-10">
       <Link to="/">
-        <a>
-          <img src={logo} alt="" className="mb-10" />
-        </a>
+        <img src={logo} alt="" className="mb-10" />
       </Link>
       {links.map((item, index) => {
         return (

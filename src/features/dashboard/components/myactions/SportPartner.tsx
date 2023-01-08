@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 
 import { useGetUserDatingPostsQuery } from 'services/datingApi';
 
-import PartnerCard from './components/PartnerCard';
+import PartnerCard from './PartnerCard';
 
 const SportPartner = (): JSX.Element => {
   const { data, isSuccess, error } = useGetUserDatingPostsQuery('');

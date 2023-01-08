@@ -2,22 +2,23 @@ import { useState } from 'react';
 
 import { SwitchMenu } from 'shared/components';
 
-import Events from '../components/myactions/Events';
-import SportPartner from '../components/myactions/SportPartner';
+import SetProfile from '../components/settings/SetProfile';
+import SetProfileImg from '../components/settings/SetProfileImg';
+import SetCredentials from '../components/settings/SetCredentials';
 
-const MyActions = () => {
+const Settings = () => {
   const menuItems = [
     {
-      text: 'Joined Events',
-      component: <Events type="joined" />,
+      text: 'Profile',
+      component: <SetProfile />,
     },
     {
-      text: 'Created Events',
-      component: <Events type="created" />,
+      text: 'Profile image',
+      component: <SetProfileImg />,
     },
     {
-      text: 'Sport Partner',
-      component: <SportPartner />,
+      text: 'Credentials',
+      component: <SetCredentials />,
     },
   ];
 
@@ -33,4 +34,4 @@ const MyActions = () => {
   );
 };
 
-export default MyActions;
+export default Settings;

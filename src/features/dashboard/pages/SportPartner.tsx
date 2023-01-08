@@ -19,7 +19,7 @@ export default function SportPartner() {
   console.log(datingPosts);
 
   return (
-    <div className="w-full min-h-screen">
+    <div className="max-w-[920px] mx-auto px-4 mt-12 min-h-screen">
       <div className="max-w-7xl mx-auto p-8">
         <div className="mb-8">
           <Filter enableFilters={['gender', 'sport', 'distance']} />
