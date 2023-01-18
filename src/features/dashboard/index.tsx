@@ -1,13 +1,12 @@
 import { Route, Routes, Navigate } from 'react-router-dom';
 
 import { SLUGS } from './shared/constants';
-import DashboardLayout from './components/DashboardLayout';
+import DashboardLayout from './components/layout/DashboardLayout';
 import Home from './pages/Home';
 import EventsList from './pages/EventsList';
 import Friends from './pages/Friends';
 import SportsPartner from './pages/SportPartner';
 import Settings from './pages/Settings';
-import MyAccount from './features/settings/MyAccount';
 import CreateEventForm from './pages/CreateEventForm';
 import EventMap from './pages/EventsMap';
 import Chat from './pages/Chat';
@@ -24,12 +23,11 @@ const Dashboard = () => {
         <Route path={SLUGS.Events} element={<EventsList />} />
         <Route path={SLUGS.EventsMap} element={<EventMap />} />
         <Route path={SLUGS.CreateEvent} element={<CreateEventForm />} />
-        <Route path={SLUGS.Friends} element={<Friends />} />
+        <Route path={SLUGS.Social} element={<Friends />} />
         <Route path={SLUGS.SportsPartner} element={<SportsPartner />} />
         <Route path={SLUGS.CreateSportsPartnerPost} element={<CreateSportsPartnerForm />} />
         <Route path={SLUGS.Chat} element={<Chat />} />
         <Route path={SLUGS.Settings} element={<Settings />} />
-        <Route path={SLUGS.UserProfile} element={<MyAccount />} />
         <Route path={SLUGS.Event + '/:id'} element={<EventDetail />} />
         <Route path="*" element={<Navigate to={SLUGS.Home} />} />
       </Routes>
