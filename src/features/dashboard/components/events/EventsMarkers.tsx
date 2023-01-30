@@ -5,7 +5,7 @@ import L from 'leaflet';
 
 import { MAX_ZOOM } from 'shared/constants';
 
-import MarkerPopupTable from './MarkerPopupTable';
+import MarkerPopup from './MarkerPopup';
 
 const icons = {};
 const fetchIcon = (count, size) => {
@@ -87,7 +87,7 @@ const EventsMarkers = ({ data }) => {
                 },
               }}
             >
-              {zoom >= MAX_ZOOM && <Popup>{<MarkerPopupTable data={supercluster.getLeaves(cluster.id)} />}</Popup>}
+              {zoom >= MAX_ZOOM && <Popup>{<MarkerPopup data={supercluster.getLeaves(cluster.id)} />}</Popup>}
             </Marker>
           );
         } else {
@@ -104,7 +104,7 @@ const EventsMarkers = ({ data }) => {
                 },
               }}
             >
-              {zoom >= MAX_ZOOM && <Popup>{<MarkerPopupTable data={[{ event: cluster.event }]} />}</Popup>}
+              {zoom >= MAX_ZOOM && <Popup>{<MarkerPopup data={[{ event: cluster.event }]} />}</Popup>}
             </Marker>
           );
         }

@@ -10,14 +10,18 @@ import { MAX_ZOOM } from 'shared/constants';
 import Filter from '../components/filter/Filter';
 import EventsMarkers from '../components/events/EventsMarkers';
 
+interface MapOptions {
+  center: [number, number];
+}
+
 export default function EventsMap() {
-  const { data: userData, isLoading: userLoading, isSuccess: userSuccess, error: userError } = useGetUserQuery();
+  const { data: userData, isLoading: userLoading, isSuccess: userSuccess, error: userError } = useGetUserQuery('');
   const {
     data: eventsData,
     isLoading: eventsLoading,
     isSuccess: eventsSuccess,
     error: eventsError,
-  } = useGetEventsQuery();
+  } = useGetEventsQuery('');
 
   const position = userData?.location.coordinates;
 
@@ -37,7 +41,7 @@ export default function EventsMap() {
             zoom={11}
             scrollWheelZoom={false}
             maxZoom={MAX_ZOOM}
-            className="h-[calc(70vh_-_5rem)] w-full z-10"
+            className="h-[calc(70vh_-_5rem)] w-[calc(70vw_-_5rem)] z-10"
           >
             <TileLayer
               attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'

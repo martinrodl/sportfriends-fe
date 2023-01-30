@@ -5,9 +5,12 @@ export interface State {
 }
 
 export interface Comment {
-  id: string;
+  author: {
+    id: string;
+    name: string;
+  };
   text: string;
-  author: string;
+  createdAt: Date;
 }
 
 export interface Post {
@@ -20,6 +23,7 @@ export interface Post {
   comments: Comment[];
   createdAt: Date;
   updatedAt: Date;
+  likes: string[];
 }
 
 export interface Friendship {
@@ -32,4 +36,19 @@ export interface FriendshipsResponse {
   waitingResponseFriendships: Friendship[];
   requestedFriendships: Friendship[];
   confirmedFriendships: Friendship[];
+}
+
+export interface Event {
+  id: string;
+  title: string;
+  sport: string;
+  address: string;
+  timeStart: Date;
+  timeEnd: Date;
+  participants: { id: string }[];
+  maxParticipants: number;
+  description: string;
+  comments: Comment[];
+  author: string | { id: string; name: string };
+  outdoor: boolean;
 }

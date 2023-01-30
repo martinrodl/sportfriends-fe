@@ -18,15 +18,15 @@ const DashboardLayout = ({ children }: DashboardLayoutProps) => {
     setSidebarOpen(false);
   };
   return (
-    <div className="w-screen h-1 bg-[#EFEFEF]">
+    <div className="w-screen h-1">
       <Modal isOpened={sidebarOpen} onRequestClose={closeSideBar}>
         <Sidebar isClosed={sidebarOpen} onClose={closeSideBar} />
       </Modal>
-      <div className="flex flex-row flex-1">
+      <div className="flex flex-row flex-1 bg-[#FDFDFD]">
         <div className="hidden md:block mt-5 ml-5">
           <Sidebar isClosed={sidebarOpen} onClose={closeSideBar} />
         </div>
-        <main className="flex-1 flex flex-col w-1">
+        <main className="flex-1 flex flex-col w-1 max-w-5xl">
           <Navbar openSideBar={openSideBar} />
           <>{children}</>
         </main>

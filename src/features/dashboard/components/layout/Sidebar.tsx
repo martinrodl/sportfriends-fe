@@ -74,19 +74,9 @@ const links = [
     icon: eventsMapIcon,
   },
   {
-    title: 'Create Event',
-    slug: SLUGS.CreateEvent,
-    icon: createEventIcon,
-  },
-  {
     title: 'Sports partner',
     slug: SLUGS.SportsPartner,
     icon: sportsPartnerIcon,
-  },
-  {
-    title: 'Create partner post',
-    slug: SLUGS.CreateSportsPartnerPost,
-    icon: createIcon,
   },
   {
     title: 'Social',

@@ -1,17 +1,29 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { FiLogOut, FiSearch } from 'react-icons/fi';
 import { FaUserAlt } from 'react-icons/fa';
-
 import { BsThreeDotsVertical } from 'react-icons/bs';
+import { Link } from 'react-router-dom';
 
 import { setCredentials } from 'store/slices';
 import { useGetUserQuery } from 'services/userApi';
+import Modal2 from 'shared/components/Modal2';
 
+import { SLUGS } from '../../shared/constants';
+import ProfileIcon from '../ProfileIcon';
 import menu from '../../assets/new/Menu.svg';
-
-import notificationCircle from '../../assets/images/ion_notifications-circle.svg';
-import messageCircle from '../../assets/images/bell.svg';
+import { ReactComponent as NotificationIcon } from '../../assets/new/Notification.svg';
+import { ReactComponent as MessageIcon } from '../../assets/new/Message.svg';
+import { ReactComponent as AddIcon } from '../../assets/new/Add.svg';
+import { ReactComponent as CreateEventIcon } from '../../assets/new/CreateEventIcon.svg';
+import { ReactComponent as CreateSportparnerIcon } from '../../assets/new/CreateSportparnerIcon.svg';
+import { ReactComponent as CreateTeamIcon } from '../../assets/new/CreateTeamIcon.svg';
+import { ReactComponent as CreateOrganization } from '../../assets/new/CreateOrganizationIcon.svg';
+interface MenuI {
+  title: string;
+  slug: string;
+  icon: React.ReactNode;
+}
 
 interface NavbarProps {
   openSideBar: () => void;
@@ -20,6 +32,7 @@ interface NavbarProps {
 const Navbar = ({ openSideBar }: NavbarProps) => {
   const { data: userData } = useGetUserQuery('');
   const { name, profileImg } = userData || {};
+  const [isOpenedCreateMenu, setIsOpenedCreateMenu] = useState(false);
 
   const navigate = useNavigate();
 
@@ -27,6 +40,24 @@ const Navbar = ({ openSideBar }: NavbarProps) => {
     setCredentials({ accessToken: '' });
     navigate('/');
   };
+
+  const modalMenu = (menuArray: MenuI[]) =>
+    menuArray.map((item, index) => (
+      <Link
+        onClick={() => {
+          setIsOpenedCreateMenu(false);
+        }}
+        to={'/dashboard/' + item.slug}
+        className={`flex items-center bg-white gap-x-2 px-2 h-11 shadow-xl hover:bg-primary
+        hover:text-white
+         ${menuArray.length - 1 === index ? '' : 'border-b'} 
+         ${0 !== index ? '' : 'rounded-t-xl'} ${menuArray.length - 1 === index ? 'rounded-b-xl' : ''}
+        `}
+      >
+        {item.icon}
+        <h4>{item.title}</h4>
+      </Link>
+    ));
 
   const getProfileIcon = () => {
     if (profileImg) {
@@ -56,16 +87,33 @@ const Navbar = ({ openSideBar }: NavbarProps) => {
           <button onClick={openSideBar} className="flex-1 ml-5 md:hidden flex-shrink-0">
             <img src={menu} alt="menu" className="w-5 md:w-3 " />
           </button>
-          <button className="h-10 w-10 md:h-14 md:w-14 flex-shrink-0">
-            <img src={notificationCircle} alt="notification" />
+          <button
+            onClick={() => {
+              if (!isOpenedCreateMenu) {
+                setIsOpenedCreateMenu(true);
+              }
+            }}
+          >
+            <AddIcon className="h-6 w-6 md:h-8 md:w-8 flex-shrink-0 ml-2" />
+            <Modal2
+              isOpened={isOpenedCreateMenu}
+              onRequestClose={() => {
+                setIsOpenedCreateMenu(false);
+              }}
+            >
+              {modalMenu(plusMenu)}
+            </Modal2>
           </button>
-          <button className="h-10 w-10 md:h-14 md:w-14 flex-shrink-0">
-            <img src={messageCircle} alt="messages" />
+          <button>
+            <NotificationIcon className="h-6 w-6 md:h-8 md:w-8 flex-shrink-0 ml-2" />
+          </button>
+          <button>
+            <MessageIcon className="h-6 w-6 md:h-8 md:w-8 flex-shrink-0 ml-2 mr-2" />
           </button>
           <div className="lg:border-l border-l-[#DADADA] md:px-10">
             <div className="flex self-center  gap-x-2">
-              <button className="flex">
-                {getProfileIcon()}
+              <button className="flex gap-x-2">
+                <ProfileIcon />
                 <span className="hidden text-base font-semibold md:flex self-center">{'' || name}</span>
               </button>
               <button onClick={onLogout}>
@@ -83,3 +131,26 @@ const Navbar = ({ openSideBar }: NavbarProps) => {
 };
 
 export default Navbar;
+
+const plusMenu = [
+  {
+    title: 'Create Event',
+    slug: SLUGS.CreateEvent,
+    icon: <CreateEventIcon />,
+  },
+  {
+    title: 'Add Sportpartner',
+    slug: SLUGS.CreateSportsPartnerPost,
+    icon: <CreateSportparnerIcon />,
+  },
+  {
+    title: 'Create Organization',
+    slug: SLUGS.Home,
+    icon: <CreateTeamIcon />,
+  },
+  {
+    title: 'Create Team',
+    slug: SLUGS.Home,
+    icon: <CreateOrganization />,
+  },
+];

@@ -34,9 +34,39 @@ export const postApi = createApi({
       }),
       invalidatesTags: ['posts'],
     }),
+    likePost: builder.mutation({
+      query: (postId: string) => ({
+        url: `post/${postId}/like`,
+        method: 'PUT',
+      }),
+      invalidatesTags: ['posts'],
+    }),
+    unlikePost: builder.mutation({
+      query: (postId: string) => ({
+        url: `post/${postId}/unlike`,
+        method: 'PUT',
+      }),
+      invalidatesTags: ['posts'],
+    }),
+    sendPostComment: builder.mutation<Post, { postId: string; text: string }>({
+      query: ({ postId, text }) => ({
+        url: `post/${postId}/comment`,
+        method: 'POST',
+        body: {
+          text,
+        },
+      }),
+      invalidatesTags: ['posts'],
+    }),
   }),
 });
 
 // Export hooks for usage in functional components, which are
 // auto-generated based on the defined endpoints
-export const { useGetPostsQuery, useCreatePostMutation } = postApi;
+export const {
+  useGetPostsQuery,
+  useCreatePostMutation,
+  useLikePostMutation,
+  useUnlikePostMutation,
+  useSendPostCommentMutation,
+} = postApi;

@@ -1,23 +1,16 @@
 import moment from 'moment';
 import { Link } from 'react-router-dom';
 
+import { Event as EventI } from 'models';
+
 import { SLUGS } from '../../shared/constants';
+import Event from '../Event';
 
-interface EventI {
-  id: string;
-  title: string;
-  sport: string;
-  timeStart: Date;
-  timeEnd: Date;
-  participants: { id: string }[];
-  maxParticipants: number;
-}
-
-interface MarkerPopupTablePropsI {
+interface MarkerPopupPropsI {
   data: { event: EventI }[];
 }
 
-const MarkerPopupTable = ({ data }: MarkerPopupTablePropsI) => {
+const MarkerPopup = ({ data }: MarkerPopupPropsI) => {
   const headTableArray = ['Title', 'Sport', 'Date', 'Time', 'Option'];
   const getHeadTable = (text) => (
     <th scope="col" className="w-[92px] h-[56px] text-[#080E0B] bg-[#54D2E0] text-center font-medium">
@@ -25,7 +18,7 @@ const MarkerPopupTable = ({ data }: MarkerPopupTablePropsI) => {
     </th>
   );
 
-  const getOneRow = (item: { event: EventI }) => {
+  const getOneRow = (item: { event: Event }) => {
     const { id, title, sport, timeStart } = item.event;
     return (
       <tr className="h-[56px] text-[#080E0B] text-base text-center ">
@@ -42,16 +35,26 @@ const MarkerPopupTable = ({ data }: MarkerPopupTablePropsI) => {
     );
   };
 
-  return (
-    <div>
-      <table className="min-w-full border-0 divide-y divide-gray-200 border-collapse border border-slate-500">
-        <thead className="bg-gray-50">
-          <tr>{headTableArray.map(getHeadTable)}</tr>
-        </thead>
-        <tbody className="bg-white divide-y divide-gray-200">{data.map(getOneRow)}</tbody>
-      </table>
-    </div>
+  const getTable = () => (
+    <table className="min-w-full border-0 divide-y divide-gray-200 border-collapse border border-slate-500">
+      <thead className="bg-gray-50">
+        <tr>{headTableArray.map(getHeadTable)}</tr>
+      </thead>
+      <tbody className="bg-white divide-y divide-gray-200">{data.map(getOneRow)}</tbody>
+    </table>
   );
+
+  const getEvent = () => {
+    const { event } = data[0];
+    console.log(event);
+    return (
+      <div className="top-[-50px]">
+        <Event event={event} />
+      </div>
+    );
+  };
+
+  return data.length > 1 ? getTable() : getEvent();
 };
 
-export default MarkerPopupTable;
+export default MarkerPopup;
