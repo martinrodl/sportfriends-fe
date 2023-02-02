@@ -1,20 +1,48 @@
 import React, { useState } from 'react';
 import Autocomplete from '@mui/material/Autocomplete';
 import { RxCross2 } from 'react-icons/rx';
+import { useDispatch, useSelector } from 'react-redux';
 
-const SelectSports = () => {
+import { selectSports, allFilterType, addSports, removeSport } from 'store/slices';
+import { SPORTS } from 'shared/constants';
+
+interface SelectSportsProps {
+  type: allFilterType;
+}
+
+const SelectSports = ({ type }: SelectSportsProps) => {
+  const dispatch = useDispatch();
   const [input, setInput] = useState(null);
-  console.log(input);
+  const filteredSports = useSelector(selectSports(type));
+
+  const renderSport = (sport: string) => {
+    const sportValue = SPORTS.filter((item) => item.value === sport)[0];
+    return (
+      <div className="flex" key={'filterSpots' + type + sport}>
+        <div className="border border-primary rounded-2xl flex items-center py-1 px-2">
+          <p className="">{sportValue.label}</p>
+          <button
+            onClick={() => {
+              dispatch(removeSport({ type, value: sportValue.value }));
+            }}
+          >
+            <RxCross2 className="ml-2" color="#54D2E0" />
+          </button>
+        </div>
+      </div>
+    );
+  };
+
   return (
-    <div className="flex flex-col w-[340px] h-40 rounded-3xl p-5 bg-white border border-primary ">
+    <div className="flex flex-col w-[340px] rounded-3xl p-5 bg-white border border-primary ">
       <h2 className="mb-2">Select Sports</h2>
       <div className="border-1 rounded-2xl h-12 border-primary bg-slate-100 flex items-center p-3 mb-2">
         <Autocomplete
           disablePortal
           id="combo-box-demo"
-          options={sports}
+          options={SPORTS}
           onChange={(e, val) => {
-            setInput(null);
+            setInput(val);
           }}
           value={input}
           renderInput={(params) => (
@@ -30,6 +58,9 @@ const SelectSports = () => {
         />
         <button
           onClick={() => {
+            if (input.value) {
+              dispatch(addSports({ type, value: input.value }));
+            }
             setInput(null);
           }}
           className="flex items-center bg-primary h-8 w-20 rounded-full"
@@ -40,22 +71,9 @@ const SelectSports = () => {
           <h4 className="text-white ml-2">Add</h4>
         </button>
       </div>
-      <div className="flex">
-        <div className="border border-primary rounded-2xl flex items-center py-1 px-2">
-          <p className="">Football</p>
-          <button>
-            <RxCross2 className="ml-2" color="#54D2E0" />
-          </button>
-        </div>
-      </div>
+      <div className="flex flex-wrap gap-2">{filteredSports.map((item) => renderSport(item))}</div>
     </div>
   );
 };
 
 export default SelectSports;
-
-const sports = [
-  { label: 'Football', value: 'football' },
-  { label: 'Hockey', value: 'hockey' },
-  { label: 'Cricket', value: 'cricket' },
-];

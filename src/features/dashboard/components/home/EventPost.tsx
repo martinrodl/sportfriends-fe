@@ -7,7 +7,7 @@ const EventPost = () => {
   return (
     <div className="w-full flex flex-col md:flex-row justify-between rounded-lg bg-white shadow-md  min-h-40 p-3">
       <div>
-        <h1 className="font-medium text-[#282828] text-xl">Lorem ipsum dolor sit amet</h1>
+        <h1 className="font-medium text-[#282828]">Lorem ipsum dolor sit amet</h1>
         <div className="flex items-center my-2">
           <img src={point} />
           <p className="text-[##282828] text-sm px-1">Barca</p>

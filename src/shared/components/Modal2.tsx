@@ -15,8 +15,8 @@ const Modal2 = ({ isOpened, onRequestClose, children }: ModalProps) => {
     <>
       {isOpened ? (
         <>
-          <div className="absolute z-50 ">
-            <div ref={ref} className="">
+          <div className="absolute z-50">
+            <div ref={ref} className="flex flex-col">
               {children}
             </div>
           </div>

@@ -88,9 +88,4 @@ const links = [
     slug: SLUGS.Chat,
     icon: chatIcon,
   },
-  {
-    title: 'Settings',
-    slug: SLUGS.Settings,
-    icon: settingsIcon,
-  },
 ];

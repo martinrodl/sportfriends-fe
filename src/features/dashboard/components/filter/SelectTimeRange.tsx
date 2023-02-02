@@ -1,14 +1,20 @@
-import React, { useState } from 'react';
 import moment from 'moment';
+import { useDispatch, useSelector } from 'react-redux';
 
 import { AdapterMoment } from '@mui/x-date-pickers/AdapterMoment';
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 import { TimePicker } from '@mui/x-date-pickers/TimePicker';
 import { RiArrowDownSLine } from 'react-icons/ri';
+import { selectStartTime, selectEndTime, setStartTime, setEndTime, timeFilterType } from 'store/slices';
 
-const SelectTimeRange = () => {
-  const [startDate, setStartDate] = useState(moment(moment().format('YYYY-MM-DD ') + '10:00'));
-  const [endDate, setEndDate] = useState(moment(moment().format('YYYY-MM-DD ') + '18:00'));
+interface SelectTimeRangeProps {
+  type: timeFilterType;
+}
+
+const SelectTimeRange = ({ type }: SelectTimeRangeProps) => {
+  const dispatch = useDispatch();
+  const startTime = useSelector(selectStartTime(type));
+  const endTime = useSelector(selectEndTime(type));
   return (
     <div className="flex flex-col w-[340px] h-40 rounded-3xl p-5 bg-white border border-primary">
       <h2 className="mb-2">Select Date</h2>
@@ -16,12 +22,16 @@ const SelectTimeRange = () => {
         <div className="flex gap-x-3">
           <TimePicker
             ampm={false}
-            value={startDate}
+            value={moment(startTime)}
             onChange={(newValue) => {
-              setStartDate(moment(newValue));
-              if (newValue.isAfter(endDate.subtract(1, 'minute'))) {
-                setEndDate(moment(newValue).add(1, 'day'));
-              }
+              dispatch(
+                setStartTime({
+                  type,
+                  value: moment(
+                    moment(startTime).format('YYYY-MM-DD') + ' ' + moment(newValue).format('HH:mm'),
+                  ).toISOString(),
+                }),
+              );
             }}
             components={{
               OpenPickerIcon: RiArrowDownSLine,
@@ -44,8 +54,17 @@ const SelectTimeRange = () => {
           />
           <TimePicker
             ampm={false}
-            value={endDate}
-            onChange={(newValue) => setEndDate(newValue)}
+            value={moment(endTime)}
+            onChange={(newValue) => {
+              dispatch(
+                setEndTime({
+                  type,
+                  value: moment(
+                    moment(endTime).format('YYYY-MM-DD') + ' ' + moment(newValue).format('HH:mm'),
+                  ).toISOString(),
+                }),
+              );
+            }}
             components={{
               OpenPickerIcon: RiArrowDownSLine,
             }}

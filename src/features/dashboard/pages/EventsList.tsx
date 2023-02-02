@@ -1,35 +1,33 @@
-import React from 'react';
 import { useSelector } from 'react-redux';
 
 import { useGetEventsQuery } from 'services/eventApi';
-import { selectFilter } from 'store/slices';
+import { selectSpecificFilter, filterTypeEnum } from 'store/slices';
 import { objectToParametrs } from 'shared/utils';
 
-import EventFullCard from '../components/events/EventFullCard';
-import Filter from '../components/filter/Filter';
+import Event from '../components/Event';
 import SelectSports from '../components/filter/SelectSports';
 import SelectDistance from '../components/filter/SelectDistance';
-import SelectGender from '../components/filter/SelectGender';
-import SelectLabels from '../components/filter/SelectLabels';
+
 import SelectDateRange from '../components/filter/SelectDateRange';
 import SelectTimeRange from '../components/filter/SelectTimeRange';
 
 const Events = () => {
-  const filters = useSelector(selectFilter);
+  const filters = useSelector(selectSpecificFilter(filterTypeEnum.listEvents));
+  console.log(objectToParametrs(filters));
   const { data: events, isLoading, isSuccess, error } = useGetEventsQuery(objectToParametrs(filters));
   return (
-    <div className="max-w-[920px] mx-auto px-4 mt-12">
-      <div className="max-w-7xl mx-auto p-8">
-        <div className="mb-8">
-          <Filter enableFilters={['sport', 'distance', 'date', 'startTime']} />
+    <div className="px-5 mt-12 flex justify-around max-w-5xl">
+      <div>
+        <div className="flex flex-wrap w-max-sm gap-2">
+          {Array.isArray(events) && events.map((event) => <Event event={event} key={event.id} />)}
         </div>
-        <SelectSports />
-        <SelectDistance />
-        <SelectGender />
-        <SelectLabels />
-        <SelectDateRange />
-        <SelectTimeRange />
-        {Array.isArray(events) && events.map((event) => <EventFullCard event={event} key={event.id} />)}
+      </div>
+      <div className="w-[320px] flex flex-col gap-y-2">
+        <h2>Filters</h2>
+        <SelectSports type={filterTypeEnum.listEvents} />
+        <SelectDistance type={filterTypeEnum.listEvents} />
+        <SelectDateRange type={filterTypeEnum.listEvents} />
+        <SelectTimeRange type={filterTypeEnum.listEvents} />
       </div>
     </div>
   );

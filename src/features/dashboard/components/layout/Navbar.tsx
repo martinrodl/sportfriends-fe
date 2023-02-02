@@ -1,8 +1,7 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { FiLogOut, FiSearch } from 'react-icons/fi';
+import { FiSearch } from 'react-icons/fi';
 import { FaUserAlt } from 'react-icons/fa';
-import { BsThreeDotsVertical } from 'react-icons/bs';
 import { Link } from 'react-router-dom';
 
 import { setCredentials } from 'store/slices';
@@ -19,11 +18,23 @@ import { ReactComponent as CreateEventIcon } from '../../assets/new/CreateEventI
 import { ReactComponent as CreateSportparnerIcon } from '../../assets/new/CreateSportparnerIcon.svg';
 import { ReactComponent as CreateTeamIcon } from '../../assets/new/CreateTeamIcon.svg';
 import { ReactComponent as CreateOrganization } from '../../assets/new/CreateOrganizationIcon.svg';
-interface MenuI {
-  title: string;
-  slug: string;
-  icon: React.ReactNode;
-}
+import { ReactComponent as ViewProfileIcon } from '../../assets/new/ProfileMenuIcon.svg';
+import { ReactComponent as SetProfileIcon } from '../../assets/new/SetProfileMenuIcon.svg';
+import { ReactComponent as CredentialsIcon } from '../../assets/new/CredentialsMenuIcon.svg';
+import { ReactComponent as SettingsIcon } from '../../assets/new/SettingsMenuIcon.svg';
+import { ReactComponent as LogoutIcon } from '../../assets/new/LogoutMenuIcon.svg';
+
+type MenuI =
+  | {
+      title: string;
+      slug: string;
+      icon: React.ReactNode;
+    }
+  | {
+      title: string;
+      action: () => void;
+      icon: React.ReactNode;
+    };
 
 interface NavbarProps {
   openSideBar: () => void;
@@ -33,6 +44,7 @@ const Navbar = ({ openSideBar }: NavbarProps) => {
   const { data: userData } = useGetUserQuery('');
   const { name, profileImg } = userData || {};
   const [isOpenedCreateMenu, setIsOpenedCreateMenu] = useState(false);
+  const [isOpenedUserMenu, setIsOpenedUserMenu] = useState(false);
 
   const navigate = useNavigate();
 
@@ -41,23 +53,101 @@ const Navbar = ({ openSideBar }: NavbarProps) => {
     navigate('/');
   };
 
-  const modalMenu = (menuArray: MenuI[]) =>
-    menuArray.map((item, index) => (
-      <Link
-        onClick={() => {
-          setIsOpenedCreateMenu(false);
-        }}
-        to={'/dashboard/' + item.slug}
-        className={`flex items-center bg-white gap-x-2 px-2 h-11 shadow-xl hover:bg-primary
+  const plusMenu = [
+    {
+      title: 'Create Event',
+      slug: SLUGS.CreateEvent,
+      icon: <CreateEventIcon />,
+    },
+    {
+      title: 'Add Sportpartner',
+      slug: SLUGS.CreateSportsPartnerPost,
+      icon: <CreateSportparnerIcon />,
+    },
+    {
+      title: 'Create Organization',
+      slug: SLUGS.Home,
+      icon: <CreateTeamIcon />,
+    },
+    {
+      title: 'Create Team',
+      slug: SLUGS.Home,
+      icon: <CreateOrganization />,
+    },
+  ];
+
+  const profileMenu = [
+    {
+      title: 'View Profile',
+      slug: SLUGS.UserProfile,
+      icon: <ViewProfileIcon />,
+    },
+    {
+      title: 'Set Profile',
+      slug: SLUGS.Settings,
+      icon: <SetProfileIcon />,
+    },
+    {
+      title: 'Credentials',
+      slug: SLUGS.Settings,
+      icon: <CredentialsIcon />,
+    },
+    {
+      title: 'Settings',
+      slug: SLUGS.Settings,
+      icon: <SettingsIcon />,
+    },
+    {
+      title: 'Logout',
+      action: onLogout,
+      icon: <LogoutIcon />,
+    },
+  ];
+
+  const getLinkItem = (item: MenuI, index: number, menuArray: MenuI[]) => {
+    if ('slug' in item) {
+      return (
+        <Link
+          key={'navbarlink' + index}
+          onClick={() => {
+            setIsOpenedCreateMenu(false);
+          }}
+          to={'/dashboard/' + item.slug}
+          className={`flex items-center bg-white gap-x-3 px-3 h-11 shadow-xl hover:bg-primary
         hover:text-white
          ${menuArray.length - 1 === index ? '' : 'border-b'} 
          ${0 !== index ? '' : 'rounded-t-xl'} ${menuArray.length - 1 === index ? 'rounded-b-xl' : ''}
         `}
-      >
-        {item.icon}
-        <h4>{item.title}</h4>
-      </Link>
-    ));
+        >
+          {item.icon}
+          <h4>{item.title}</h4>
+        </Link>
+      );
+    } else {
+      return (
+        <button
+          key={'navbarlink' + index}
+          onClick={() => {
+            setIsOpenedCreateMenu(false);
+            item.action();
+          }}
+        >
+          <div
+            className={`flex w-full items-center bg-white gap-x-3 px-3 h-11 shadow-xl hover:bg-primary
+          hover:text-white
+          ${menuArray.length - 1 === index ? '' : 'border-b'} 
+          ${0 !== index ? '' : 'rounded-t-xl'} ${menuArray.length - 1 === index ? 'rounded-b-xl' : ''}
+          `}
+          >
+            {item.icon}
+            <h4>{item.title}</h4>
+          </div>
+        </button>
+      );
+    }
+  };
+
+  const modalMenu = (menuArray: MenuI[]) => menuArray.map(getLinkItem);
 
   const getProfileIcon = () => {
     if (profileImg) {
@@ -111,17 +201,28 @@ const Navbar = ({ openSideBar }: NavbarProps) => {
             <MessageIcon className="h-6 w-6 md:h-8 md:w-8 flex-shrink-0 ml-2 mr-2" />
           </button>
           <div className="lg:border-l border-l-[#DADADA] md:px-10">
-            <div className="flex self-center  gap-x-2">
-              <button className="flex gap-x-2">
+            <div className="flex flex-col self-center  gap-x-2">
+              <button
+                className="flex gap-x-2"
+                onClick={() => {
+                  if (!isOpenedUserMenu) {
+                    setIsOpenedUserMenu(true);
+                  }
+                }}
+              >
                 <ProfileIcon />
                 <span className="hidden text-base font-semibold md:flex self-center">{'' || name}</span>
               </button>
-              <button onClick={onLogout}>
-                <BsThreeDotsVertical className="h-6 w-6" style={{ color: '#303030' }} />
-              </button>
-              <button onClick={onLogout}>
-                <FiLogOut className="h-6 w-6" style={{ color: '#303030' }} />
-              </button>
+              <div>
+                <Modal2
+                  isOpened={isOpenedUserMenu}
+                  onRequestClose={() => {
+                    setIsOpenedUserMenu(false);
+                  }}
+                >
+                  {modalMenu(profileMenu)}
+                </Modal2>
+              </div>
             </div>
           </div>
         </div>
@@ -131,26 +232,3 @@ const Navbar = ({ openSideBar }: NavbarProps) => {
 };
 
 export default Navbar;
-
-const plusMenu = [
-  {
-    title: 'Create Event',
-    slug: SLUGS.CreateEvent,
-    icon: <CreateEventIcon />,
-  },
-  {
-    title: 'Add Sportpartner',
-    slug: SLUGS.CreateSportsPartnerPost,
-    icon: <CreateSportparnerIcon />,
-  },
-  {
-    title: 'Create Organization',
-    slug: SLUGS.Home,
-    icon: <CreateTeamIcon />,
-  },
-  {
-    title: 'Create Team',
-    slug: SLUGS.Home,
-    icon: <CreateOrganization />,
-  },
-];

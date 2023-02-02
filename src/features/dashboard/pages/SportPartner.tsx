@@ -6,7 +6,9 @@ import { selectFilter } from 'store/slices';
 import { objectToParametrs } from 'shared/utils';
 
 import PartnerCard from '../components/events/PartnerCard';
-import Filter from '../components/filter/Filter';
+// import Filter from '../components/filter/Filter';
+import SelectGender from '../components/filter/SelectGender';
+import SelectLabels from '../components/filter/SelectLabels';
 
 export default function SportPartner() {
   const [query, setQuery] = useState('');
@@ -20,10 +22,10 @@ export default function SportPartner() {
 
   return (
     <div className="max-w-[920px] mx-auto px-4 mt-12 min-h-screen">
+      <SelectGender />
+      <SelectLabels />
       <div className="max-w-7xl mx-auto p-8">
-        <div className="mb-8">
-          <Filter enableFilters={['gender', 'sport', 'distance']} />
-        </div>
+        <div className="mb-8">{/* <Filter enableFilters={['gender', 'sport', 'distance']} /> */}</div>
         {datingSuccess &&
           Array.isArray(datingPosts?.posts) &&
           datingPosts.posts.map((post) => (

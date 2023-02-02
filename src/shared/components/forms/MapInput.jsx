@@ -10,7 +10,7 @@ export default function MapInput({ label, ...props }) {
   const [field, meta, helpers] = useField(label);
   const [address, setAddress] = useState({
     address: '',
-    coordinates: { lat: 0, lng: 0 },
+    coordinates: { lat: 49.8175, lng: 15.473 },
   });
 
   useEffect(() => {

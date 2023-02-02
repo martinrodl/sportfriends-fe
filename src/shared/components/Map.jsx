@@ -32,7 +32,6 @@ function LocationMarker({ coordinates, setAddress }) {
     )
       .then((response) => response.json())
       .then((data) => {
-        console.log(data);
         setAddress({
           address: String(data.features[0].properties.label),
           coordinates: { lat: position.lat, lng: position.lng },
@@ -71,12 +70,12 @@ export default function ModalMap({ isOpen, setIsOpen, setAddress, address }) {
             disabled
           />
         </div>
-        <MapContainer center={position.coordinates} zoom={13} scrollWheelZoom={false} className="h-[500px] w-full">
+        <MapContainer center={position.coordinates} zoom={12} scrollWheelZoom={false} className="h-[500px] w-full">
           <TileLayer
             attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
           />
-          <LocationMarker coordinates={address.coordinates} setAddress={setPosition} />
+          <LocationMarker coordinates={address.coordinates || { lat: 49.8175, lng: 15.473 }} setAddress={setPosition} />
         </MapContainer>
       </div>
     </Modal>

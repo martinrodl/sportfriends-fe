@@ -10,11 +10,23 @@ import MarkerPopup from './MarkerPopup';
 const icons = {};
 const fetchIcon = (count, size) => {
   if (!icons[count]) {
-    icons[count] = L.divIcon({
-      html: `<div class="cluster-marker" style="width: ${size}px; height: ${size}px;">
-        ${count}
-      </div>`,
-    });
+    if (count === 1) {
+      icons[count] = L.divIcon({
+        html: `<div class="cluster-marker cluster-marker-custom" 
+        style="width: ${size}px; height: ${size}px; border-width: ${size / 3}px;
+        border-color:#292D32; background-color:transparent;"/>`,
+      });
+    } else {
+      icons[count] = L.divIcon({
+        html: `<div class="cluster-marker" style="width: ${size}px; height: ${size}px; background-color:#54D2E0;">
+          <div class="cluster-marker" style="width:${0.8 * size}px; height: ${0.8 * size}px; background-color:#FFFFFF;">
+            <p class="cluster-marker-text" style="font-size: ${size * 0.03 * 15}px;">
+              ${count}
+            </p>
+          </div>
+        </div>`,
+      });
+    }
   }
   return icons[count];
 };
@@ -58,7 +70,7 @@ const EventsMarkers = ({ data }) => {
 
   const { clusters, supercluster } = useSupercluster({
     points: points,
-    bounds: [49, 13, 50, 14],
+    bounds: [20, 1, 80, 40],
     zoom: zoom,
     options: {
       radius: 75,
@@ -96,15 +108,8 @@ const EventsMarkers = ({ data }) => {
               key={`event-${cluster.properties.eventId}`}
               position={[latitude, longitude]}
               icon={fetchIcon(1, 10 + (1 / points.length) * 40)}
-              eventHandlers={{
-                click: () => {
-                  map.setView([latitude, longitude], MAX_ZOOM, {
-                    animate: true,
-                  });
-                },
-              }}
             >
-              {zoom >= MAX_ZOOM && <Popup>{<MarkerPopup data={[{ event: cluster.event }]} />}</Popup>}
+              {<Popup>{<MarkerPopup data={[{ event: cluster.event }]} />}</Popup>}
             </Marker>
           );
         }

@@ -11,7 +11,7 @@ interface EventPros {
 const Event = ({ event }: EventPros) => {
   const { id, title, participants, sport, timeEnd, timeStart, address, outdoor } = event;
   return (
-    <div className="h-[200px] w-[340px] bg-white shadow-2xl rounded-2xl p-5">
+    <div className="h-[200px] w-80 bg-white shadow-2xl rounded-2xl p-5">
       <h2>{title}</h2>
       <div className="flex items-center my-2">
         <img src={point} />

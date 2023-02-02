@@ -1,43 +1,60 @@
 import { useState } from 'react';
 
-import { SwitchMenu } from 'shared/components';
+import { useGetUserEventsQuery } from 'services/eventApi';
+import { Event as EventI } from 'models';
+import moment, { Moment } from 'moment';
 
-import Events from '../components/myactions/Events';
-import SportPartner from '../components/myactions/SportPartner';
 import Calender from '../components/Calendar';
 import Event from '../components/Event';
 
 const MyActions = () => {
-  const menuItems = [
-    {
-      text: 'Joined Events',
-      component: <Events type="joined" />,
-    },
-    {
-      text: 'Created Events',
-      component: <Events type="created" />,
-    },
-    {
-      text: 'Sport Partner',
-      component: <SportPartner />,
-    },
-  ];
+  const { data, isLoading, isSuccess, error } = useGetUserEventsQuery('');
+  const [pickedDate, setPickedDate] = useState(null);
 
-  const [activeMenu, setActiveMenu] = useState(0);
+  const getPickedDate = (pickedDate: Moment) => {
+    setPickedDate(pickedDate);
+  };
+
+  const getCreatedAction = (data: { created: EventI[] }) =>
+    data.created.map((event) => <Event event={event} key={event.id} />);
+  const getJoindAction = (data: { participated: EventI[] }) =>
+    data.participated.map((event) => <Event event={event} key={event.id} />);
+
+  const getAllEvents = (data: { created: EventI[]; participated: EventI[] }) => {
+    let allEvents = [] as EventI[];
+    if (data?.created.length) {
+      allEvents = [...data.created];
+    }
+    if (data?.participated.length) {
+      allEvents = [...allEvents, ...data.participated];
+    }
+    return (allEvents = allEvents.filter((item, index, self) => {
+      return index === self.findIndex((t) => JSON.stringify(t) === JSON.stringify(item));
+    }));
+  };
+
+  const getAllEventsFilteredByDay = (data: { created: EventI[]; participated: EventI[] }, date: Moment) =>
+    getAllEvents(data).filter((event) => moment(event.timeStart).startOf('day').isSame(date.startOf('day')));
 
   return (
-    <div className="max-w-[920px] mx-auto px-4 mt-12">
+    <div className="px-10 max-w-[1080px] mt-12 flex flex-col gap-y-4">
       <div>
         <h2>Upcomming events</h2>
-        <div>
-          <Calender />
-          {/* <Event /> */}
+        <div className="flex gap-x-2 flex-nowrap overflow-scroll">
+          <Calender getPickedDate={getPickedDate} dates={getAllEvents(data).map((event) => moment(event.timeStart))} />
+          {isSuccess
+            ? getAllEventsFilteredByDay(data, pickedDate).map((event) => <Event event={event} key={'all' + event.id} />)
+            : null}
         </div>
       </div>
-      <div className="mb-6">
-        <SwitchMenu menuItems={menuItems} activeIndex={activeMenu} setIndex={setActiveMenu} />
+      <div>
+        <h2>Created events</h2>
+        <div className="flex gap-2 flex-wrap">{isSuccess ? getCreatedAction(data) : null}</div>
       </div>
-      {menuItems[activeMenu].component}
+      <div>
+        <h2>Joined events</h2>
+        <div className="flex gap-x-2 flex-wrap">{isSuccess ? getJoindAction(data) : null}</div>
+      </div>
     </div>
   );
 };

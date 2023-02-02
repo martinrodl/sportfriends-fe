@@ -13,8 +13,6 @@ const UserPost = ({ post }: PostProps) => {
   const { id, text, comments, author, createdAt, likes } = post;
   const [showComment, setShowComment] = useState(false);
 
-  console.log(post);
-
   return (
     <div className="w-full mt-2 max-w-2xl rounded-lg bg-white shadow-md">
       <div className="flex justify-between px-4 py-3">
