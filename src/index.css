@@ -1,21 +1,57 @@
-@tailwind base;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap');
 
+@tailwind base;
 @tailwind components;
+@tailwind utilities;
+
+* {
+  font-family: 'Poppins', sans-serif;
+}
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans',
-    'Droid Sans', 'Helvetica Neue', sans-serif;
+
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: 'Poppins', source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+.p2 {
+  font-size: 13px;
 }
 
-.h1 {
-  /* font-size: 30px; */
+.body1 {
+  font-size: 14px;
+}
+.body2 {
+  font-size: 13px;
+}
+.body3 {
+  font-size: 12px;
+}
+.body4 {
+  font-size: 12px;
+}
+.body5 {
+  font-size: 10px;
+}
+
+@media only screen and (min-width: 768px) {
+  .body1 {
+    font-size: 16px;
+  }
+
+  .body2 {
+    font-size: 15px;
+  }
+  .body3 {
+    font-size: 13px;
+  }
+  .body4 {
+    font-size: 12px;
+  }
+  .body5 {
+    font-size: 10px;
+  }
 }
 
 .leaflet-div-icon {
@@ -60,5 +96,3 @@ code {
   top: -3px;
   right: -4px;
 }
-
-@tailwind utilities;

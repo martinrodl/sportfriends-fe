@@ -1,4 +1,5 @@
 export * from './slugs';
+export * from './colors';
 
 export const selectGenderInputs = [
   { value: 'Male', label: 'Male' },

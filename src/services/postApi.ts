@@ -3,9 +3,7 @@ import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
 import { BASE_URL } from 'shared/constants';
 
 import { Post, State } from 'models';
-// export const BASE_URL = "http://kubernetes.docker.internal:32668";
 
-// Define a service using a base URL and expected endpoints
 export const postApi = createApi({
   reducerPath: 'postApi',
   baseQuery: fetchBaseQuery({

@@ -29,7 +29,7 @@ const PostDialog = ({ open, handleClose }: PostDialogProps) => {
           <span>
             <CloseIcon
               onClick={handleClose}
-              className="text-white bg-[#04A5C2] w-[26px] h-[26px] p-[3px] flex justify-center items-center rounded-full"
+              className="text-white bg-primary w-[26px] h-[26px] p-[3px] flex justify-center items-center rounded-full"
             />
           </span>
         </div>
@@ -45,7 +45,7 @@ const PostDialog = ({ open, handleClose }: PostDialogProps) => {
           <div className="mt-4">
             <button
               type="submit"
-              className="flex w-full justify-center text-white py-3 rounded-sm bg-[#04A5C2] cursor-pointer transition-all duration-300 hover:shadow-xl"
+              className="flex w-full justify-center text-white py-3 rounded-sm bg-primary cursor-pointer transition-all duration-300 hover:shadow-xl"
             >
               Post creation
             </button>

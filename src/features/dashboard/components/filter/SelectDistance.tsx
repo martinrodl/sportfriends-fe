@@ -14,8 +14,8 @@ const SelectDistance = ({ type }: SelectDistanceProps) => {
   const getMarkValue = (value: number) => marks.filter((item) => item.value === value);
 
   return (
-    <div className="flex flex-col w-[340px] h-40 rounded-3xl p-5 bg-white border border-primary">
-      <h2>Distance</h2>
+    <div className="flex flex-col max-w-[340px] h-40 rounded-3xl p-5 bg-white border border-primary">
+      <h4>Distance</h4>
       <div className="m-2">
         <Slider
           size="small"

@@ -15,11 +15,11 @@ const Comment = ({ comment }: CommentProps) => {
       <div className="flex flex-1 justify-between items-center mb-0.5">
         <div className="flex items-center">
           <ProfileIcon sizeDesktop={2} size={2} />
-          <p className="ml-1 text-xs text-[#9A9A9A]">{author.name}</p>
+          <p className="ml-1 body3 text-main4">{author.name}</p>
         </div>
-        <p className="text-xs text-[#9A9A9A]">{moment(createdAt).format('hh:mm DD.MM')}</p>
+        <p className="body3 text-main4">{moment(createdAt).format('hh:mm DD.MM')}</p>
       </div>
-      <p className="text-sm ">{text}</p>
+      <p className="body2 ">{text}</p>
     </div>
   );
 };

@@ -11,9 +11,7 @@ interface CalendarProps {
 const Calendar = ({ getPickedDate, dates }: CalendarProps) => {
   const [pickedDay, setPickedDay] = useState(moment());
   const [pickedWeek, setPickedWeek] = useState(0);
-  const today = moment().day();
-  const getWeek = (day: number, week: number) =>
-    Array.from(Array(7).keys()).map((n) => moment().day(n - day + 7 * week));
+  const getWeek = (week: number) => Array.from(Array(7).keys()).map((n) => moment().day(1 + n + 7 * week));
 
   useEffect(() => {
     if (getPickedDate) {
@@ -28,13 +26,13 @@ const Calendar = ({ getPickedDate, dates }: CalendarProps) => {
           setPickedDay(day);
         }}
         className={`flex flex-col justify-center gap-y-1 h-16 w-9 rounded-xl ${
-          day.day() === pickedDay.day() ? 'bg-white' : ''
+          day.day() === pickedDay.day() ? 'bg-primary' : ''
         }`}
       >
-        <h2>{day.format('DD')}</h2>
-        <h2>{day.format('dd')}</h2>
+        <h4>{day.format('DD')}</h4>
+        <h4>{day.format('dd')}</h4>
       </button>
-      <div className={`${hasEvent ? 'bg-white' : 'bg-primary'} h-2 w-2 rounded-full mt-2`} />
+      <div className={`${hasEvent ? 'bg-primary' : 'bg-white'} h-2 w-2 rounded-full mt-2`} />
     </div>
   );
 
@@ -53,23 +51,23 @@ const Calendar = ({ getPickedDate, dates }: CalendarProps) => {
   };
 
   return (
-    <div className="h-[200px] w-[340px] flex flex-col bg-primary rounded-2xl p-5">
-      <h2 className="text-white">January</h2>
+    <div className="h-[200px] max-w-[340px] flex flex-col bg-white  rounded-2xl p-5 border border-primary">
+      <h3 className="text-black">{getWeek(pickedWeek)[0].format('MMMM')}</h3>
       <div className="flex flex-1 justify-around my-2">
-        {getWeek(today, pickedWeek).map((day) => dayOfCalender(day, checkIfContainsDate(dates, day)))}
+        {getWeek(pickedWeek).map((day) => dayOfCalender(day, checkIfContainsDate(dates, day)))}
       </div>
       <div className="flex gap-x-2 self-end mr-3">
         <button
           onClick={onClickLeft}
-          className="h-8 w-11 bg-white bg-opacity-30 rounded-full flex justify-center items-center"
+          className="h-8 w-11 bg-main3 bg-opacity-5 rounded-full flex justify-center items-center"
         >
-          <HiOutlineChevronLeft color="white" />
+          <HiOutlineChevronLeft color="black" />
         </button>
         <button
           onClick={onClickRight}
-          className="h-8 w-11 bg-white bg-opacity-30 rounded-full flex justify-center items-center"
+          className="h-8 w-11 bg-main3 bg-opacity-5 rounded-full flex justify-center items-center"
         >
-          <HiOutlineChevronRight color="white" />
+          <HiOutlineChevronRight color="black" />
         </button>
       </div>
     </div>

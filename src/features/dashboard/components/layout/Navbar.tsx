@@ -7,6 +7,7 @@ import { Link } from 'react-router-dom';
 import { setCredentials } from 'store/slices';
 import { useGetUserQuery } from 'services/userApi';
 import Modal2 from 'shared/components/Modal2';
+import { colors } from 'shared/constants';
 
 import { SLUGS } from '../../shared/constants';
 import ProfileIcon from '../ProfileIcon';
@@ -170,7 +171,7 @@ const Navbar = ({ openSideBar }: NavbarProps) => {
             placeholder="Search friends..."
             className="pl-10 pr-3 py-3 rounded-xl text-xs md:text-sm focus-within:outline-none placeholder-black w-full"
           />
-          <FiSearch className="absolute top-2.5 left-2" size="1.5rem" style={{ color: '#FAB447' }} />
+          <FiSearch className="absolute top-2.5 left-2" size="1.5rem" style={{ color: colors.secondary }} />
         </div>
 
         <div className="order-2 flex flex-1 justify-end items-center">
@@ -211,9 +212,9 @@ const Navbar = ({ openSideBar }: NavbarProps) => {
                 }}
               >
                 <ProfileIcon />
-                <span className="hidden text-base font-semibold md:flex self-center">{'' || name}</span>
+                <h3 className=" font-semibold md:flex self-center">{'' || name}</h3>
               </button>
-              <div>
+              <div className="relative md:right-10 right-24 top-2">
                 <Modal2
                   isOpened={isOpenedUserMenu}
                   onRequestClose={() => {

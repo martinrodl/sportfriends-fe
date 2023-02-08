@@ -21,13 +21,13 @@ const UserPost = ({ post }: PostProps) => {
             <ProfileIcon />
           </div>
           <div className="flex flex-col self-center">
-            <p className="text-sm mb-1">{author.name}</p>
-            <p className="text-xs text-[#9A9A9A] mb-1">{`${moment(createdAt).format('DD MMMM hh:mm')}`}</p>
+            <p className="body2">{author.name}</p>
+            <p className="body4 text-main4">{`${moment(createdAt).format('DD MMMM hh:mm')}`}</p>
           </div>
         </div>
       </div>
-      <div className="px-4 py-5">
-        <p className="text-sm font-normal text-[#9A9A9A] pb-1">{text}</p>
+      <div className="px-6 pb-4 pt-2">
+        <p className="body1 font-normal text-main4 py-1">{text}</p>
       </div>
       <BottomPost comments={comments} likes={likes} postId={id} />
     </div>

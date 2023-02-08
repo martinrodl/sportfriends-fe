@@ -34,9 +34,9 @@ const SelectSports = ({ type }: SelectSportsProps) => {
   };
 
   return (
-    <div className="flex flex-col w-[340px] rounded-3xl p-5 bg-white border border-primary ">
-      <h2 className="mb-2">Select Sports</h2>
-      <div className="border-1 rounded-2xl h-12 border-primary bg-slate-100 flex items-center p-3 mb-2">
+    <div className="flex flex-col max-w-[340px] rounded-3xl p-5 bg-white border border-primary">
+      <h4 className="mb-2">Select Sports</h4>
+      <div className="border-1 rounded-2xl h-12 border-primary bg-slate-100 flex items-center p-2 mb-3">
         <Autocomplete
           disablePortal
           id="combo-box-demo"
@@ -46,12 +46,12 @@ const SelectSports = ({ type }: SelectSportsProps) => {
           }}
           value={input}
           renderInput={(params) => (
-            <div ref={params.InputProps.ref}>
+            <div ref={params.InputProps.ref} className="w-full">
               <input
                 type="text"
                 placeholder="Enter here ..."
                 {...params.inputProps}
-                className="h-11 bg-slate-100 pl-3 pr-3 py-2 rounded-xl text-xs focus-within:outline-none placeholder-[#282828] flex-1"
+                className="h-11 bg-slate-100 pl-3 pr-3 py-2 rounded-xl text-xs focus-within:outline-none placeholder-main3  w-full"
               />
             </div>
           )}
@@ -66,9 +66,9 @@ const SelectSports = ({ type }: SelectSportsProps) => {
           className="flex items-center bg-primary h-8 w-20 rounded-full"
         >
           <div className="bg-white w-5 h-5 rounded-full flex justify-center items-center ml-2">
-            <h2 className="text-primary mb-0.5">+</h2>
+            <h2 className="text-primary">+</h2>
           </div>
-          <h4 className="text-white ml-2">Add</h4>
+          <h4 className="text-white ml-1 mr-2">Add</h4>
         </button>
       </div>
       <div className="flex flex-wrap gap-2">{filteredSports.map((item) => renderSport(item))}</div>

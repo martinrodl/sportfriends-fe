@@ -17,6 +17,8 @@ interface FilterState {
   sportParner: {
     distance: number;
     sports: string[];
+    level?: string;
+    gender?: string;
   };
 }
 
@@ -28,6 +30,8 @@ export enum filterTypeEnum {
 
 export type allFilterType = filterTypeEnum.listEvents | filterTypeEnum.mapEvents | filterTypeEnum.sportPartner;
 export type timeFilterType = filterTypeEnum.listEvents | filterTypeEnum.mapEvents;
+export type genderFilterType = filterTypeEnum.sportPartner;
+export type levelFilterType = filterTypeEnum.sportPartner;
 
 const initialState = {
   listEvents: {
@@ -43,8 +47,10 @@ const initialState = {
     endTime: moment().add(1, 'year').add(1, 'month').toISOString(),
   },
   sportParner: {
-    distance: 50,
-    sports: ['tests'],
+    distance: 20,
+    sports: [],
+    level: '',
+    gender: '',
   },
 } as FilterState;
 
@@ -69,10 +75,17 @@ const filter = createSlice({
     setEndTime: (state, action) => {
       state[action.payload.type].endTime = action.payload.value;
     },
+    changeGender: (state, action) => {
+      state[action.payload.type].gender = action.payload.value;
+    },
+    changeLevel: (state, action) => {
+      state[action.payload.type].level = action.payload.value;
+    },
   },
 });
 
-export const { changeDistance, addSports, removeSport, setStartTime, setEndTime } = filter.actions;
+export const { changeDistance, addSports, removeSport, setStartTime, setEndTime, changeGender, changeLevel } =
+  filter.actions;
 export default filter.reducer;
 
 export const selectFilter = (state: { filter: FilterState }) => state.filter;
@@ -86,3 +99,7 @@ export const selectStartTime = (type: timeFilterType) =>
   createSelector(selectTimeSpecificFilter(type), (state) => state?.startTime);
 export const selectEndTime = (type: timeFilterType) =>
   createSelector(selectTimeSpecificFilter(type), (state) => state?.endTime);
+export const selectGender = (type: genderFilterType) =>
+  createSelector(selectSpecificFilter(type), (state) => ('gender' in state ? state.gender : ''));
+export const selectLevel = (type: levelFilterType) =>
+  createSelector(selectSpecificFilter(type), (state) => ('level' in state ? state.level : ''));

@@ -17,7 +17,7 @@ export default function Modal({ isOpened, onRequestClose, children }: ModalProps
       {isOpened ? (
         <>
           <div className="flex justify-center items-center  overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none">
-            <div className="relative w-auto mx-auto max-w-3xl flex flex-col">
+            <div className="relative  max-w-3xl flex flex-col">
               <IoCloseSharp size="30px" className="self-end" />
               <div ref={ref} className="">
                 {children}

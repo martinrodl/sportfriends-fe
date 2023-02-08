@@ -34,13 +34,13 @@ const MyActions = () => {
   };
 
   const getAllEventsFilteredByDay = (data: { created: EventI[]; participated: EventI[] }, date: Moment) =>
-    getAllEvents(data).filter((event) => moment(event.timeStart).startOf('day').isSame(date.startOf('day')));
+    getAllEvents(data).filter((event) => moment(event.timeStart).startOf('day').isSame(date?.startOf('day')));
 
   return (
-    <div className="px-10 max-w-[1080px] mt-12 flex flex-col gap-y-4">
+    <div className="px-10 max-w-[1080px] mt-12 flex flex-col gap-y-4 mb-5">
       <div>
-        <h2>Upcomming events</h2>
-        <div className="flex gap-x-2 flex-nowrap overflow-scroll">
+        <h3 className="font-semibold mb-2">Upcomming events</h3>
+        <div className="flex flex-col md:flex-row md:gap-x-5 gap-y-2 flex-nowrap  md:overflow-scroll md:py-2">
           <Calender getPickedDate={getPickedDate} dates={getAllEvents(data).map((event) => moment(event.timeStart))} />
           {isSuccess
             ? getAllEventsFilteredByDay(data, pickedDate).map((event) => <Event event={event} key={'all' + event.id} />)
@@ -48,11 +48,11 @@ const MyActions = () => {
         </div>
       </div>
       <div>
-        <h2>Created events</h2>
+        <h3 className="font-semibold mb-2">Created events</h3>
         <div className="flex gap-2 flex-wrap">{isSuccess ? getCreatedAction(data) : null}</div>
       </div>
       <div>
-        <h2>Joined events</h2>
+        <h3 className="font-semibold mb-2">Joined events</h3>
         <div className="flex gap-x-2 flex-wrap">{isSuccess ? getJoindAction(data) : null}</div>
       </div>
     </div>

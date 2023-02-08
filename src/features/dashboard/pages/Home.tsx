@@ -10,7 +10,7 @@ const Home = () => {
   return (
     <div className="w-full h-screen max-w-5xl">
       <div className="flex flex-col md:flex-row-reverse mx-auto p-8">
-        <div className="my-4 flex-1 max-w-xs">
+        <div className="my-4 mx-4 max-w-xs">
           <PostCreation />
         </div>
         <div className="flex flex-col flex-auto mx-4">

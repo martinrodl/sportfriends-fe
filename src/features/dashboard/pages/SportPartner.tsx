@@ -2,43 +2,38 @@ import React, { useState, useEffect } from 'react';
 import { useSelector } from 'react-redux';
 
 import { useGetDatingPostsQuery } from 'services/datingApi';
-import { selectFilter } from 'store/slices';
 import { objectToParametrs } from 'shared/utils';
+import { selectSpecificFilter, filterTypeEnum } from 'store/slices';
 
 import PartnerCard from '../components/events/PartnerCard';
-// import Filter from '../components/filter/Filter';
 import SelectGender from '../components/filter/SelectGender';
-import SelectLabels from '../components/filter/SelectLabels';
+import SelectLevel from '../components/filter/SelectLevel';
+import SelectSports from '../components/filter/SelectSports';
+import SelectDistance from '../components/filter/SelectDistance';
 
 export default function SportPartner() {
-  const [query, setQuery] = useState('');
-  const filters = useSelector(selectFilter);
+  const filters = useSelector(selectSpecificFilter);
   const {
     data: datingPosts,
     isSuccess: datingSuccess,
     error: datingError,
   } = useGetDatingPostsQuery(objectToParametrs(filters));
-  console.log(datingPosts);
 
   return (
-    <div className="max-w-[920px] mx-auto px-4 mt-12 min-h-screen">
-      <SelectGender />
-      <SelectLabels />
-      <div className="max-w-7xl mx-auto p-8">
-        <div className="mb-8">{/* <Filter enableFilters={['gender', 'sport', 'distance']} /> */}</div>
-        {datingSuccess &&
-          Array.isArray(datingPosts?.posts) &&
-          datingPosts.posts.map((post) => (
-            <PartnerCard
-              id={post.id}
-              title={post.title}
-              description={post.description}
-              sport={post.sports[0]}
-              address={post.address}
-              key={post.id}
-              author={post.author}
-            />
-          ))}
+    <div className="px-5 mt-12 flex justify-around max-w-5xl">
+      <div>
+        <div className="flex flex-wrap w-max-sm gap-2">
+          {datingSuccess &&
+            Array.isArray(datingPosts?.posts) &&
+            datingPosts.posts.map((post) => <PartnerCard post={post} />)}
+        </div>
+      </div>
+      <div className="w-[320px] flex flex-col gap-y-2">
+        <h2>Filters</h2>
+        <SelectSports type={filterTypeEnum.sportPartner} />
+        <SelectDistance type={filterTypeEnum.sportPartner} />
+        <SelectGender type={filterTypeEnum.sportPartner} />
+        <SelectLevel type={filterTypeEnum.sportPartner} />
       </div>
     </div>
   );

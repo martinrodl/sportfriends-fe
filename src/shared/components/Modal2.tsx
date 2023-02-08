@@ -1,4 +1,5 @@
 import { useRef, ReactNode } from 'react';
+import { useDebouncedCallback } from 'use-debounce';
 
 import useOnClickOutside from 'shared/hooks/useClickOutside';
 
@@ -10,7 +11,7 @@ interface ModalProps {
 
 const Modal2 = ({ isOpened, onRequestClose, children }: ModalProps) => {
   const ref = useRef(null);
-  useOnClickOutside(ref, onRequestClose);
+  useOnClickOutside(ref, useDebouncedCallback(onRequestClose, 100));
   return (
     <>
       {isOpened ? (
