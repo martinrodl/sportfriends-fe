@@ -11,44 +11,53 @@ interface MarkerPopupPropsI {
 }
 
 const MarkerPopup = ({ data }: MarkerPopupPropsI) => {
-  const headTableArray = ['Title', 'Sport', 'Date', 'Time', 'Option'];
-  const getHeadTable = (text) => (
-    <th scope="col" className="w-[92px] h-[56px] text-[#080E0B] bg-[#54D2E0] text-center font-medium">
-      {text}
-    </th>
-  );
-
-  const getOneRow = (item: { event: Event }) => {
-    const { id, title, sport, timeStart } = item.event;
+  const getOneRow = (item: { event: EventI }) => {
+    const { id, sport, timeStart, title } = item.event;
     return (
-      <tr className="h-[56px] text-[#080E0B] text-base text-center ">
-        <td>{title}</td>
-        <td className="text-center">{sport}</td>
-        <td className="text-center px-2 whitespace-nowrap">{moment(timeStart).format('DD.MM')}</td>
-        <td className="text-center px-2 whitespace-nowrap">{moment(timeStart).format('hh:mm')}</td>
-        <td>
-          <Link to={'/dashboard/' + SLUGS.Event + '/' + id}>
-            <p className="text-xs">View More</p>
-          </Link>
-        </td>
-      </tr>
+      <Link
+        className="hover:bg-primary hover:opacity-50 rounded-md overflow-hidden content-center grid grid-cols-4 h-[38px]"
+        to={'/dashboard/' + SLUGS.Event + '/' + id}
+      >
+        <div className="flex justify-center items-center">
+          <p className="body4 text-main3 truncate">{title}</p>
+        </div>
+        <div className=" flex justify-start items-center">
+          <p className="body4 text-main3 truncate">{sport}dsfasdfasdf </p>
+        </div>
+        <div className="flex justify-center items-center ">
+          <p className="body4 text-main3">{moment(timeStart).format('DD.MM')}</p>
+        </div>
+        <div className="flex justify-center items-center ">
+          <p className="body4 text-main3">{moment(timeStart).format('hh.mm')}</p>
+        </div>
+      </Link>
     );
   };
 
   const getTable = () => (
-    <table className="min-w-full border-0 divide-y divide-gray-200 border-collapse border border-slate-500">
-      <thead className="bg-gray-50">
-        <tr>{headTableArray.map(getHeadTable)}</tr>
-      </thead>
-      <tbody className="bg-white divide-y divide-gray-200">{data.map(getOneRow)}</tbody>
-    </table>
+    <div className="bg-white p-2 rounded-lg w-[230px] relative top-[11px]">
+      <div className="grid grid-cols-4 bg-accent6 h-[38px] rounded-lg content-center">
+        <div className="h-full flex justify-center  items-center p-1">
+          <p className="body3 text-main3">Title</p>
+        </div>
+        <div className="flex items-center justify-center p-1">
+          <p className="body3 text-main3">Sport</p>
+        </div>
+        <div className="flex items-center justify-center p-1">
+          <p className="body3 text-main3">Date</p>
+        </div>
+        <div className="flex items-center justify-center p-1">
+          <p className="body3 text-main3">Start</p>
+        </div>
+      </div>
+      <div className="bg-white divide-y divide-gray-200">{data.map(getOneRow)}</div>
+    </div>
   );
 
   const getEvent = () => {
     const { event } = data[0];
-    console.log(event);
     return (
-      <div className="top-[-50px]">
+      <div className="relative top-[11px]">
         <Event event={event} />
       </div>
     );

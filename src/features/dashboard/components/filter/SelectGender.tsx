@@ -23,12 +23,12 @@ const SelectGender = ({ type }: SelectGenderProps) => {
       }}
       className={`h-11 px-3 ${variant.value === gender ? 'bg-primary' : 'bg-slate-100 '} rounded-2xl`}
     >
-      <h3>{variant.label}</h3>
+      <p className={`body1 ${variant.value === gender ? 'text-white' : 'text-black'}`}>{variant.label}</p>
     </button>
   );
 
   return (
-    <div className="flex flex-col max-w-[340px] h-40 rounded-3xl p-5 bg-white border border-primary">
+    <div className="flex flex-col max-w-[340px] rounded-3xl p-5 bg-white border border-primary">
       <h4 className="mb-2">Select Gender</h4>
       <div className="flex gap-x-2">{genderVariants.map((variant) => generateButton(variant))}</div>
     </div>

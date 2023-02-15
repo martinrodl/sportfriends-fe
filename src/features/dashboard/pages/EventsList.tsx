@@ -23,6 +23,7 @@ const Events = () => {
   const closeFilterModal = () => {
     setIsFilterOpened(false);
   };
+
   const getFilters = () => {
     return [SelectSports, SelectDistance, SelectDateRange, SelectTimeRange].map((el) =>
       React.createElement(el, { type: filterTypeEnum.listEvents }),
@@ -32,7 +33,7 @@ const Events = () => {
   return (
     <div className="px-5 mt-12 flex justify-around max-w-5xl">
       <div>
-        <h2 className="hidden md:block font-semibold mb-2">All Events</h2>
+        <h3 className="hidden md:block font-semibold mb-2">All Events</h3>
         <button
           className="flex md:hidden bg-white items-center"
           onClick={() => {

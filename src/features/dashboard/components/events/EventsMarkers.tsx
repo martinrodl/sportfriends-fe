@@ -11,16 +11,24 @@ const icons = {};
 const fetchIcon = (count, size) => {
   if (!icons[count]) {
     if (count === 1) {
+      const smallerConstant = 0.8;
       icons[count] = L.divIcon({
         html: `<div class="cluster-marker cluster-marker-custom" 
-        style="width: ${size}px; height: ${size}px; border-width: ${size / 3}px;
-        border-color:#292D32; background-color:transparent;"/>`,
+        style="width: ${(size + 3) * smallerConstant}px; height: ${(size + 3) * smallerConstant}px; border-width: ${
+          (smallerConstant * size) / 4
+        }px;
+        border-color:#292D32; background-color:white;"/>`,
       });
     } else {
+      const smallerConstant = 0.8;
       icons[count] = L.divIcon({
-        html: `<div class="cluster-marker" style="width: ${size}px; height: ${size}px; background-color:#54D2E0;">
-          <div class="cluster-marker" style="width:${0.8 * size}px; height: ${0.8 * size}px; background-color:#FFFFFF;">
-            <p class="cluster-marker-text" style="font-size: ${size * 0.03 * 15}px;">
+        html: `<div class="cluster-marker cluster-marker-table" style="width: ${size * smallerConstant}px; height: ${
+          size * smallerConstant
+        }px; background-color:#54D2E0;">
+          <div class="cluster-marker" style="width:${0.8 * size * smallerConstant}px; height: ${
+          0.8 * size * smallerConstant
+        }px; background-color:#FFFFFF;">
+            <p class="cluster-marker-text" style="font-size: ${size * 0.03 * 15 * smallerConstant}px;">
               ${count}
             </p>
           </div>

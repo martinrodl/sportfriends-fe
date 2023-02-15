@@ -67,14 +67,6 @@ body {
   align-items: center;
 }
 
-.cluster-marker-inner {
-  color: #fff;
-}
-
-.cluster-marker-single {
-  border-color: #292d32;
-}
-
 .cluster-marker-text {
   color: #54d2e0;
   font-weight: 500;
@@ -84,15 +76,24 @@ body {
   display: none;
 }
 
+div .leaflet-popup-content {
+  padding: 0;
+  margin: 0;
+}
+
 .leaflet-popup-content-wrapper {
   all: initial;
   position: relative;
   background-color: transparent !important;
-  top: 20px;
+  top: -11px;
 }
 
 .leaflet-popup-tip {
   position: relative;
-  top: -3px;
-  right: -4px;
+  right: -3px;
+}
+
+.cluster-marker-table {
+  position: relative;
+  right: 7px;
 }

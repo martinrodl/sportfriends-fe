@@ -24,12 +24,12 @@ const SelectLevel = ({ type }: SelectLevelProps) => {
       }}
       className={`h-11 px-3 ${variant.value === level ? 'bg-primary' : 'bg-slate-100 '} rounded-2xl`}
     >
-      <h3>{variant.label}</h3>
+      <p className={`body1 ${variant.value === level ? 'text-white' : 'text-black'}`}>{variant.label}</p>
     </button>
   );
 
   return (
-    <div className="flex flex-col max-w-[340px] h-40 rounded-3xl p-5 bg-white border border-primary">
+    <div className="flex flex-col max-w-[340px] rounded-3xl p-5 bg-white border border-primary">
       <h4 className="mb-2">Select Level</h4>
       <div className="flex gap-x-2 gap-y-2 flex-wrap">{levelVariants.map((variant) => generateButton(variant))}</div>
     </div>
