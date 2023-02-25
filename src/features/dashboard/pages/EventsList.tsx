@@ -31,8 +31,8 @@ const Events = () => {
   };
 
   return (
-    <div className="px-5 mt-12 flex justify-around max-w-5xl">
-      <div>
+    <div className="px-5 mt-12 flex justify-around w-full">
+      <div className="w-full">
         <h3 className="hidden md:block font-semibold mb-2">All Events</h3>
         <button
           className="flex md:hidden bg-white items-center"
@@ -49,7 +49,7 @@ const Events = () => {
             )}
           </div>
         </button>
-        <div className="flex flex-wrap w-max-sm gap-2">
+        <div className="flex flex-wrap w-max-sm gap-2 w-full">
           {Array.isArray(events) && events.map((event) => <Event event={event} key={event.id} />)}
         </div>
       </div>

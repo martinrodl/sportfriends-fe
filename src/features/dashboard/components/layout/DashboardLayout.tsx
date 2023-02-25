@@ -26,7 +26,7 @@ const DashboardLayout = ({ children }: DashboardLayoutProps) => {
         <div className="hidden md:block mt-5 ml-5">
           <Sidebar isClosed={sidebarOpen} onClose={closeSideBar} />
         </div>
-        <main className="flex-1 flex flex-col w-1 max-w-5xl">
+        <main className="flex-1 flex flex-col w-1 px-10">
           <Navbar openSideBar={openSideBar} />
           <>{children}</>
         </main>

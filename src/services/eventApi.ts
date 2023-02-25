@@ -1,43 +1,52 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
 
 import { BASE_URL } from 'shared/constants';
-// const BASE_URL = 'http://kubernetes.docker.internal:31978';
+import { Event, State } from 'models';
 
-// Define a service using a base URL and expected endpoints
 export const eventApi = createApi({
   reducerPath: 'eventApi',
   baseQuery: fetchBaseQuery({
     baseUrl: BASE_URL + '/api/event/',
     prepareHeaders: (headers, { getState }) => {
-      headers.set('authorization', `${getState().auth.accessToken}`);
+      const state = getState() as State;
+      headers.set('authorization', `${state.auth.accessToken}`);
       return headers;
     },
   }),
-  tagTypes: ['events', 'userEvents'],
+  tagTypes: ['event', 'events', 'userEvents'],
   endpoints: (builder) => ({
-    getUserEvents: builder.query({
+    getUserEvents: builder.query<Event[], string>({
       query: () => ({
         url: 'events/userevents',
       }),
-      transformResponse: (response) => {
+      transformResponse: (response: { data: Event[] }): Event[] => {
         return response.data;
       },
       providesTags: ['userEvents'],
     }),
-    getEvents: builder.query({
+    getEvents: builder.query<Event[], string>({
       query: (query = '') => ({
         url: `events${query}`,
       }),
-      transformResponse: (response) => {
+      transformResponse: (response: { data: Event[] }): Event[] => {
         return response.data;
       },
       providesTags: ['events'],
     }),
-    getEvent: builder.query({
+    getSpecificUserEvents: builder.query<Event[], string>({
+      query: (userId) => ({
+        url: `events/${userId}`,
+      }),
+      transformResponse: (response: { data: { created: Event[] } }): Event[] => {
+        return response.data.created;
+      },
+      providesTags: ['events'],
+    }),
+    getEvent: builder.query<Event, string>({
       query: (id) => ({
         url: `event/${id}`,
       }),
-      transformResponse: (response) => {
+      transformResponse: (response: { data: Event }): Event => {
         return response.data;
       },
       providesTags: ['event'],
@@ -68,7 +77,7 @@ export const eventApi = createApi({
       query: (arg) => ({
         url: `event/${arg.eventId}/comment`,
         method: 'POST',
-        body: { text: arg.comment },
+        body: { text: arg.text },
       }),
       invalidatesTags: ['event'],
     }),
@@ -78,6 +87,7 @@ export const eventApi = createApi({
 // Export hooks for usage in functional components, which are
 // auto-generated based on the defined endpoints
 export const {
+  useGetSpecificUserEventsQuery,
   useGetUserEventsQuery,
   useGetEventsQuery,
   useGetEventQuery,

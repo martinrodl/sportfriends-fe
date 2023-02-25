@@ -212,7 +212,7 @@ const Navbar = ({ openSideBar }: NavbarProps) => {
                 }}
               >
                 <ProfileIcon />
-                <h3 className=" font-semibold md:flex self-center">{'' || name}</h3>
+                <h4 className=" font-semibold md:flex self-center">{'' || name}</h4>
               </button>
               <div className="relative md:right-10 right-24 top-2">
                 <Modal2

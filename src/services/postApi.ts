@@ -24,6 +24,13 @@ export const postApi = createApi({
       },
       providesTags: () => ['posts'],
     }),
+    getUserPosts: builder.query<Post[], string>({
+      query: (userId) => {
+        return {
+          url: `userposts/${userId}`,
+        };
+      },
+    }),
     createPost: builder.mutation({
       query: (formData) => ({
         url: 'post',
@@ -63,6 +70,7 @@ export const postApi = createApi({
 // auto-generated based on the defined endpoints
 export const {
   useGetPostsQuery,
+  useGetUserPostsQuery,
   useCreatePostMutation,
   useLikePostMutation,
   useUnlikePostMutation,

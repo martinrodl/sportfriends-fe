@@ -28,7 +28,7 @@ export default function EventsMap() {
   }
 
   return (
-    <div className="max-w-[920px] mx-auto px-4 mt-12">
+    <div className="max-w-7xl  mx-auto px-4 mt-12 self-start">
       <div className="max-w-7xl mx-auto p-8">
         <div className="mb-8">{/* <Filter enableFilters={['sport', 'distance', 'date', 'startTime']} /> */}</div>
 

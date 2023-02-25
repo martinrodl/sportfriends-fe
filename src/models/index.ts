@@ -45,10 +45,11 @@ export interface Event {
   address: string;
   timeStart: Date;
   timeEnd: Date;
-  participants: { id: string }[];
+  participants: { id: string; name?: string }[];
+  minParticipants: number;
   maxParticipants: number;
   description: string;
-  comments: Comment[];
+  comments: { text: string; id: string; authorName: string; createdAt: string }[];
   author: string | { id: string; name: string };
   outdoor: boolean;
 }
@@ -72,4 +73,27 @@ export interface PartnerPost {
   };
   createdAt?: string;
   labels: Level[];
+}
+
+export enum FriendStatus {
+  Pending = 'pending',
+  Confirmend = 'confirmed',
+}
+export interface Friendship {
+  requester: string;
+  recipient: string;
+  status: FriendStatus;
+}
+
+export interface User {
+  id: string;
+  name: string;
+  version: number;
+  birthDay?: Date;
+  gender?: boolean;
+  address: string;
+  friendships: Friendship[];
+  location: { coordinates: [number, number] };
+  description?: string;
+  profileImg?: string;
 }

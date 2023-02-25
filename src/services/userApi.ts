@@ -1,7 +1,7 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
 
 import { BASE_URL } from 'shared/constants';
-import { FriendshipsResponse, State } from 'models';
+import { FriendshipsResponse, State, User } from 'models';
 
 // export const BASE_URL = "http://kubernetes.docker.internal:32668";
 
@@ -19,10 +19,18 @@ export const userApi = createApi({
   }),
   tagTypes: ['userProfile'],
   endpoints: (builder) => ({
-    getUser: builder.query({
+    getUser: builder.query<User, string>({
       query: () => {
         return {
           url: `profile`,
+        };
+      },
+      providesTags: () => ['userProfile'],
+    }),
+    getSpecificUser: builder.query<User, string>({
+      query: (id) => {
+        return {
+          url: `profile/${id}`,
         };
       },
       providesTags: () => ['userProfile'],
@@ -56,6 +64,15 @@ export const userApi = createApi({
         };
       },
     }),
+    createFriendship: builder.mutation({
+      query(id) {
+        return {
+          url: `friendship/${id}`,
+          method: 'POST',
+          body: {},
+        };
+      },
+    }),
     confirmFriendship: builder.mutation({
       query(id) {
         return {
@@ -78,10 +95,12 @@ export const userApi = createApi({
 // Export hooks for usage in functional components, which are
 // auto-generated based on the defined endpoints
 export const {
+  useGetSpecificUserQuery,
   useUpdateProfileMutation,
   useUploadProfileImageMutation,
   useGetUserQuery,
   useGetFriendshipsQuery,
+  useCreateFriendshipMutation,
   useConfirmFriendshipMutation,
   useRejectFriendshipMutation,
 } = userApi;

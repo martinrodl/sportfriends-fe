@@ -1,4 +1,4 @@
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import moment from 'moment';
 
 import { PartnerPost as PartnerPostI } from 'models';
@@ -25,7 +25,7 @@ const PartnerCard = ({ post }: PartnerCardPropsI) => {
   return (
     <div className="w-full max-w-2xl rounded-lg bg-white shadow-md px-3 pb-3 flex flex-col">
       <div className="flex justify-between px-4 py-3">
-        <div className="flex gap-x-2">
+        <Link className="flex gap-x-2" to={'/dashboard/' + SLUGS.UserProfile + '/' + author.id}>
           <div>
             <ProfileIcon />
           </div>
@@ -33,7 +33,7 @@ const PartnerCard = ({ post }: PartnerCardPropsI) => {
             <p className="body2">{author.name}</p>
             <p className="text-xs text-main4 mb-1">{`${moment(createdAt).format('DD MMMM hh:mm')}`}</p>
           </div>
-        </div>
+        </Link>
       </div>
       <h4 className="font-semibold">{title}</h4>
       <p className="body2 font-normal text-main4 mb-2">{description}</p>

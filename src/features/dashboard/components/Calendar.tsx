@@ -56,7 +56,7 @@ const Calendar = ({ getPickedDate, dates }: CalendarProps) => {
       <div className="flex flex-1 justify-around my-2">
         {getWeek(pickedWeek).map((day) => dayOfCalender(day, checkIfContainsDate(dates, day)))}
       </div>
-      <div className="flex gap-x-2 self-end mr-3">
+      <div className="flex gap-x-2 self-end mt-3 mr-3">
         <button
           onClick={onClickLeft}
           className="h-8 w-11 bg-main3 bg-opacity-5 rounded-full flex justify-center items-center"

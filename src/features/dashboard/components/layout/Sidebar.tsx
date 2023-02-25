@@ -39,7 +39,7 @@ const Sidebar = ({ onClose, isClosed }: SideBarProps) => {
                 style={{ backgroundColor: getMatch(item.slug) ? colors.primary : '' }}
               >
                 {<img src={item.icon} alt="" className="h-5 w-5 fill-black" />}
-                <span className="text-black body1 font-semibold flex-1">{item.title}</span>
+                <span className="text-black body3 font-semibold flex-1">{item.title}</span>
                 <div className="bg-white rounded-full h-2 w-2" />
               </NavLink>
             </div>

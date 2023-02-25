@@ -29,8 +29,8 @@ export default function SportPartner() {
   };
 
   const getFilters = () => {
-    return [SelectSports, SelectDistance, SelectGender, SelectLevel].map((el) =>
-      React.createElement(el, { type: filterTypeEnum.sportPartner }),
+    return [SelectSports, SelectDistance, SelectGender, SelectLevel].map((el, i) =>
+      React.createElement(el, { type: filterTypeEnum.sportPartner, key: 'sportpartner' + i }),
     );
   };
 
