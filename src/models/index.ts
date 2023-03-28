@@ -78,7 +78,10 @@ export interface PartnerPost {
 export enum FriendStatus {
   Pending = 'pending',
   Confirmend = 'confirmed',
+  Requested = 'requested',
+  WaitingResponse = 'waitingresponse',
 }
+
 export interface Friendship {
   requester: string;
   recipient: string;

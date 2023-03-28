@@ -11,10 +11,10 @@ interface FriendsGroupProps {
 const FriendsGroup = ({ friendships, groupType }: FriendsGroupProps) => {
   const getText = (type: FriendStatus) => {
     switch (type) {
-      case FriendStatus.Pending:
-        return 'Sent reuquests';
-      case FriendStatus.Pending:
-        return 'Waiting for response requests';
+      case FriendStatus.Requested:
+        return 'Sent request';
+      case FriendStatus.WaitingResponse:
+        return 'Waiting for response';
       case FriendStatus.Confirmend:
         return 'Friends';
     }
@@ -29,7 +29,7 @@ const FriendsGroup = ({ friendships, groupType }: FriendsGroupProps) => {
       {friendships?.length ? (
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-5">
           {friendships?.map((friendShip) => (
-            <FriendsCard friendShip={friendShip} key={'friendscard' + friendShip.id} />
+            <FriendsCard status={groupType} friendShip={friendShip} key={'friendscard' + friendShip.id} />
           ))}
         </div>
       ) : (

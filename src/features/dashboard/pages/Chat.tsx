@@ -12,10 +12,10 @@ import ChatBox from '../components/chat/ChatBox';
 
 export default function Chat() {
   const auth = useSelector(selectAuth);
-  const { data, isSuccess, error } = useGetUserChatsQuery();
+  const { data, isSuccess, error } = useGetUserChatsQuery('');
   const { chats } = data || {};
   const location = useLocation();
-  const [activeChat, setActiveChat] = useState();
+  const [activeChat, setActiveChat] = useState(null);
 
   const socket = io('ws://martinrodl.me/api/socket/chat', {
     reconnectionDelayMax: 10000,
@@ -37,7 +37,6 @@ export default function Chat() {
         const newChat = createNewChat(location.state.userId);
         setActiveChat(newChat);
       } else {
-        console.log('**', activeChat);
         setActiveChat(chats[0]);
       }
     }

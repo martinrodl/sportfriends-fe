@@ -18,12 +18,12 @@ export default function Friends() {
   return (
     <div className="w-full max-w-4xl mx-auto px-4 mt-12 min-h-screen">
       {waitingResponseFriendships?.length ? (
-        <FriendsGroup friendships={waitingResponseFriendships} groupType={FriendStatus.requested} />
+        <FriendsGroup friendships={waitingResponseFriendships} groupType={FriendStatus.WaitingResponse} />
       ) : null}
       {requestedFriendships?.length ? (
-        <FriendsGroup friendships={requestedFriendships} groupType={FriendStatus.requested} />
+        <FriendsGroup friendships={requestedFriendships} groupType={FriendStatus.Requested} />
       ) : null}
-      {<FriendsGroup friendships={confirmedFriendships} groupType={FriendStatus.confirmed} />}
+      {<FriendsGroup friendships={confirmedFriendships} groupType={FriendStatus.Confirmend} />}
     </div>
   );
 }
