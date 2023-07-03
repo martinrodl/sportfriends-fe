@@ -24,6 +24,7 @@ const EventDetail = () => {
   const [leaveEvent, { error: leaveError, isLoading: leaveLoading }] = useLeaveEventMutation();
   const [createMoment, { error: commentError, isLoading: commentLoading }] = useCreateCommentMutation();
   const {
+    id,
     title,
     address,
     timeStart,
@@ -43,7 +44,7 @@ const EventDetail = () => {
     setComment('');
   };
 
-  if (isLoading) {
+  if (isLoading || !event.id) {
     <CircularProgress />;
   }
 
@@ -77,7 +78,7 @@ const EventDetail = () => {
 
           <div className="my-3 flex items-center">
             <ProfileIcon sizeDesktop={3} size={3} />
-            <p className="ml-2 font-medium body2">{typeof author !== 'string' && author.name}</p>
+            <p className="ml-2 font-medium body2">{typeof author !== 'string' && author?.name}</p>
           </div>
           {participants?.some((participant) => participant.id === userId) ? (
             <div className="flex justify-center">

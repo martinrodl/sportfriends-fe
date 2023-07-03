@@ -28,7 +28,7 @@ const Login = () => {
     <PageLayout>
       <div className="max-w-[485px] mx-auto w-full">
         <div className="flex flex-col">
-          <h3 className="text-[28px] md:text-[38px] text-primary font-semibold mb-[18px]">Welcome!</h3>
+          <h3 className="text-[28px] md:text-[38px] text-primary font-semibold mb-[18px]">Welcome! Test3</h3>
           <p className="text-[#9A9A9A] md:text-xl mb-[30px]">
             Get out of the monitor, stand up,
             <br /> move and find new pals!

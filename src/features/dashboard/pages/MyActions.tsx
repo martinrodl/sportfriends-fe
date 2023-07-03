@@ -8,7 +8,7 @@ import Calender from '../components/Calendar';
 import Event from '../components/Event';
 
 const MyActions = () => {
-  const { data, isLoading, isSuccess, error } = useGetUserEventsQuery('');
+  const { data, isLoading, isSuccess, error } = useGetUserEventsQuery();
   const [pickedDate, setPickedDate] = useState(null);
 
   const getPickedDate = (pickedDate: Moment) => {

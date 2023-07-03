@@ -20,7 +20,7 @@ const Calendar = ({ getPickedDate, dates }: CalendarProps) => {
   }, [pickedDay]);
 
   const dayOfCalender = (day: moment.Moment, hasEvent = true) => (
-    <div className="flex flex-col items-center">
+    <div className="flex flex-col items-center" key={'day' + String(day)}>
       <button
         onClick={() => {
           setPickedDay(day);

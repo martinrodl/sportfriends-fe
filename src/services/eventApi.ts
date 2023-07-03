@@ -3,6 +3,11 @@ import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
 import { BASE_URL } from 'shared/constants';
 import { Event, State } from 'models';
 
+interface UserEventsI {
+  participated: Event[];
+  created: Event[];
+}
+
 export const eventApi = createApi({
   reducerPath: 'eventApi',
   baseQuery: fetchBaseQuery({
@@ -15,11 +20,11 @@ export const eventApi = createApi({
   }),
   tagTypes: ['event', 'events', 'userEvents'],
   endpoints: (builder) => ({
-    getUserEvents: builder.query<Event[], string>({
+    getUserEvents: builder.query<UserEventsI, void>({
       query: () => ({
         url: 'events/userevents',
       }),
-      transformResponse: (response: { data: Event[] }): Event[] => {
+      transformResponse: (response: { data: UserEventsI }): UserEventsI => {
         return response.data;
       },
       providesTags: ['userEvents'],
