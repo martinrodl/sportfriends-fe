@@ -13,7 +13,10 @@ jobs:
         username: ${{ secrets.DOCKER_LOGIN }}
         password: ${{ secrets.DOCKER_PASSWORD }}
     - name: Build the Docker image
-      uses: docker/build-push-action@v2
+      id: build-and-push
+      uses: docker/build-push-action@ac9327eae2b366085ac7f6a2d02df8aa8ead720a
       with:
+        context: .
         push: true
-        tags: mrodl/sportfriends-fe
+        labels: mrodl/sportfriends-fe
+        tags: latest
