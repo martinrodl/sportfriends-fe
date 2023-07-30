@@ -14,6 +14,7 @@ import MyActions from './pages/MyActions';
 import CreateSportsPartnerForm from './pages/CreateSportsPartnerForm';
 import EventDetail from './pages/EventDetail';
 import UserProfile from './pages/UserProfile';
+import CreateSlot from './pages/CreateTimeSlot';
 
 const Dashboard = () => {
   return (
@@ -26,12 +27,16 @@ const Dashboard = () => {
         <Route path={SLUGS.CreateEvent} element={<CreateEventForm />} />
         <Route path={SLUGS.Social} element={<Social />} />
         <Route path={SLUGS.SportsPartner} element={<SportsPartner />} />
-        <Route path={SLUGS.CreateSportsPartnerPost} element={<CreateSportsPartnerForm />} />
+        <Route
+          path={SLUGS.CreateSportsPartnerPost}
+          element={<CreateSportsPartnerForm />}
+        />
         <Route path={SLUGS.Chat} element={<Chat />} />
         <Route path={SLUGS.Settings} element={<Settings />} />
         <Route path={SLUGS.Event + '/:id'} element={<EventDetail />} />
         <Route path={SLUGS.UserProfile + '/:id'} element={<UserProfile />} />
-
+        <Route path={SLUGS.UserProfile} element={<UserProfile />} />
+        <Route path={SLUGS.CreateSlot} element={<CreateSlot />} />
         <Route path="*" element={<Navigate to={SLUGS.Home} />} />
       </Routes>
     </DashboardLayout>
