@@ -75,6 +75,11 @@ const Navbar = ({ openSideBar }: NavbarProps) => {
       slug: SLUGS.Home,
       icon: <CreateOrganization />,
     },
+    {
+      title: 'Create Slot',
+      slug: SLUGS.CreateSlot,
+      icon: <CreateEventIcon />,
+    },
   ];
 
   const profileMenu = [
@@ -117,7 +122,9 @@ const Navbar = ({ openSideBar }: NavbarProps) => {
           className={`flex items-center bg-white gap-x-3 px-3 h-11 shadow-xl hover:bg-primary
         hover:text-white
          ${menuArray.length - 1 === index ? '' : 'border-b'} 
-         ${0 !== index ? '' : 'rounded-t-xl'} ${menuArray.length - 1 === index ? 'rounded-b-xl' : ''}
+         ${0 !== index ? '' : 'rounded-t-xl'} ${
+            menuArray.length - 1 === index ? 'rounded-b-xl' : ''
+          }
         `}
         >
           {item.icon}
@@ -137,7 +144,9 @@ const Navbar = ({ openSideBar }: NavbarProps) => {
             className={`flex w-full items-center bg-white gap-x-3 px-3 h-11 shadow-xl hover:bg-primary
           hover:text-white
           ${menuArray.length - 1 === index ? '' : 'border-b'} 
-          ${0 !== index ? '' : 'rounded-t-xl'} ${menuArray.length - 1 === index ? 'rounded-b-xl' : ''}
+          ${0 !== index ? '' : 'rounded-t-xl'} ${
+              menuArray.length - 1 === index ? 'rounded-b-xl' : ''
+            }
           `}
           >
             {item.icon}
@@ -156,7 +165,10 @@ const Navbar = ({ openSideBar }: NavbarProps) => {
     } else {
       return (
         <div className="flex md:w-10 md:h-10 w-6 h-6  flex-col justify-center items-center bg-white rounded-full">
-          <FaUserAlt className="h-3 w-3 md:h-5 md:w-5" style={{ color: '#303030' }} />
+          <FaUserAlt
+            className="h-3 w-3 md:h-5 md:w-5"
+            style={{ color: '#303030' }}
+          />
         </div>
       );
     }
@@ -171,11 +183,18 @@ const Navbar = ({ openSideBar }: NavbarProps) => {
             placeholder="Search friends..."
             className="pl-10 pr-3 py-3 rounded-xl text-xs md:text-sm focus-within:outline-none placeholder-black w-full"
           />
-          <FiSearch className="absolute top-2.5 left-2" size="1.5rem" style={{ color: colors.secondary }} />
+          <FiSearch
+            className="absolute top-2.5 left-2"
+            size="1.5rem"
+            style={{ color: colors.secondary }}
+          />
         </div>
 
         <div className="order-2 flex flex-1 justify-end items-center">
-          <button onClick={openSideBar} className="flex-1 ml-5 md:hidden flex-shrink-0">
+          <button
+            onClick={openSideBar}
+            className="flex-1 ml-5 md:hidden flex-shrink-0"
+          >
             <img src={menu} alt="menu" className="w-5 md:w-3 " />
           </button>
           <button
@@ -212,7 +231,9 @@ const Navbar = ({ openSideBar }: NavbarProps) => {
                 }}
               >
                 <ProfileIcon />
-                <h4 className=" font-semibold md:flex self-center">{'' || name}</h4>
+                <h4 className=" font-semibold md:flex self-center">
+                  {'' || name}
+                </h4>
               </button>
               <div className="relative md:right-10 right-24 top-2">
                 <Modal2

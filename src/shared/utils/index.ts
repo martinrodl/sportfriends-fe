@@ -1,5 +1,12 @@
+import moment from 'moment';
+
 export const objectToParametrs = (obj: any) => {
-  if (JSON.stringify(obj) === '{}' || obj === null || Array.isArray(obj) || obj === undefined) {
+  if (
+    JSON.stringify(obj) === '{}' ||
+    obj === null ||
+    Array.isArray(obj) ||
+    obj === undefined
+  ) {
     return '';
   } else {
     let query = '?';
@@ -15,3 +22,6 @@ export const objectToParametrs = (obj: any) => {
     return query.slice(0, -1);
   }
 };
+
+export const getFullWeekOfMomentDays = (week: number) =>
+  Array.from(Array(7).keys()).map((n) => moment().day(1 + n + 7 * week));

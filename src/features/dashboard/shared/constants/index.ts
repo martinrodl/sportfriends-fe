@@ -12,4 +12,5 @@ export const SLUGS = {
   UserProfile: 'user-profile',
   Chat: 'chat',
   Dashboard: 'dashboard',
+  CreateSlot: 'create-slot',
 };

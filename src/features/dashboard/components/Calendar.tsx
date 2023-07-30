@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react';
 import moment from 'moment';
-
 import { HiOutlineChevronLeft, HiOutlineChevronRight } from 'react-icons/hi';
 
+import { getFullWeekOfMomentDays } from 'shared/utils';
 interface CalendarProps {
   getPickedDate?: (pickedDay: moment.Moment) => void;
   dates?: moment.Moment[];
@@ -11,7 +11,6 @@ interface CalendarProps {
 const Calendar = ({ getPickedDate, dates }: CalendarProps) => {
   const [pickedDay, setPickedDay] = useState(moment());
   const [pickedWeek, setPickedWeek] = useState(0);
-  const getWeek = (week: number) => Array.from(Array(7).keys()).map((n) => moment().day(1 + n + 7 * week));
 
   useEffect(() => {
     if (getPickedDate) {
@@ -32,7 +31,11 @@ const Calendar = ({ getPickedDate, dates }: CalendarProps) => {
         <h4>{day.format('DD')}</h4>
         <h4>{day.format('dd')}</h4>
       </button>
-      <div className={`${hasEvent ? 'bg-primary' : 'bg-white'} h-2 w-2 rounded-full mt-2`} />
+      <div
+        className={`${
+          hasEvent ? 'bg-primary' : 'bg-white'
+        } h-2 w-2 rounded-full mt-2`}
+      />
     </div>
   );
 
@@ -43,18 +46,29 @@ const Calendar = ({ getPickedDate, dates }: CalendarProps) => {
     setPickedWeek(pickedWeek + 1);
   };
 
-  const checkIfContainsDate = (dates: moment.Moment[] | undefined, day: moment.Moment): boolean => {
+  const checkIfContainsDate = (
+    dates: moment.Moment[] | undefined,
+    day: moment.Moment,
+  ): boolean => {
     if (dates) {
-      return Boolean(dates.filter((date) => moment(date).startOf('day').isSame(day.startOf('day'))).length);
+      return Boolean(
+        dates.filter((date) =>
+          moment(date).startOf('day').isSame(day.startOf('day')),
+        ).length,
+      );
     }
     return false;
   };
 
   return (
     <div className="h-[200px] max-w-[340px] flex flex-col bg-white  rounded-2xl p-5 border border-primary">
-      <h3 className="text-black">{getWeek(pickedWeek)[0].format('MMMM')}</h3>
+      <h3 className="text-black">
+        {getFullWeekOfMomentDays(pickedWeek)[0].format('MMMM')}
+      </h3>
       <div className="flex flex-1 justify-around my-2">
-        {getWeek(pickedWeek).map((day) => dayOfCalender(day, checkIfContainsDate(dates, day)))}
+        {getFullWeekOfMomentDays(pickedWeek).map((day) =>
+          dayOfCalender(day, checkIfContainsDate(dates, day)),
+        )}
       </div>
       <div className="flex gap-x-2 self-end mt-3 mr-3">
         <button

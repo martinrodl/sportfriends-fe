@@ -49,7 +49,12 @@ export interface Event {
   minParticipants: number;
   maxParticipants: number;
   description: string;
-  comments: { text: string; id: string; authorName: string; createdAt: string }[];
+  comments: {
+    text: string;
+    id: string;
+    authorName: string;
+    createdAt: string;
+  }[];
   author: string | { id: string; name: string };
   outdoor: boolean;
 }
@@ -99,4 +104,16 @@ export interface User {
   location: { coordinates: [number, number] };
   description?: string;
   profileImg?: string;
+}
+
+export interface Slot {
+  id: string;
+  title?: string;
+  address?: string;
+  location?: { coordinates: [number, number] };
+  startTime: [string];
+  endTime: [string];
+  user: string;
+  rate?: number;
+  description?: string;
 }

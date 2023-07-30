@@ -1,7 +1,7 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
 
 import { BASE_URL } from 'shared/constants';
-import { Event, State } from 'models';
+import { Event, State, Slot } from 'models';
 
 interface UserEventsI {
   participated: Event[];
@@ -42,7 +42,9 @@ export const eventApi = createApi({
       query: (userId) => ({
         url: `events/${userId}`,
       }),
-      transformResponse: (response: { data: { created: Event[] } }): Event[] => {
+      transformResponse: (response: {
+        data: { created: Event[] };
+      }): Event[] => {
         return response.data.created;
       },
       providesTags: ['events'],
@@ -86,6 +88,21 @@ export const eventApi = createApi({
       }),
       invalidatesTags: ['event'],
     }),
+    getSlots: builder.query<Slot[], string>({
+      query: (userId) => ({
+        url: `slots/${userId}`,
+      }),
+      transformResponse: (response: { data: { slots: Slot[] } }): Slot[] => {
+        return response.data.slots;
+      },
+    }),
+    createSlot: builder.mutation({
+      query: (formData) => ({
+        url: 'slot',
+        method: 'POST',
+        body: formData,
+      }),
+    }),
   }),
 });
 
@@ -100,4 +117,6 @@ export const {
   useLeaveEventMutation,
   useCreateEventMutation,
   useCreateCommentMutation,
+  useGetSlotsQuery,
+  useCreateSlotMutation,
 } = eventApi;
