@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useSelector } from 'react-redux';
-import { GoTriangleUp, GoTriangleDown } from 'react-icons/all';
+import { GoTriangleUp, GoTriangleDown } from 'react-icons/go';
 
 import { useGetDatingPostsQuery } from 'services/datingApi';
 import { objectToParametrs } from 'shared/utils';
@@ -29,8 +29,12 @@ export default function SportPartner() {
   };
 
   const getFilters = () => {
-    return [SelectSports, SelectDistance, SelectGender, SelectLevel].map((el, i) =>
-      React.createElement(el, { type: filterTypeEnum.sportPartner, key: 'sportpartner' + i }),
+    return [SelectSports, SelectDistance, SelectGender, SelectLevel].map(
+      (el, i) =>
+        React.createElement(el, {
+          type: filterTypeEnum.sportPartner,
+          key: 'sportpartner' + i,
+        }),
     );
   };
 
@@ -54,7 +58,9 @@ export default function SportPartner() {
         </button>
         {datingSuccess &&
           Array.isArray(datingPosts?.posts) &&
-          datingPosts.posts.map((post) => <PartnerCard post={post} key={post.id} />)}
+          datingPosts.posts.map((post) => (
+            <PartnerCard post={post} key={post.id} />
+          ))}
       </div>
       <div className="hidden md:flex my-4 mx-4  flex-col gap-y-2 w-[320px] shrink-0">
         <h3 className="font-semibold mb-2">Filters</h3>

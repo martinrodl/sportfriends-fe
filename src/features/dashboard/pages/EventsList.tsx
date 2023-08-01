@@ -1,10 +1,14 @@
 import { useState } from 'react';
 import { useSelector } from 'react-redux';
-import { GoTriangleUp, GoTriangleDown } from 'react-icons/all';
+import { GoTriangleUp, GoTriangleDown } from 'react-icons/go';
 
 import React from 'react';
 import { useGetEventsQuery } from 'services/eventApi';
-import { selectSpecificFilter, filterTypeEnum, selectDistance } from 'store/slices';
+import {
+  selectSpecificFilter,
+  filterTypeEnum,
+  selectDistance,
+} from 'store/slices';
 import { objectToParametrs } from 'shared/utils';
 import { colors } from 'shared/constants';
 import Modal from 'shared/components/ShadowModal';
@@ -18,15 +22,20 @@ import SelectTimeRange from '../components/filter/SelectTimeRange';
 const Events = () => {
   const [isFilterOpened, setIsFilterOpened] = useState(false);
   const filters = useSelector(selectSpecificFilter(filterTypeEnum.listEvents));
-  const { data: events, isLoading, isSuccess, error } = useGetEventsQuery(objectToParametrs(filters));
+  const {
+    data: events,
+    isLoading,
+    isSuccess,
+    error,
+  } = useGetEventsQuery(objectToParametrs(filters));
 
   const closeFilterModal = () => {
     setIsFilterOpened(false);
   };
 
   const getFilters = () => {
-    return [SelectSports, SelectDistance, SelectDateRange, SelectTimeRange].map((el) =>
-      React.createElement(el, { type: filterTypeEnum.listEvents }),
+    return [SelectSports, SelectDistance, SelectDateRange, SelectTimeRange].map(
+      (el) => React.createElement(el, { type: filterTypeEnum.listEvents }),
     );
   };
 
@@ -50,7 +59,8 @@ const Events = () => {
           </div>
         </button>
         <div className="flex flex-wrap w-max-sm gap-2 w-full">
-          {Array.isArray(events) && events.map((event) => <Event event={event} key={event.id} />)}
+          {Array.isArray(events) &&
+            events.map((event) => <Event event={event} key={event.id} />)}
         </div>
       </div>
       <div className="hidden md:flex my-4 mx-4  flex-col gap-y-2 w-[320px] shrink-0">

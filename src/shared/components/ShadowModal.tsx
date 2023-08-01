@@ -1,5 +1,5 @@
 import { useRef, ReactNode } from 'react';
-import { IoCloseSharp } from 'react-icons/all';
+import { IoCloseSharp } from 'react-icons/io5';
 
 import useOnClickOutside from 'shared/hooks/useClickOutside';
 
@@ -9,7 +9,11 @@ interface ModalProps {
   children: ReactNode;
 }
 
-export default function Modal({ isOpened, onRequestClose, children }: ModalProps) {
+export default function Modal({
+  isOpened,
+  onRequestClose,
+  children,
+}: ModalProps) {
   const ref = useRef(null);
   useOnClickOutside(ref, onRequestClose);
   return (
