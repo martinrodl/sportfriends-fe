@@ -4,6 +4,7 @@ import { Link, Routes, Route, useLocation } from 'react-router-dom';
 import { SLUGS } from 'shared/constants';
 import { ProtectedRoutes } from 'shared/components';
 
+import PassowordPage from './pages/PasswordPage';
 import Login from './pages/Login';
 import SignUp from './pages/SignUp';
 import MoreInfo from './pages/MoreInfo';
@@ -25,7 +26,8 @@ const HomeIndex = () => {
           </Link>
           <div className=" flex items-center">
             <Routes>
-              <Route path={SLUGS.all} index element={<Login />} />
+              <Route path={SLUGS.home} index element={<PassowordPage />} />
+              <Route path={SLUGS.login} index element={<Login />} />
               <Route path={SLUGS.signup} element={<SignUp />} />
               <Route element={<ProtectedRoutes />}>
                 <Route path={SLUGS.moreinfo} element={<MoreInfo />} />

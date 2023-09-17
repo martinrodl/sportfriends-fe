@@ -25,7 +25,7 @@ const Login = () => {
     if (isSuccess) {
       const { id, email, accessToken } = data;
       dispatch(setCredentials({ accessToken, id, email }));
-      navigate(SLUGS.dashboard);
+      navigate('/' + SLUGS.dashboard);
     }
   }, [isSuccess]);
 
@@ -94,7 +94,7 @@ const Login = () => {
           <div className="ml-auto md:mr-0 mr-auto mt-[62px] md:mt-[18px]">
             <p className="font-semibold text-sm  md:text-lg cursor-pointer">
               Not Registered yet?{' '}
-              <Link to={SLUGS.signup} className="text-primary">
+              <Link to={'/' + SLUGS.signup} className="text-primary">
                 Register now!
               </Link>
             </p>
