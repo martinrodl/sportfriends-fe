@@ -78,6 +78,7 @@ const ReservationTimetable = ({ userId }) => {
     data: slots,
     isLoading,
     isSuccess,
+    isError,
     error,
     isFetching,
   } = useGetSlotsQuery(
@@ -102,6 +103,14 @@ const ReservationTimetable = ({ userId }) => {
   if (isLoading) {
     return (
       <CircularProgress className="mr-5" size={20} style={{ color: 'white' }} />
+    );
+  }
+
+  if (isError) {
+    return (
+      <div>
+        <h1>Something went wrong - TimeTable</h1>
+      </div>
     );
   }
   return (

@@ -29,4 +29,4 @@ spec:
       protocol: TCP
       port: 3000
       targetPort: 3000
-      nodePort: 30087
+      nodePort: 30095
