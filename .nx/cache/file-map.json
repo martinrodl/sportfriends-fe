@@ -1,0 +1,1076 @@
+{
+  "version": "6.0",
+  "nxVersion": "16.10.0",
+  "deps": {
+    "@nx/js": "16.10.0",
+    "@nx/workspace": "16.10.0",
+    "nx": "16.10.0"
+  },
+  "pathMappings": {},
+  "nxJsonPlugins": [],
+  "fileMap": {
+    "nonProjectFiles": [
+      {
+        "file": ".editorconfig",
+        "hash": "5443105041930014821"
+      },
+      {
+        "file": ".eslintrc.js",
+        "hash": "8307017463036363339"
+      },
+      {
+        "file": ".github/workflows/docker-build.yml",
+        "hash": "14115917605815161318"
+      },
+      {
+        "file": ".gitignore",
+        "hash": "17834934085349565314"
+      },
+      {
+        "file": ".nx/cache/d/daemon.log",
+        "hash": "16987098516766979503"
+      },
+      {
+        "file": ".nx/cache/d/server-process.json",
+        "hash": "1234773391567367266"
+      },
+      {
+        "file": ".nx/cache/file-map.json",
+        "hash": "6217512515425154469"
+      },
+      {
+        "file": ".nx/cache/nx-console-project-graph/project-graph.html",
+        "hash": "17036869540637447991"
+      },
+      {
+        "file": ".nx/cache/nx-console-project-graph/static/3rdpartylicenses.txt",
+        "hash": "5667550289807473445"
+      },
+      {
+        "file": ".nx/cache/nx-console-project-graph/static/environment.js",
+        "hash": "12567023232044855403"
+      },
+      {
+        "file": ".nx/cache/nx-console-project-graph/static/favicon.ico",
+        "hash": "9303420814833116677"
+      },
+      {
+        "file": ".nx/cache/nx-console-project-graph/static/main.js",
+        "hash": "13551439496520482047"
+      },
+      {
+        "file": ".nx/cache/nx-console-project-graph/static/polyfills.js",
+        "hash": "5617236864114375205"
+      },
+      {
+        "file": ".nx/cache/nx-console-project-graph/static/runtime.js",
+        "hash": "9652903316845995179"
+      },
+      {
+        "file": ".nx/cache/nx-console-project-graph/static/styles.css",
+        "hash": "2125456314194136822"
+      },
+      {
+        "file": ".nx/cache/nx-console-project-graph/static/styles.js",
+        "hash": "13596360365094399219"
+      },
+      {
+        "file": ".nx/cache/project-graph.json",
+        "hash": "17289852913997677231"
+      },
+      {
+        "file": ".prettierrc",
+        "hash": "13161801197277730469"
+      },
+      {
+        "file": ".vscode/extensions.json",
+        "hash": "3833545590435012078"
+      },
+      {
+        "file": "apps/dosportanywhere/.dockerignore",
+        "hash": "4406726806561618152"
+      },
+      {
+        "file": "apps/dosportanywhere/Dockerfile",
+        "hash": "4747388368160028292"
+      },
+      {
+        "file": "apps/dosportanywhere/README.md",
+        "hash": "17524295600495787358"
+      },
+      {
+        "file": "apps/dosportanywhere/index.html",
+        "hash": "17924205786837828528"
+      },
+      {
+        "file": "apps/dosportanywhere/package-lock.json",
+        "hash": "11106025753016932775"
+      },
+      {
+        "file": "apps/dosportanywhere/package.json",
+        "hash": "3708858728732379687"
+      },
+      {
+        "file": "apps/dosportanywhere/postcss.config.js",
+        "hash": "1579725330904862112"
+      },
+      {
+        "file": "apps/dosportanywhere/public/favicon.ico",
+        "hash": "924510235732928172"
+      },
+      {
+        "file": "apps/dosportanywhere/public/manifest.json",
+        "hash": "8528690344418497343"
+      },
+      {
+        "file": "apps/dosportanywhere/public/robots.txt",
+        "hash": "2790380794362165217"
+      },
+      {
+        "file": "apps/dosportanywhere/src/custom.d.ts",
+        "hash": "12109487586429375174"
+      },
+      {
+        "file": "apps/dosportanywhere/src/features/dashboard/assets/images/BsChat.svg",
+        "hash": "13585863565265545391"
+      },
+      {
+        "file": "apps/dosportanywhere/src/features/dashboard/assets/images/avatar.png",
+        "hash": "16174976836153657074"
+      },
+      {
+        "file": "apps/dosportanywhere/src/features/dashboard/assets/images/bandy.svg",
+        "hash": "15671265971302306986"
+      },
+      {
+        "file": "apps/dosportanywhere/src/features/dashboard/assets/images/bell.svg",
+        "hash": "17628620583618178551"
+      },
+      {
+        "file": "apps/dosportanywhere/src/features/dashboard/assets/images/bubble.svg",
+        "hash": "3159610170074652497"
+      },
+      {
+        "file": "apps/dosportanywhere/src/features/dashboard/assets/images/bx_bx-trash.svg",
+        "hash": "15421543259260283214"
+      },
+      {
+        "file": "apps/dosportanywhere/src/features/dashboard/assets/images/calendr.svg",
+        "hash": "12285921493734759431"
+      },
+      {
+        "file": "apps/dosportanywhere/src/features/dashboard/assets/images/calnder.svg",
+        "hash": "10118570314748109877"
+      },
+      {
+        "file": "apps/dosportanywhere/src/features/dashboard/assets/images/create-outline.svg",
+        "hash": "12585072500440072849"
+      },
+      {
+        "file": "apps/dosportanywhere/src/features/dashboard/assets/images/cross.svg",
+        "hash": "4481954826648739270"
+      },
+      {
+        "file": "apps/dosportanywhere/src/features/dashboard/assets/images/dropdown.svg",
+        "hash": "1028256190931889163"
+      },
+      {
+        "file": "apps/dosportanywhere/src/features/dashboard/assets/images/eva_message-circle-fill.svg",
+        "hash": "10936246488478987161"
+      },
+      {
+        "file": "apps/dosportanywhere/src/features/dashboard/assets/images/events.svg",
+        "hash": "343021843675458830"
+      },
+      {
+        "file": "apps/dosportanywhere/src/features/dashboard/assets/images/fe_search.svg",
+        "hash": "12913073330543639844"
+      },
+      {
+        "file": "apps/dosportanywhere/src/features/dashboard/assets/images/feather_edit-2.svg",
+        "hash": "11740323458630965876"
+      },
+      {
+        "file": "apps/dosportanywhere/src/features/dashboard/assets/images/filters.svg",
+        "hash": "11637224037490230347"
+      },
+      {
+        "file": "apps/dosportanywhere/src/features/dashboard/assets/images/fluent_home-16-regular.svg",
+        "hash": "5330747658524006000"
+      },
+      {
+        "file": "apps/dosportanywhere/src/features/dashboard/assets/images/friends.svg",
+        "hash": "3414202507413495020"
+      },
+      {
+        "file": "apps/dosportanywhere/src/features/dashboard/assets/images/heart.svg",
+        "hash": "13094444526073943395"
+      },
+      {
+        "file": "apps/dosportanywhere/src/features/dashboard/assets/images/horidot.svg",
+        "hash": "13852699150238044230"
+      },
+      {
+        "file": "apps/dosportanywhere/src/features/dashboard/assets/images/ion_notifications-circle.svg",
+        "hash": "1758542332393897693"
+      },
+      {
+        "file": "apps/dosportanywhere/src/features/dashboard/assets/images/logo.svg",
+        "hash": "17880607162470096598"
+      },
+      {
+        "file": "apps/dosportanywhere/src/features/dashboard/assets/images/particpents.svg",
+        "hash": "12824485205048851556"
+      },
+      {
+        "file": "apps/dosportanywhere/src/features/dashboard/assets/images/pin.svg",
+        "hash": "11864806371174209362"
+      },
+      {
+        "file": "apps/dosportanywhere/src/features/dashboard/assets/images/placeholder.svg",
+        "hash": "17726969933017192112"
+      },
+      {
+        "file": "apps/dosportanywhere/src/features/dashboard/assets/images/settings.svg",
+        "hash": "15673493093796561277"
+      },
+      {
+        "file": "apps/dosportanywhere/src/features/dashboard/assets/images/upload.png",
+        "hash": "14206611200923485169"
+      },
+      {
+        "file": "apps/dosportanywhere/src/features/dashboard/assets/images/user.png",
+        "hash": "14875505719362037675"
+      },
+      {
+        "file": "apps/dosportanywhere/src/features/dashboard/assets/images/user.svg",
+        "hash": "12269670816964411925"
+      },
+      {
+        "file": "apps/dosportanywhere/src/features/dashboard/assets/images/users.svg",
+        "hash": "7162752979760480904"
+      },
+      {
+        "file": "apps/dosportanywhere/src/features/dashboard/assets/new/Add.svg",
+        "hash": "13743764729613286509"
+      },
+      {
+        "file": "apps/dosportanywhere/src/features/dashboard/assets/new/Calendar.svg",
+        "hash": "17629646484892624217"
+      },
+      {
+        "file": "apps/dosportanywhere/src/features/dashboard/assets/new/Chat.svg",
+        "hash": "2493988392359797429"
+      },
+      {
+        "file": "apps/dosportanywhere/src/features/dashboard/assets/new/ChatMessage.svg",
+        "hash": "8419150615869460639"
+      },
+      {
+        "file": "apps/dosportanywhere/src/features/dashboard/assets/new/CommentButton.svg",
+        "hash": "11714279846273035788"
+      },
+      {
+        "file": "apps/dosportanywhere/src/features/dashboard/assets/new/CreateEventIcon.svg",
+        "hash": "13610883318685591614"
+      },
+      {
+        "file": "apps/dosportanywhere/src/features/dashboard/assets/new/CreateOrganizationIcon.svg",
+        "hash": "4302893167490067179"
+      },
+      {
+        "file": "apps/dosportanywhere/src/features/dashboard/assets/new/CreateSportparnerIcon.svg",
+        "hash": "17907500491568181224"
+      },
+      {
+        "file": "apps/dosportanywhere/src/features/dashboard/assets/new/CreateTeamIcon.svg",
+        "hash": "11892821449500212823"
+      },
+      {
+        "file": "apps/dosportanywhere/src/features/dashboard/assets/new/CredentialsMenuIcon.svg",
+        "hash": "262652867280724981"
+      },
+      {
+        "file": "apps/dosportanywhere/src/features/dashboard/assets/new/Home.svg",
+        "hash": "7306142757385059181"
+      },
+      {
+        "file": "apps/dosportanywhere/src/features/dashboard/assets/new/Like.svg",
+        "hash": "11379621901342511140"
+      },
+      {
+        "file": "apps/dosportanywhere/src/features/dashboard/assets/new/LikeButton.svg",
+        "hash": "556362471756851249"
+      },
+      {
+        "file": "apps/dosportanywhere/src/features/dashboard/assets/new/LogoutMenuIcon.svg",
+        "hash": "8464779809850717752"
+      },
+      {
+        "file": "apps/dosportanywhere/src/features/dashboard/assets/new/MapPointer.svg",
+        "hash": "10860265715978251973"
+      },
+      {
+        "file": "apps/dosportanywhere/src/features/dashboard/assets/new/Menu.svg",
+        "hash": "5794619064608361932"
+      },
+      {
+        "file": "apps/dosportanywhere/src/features/dashboard/assets/new/Message.svg",
+        "hash": "5165443825244064044"
+      },
+      {
+        "file": "apps/dosportanywhere/src/features/dashboard/assets/new/Notification.svg",
+        "hash": "11913639789919104752"
+      },
+      {
+        "file": "apps/dosportanywhere/src/features/dashboard/assets/new/Point.svg",
+        "hash": "10838278920498742749"
+      },
+      {
+        "file": "apps/dosportanywhere/src/features/dashboard/assets/new/ProfileMenuIcon.svg",
+        "hash": "10270111909362468200"
+      },
+      {
+        "file": "apps/dosportanywhere/src/features/dashboard/assets/new/SetProfileMenuIcon.svg",
+        "hash": "16996891409695034413"
+      },
+      {
+        "file": "apps/dosportanywhere/src/features/dashboard/assets/new/SettingsMenuIcon.svg",
+        "hash": "14321770318388009247"
+      },
+      {
+        "file": "apps/dosportanywhere/src/features/dashboard/assets/new/ShareButton.svg",
+        "hash": "17008062805163792543"
+      },
+      {
+        "file": "apps/dosportanywhere/src/features/dashboard/assets/new/Social.svg",
+        "hash": "2215861823567862043"
+      },
+      {
+        "file": "apps/dosportanywhere/src/features/dashboard/assets/new/SportPartner.svg",
+        "hash": "15317037310140718989"
+      },
+      {
+        "file": "apps/dosportanywhere/src/features/dashboard/assets/new/User.svg",
+        "hash": "423404366672196438"
+      },
+      {
+        "file": "apps/dosportanywhere/src/features/dashboard/assets/new/Watch.svg",
+        "hash": "257756903915165019"
+      },
+      {
+        "file": "apps/dosportanywhere/src/features/dashboard/components/Calendar.tsx",
+        "hash": "6724887353370074707"
+      },
+      {
+        "file": "apps/dosportanywhere/src/features/dashboard/components/Event.tsx",
+        "hash": "12630987474095947736"
+      },
+      {
+        "file": "apps/dosportanywhere/src/features/dashboard/components/ProfileIcon.tsx",
+        "hash": "10656948236310331568"
+      },
+      {
+        "file": "apps/dosportanywhere/src/features/dashboard/components/RectangleProfileIcon.tsx",
+        "hash": "14461135144398706649"
+      },
+      {
+        "file": "apps/dosportanywhere/src/features/dashboard/components/chat/ChatBox.jsx",
+        "hash": "15463778437772727185"
+      },
+      {
+        "file": "apps/dosportanywhere/src/features/dashboard/components/chat/ChatList.jsx",
+        "hash": "7141494191316995769"
+      },
+      {
+        "file": "apps/dosportanywhere/src/features/dashboard/components/chat/Message.jsx",
+        "hash": "14627685554524023023"
+      },
+      {
+        "file": "apps/dosportanywhere/src/features/dashboard/components/events/EventFullCard.tsx",
+        "hash": "10778567405669998053"
+      },
+      {
+        "file": "apps/dosportanywhere/src/features/dashboard/components/events/EventsMarkers.tsx",
+        "hash": "15843668379667764583"
+      },
+      {
+        "file": "apps/dosportanywhere/src/features/dashboard/components/events/MarkerPopup.tsx",
+        "hash": "13557953136807186066"
+      },
+      {
+        "file": "apps/dosportanywhere/src/features/dashboard/components/events/PartnerCard.tsx",
+        "hash": "10735047495063409685"
+      },
+      {
+        "file": "apps/dosportanywhere/src/features/dashboard/components/filter/SelectDateRange.tsx",
+        "hash": "3330856860755855057"
+      },
+      {
+        "file": "apps/dosportanywhere/src/features/dashboard/components/filter/SelectDistance.tsx",
+        "hash": "3216191599397673849"
+      },
+      {
+        "file": "apps/dosportanywhere/src/features/dashboard/components/filter/SelectGender.tsx",
+        "hash": "7277015595005477691"
+      },
+      {
+        "file": "apps/dosportanywhere/src/features/dashboard/components/filter/SelectLevel.tsx",
+        "hash": "16992296009617442197"
+      },
+      {
+        "file": "apps/dosportanywhere/src/features/dashboard/components/filter/SelectSports.tsx",
+        "hash": "727907215021379583"
+      },
+      {
+        "file": "apps/dosportanywhere/src/features/dashboard/components/filter/SelectTimeRange.tsx",
+        "hash": "12119446277234408171"
+      },
+      {
+        "file": "apps/dosportanywhere/src/features/dashboard/components/home/BottomPost.tsx",
+        "hash": "5109720458184613891"
+      },
+      {
+        "file": "apps/dosportanywhere/src/features/dashboard/components/home/Comment.tsx",
+        "hash": "15780485043051358812"
+      },
+      {
+        "file": "apps/dosportanywhere/src/features/dashboard/components/home/EventPost.tsx",
+        "hash": "6269524943572760998"
+      },
+      {
+        "file": "apps/dosportanywhere/src/features/dashboard/components/home/PostCreation.tsx",
+        "hash": "2288120958691667566"
+      },
+      {
+        "file": "apps/dosportanywhere/src/features/dashboard/components/home/PostDialog.tsx",
+        "hash": "4367479583407157745"
+      },
+      {
+        "file": "apps/dosportanywhere/src/features/dashboard/components/home/UserPost.tsx",
+        "hash": "2477048933342636746"
+      },
+      {
+        "file": "apps/dosportanywhere/src/features/dashboard/components/layout/DashboardLayout.tsx",
+        "hash": "631403207331523880"
+      },
+      {
+        "file": "apps/dosportanywhere/src/features/dashboard/components/layout/Navbar.tsx",
+        "hash": "5850044438436425947"
+      },
+      {
+        "file": "apps/dosportanywhere/src/features/dashboard/components/layout/Sidebar.tsx",
+        "hash": "10458021571960506636"
+      },
+      {
+        "file": "apps/dosportanywhere/src/features/dashboard/components/myactions/EventCard.tsx",
+        "hash": "11826142498854018052"
+      },
+      {
+        "file": "apps/dosportanywhere/src/features/dashboard/components/myactions/PartnerCard.tsx",
+        "hash": "5588749995434225755"
+      },
+      {
+        "file": "apps/dosportanywhere/src/features/dashboard/components/myactions/SportPartner.tsx",
+        "hash": "15565339409733466269"
+      },
+      {
+        "file": "apps/dosportanywhere/src/features/dashboard/components/profile/ProUserInfo.tsx",
+        "hash": "17690678661974249656"
+      },
+      {
+        "file": "apps/dosportanywhere/src/features/dashboard/components/profile/ReservationTimetable.tsx",
+        "hash": "8894316505499795988"
+      },
+      {
+        "file": "apps/dosportanywhere/src/features/dashboard/components/profile/UserInfo.tsx",
+        "hash": "14368241458398901711"
+      },
+      {
+        "file": "apps/dosportanywhere/src/features/dashboard/components/settings/SetCredentials.tsx",
+        "hash": "17318797719843353249"
+      },
+      {
+        "file": "apps/dosportanywhere/src/features/dashboard/components/settings/SetProfile.tsx",
+        "hash": "17745105674558011534"
+      },
+      {
+        "file": "apps/dosportanywhere/src/features/dashboard/components/settings/SetProfileImg.tsx",
+        "hash": "16493091961256253725"
+      },
+      {
+        "file": "apps/dosportanywhere/src/features/dashboard/components/social/FriendsCard.tsx",
+        "hash": "2440179853287375405"
+      },
+      {
+        "file": "apps/dosportanywhere/src/features/dashboard/components/social/FriendsGroup.tsx",
+        "hash": "7297269903867615729"
+      },
+      {
+        "file": "apps/dosportanywhere/src/features/dashboard/index.tsx",
+        "hash": "8130681226505840113"
+      },
+      {
+        "file": "apps/dosportanywhere/src/features/dashboard/pages/Chat.tsx",
+        "hash": "10505523056979446891"
+      },
+      {
+        "file": "apps/dosportanywhere/src/features/dashboard/pages/CreateEventForm.jsx",
+        "hash": "3485870398585476098"
+      },
+      {
+        "file": "apps/dosportanywhere/src/features/dashboard/pages/CreateSportsPartnerForm.jsx",
+        "hash": "7852729778177493427"
+      },
+      {
+        "file": "apps/dosportanywhere/src/features/dashboard/pages/CreateTimeSlot.tsx",
+        "hash": "11965794019488630772"
+      },
+      {
+        "file": "apps/dosportanywhere/src/features/dashboard/pages/EventDetail.tsx",
+        "hash": "5430758557691096543"
+      },
+      {
+        "file": "apps/dosportanywhere/src/features/dashboard/pages/EventsList.tsx",
+        "hash": "12621772674734878858"
+      },
+      {
+        "file": "apps/dosportanywhere/src/features/dashboard/pages/EventsMap.tsx",
+        "hash": "9246978248552778660"
+      },
+      {
+        "file": "apps/dosportanywhere/src/features/dashboard/pages/Home.tsx",
+        "hash": "3105812080702187287"
+      },
+      {
+        "file": "apps/dosportanywhere/src/features/dashboard/pages/MyActions.tsx",
+        "hash": "478757284836910503"
+      },
+      {
+        "file": "apps/dosportanywhere/src/features/dashboard/pages/Settings.tsx",
+        "hash": "16680125586415576360"
+      },
+      {
+        "file": "apps/dosportanywhere/src/features/dashboard/pages/Social.tsx",
+        "hash": "5991494578560594289"
+      },
+      {
+        "file": "apps/dosportanywhere/src/features/dashboard/pages/SportPartner.tsx",
+        "hash": "8053801814134391432"
+      },
+      {
+        "file": "apps/dosportanywhere/src/features/dashboard/pages/UserProfile.tsx",
+        "hash": "7698391635739525972"
+      },
+      {
+        "file": "apps/dosportanywhere/src/features/dashboard/shared/constants/index.ts",
+        "hash": "1219370315432317901"
+      },
+      {
+        "file": "apps/dosportanywhere/src/features/dashboard/shared/utils/index.ts",
+        "hash": "14914938518065783875"
+      },
+      {
+        "file": "apps/dosportanywhere/src/features/login/assets/images/Ellipse 53.svg",
+        "hash": "2282335285961463365"
+      },
+      {
+        "file": "apps/dosportanywhere/src/features/login/assets/images/Ellipse 60.png",
+        "hash": "2834947500085412311"
+      },
+      {
+        "file": "apps/dosportanywhere/src/features/login/assets/images/Frame (1).svg",
+        "hash": "18227477108892700784"
+      },
+      {
+        "file": "apps/dosportanywhere/src/features/login/assets/images/Frame 2.svg",
+        "hash": "2637639371138297362"
+      },
+      {
+        "file": "apps/dosportanywhere/src/features/login/assets/images/Frame 3.svg",
+        "hash": "13094444526073943395"
+      },
+      {
+        "file": "apps/dosportanywhere/src/features/login/assets/images/Frame copy.svg",
+        "hash": "16391116654962590944"
+      },
+      {
+        "file": "apps/dosportanywhere/src/features/login/assets/images/Frame.png",
+        "hash": "8774589733517234750"
+      },
+      {
+        "file": "apps/dosportanywhere/src/features/login/assets/images/Frame.svg",
+        "hash": "14529010224196481973"
+      },
+      {
+        "file": "apps/dosportanywhere/src/features/login/assets/images/Group 162901.svg",
+        "hash": "187324309175870576"
+      },
+      {
+        "file": "apps/dosportanywhere/src/features/login/assets/images/Group 162902.svg",
+        "hash": "12373668087790753917"
+      },
+      {
+        "file": "apps/dosportanywhere/src/features/login/assets/images/Group 162903.svg",
+        "hash": "17107818090564819060"
+      },
+      {
+        "file": "apps/dosportanywhere/src/features/login/assets/images/Group 162904.svg",
+        "hash": "5978760447350401716"
+      },
+      {
+        "file": "apps/dosportanywhere/src/features/login/assets/images/Group 162905.svg",
+        "hash": "18113189799338977142"
+      },
+      {
+        "file": "apps/dosportanywhere/src/features/login/assets/images/Group 162906.svg",
+        "hash": "1102375441733067310"
+      },
+      {
+        "file": "apps/dosportanywhere/src/features/login/assets/images/Group 4560.png",
+        "hash": "15453934031202578178"
+      },
+      {
+        "file": "apps/dosportanywhere/src/features/login/assets/images/Group 4616.png",
+        "hash": "9290764089915604212"
+      },
+      {
+        "file": "apps/dosportanywhere/src/features/login/assets/images/Group 4616.svg",
+        "hash": "6956496244355628358"
+      },
+      {
+        "file": "apps/dosportanywhere/src/features/login/assets/images/Group 4688.svg",
+        "hash": "12503362537325894056"
+      },
+      {
+        "file": "apps/dosportanywhere/src/features/login/assets/images/Jogging.svg",
+        "hash": "11306849046936158796"
+      },
+      {
+        "file": "apps/dosportanywhere/src/features/login/assets/images/Tennis.svg",
+        "hash": "11530701258184100996"
+      },
+      {
+        "file": "apps/dosportanywhere/src/features/login/assets/images/Vector.svg",
+        "hash": "16023721007480629380"
+      },
+      {
+        "file": "apps/dosportanywhere/src/features/login/assets/images/avatar.png",
+        "hash": "16174976836153657074"
+      },
+      {
+        "file": "apps/dosportanywhere/src/features/login/assets/images/bandy.svg",
+        "hash": "15671265971302306986"
+      },
+      {
+        "file": "apps/dosportanywhere/src/features/login/assets/images/bell.svg",
+        "hash": "17628620583618178551"
+      },
+      {
+        "file": "apps/dosportanywhere/src/features/login/assets/images/bubble.svg",
+        "hash": "3159610170074652497"
+      },
+      {
+        "file": "apps/dosportanywhere/src/features/login/assets/images/bx_bx-trash.svg",
+        "hash": "15421543259260283214"
+      },
+      {
+        "file": "apps/dosportanywhere/src/features/login/assets/images/calendr.svg",
+        "hash": "12285921493734759431"
+      },
+      {
+        "file": "apps/dosportanywhere/src/features/login/assets/images/calnder.svg",
+        "hash": "10118570314748109877"
+      },
+      {
+        "file": "apps/dosportanywhere/src/features/login/assets/images/cross.svg",
+        "hash": "17626707802618694830"
+      },
+      {
+        "file": "apps/dosportanywhere/src/features/login/assets/images/dark-haired-man-in-brown-leather-jacket 2.png",
+        "hash": "9851260796806101264"
+      },
+      {
+        "file": "apps/dosportanywhere/src/features/login/assets/images/dropdown.svg",
+        "hash": "1028256190931889163"
+      },
+      {
+        "file": "apps/dosportanywhere/src/features/login/assets/images/eva_message-circle-fill.svg",
+        "hash": "10936246488478987161"
+      },
+      {
+        "file": "apps/dosportanywhere/src/features/login/assets/images/events.svg",
+        "hash": "343021843675458830"
+      },
+      {
+        "file": "apps/dosportanywhere/src/features/login/assets/images/fe_search.png",
+        "hash": "14808725002720504815"
+      },
+      {
+        "file": "apps/dosportanywhere/src/features/login/assets/images/fe_search.svg",
+        "hash": "12913073330543639844"
+      },
+      {
+        "file": "apps/dosportanywhere/src/features/login/assets/images/feather_edit-2.svg",
+        "hash": "11740323458630965876"
+      },
+      {
+        "file": "apps/dosportanywhere/src/features/login/assets/images/filters.svg",
+        "hash": "11637224037490230347"
+      },
+      {
+        "file": "apps/dosportanywhere/src/features/login/assets/images/fluent_home-16-regular.svg",
+        "hash": "5330747658524006000"
+      },
+      {
+        "file": "apps/dosportanywhere/src/features/login/assets/images/friends.svg",
+        "hash": "3414202507413495020"
+      },
+      {
+        "file": "apps/dosportanywhere/src/features/login/assets/images/heaert.svg",
+        "hash": "8167610984355553082"
+      },
+      {
+        "file": "apps/dosportanywhere/src/features/login/assets/images/heart.svg",
+        "hash": "13094444526073943395"
+      },
+      {
+        "file": "apps/dosportanywhere/src/features/login/assets/images/ion_notifications-circle.svg",
+        "hash": "1758542332393897693"
+      },
+      {
+        "file": "apps/dosportanywhere/src/features/login/assets/images/layers-2x.png",
+        "hash": "9344261028423700841"
+      },
+      {
+        "file": "apps/dosportanywhere/src/features/login/assets/images/layers.png",
+        "hash": "9282921627250197590"
+      },
+      {
+        "file": "apps/dosportanywhere/src/features/login/assets/images/logo.png",
+        "hash": "10364594544373108556"
+      },
+      {
+        "file": "apps/dosportanywhere/src/features/login/assets/images/logo.svg",
+        "hash": "17880607162470096598"
+      },
+      {
+        "file": "apps/dosportanywhere/src/features/login/assets/images/marker-icon-2x.png",
+        "hash": "16225105066935018559"
+      },
+      {
+        "file": "apps/dosportanywhere/src/features/login/assets/images/marker-icon.png",
+        "hash": "12839574698303764257"
+      },
+      {
+        "file": "apps/dosportanywhere/src/features/login/assets/images/marker-shadow.png",
+        "hash": "13400201256143088927"
+      },
+      {
+        "file": "apps/dosportanywhere/src/features/login/assets/images/particpents.svg",
+        "hash": "12824485205048851556"
+      },
+      {
+        "file": "apps/dosportanywhere/src/features/login/assets/images/pin.svg",
+        "hash": "11864806371174209362"
+      },
+      {
+        "file": "apps/dosportanywhere/src/features/login/assets/images/placeholder 1 copy.svg",
+        "hash": "2260350929484749841"
+      },
+      {
+        "file": "apps/dosportanywhere/src/features/login/assets/images/placeholder 1.svg",
+        "hash": "17726969933017192112"
+      },
+      {
+        "file": "apps/dosportanywhere/src/features/login/assets/images/screen-shot-2019-08-16-at-6.52 2.png",
+        "hash": "16875167072925531763"
+      },
+      {
+        "file": "apps/dosportanywhere/src/features/login/assets/images/settings.svg",
+        "hash": "15673493093796561277"
+      },
+      {
+        "file": "apps/dosportanywhere/src/features/login/assets/images/slide1.png",
+        "hash": "1623518317715620621"
+      },
+      {
+        "file": "apps/dosportanywhere/src/features/login/assets/images/slide2.png",
+        "hash": "2493465160084339353"
+      },
+      {
+        "file": "apps/dosportanywhere/src/features/login/assets/images/slide3.png",
+        "hash": "14401195442878474702"
+      },
+      {
+        "file": "apps/dosportanywhere/src/features/login/assets/images/slider-img.png",
+        "hash": "2493465160084339353"
+      },
+      {
+        "file": "apps/dosportanywhere/src/features/login/assets/images/slider-img2.png",
+        "hash": "14401195442878474702"
+      },
+      {
+        "file": "apps/dosportanywhere/src/features/login/assets/images/slider-img3.png",
+        "hash": "2745229774631104056"
+      },
+      {
+        "file": "apps/dosportanywhere/src/features/login/assets/images/upload.png",
+        "hash": "14206611200923485169"
+      },
+      {
+        "file": "apps/dosportanywhere/src/features/login/assets/images/user.png",
+        "hash": "14875505719362037675"
+      },
+      {
+        "file": "apps/dosportanywhere/src/features/login/assets/images/user.svg",
+        "hash": "12269670816964411925"
+      },
+      {
+        "file": "apps/dosportanywhere/src/features/login/assets/images/users.svg",
+        "hash": "7162752979760480904"
+      },
+      {
+        "file": "apps/dosportanywhere/src/features/login/components/PageLayout.jsx",
+        "hash": "1808002236175526561"
+      },
+      {
+        "file": "apps/dosportanywhere/src/features/login/components/Slider.jsx",
+        "hash": "16770343550880912392"
+      },
+      {
+        "file": "apps/dosportanywhere/src/features/login/components/Steps.jsx",
+        "hash": "6606599528145560285"
+      },
+      {
+        "file": "apps/dosportanywhere/src/features/login/index.jsx",
+        "hash": "10267273082050906633"
+      },
+      {
+        "file": "apps/dosportanywhere/src/features/login/pages/AddProfileImg.tsx",
+        "hash": "6251713816770280072"
+      },
+      {
+        "file": "apps/dosportanywhere/src/features/login/pages/Login.tsx",
+        "hash": "4970325285880012489"
+      },
+      {
+        "file": "apps/dosportanywhere/src/features/login/pages/MoreInfo.tsx",
+        "hash": "16561511772319023631"
+      },
+      {
+        "file": "apps/dosportanywhere/src/features/login/pages/PasswordPage.tsx",
+        "hash": "6295464081498443828"
+      },
+      {
+        "file": "apps/dosportanywhere/src/features/login/pages/SignUp.jsx",
+        "hash": "8555602754575897703"
+      },
+      {
+        "file": "apps/dosportanywhere/src/index.css",
+        "hash": "10227601047777506583"
+      },
+      {
+        "file": "apps/dosportanywhere/src/index.tsx",
+        "hash": "2976014544677821427"
+      },
+      {
+        "file": "apps/dosportanywhere/src/models/index.ts",
+        "hash": "14630908799335692898"
+      },
+      {
+        "file": "apps/dosportanywhere/src/muiTheme.ts",
+        "hash": "2955865247023393529"
+      },
+      {
+        "file": "apps/dosportanywhere/src/services/authApi.js",
+        "hash": "3914775077885059736"
+      },
+      {
+        "file": "apps/dosportanywhere/src/services/chatApi.js",
+        "hash": "8407798631540996426"
+      },
+      {
+        "file": "apps/dosportanywhere/src/services/datingApi.ts",
+        "hash": "11430548809678515282"
+      },
+      {
+        "file": "apps/dosportanywhere/src/services/eventApi.ts",
+        "hash": "16115981788880813076"
+      },
+      {
+        "file": "apps/dosportanywhere/src/services/index.ts",
+        "hash": "16285237759011459183"
+      },
+      {
+        "file": "apps/dosportanywhere/src/services/postApi.ts",
+        "hash": "10423075989019747004"
+      },
+      {
+        "file": "apps/dosportanywhere/src/services/userApi.ts",
+        "hash": "2303408086992426237"
+      },
+      {
+        "file": "apps/dosportanywhere/src/shared/assets/images/marker-icon.png",
+        "hash": "12839574698303764257"
+      },
+      {
+        "file": "apps/dosportanywhere/src/shared/assets/images/sportfriendsLogo.svg",
+        "hash": "6819413265187906632"
+      },
+      {
+        "file": "apps/dosportanywhere/src/shared/components/Button.tsx",
+        "hash": "15463749224571846193"
+      },
+      {
+        "file": "apps/dosportanywhere/src/shared/components/ErrorMessage.tsx",
+        "hash": "11845177981325869724"
+      },
+      {
+        "file": "apps/dosportanywhere/src/shared/components/Map.jsx",
+        "hash": "10989018618509928460"
+      },
+      {
+        "file": "apps/dosportanywhere/src/shared/components/Modal.jsx",
+        "hash": "1396779157224696905"
+      },
+      {
+        "file": "apps/dosportanywhere/src/shared/components/Modal2.tsx",
+        "hash": "12100930194267504550"
+      },
+      {
+        "file": "apps/dosportanywhere/src/shared/components/ProtectedRoutes.jsx",
+        "hash": "3945999609334698330"
+      },
+      {
+        "file": "apps/dosportanywhere/src/shared/components/ShadowModal.tsx",
+        "hash": "8116888171543234318"
+      },
+      {
+        "file": "apps/dosportanywhere/src/shared/components/SwitchMenu.tsx",
+        "hash": "17763520227123505663"
+      },
+      {
+        "file": "apps/dosportanywhere/src/shared/components/forms/CheckboxInput.jsx",
+        "hash": "12085854717882161303"
+      },
+      {
+        "file": "apps/dosportanywhere/src/shared/components/forms/DatePickerInput.jsx",
+        "hash": "7521613973636475461"
+      },
+      {
+        "file": "apps/dosportanywhere/src/shared/components/forms/MapInput.jsx",
+        "hash": "3069521531052809385"
+      },
+      {
+        "file": "apps/dosportanywhere/src/shared/components/forms/RangeInput.jsx",
+        "hash": "11542520519799338607"
+      },
+      {
+        "file": "apps/dosportanywhere/src/shared/components/forms/SelectInput.tsx",
+        "hash": "10462564170973790714"
+      },
+      {
+        "file": "apps/dosportanywhere/src/shared/components/forms/SelectSearchInput.jsx",
+        "hash": "18239011075151645034"
+      },
+      {
+        "file": "apps/dosportanywhere/src/shared/components/forms/SubmitButton.jsx",
+        "hash": "5286072006490140106"
+      },
+      {
+        "file": "apps/dosportanywhere/src/shared/components/forms/TextAreaInput.jsx",
+        "hash": "16692802437186045675"
+      },
+      {
+        "file": "apps/dosportanywhere/src/shared/components/forms/TextInput.jsx",
+        "hash": "11946323987416030949"
+      },
+      {
+        "file": "apps/dosportanywhere/src/shared/components/forms/TimePickerInput.jsx",
+        "hash": "2098026696987192773"
+      },
+      {
+        "file": "apps/dosportanywhere/src/shared/components/forms/TimeRangeInput.jsx",
+        "hash": "2410230969506495225"
+      },
+      {
+        "file": "apps/dosportanywhere/src/shared/components/index.js",
+        "hash": "16246863068015740077"
+      },
+      {
+        "file": "apps/dosportanywhere/src/shared/constants/colors.ts",
+        "hash": "13937010780628745541"
+      },
+      {
+        "file": "apps/dosportanywhere/src/shared/constants/index.ts",
+        "hash": "4895423685859433861"
+      },
+      {
+        "file": "apps/dosportanywhere/src/shared/constants/slugs.ts",
+        "hash": "11115692568791118144"
+      },
+      {
+        "file": "apps/dosportanywhere/src/shared/hooks/useClickOutside.ts",
+        "hash": "8315954759861560288"
+      },
+      {
+        "file": "apps/dosportanywhere/src/shared/utils/index.ts",
+        "hash": "281137923799799631"
+      },
+      {
+        "file": "apps/dosportanywhere/src/store/index.ts",
+        "hash": "13858171742383394920"
+      },
+      {
+        "file": "apps/dosportanywhere/src/store/slices/auth.js",
+        "hash": "8267207765133235955"
+      },
+      {
+        "file": "apps/dosportanywhere/src/store/slices/filter.ts",
+        "hash": "1084751370998980508"
+      },
+      {
+        "file": "apps/dosportanywhere/src/store/slices/index.ts",
+        "hash": "1435960020832426809"
+      },
+      {
+        "file": "apps/dosportanywhere/tailwind.config.js",
+        "hash": "10950955995620572924"
+      },
+      {
+        "file": "apps/dosportanywhere/vite-env.d.ts",
+        "hash": "12946363841406869089"
+      },
+      {
+        "file": "apps/dosportanywhere/vite.config.ts",
+        "hash": "989273210743892513"
+      },
+      {
+        "file": "apps/dosportanywhere/yaml/client-depl.yaml",
+        "hash": "5540922929040737646"
+      },
+      {
+        "file": "fe/package-lock.json",
+        "hash": "17037334900817579180"
+      },
+      {
+        "file": "nx.json",
+        "hash": "11274056137621334090"
+      },
+      {
+        "file": "package.json",
+        "hash": "8680370108686945124"
+      },
+      {
+        "file": "tsconfig.json",
+        "hash": "4623959788291817970"
+      },
+      {
+        "file": "README.md",
+        "hash": "8822892800995134243"
+      }
+    ],
+    "projectFileMap": {}
+  }
+}
