@@ -1,0 +1,98 @@
+
+> fe@0.1.0 start
+> vite
+
+
+  [32m[1mVITE[22m v4.4.11[39m  [2mready in [0m[1m2700[22m[2m[0m ms[22m
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m3000[22m/[39m
+  [32m➜[39m  [1mNetwork[22m: [36mhttp://192.168.0.101:[1m3000[22m/[39m
+  [32m➜[39m  [1mNetwork[22m: [36mhttp://10.214.0.190:[1m3000[22m/[39m
+[2m[32m  ➜[39m[22m[2m  press [22m[1mh[22m[2m to show help[22m
+Browserslist: caniuse-lite is outdated. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+[2m12:39:31 PM[22m [36m[1m[vite][22m[39m [32mpage reload [39m[2m/Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/libs/shared/services/src/slices/filter.ts[22m
+[2m12:40:54 PM[22m [36m[1m[vite][22m[39m [32mpage reload [39m[2msrc/store/index.ts[22m
+[2m12:43:33 PM[22m [36m[1m[vite][22m[39m [32mpage reload [39m[2msrc/store/index.ts[22m
+[2m12:44:12 PM[22m [36m[1m[vite][22m[39m [32mpage reload [39m[2msrc/store/index.ts[22m
+Failed to resolve import "../slices" from "src/store/index.ts". Does the file exist?
+[2m12:44:13 PM[22m [31m[1m[vite][22m[39m [31mInternal server error: Failed to resolve import "../slices" from "src/store/index.ts". Does the file exist?[39m
+  Plugin: [35mvite:import-analysis[39m
+  File: [36m/Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/src/store/index.ts[39m:13:68
+[33m  9  |    postApi
+  10 |  } from "@sportfriends-fe/shared/data/services";
+  11 |  import { authReducer, filterReducer as externalFilterReducer } from "../slices";
+     |                                                                       ^
+  12 |  export const store = configureStore({
+  13 |    reducer: {[39m
+      at formatError (file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:44055:46)
+      at TransformContext.error (file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:44051:19)
+      at normalizeUrl (file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:41837:33)
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at async file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:41991:47
+      at async Promise.all (index 3)
+      at async TransformContext.transform (file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:41907:13)
+      at async Object.transform (file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:44345:30)
+      at async loadAndTransform (file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:55015:29)
+      at async viteTransformMiddleware (file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:64417:32)
+[2m12:44:23 PM[22m [36m[1m[vite][22m[39m [32mpage reload [39m[2msrc/store/index.ts[22m
+[2m12:44:35 PM[22m [36m[1m[vite][22m[39m [32mpage reload [39m[2msrc/store/index.ts[22m
+[2m12:47:18 PM[22m [36m[1m[vite][22m[39m [32mpage reload [39m[2msrc/store/slices/filter.ts[22m
+Transform failed with 1 error:
+/Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/src/store/slices/filter.ts:4:17: ERROR: Expected "=" but found "{"
+Transform failed with 1 error:
+/Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/src/store/slices/filter.ts:4:17: ERROR: Expected "=" but found "{"
+[2m12:47:20 PM[22m [31m[1m[vite][22m[39m [31mInternal server error: Transform failed with 1 error:
+/Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/src/store/slices/filter.ts:4:17: ERROR: Expected "=" but found "{"[39m
+  Plugin: [35mvite:esbuild[39m
+  File: [36m/Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/src/store/slices/filter.ts[39m:4:17
+[33m  
+  [33mExpected "=" but found "{"[33m
+  2  |  import moment from 'moment';
+  3  |  
+  4  |  type FilterState {
+     |                   ^
+  5  |    listEvents: {
+  6  |      distance: number;
+  [39m
+      at failureErrorWithLog (/Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/esbuild/lib/main.js:1649:15)
+      at /Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/esbuild/lib/main.js:847:29
+      at responseCallbacks.<computed> (/Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/esbuild/lib/main.js:703:9)
+      at handleIncomingPacket (/Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/esbuild/lib/main.js:762:9)
+      at Socket.readFromStdout (/Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/esbuild/lib/main.js:679:7)
+      at Socket.emit (node:events:511:28)
+      at addChunk (node:internal/streams/readable:332:12)
+      at readableAddChunk (node:internal/streams/readable:305:9)
+      at Readable.push (node:internal/streams/readable:242:10)
+      at Pipe.onStreamRead (node:internal/stream_base_commons:190:23)
+[2m12:47:27 PM[22m [36m[1m[vite][22m[39m [32mpage reload [39m[2msrc/store/slices/filter.ts[22m
+[2m12:48:24 PM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/features/dashboard/pages/SportPartner.tsx, /src/index.css, /src/features/dashboard/pages/EventDetail.tsx, /src/features/login/pages/SignUp.jsx, /src/features/login/pages/Login.tsx, /src/features/dashboard/components/filter/SelectSports.tsx, /src/features/dashboard/components/filter/SelectDistance.tsx, /src/features/dashboard/components/filter/SelectTimeRange.tsx, /src/features/dashboard/components/filter/SelectDateRange.tsx, /src/features/dashboard/components/filter/SelectLevel.tsx, /src/features/dashboard/components/filter/SelectGender.tsx, /src/features/dashboard/components/layout/Navbar.tsx, /src/features/dashboard/components/home/BottomPost.tsx, /@fs/Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/libs/shared/ui/src/components/ProtectedRoutes.jsx[22m
+[2m12:48:54 PM[22m [36m[1m[vite][22m[39m [32mpage reload [39m[2msrc/store/index.ts[22m
+[2m12:50:09 PM[22m [36m[1m[vite][22m[39m [32mpage reload [39m[2m/Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/libs/shared/data/services/src/api/eventApi.ts[22m
+Transform failed with 1 error:
+/Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/libs/shared/data/services/src/api/eventApi.ts:6:17: ERROR: Expected "=" but found "{"
+[2m12:50:12 PM[22m [31m[1m[vite][22m[39m [31mInternal server error: Transform failed with 1 error:
+/Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/libs/shared/data/services/src/api/eventApi.ts:6:17: ERROR: Expected "=" but found "{"[39m
+  Plugin: [35mvite:esbuild[39m
+  File: [36m/Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/libs/shared/data/services/src/api/eventApi.ts[39m:6:17
+[33m  
+  [33mExpected "=" but found "{"[33m
+  4  |  import { Event, State, Slot } from '@sportfriends-fe/shared/models';
+  5  |  
+  6  |  type UserEventsI {
+     |                   ^
+  7  |    participated: Event[];
+  8  |    created: Event[];
+  [39m
+      at failureErrorWithLog (/Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/esbuild/lib/main.js:1649:15)
+      at /Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/esbuild/lib/main.js:847:29
+      at responseCallbacks.<computed> (/Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/esbuild/lib/main.js:703:9)
+      at handleIncomingPacket (/Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/esbuild/lib/main.js:762:9)
+      at Socket.readFromStdout (/Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/esbuild/lib/main.js:679:7)
+      at Socket.emit (node:events:511:28)
+      at addChunk (node:internal/streams/readable:332:12)
+      at readableAddChunk (node:internal/streams/readable:305:9)
+      at Readable.push (node:internal/streams/readable:242:10)
+      at Pipe.onStreamRead (node:internal/stream_base_commons:190:23)
+[2m12:50:31 PM[22m [36m[1m[vite][22m[39m [32mpage reload [39m[2m/Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/libs/shared/data/services/src/api/eventApi.ts[22m

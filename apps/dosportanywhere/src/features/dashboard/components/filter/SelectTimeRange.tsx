@@ -5,7 +5,13 @@ import { AdapterMoment } from '@mui/x-date-pickers/AdapterMoment';
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 import { TimePicker } from '@mui/x-date-pickers/TimePicker';
 import { RiArrowDownSLine } from 'react-icons/ri';
-import { selectStartTime, selectEndTime, setStartTime, setEndTime, timeFilterType } from 'store/slices';
+import {
+  selectStartTime,
+  selectEndTime,
+  setStartTime,
+  setEndTime,
+  timeFilterType,
+} from '@sportfriends-fe/shared/data/store';
 
 interface SelectTimeRangeProps {
   type: timeFilterType;
@@ -28,7 +34,9 @@ const SelectTimeRange = ({ type }: SelectTimeRangeProps) => {
                 setStartTime({
                   type,
                   value: moment(
-                    moment(startTime).format('YYYY-MM-DD') + ' ' + moment(newValue).format('HH:mm'),
+                    moment(startTime).format('YYYY-MM-DD') +
+                      ' ' +
+                      moment(newValue).format('HH:mm'),
                   ).toISOString(),
                 }),
               );
@@ -60,7 +68,9 @@ const SelectTimeRange = ({ type }: SelectTimeRangeProps) => {
                 setEndTime({
                   type,
                   value: moment(
-                    moment(endTime).format('YYYY-MM-DD') + ' ' + moment(newValue).format('HH:mm'),
+                    moment(endTime).format('YYYY-MM-DD') +
+                      ' ' +
+                      moment(newValue).format('HH:mm'),
                   ).toISOString(),
                 }),
               );

@@ -1,0 +1,762 @@
+
+> fe@0.1.0 start
+> vite
+
+
+  [32m[1mVITE[22m v4.4.11[39m  [2mready in [0m[1m2232[22m[2m[0m ms[22m
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m3000[22m/[39m
+  [32m➜[39m  [1mNetwork[22m: [36mhttp://192.168.0.101:[1m3000[22m/[39m
+  [32m➜[39m  [1mNetwork[22m: [36mhttp://10.214.0.190:[1m3000[22m/[39m
+[2m[32m  ➜[39m[22m[2m  press [22m[1mh[22m[2m to show help[22m
+Browserslist: caniuse-lite is outdated. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+[2m9:50:16 AM[22m [31m[1m[vite][22m[39m [31mInternal server error: Failed to resolve import "shared/constants" from "src/features/dashboard/components/layout/Sidebar.tsx". Does the file exist?[39m
+  Plugin: [35mvite:import-analysis[39m
+  File: [36m/Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/src/features/dashboard/components/layout/Sidebar.tsx[39m:3:23
+[33m  16 |  var _s = $RefreshSig$();
+  17 |  import { Link, NavLink, useLocation } from "react-router-dom";
+  18 |  import { colors } from "shared/constants";
+     |                          ^
+  19 |  import { SLUGS } from "../../shared/constants";
+  20 |  import logo from "shared/assets/images/sportfriendsLogo.svg";[39m
+      at formatError (file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:44055:46)
+      at TransformContext.error (file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:44051:19)
+      at normalizeUrl (file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:41837:33)
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at async file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:41991:47
+      at async Promise.all (index 4)
+      at async TransformContext.transform (file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:41907:13)
+      at async Object.transform (file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:44345:30)
+      at async loadAndTransform (file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:55015:29)
+Failed to resolve import "shared/constants" from "src/features/dashboard/components/layout/Sidebar.tsx". Does the file exist?
+[2m9:50:16 AM[22m [31m[1m[vite][22m[39m [31mInternal server error: Failed to resolve import "models" from "src/features/dashboard/components/social/FriendsGroup.tsx". Does the file exist?[39m
+  Plugin: [35mvite:import-analysis[39m
+  File: [36m/Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/src/features/dashboard/components/social/FriendsGroup.tsx[39m:4:29
+[33m  15 |  }
+  16 |  import FriendsCard from "./FriendsCard";
+  17 |  import { FriendStatus } from "models";
+     |                                ^
+  18 |  const FriendsGroup = ({
+  19 |    friendships,[39m
+      at formatError (file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:44055:46)
+      at TransformContext.error (file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:44051:19)
+      at normalizeUrl (file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:41837:33)
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at async file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:41991:47
+      at async Promise.all (index 4)
+      at async TransformContext.transform (file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:41907:13)
+      at async Object.transform (file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:44345:30)
+      at async loadAndTransform (file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:55015:29)
+Failed to resolve import "models" from "src/features/dashboard/components/social/FriendsGroup.tsx". Does the file exist?
+[2m9:50:16 AM[22m [31m[1m[vite][22m[39m [31mInternal server error: Failed to resolve import "store/slices" from "src/features/dashboard/components/layout/Navbar.tsx". Does the file exist?[39m
+  Plugin: [35mvite:import-analysis[39m
+  File: [36m/Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/src/features/dashboard/components/layout/Navbar.tsx[39m:7:31
+[33m  20 |  import { FaUserAlt } from "react-icons/fa";
+  21 |  import { Link } from "react-router-dom";
+  22 |  import { setCredentials } from "store/slices";
+     |                                  ^
+  23 |  import { useGetUserQuery } from "services/userApi";
+  24 |  import Modal2 from "shared/components/Modal2";[39m
+      at formatError (file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:44055:46)
+      at TransformContext.error (file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:44051:19)
+      at normalizeUrl (file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:41837:33)
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at async file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:41991:47
+      at async Promise.all (index 8)
+      at async TransformContext.transform (file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:41907:13)
+      at async Object.transform (file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:44345:30)
+      at async loadAndTransform (file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:55015:29)
+Failed to resolve import "store/slices" from "src/features/dashboard/components/layout/Navbar.tsx". Does the file exist?
+[2m9:50:16 AM[22m [31m[1m[vite][22m[39m [31mInternal server error: Failed to resolve import "store/slices" from "src/features/dashboard/components/filter/SelectGender.tsx". Does the file exist?[39m
+  Plugin: [35mvite:import-analysis[39m
+  File: [36m/Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/src/features/dashboard/components/filter/SelectGender.tsx[39m:3:61
+[33m  16 |  var _s = $RefreshSig$();
+  17 |  import { useDispatch, useSelector } from "react-redux";
+  18 |  import { selectGender, changeGender } from "store/slices";
+     |                                              ^
+  19 |  const SelectGender = ({
+  20 |    type[39m
+      at formatError (file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:44055:46)
+      at TransformContext.error (file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:44051:19)
+      at normalizeUrl (file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:41837:33)
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at async file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:41991:47
+      at async Promise.all (index 4)
+      at async TransformContext.transform (file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:41907:13)
+      at async Object.transform (file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:44345:30)
+      at async loadAndTransform (file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:55015:29)
+Failed to resolve import "store/slices" from "src/features/dashboard/components/filter/SelectGender.tsx". Does the file exist?
+[2m9:50:16 AM[22m [31m[1m[vite][22m[39m [31mInternal server error: Failed to resolve import "store/slices" from "src/features/dashboard/components/filter/SelectLevel.tsx". Does the file exist?[39m
+  Plugin: [35mvite:import-analysis[39m
+  File: [36m/Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/src/features/dashboard/components/filter/SelectLevel.tsx[39m:4:58
+[33m  16 |  var _s = $RefreshSig$();
+  17 |  import { useDispatch, useSelector } from "react-redux";
+  18 |  import { selectLevel, changeLevel } from "store/slices";
+     |                                            ^
+  19 |  const SelectLevel = ({
+  20 |    type[39m
+      at formatError (file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:44055:46)
+      at TransformContext.error (file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:44051:19)
+      at normalizeUrl (file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:41837:33)
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at async file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:41991:47
+      at async Promise.all (index 4)
+      at async TransformContext.transform (file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:41907:13)
+      at async Object.transform (file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:44345:30)
+      at async loadAndTransform (file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:55015:29)
+Failed to resolve import "store/slices" from "src/features/dashboard/components/filter/SelectLevel.tsx". Does the file exist?
+Failed to resolve import "store/slices" from "src/features/dashboard/components/filter/SelectSports.tsx". Does the file exist?
+[2m9:50:16 AM[22m [31m[1m[vite][22m[39m [31mInternal server error: Failed to resolve import "store/slices" from "src/features/dashboard/components/filter/SelectSports.tsx". Does the file exist?[39m
+  Plugin: [35mvite:import-analysis[39m
+  File: [36m/Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/src/features/dashboard/components/filter/SelectSports.tsx[39m:6:68
+[33m  19 |  import { RxCross2 } from "react-icons/rx";
+  20 |  import { useDispatch, useSelector } from "react-redux";
+  21 |  import { selectSports, addSports, removeSport } from "store/slices";
+     |                                                        ^
+  22 |  import { SPORTS } from "shared/constants";
+  23 |  const SelectSports = ({[39m
+      at formatError (file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:44055:46)
+      at TransformContext.error (file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:44051:19)
+      at normalizeUrl (file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:41837:33)
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at async file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:41991:47
+      at async Promise.all (index 7)
+      at async TransformContext.transform (file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:41907:13)
+      at async Object.transform (file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:44345:30)
+      at async loadAndTransform (file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:55015:29)
+Failed to resolve import "store/slices" from "src/features/dashboard/components/filter/SelectSports.tsx". Does the file exist?
+[2m9:50:16 AM[22m [31m[1m[vite][22m[39m [31mInternal server error: Failed to resolve import "store/slices" from "src/features/dashboard/components/filter/SelectDateRange.tsx". Does the file exist?[39m
+  Plugin: [35mvite:import-analysis[39m
+  File: [36m/Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/src/features/dashboard/components/filter/SelectDateRange.tsx[39m:8:89
+[33m  21 |  import { DatePicker } from "@mui/x-date-pickers/DatePicker";
+  22 |  import { RiArrowDownSLine } from "react-icons/ri";
+  23 |  import { selectStartTime, selectEndTime, setStartTime, setEndTime } from "store/slices";
+     |                                                                            ^
+  24 |  const SelectDateRange = ({
+  25 |    type[39m
+      at formatError (file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:44055:46)
+      at TransformContext.error (file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:44051:19)
+      at normalizeUrl (file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:41837:33)
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at async file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:41991:47
+      at async Promise.all (index 9)
+      at async TransformContext.transform (file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:41907:13)
+      at async Object.transform (file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:44345:30)
+      at async loadAndTransform (file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:55015:29)
+Failed to resolve import "store/slices" from "src/features/dashboard/components/filter/SelectDateRange.tsx". Does the file exist?
+[2m9:50:16 AM[22m [31m[1m[vite][22m[39m [31mInternal server error: Failed to resolve import "store/slices" from "src/features/dashboard/components/filter/SelectTimeRange.tsx". Does the file exist?[39m
+  Plugin: [35mvite:import-analysis[39m
+  File: [36m/Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/src/features/dashboard/components/filter/SelectTimeRange.tsx[39m:8:89
+[33m  21 |  import { TimePicker } from "@mui/x-date-pickers/TimePicker";
+  22 |  import { RiArrowDownSLine } from "react-icons/ri";
+  23 |  import { selectStartTime, selectEndTime, setStartTime, setEndTime } from "store/slices";
+     |                                                                            ^
+  24 |  const SelectTimeRange = ({
+  25 |    type[39m
+      at formatError (file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:44055:46)
+      at TransformContext.error (file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:44051:19)
+      at normalizeUrl (file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:41837:33)
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at async file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:41991:47
+      at async Promise.all (index 9)
+      at async TransformContext.transform (file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:41907:13)
+      at async Object.transform (file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:44345:30)
+      at async loadAndTransform (file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:55015:29)
+Failed to resolve import "store/slices" from "src/features/dashboard/components/filter/SelectTimeRange.tsx". Does the file exist?
+[2m9:50:16 AM[22m [31m[1m[vite][22m[39m [31mInternal server error: Failed to resolve import "shared/components" from "src/features/dashboard/components/settings/SetProfile.tsx". Does the file exist?[39m
+  Plugin: [35mvite:import-analysis[39m
+  File: [36m/Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/src/features/dashboard/components/settings/SetProfile.tsx[39m:13:7
+[33m  18 |  import * as Yup from "yup";
+  19 |  import CircularProgress from "@mui/material/CircularProgress";
+  20 |  import { SubmitButton, TextInput, MapInput, DatePickerInput, SelectInput, TextAreaInput } from "shared/components";
+     |                                                                                                  ^
+  21 |  import { useGetUserQuery, useUpdateProfileMutation } from "services/userApi";
+  22 |  import { selectGenderInputs } from "shared/constants";[39m
+      at formatError (file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:44055:46)
+      at TransformContext.error (file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:44051:19)
+      at normalizeUrl (file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:41837:33)
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at async file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:41991:47
+      at async Promise.all (index 6)
+      at async TransformContext.transform (file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:41907:13)
+      at async Object.transform (file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:44345:30)
+      at async loadAndTransform (file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:55015:29)
+Failed to resolve import "shared/components" from "src/features/dashboard/components/settings/SetProfile.tsx". Does the file exist?
+[2m9:50:16 AM[22m [31m[1m[vite][22m[39m [31mInternal server error: Failed to resolve import "services/userApi" from "src/features/dashboard/components/settings/SetCredentials.tsx". Does the file exist?[39m
+  Plugin: [35mvite:import-analysis[39m
+  File: [36m/Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/src/features/dashboard/components/settings/SetCredentials.tsx[39m:11:58
+[33m  17 |  import { Formik, Form } from "formik";
+  18 |  import * as Yup from "yup";
+  19 |  import { useUpdateProfileMutation } from "services/userApi";
+     |                                            ^
+  20 |  import { SubmitButton, TextInput } from "shared/components";
+  21 |  const SetCredentials = () => {[39m
+      at formatError (file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:44055:46)
+      at TransformContext.error (file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:44051:19)
+      at normalizeUrl (file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:41837:33)
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at async file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:41991:47
+      at async Promise.all (index 5)
+      at async TransformContext.transform (file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:41907:13)
+      at async Object.transform (file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:44345:30)
+      at async loadAndTransform (file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:55015:29)
+Failed to resolve import "services/userApi" from "src/features/dashboard/components/settings/SetCredentials.tsx". Does the file exist?
+[2m9:50:16 AM[22m [31m[1m[vite][22m[39m [31mInternal server error: Failed to resolve import "services/userApi" from "src/features/dashboard/components/settings/SetProfileImg.tsx". Does the file exist?[39m
+  Plugin: [35mvite:import-analysis[39m
+  File: [36m/Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/src/features/dashboard/components/settings/SetProfileImg.tsx[39m:3:46
+[33m  16 |  var _s = $RefreshSig$();
+  17 |  import { useState, useRef } from "react";
+  18 |  import { useUploadProfileImageMutation } from "services/userApi";
+     |                                                 ^
+  19 |  import { ErrorMessage, SubmitButton } from "shared/components";
+  20 |  import userdp from "../../assets/images/user.png";[39m
+      at formatError (file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:44055:46)
+      at TransformContext.error (file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:44051:19)
+      at normalizeUrl (file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:41837:33)
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at async file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:41991:47
+      at async Promise.all (index 4)
+      at async TransformContext.transform (file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:41907:13)
+      at async Object.transform (file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:44345:30)
+      at async loadAndTransform (file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:55015:29)
+Failed to resolve import "services/userApi" from "src/features/dashboard/components/settings/SetProfileImg.tsx". Does the file exist?
+[2m9:50:16 AM[22m [31m[1m[vite][22m[39m [31mInternal server error: Failed to resolve import "shared/constants" from "src/features/dashboard/components/events/EventsMarkers.tsx". Does the file exist?[39m
+  Plugin: [35mvite:import-analysis[39m
+  File: [36m/Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/src/features/dashboard/components/events/EventsMarkers.tsx[39m:6:25
+[33m  19 |  import { Marker, useMap, Popup } from "react-leaflet";
+  20 |  import L from "leaflet";
+  21 |  import { MAX_ZOOM } from "shared/constants";
+     |                            ^
+  22 |  import MarkerPopup from "./MarkerPopup";
+  23 |  const icons = {};[39m
+      at formatError (file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:44055:46)
+      at TransformContext.error (file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:44051:19)
+      at normalizeUrl (file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:41837:33)
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at async file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:41991:47
+      at async Promise.all (index 7)
+      at async TransformContext.transform (file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:41907:13)
+      at async Object.transform (file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:44345:30)
+      at async loadAndTransform (file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:55015:29)
+Failed to resolve import "shared/constants" from "src/features/dashboard/components/events/EventsMarkers.tsx". Does the file exist?
+[2m9:50:16 AM[22m [31m[1m[vite][22m[39m [31mInternal server error: Failed to resolve import "shared/components/Modal" from "src/features/dashboard/components/profile/ReservationTimetable.tsx". Does the file exist?[39m
+  Plugin: [35mvite:import-analysis[39m
+  File: [36m/Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/src/features/dashboard/components/profile/ReservationTimetable.tsx[39m:6:18
+[33m  19 |  import { HiOutlineChevronLeft, HiOutlineChevronRight } from "react-icons/hi";
+  20 |  import CircularProgress from "@mui/material/CircularProgress";
+  21 |  import Modal from "shared/components/Modal";
+     |                     ^
+  22 |  import { objectToParametrs, getFullWeekOfMomentDays } from "shared/utils";
+  23 |  import { useGetSlotsQuery } from "services/eventApi";[39m
+      at formatError (file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:44055:46)
+      at TransformContext.error (file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:44051:19)
+      at normalizeUrl (file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:41837:33)
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at async file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:41991:47
+      at async Promise.all (index 7)
+      at async TransformContext.transform (file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:41907:13)
+      at async Object.transform (file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:44345:30)
+      at async loadAndTransform (file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:55015:29)
+Failed to resolve import "shared/components/Modal" from "src/features/dashboard/components/profile/ReservationTimetable.tsx". Does the file exist?
+[2m9:50:16 AM[22m [31m[1m[vite][22m[39m [31mInternal server error: Failed to resolve import "models" from "src/features/dashboard/components/profile/ProUserInfo.tsx". Does the file exist?[39m
+  Plugin: [35mvite:import-analysis[39m
+  File: [36m/Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/src/features/dashboard/components/profile/ProUserInfo.tsx[39m:4:29
+[33m  17 |  import moment from "moment";
+  18 |  import { useNavigate } from "react-router-dom";
+  19 |  import { FriendStatus } from "models";
+     |                                ^
+  20 |  import { useCreateFriendshipMutation } from "services/userApi";
+  21 |  import { SLUGS } from "../../shared/constants";[39m
+      at formatError (file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:44055:46)
+      at TransformContext.error (file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:44051:19)
+      at normalizeUrl (file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:41837:33)
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at async file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:41991:47
+      at async Promise.all (index 5)
+      at async TransformContext.transform (file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:41907:13)
+      at async Object.transform (file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:44345:30)
+      at async loadAndTransform (file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:55015:29)
+Failed to resolve import "models" from "src/features/dashboard/components/profile/ProUserInfo.tsx". Does the file exist?
+Failed to resolve import "services/userApi" from "src/features/dashboard/components/ProfileIcon.tsx". Does the file exist?
+Failed to resolve import "services/userApi" from "src/features/dashboard/components/ProfileIcon.tsx". Does the file exist?
+Failed to resolve import "services/userApi" from "src/features/dashboard/components/ProfileIcon.tsx". Does the file exist?
+Failed to resolve import "services/userApi" from "src/features/dashboard/components/ProfileIcon.tsx". Does the file exist?
+Failed to resolve import "services/userApi" from "src/features/dashboard/components/ProfileIcon.tsx". Does the file exist?
+[2m9:50:16 AM[22m [31m[1m[vite][22m[39m [31mInternal server error: Failed to resolve import "services/userApi" from "src/features/dashboard/components/ProfileIcon.tsx". Does the file exist?[39m
+  Plugin: [35mvite:import-analysis[39m
+  File: [36m/Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/src/features/dashboard/components/ProfileIcon.tsx[39m:3:32
+[33m  16 |  var _s = $RefreshSig$();
+  17 |  import { FaUserAlt } from "react-icons/fa";
+  18 |  import { useGetUserQuery } from "services/userApi";
+     |                                   ^
+  19 |  const ProfileIcon = ({
+  20 |    size = 3,[39m
+      at formatError (file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:44055:46)
+      at TransformContext.error (file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:44051:19)
+      at normalizeUrl (file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:41837:33)
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at async file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:41991:47
+      at async Promise.all (index 4)
+      at async TransformContext.transform (file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:41907:13)
+      at async Object.transform (file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:44345:30)
+      at async loadAndTransform (file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:55015:29)
+Failed to resolve import "services/userApi" from "src/features/dashboard/components/ProfileIcon.tsx". Does the file exist?
+[2m9:50:16 AM[22m [31m[1m[vite][22m[39m [31mInternal server error: Failed to resolve import "store/slices" from "src/features/dashboard/components/home/BottomPost.tsx". Does the file exist?[39m
+  Plugin: [35mvite:import-analysis[39m
+  File: [36m/Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/src/features/dashboard/components/home/BottomPost.tsx[39m:6:29
+[33m  18 |  import { GoTriangleUp, GoTriangleDown } from "react-icons/go";
+  19 |  import { useSelector } from "react-redux";
+  20 |  import { selectAuthId } from "store/slices";
+     |                                ^
+  21 |  import { useLikePostMutation, useUnlikePostMutation, useSendPostCommentMutation } from "services/postApi";
+  22 |  import { colors } from "shared/constants";[39m
+      at formatError (file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:44055:46)
+      at TransformContext.error (file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:44051:19)
+      at normalizeUrl (file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:41837:33)
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at async file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:41991:47
+      at async Promise.all (index 6)
+      at async TransformContext.transform (file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:41907:13)
+      at async Object.transform (file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:44345:30)
+      at async loadAndTransform (file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:55015:29)
+Failed to resolve import "store/slices" from "src/features/dashboard/components/home/BottomPost.tsx". Does the file exist?
+[2m9:50:16 AM[22m [31m[1m[vite][22m[39m [31mInternal server error: Failed to resolve import "services/postApi" from "src/features/dashboard/components/home/PostDialog.tsx". Does the file exist?[39m
+  Plugin: [35mvite:import-analysis[39m
+  File: [36m/Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/src/features/dashboard/components/home/PostDialog.tsx[39m:6:38
+[33m  19 |  import DialogContent from "@mui/material/DialogContent";
+  20 |  import CloseIcon from "@mui/icons-material/Close";
+  21 |  import { useCreatePostMutation } from "services/postApi";
+     |                                         ^
+  22 |  const PostDialog = ({
+  23 |    open,[39m
+      at formatError (file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:44055:46)
+      at TransformContext.error (file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:44051:19)
+      at normalizeUrl (file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:41837:33)
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at async file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:41991:47
+      at async Promise.all (index 7)
+      at async TransformContext.transform (file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:41907:13)
+      at async Object.transform (file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:44345:30)
+      at async loadAndTransform (file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:55015:29)
+Failed to resolve import "services/postApi" from "src/features/dashboard/components/home/PostDialog.tsx". Does the file exist?
+Failed to resolve import "services/userApi" from "src/features/dashboard/components/social/FriendsCard.tsx". Does the file exist?
+Failed to resolve import "models" from "src/features/dashboard/shared/utils/index.ts". Does the file exist?
+Failed to resolve import "services/userApi" from "src/features/dashboard/components/RectangleProfileIcon.tsx". Does the file exist?
+[2m9:50:17 AM[22m [31m[1m[vite][22m[39m [31mInternal server error: Failed to resolve import "@mui/x-date-pickers/AdapterDateFns" from "../../libs/shared/ui/src/components/forms/TimePickerInput.jsx". Does the file exist?[39m
+  Plugin: [35mvite:import-analysis[39m
+  File: [36m/Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/libs/shared/ui/src/components/forms/TimePickerInput.jsx[39m:6:31
+[33m  20 |  import { useField, useFormikContext } from "formik";
+  21 |  import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
+  22 |  import { AdapterDateFns } from "@mui/x-date-pickers/AdapterDateFns";
+     |                                  ^
+  23 |  import ErrorMessage from "../ErrorMessage";
+  24 |  export default function TimePickerInput({[39m
+      at formatError (file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:44055:46)
+      at TransformContext.error (file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:44051:19)
+      at normalizeUrl (file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:41837:33)
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at async file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:41991:47
+      at async Promise.all (index 8)
+      at async TransformContext.transform (file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:41907:13)
+      at async Object.transform (file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:44345:30)
+      at async loadAndTransform (file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:55015:29)
+Failed to resolve import "@mui/x-date-pickers/AdapterDateFns" from "../../libs/shared/ui/src/components/forms/TimePickerInput.jsx". Does the file exist?
+Failed to resolve import "leaflet/dist/leaflet.css" from "../../libs/shared/ui/src/components/Map.jsx". Does the file exist?
+[2m9:50:17 AM[22m [31m[1m[vite][22m[39m [31mInternal server error: Failed to resolve import "leaflet/dist/leaflet.css" from "../../libs/shared/ui/src/components/Map.jsx". Does the file exist?[39m
+  Plugin: [35mvite:import-analysis[39m
+  File: [36m/Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/libs/shared/ui/src/components/Map.jsx[39m:1:7
+[33m  15 |  }
+  16 |  var _s = $RefreshSig$(), _s2 = $RefreshSig$();
+  17 |  import "leaflet/dist/leaflet.css";
+     |          ^
+  18 |  import React, { useEffect, useState } from "react";
+  19 |  import L from "leaflet";[39m
+      at formatError (file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:44055:46)
+      at TransformContext.error (file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:44051:19)
+      at normalizeUrl (file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:41837:33)
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at async file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:41991:47
+      at async Promise.all (index 3)
+      at async TransformContext.transform (file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:41907:13)
+      at async Object.transform (file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:44345:30)
+      at async loadAndTransform (file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:55015:29)
+Failed to resolve import "leaflet/dist/leaflet.css" from "../../libs/shared/ui/src/components/Map.jsx". Does the file exist?
+Failed to resolve import "services/userApi" from "src/features/dashboard/components/ProfileIcon.tsx". Does the file exist?
+[2m9:50:19 AM[22m [36m[1m[vite][22m[39m [32m✨ new dependencies optimized: [33m@mui/material/TextField, @mui/material/MenuItem, @mui/material/Select, @mui/material/FormGroup, @mui/material/FormControlLabel, @mui/material/Checkbox[32m[39m
+[2m9:50:19 AM[22m [36m[1m[vite][22m[39m [32m✨ optimized dependencies changed. reloading[39m
+Failed to resolve import "shared/constants" from "src/features/dashboard/components/layout/Sidebar.tsx". Does the file exist?
+[2m9:50:21 AM[22m [31m[1m[vite][22m[39m [31mInternal server error: Failed to resolve import "store/slices" from "src/features/dashboard/components/layout/Navbar.tsx". Does the file exist?[39m
+  Plugin: [35mvite:import-analysis[39m
+  File: [36m/Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/src/features/dashboard/components/layout/Navbar.tsx[39m:7:31
+[33m  20 |  import { FaUserAlt } from "react-icons/fa";
+  21 |  import { Link } from "react-router-dom";
+  22 |  import { setCredentials } from "store/slices";
+     |                                  ^
+  23 |  import { useGetUserQuery } from "services/userApi";
+  24 |  import Modal2 from "shared/components/Modal2";[39m
+      at formatError (file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:44055:46)
+      at TransformContext.error (file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:44051:19)
+      at normalizeUrl (file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:41837:33)
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at async file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:41991:47
+      at async Promise.all (index 8)
+      at async TransformContext.transform (file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:41907:13)
+      at async Object.transform (file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:44345:30)
+      at async loadAndTransform (file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:55015:29)
+Failed to resolve import "store/slices" from "src/features/dashboard/components/layout/Navbar.tsx". Does the file exist?
+Failed to resolve import "store/slices" from "src/features/dashboard/components/filter/SelectSports.tsx". Does the file exist?
+[2m9:50:21 AM[22m [31m[1m[vite][22m[39m [31mInternal server error: Failed to resolve import "store/slices" from "src/features/dashboard/components/filter/SelectSports.tsx". Does the file exist?[39m
+  Plugin: [35mvite:import-analysis[39m
+  File: [36m/Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/src/features/dashboard/components/filter/SelectSports.tsx[39m:6:68
+[33m  19 |  import { RxCross2 } from "react-icons/rx";
+  20 |  import { useDispatch, useSelector } from "react-redux";
+  21 |  import { selectSports, addSports, removeSport } from "store/slices";
+     |                                                        ^
+  22 |  import { SPORTS } from "shared/constants";
+  23 |  const SelectSports = ({[39m
+      at formatError (file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:44055:46)
+      at TransformContext.error (file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:44051:19)
+      at normalizeUrl (file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:41837:33)
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at async file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:41991:47
+      at async Promise.all (index 7)
+      at async TransformContext.transform (file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:41907:13)
+      at async Object.transform (file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:44345:30)
+      at async loadAndTransform (file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:55015:29)
+Failed to resolve import "store/slices" from "src/features/dashboard/components/filter/SelectSports.tsx". Does the file exist?
+[2m9:50:21 AM[22m [31m[1m[vite][22m[39m [31mInternal server error: Failed to resolve import "store/slices" from "src/features/dashboard/components/filter/SelectDateRange.tsx". Does the file exist?[39m
+  Plugin: [35mvite:import-analysis[39m
+  File: [36m/Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/src/features/dashboard/components/filter/SelectDateRange.tsx[39m:8:89
+[33m  21 |  import { DatePicker } from "@mui/x-date-pickers/DatePicker";
+  22 |  import { RiArrowDownSLine } from "react-icons/ri";
+  23 |  import { selectStartTime, selectEndTime, setStartTime, setEndTime } from "store/slices";
+     |                                                                            ^
+  24 |  const SelectDateRange = ({
+  25 |    type[39m
+      at formatError (file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:44055:46)
+      at TransformContext.error (file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:44051:19)
+      at normalizeUrl (file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:41837:33)
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at async file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:41991:47
+      at async Promise.all (index 9)
+      at async TransformContext.transform (file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:41907:13)
+      at async Object.transform (file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:44345:30)
+      at async loadAndTransform (file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:55015:29)
+Failed to resolve import "store/slices" from "src/features/dashboard/components/filter/SelectDateRange.tsx". Does the file exist?
+[2m9:50:21 AM[22m [31m[1m[vite][22m[39m [31mInternal server error: Failed to resolve import "models" from "src/features/dashboard/components/social/FriendsGroup.tsx". Does the file exist?[39m
+  Plugin: [35mvite:import-analysis[39m
+  File: [36m/Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/src/features/dashboard/components/social/FriendsGroup.tsx[39m:4:29
+[33m  15 |  }
+  16 |  import FriendsCard from "./FriendsCard";
+  17 |  import { FriendStatus } from "models";
+     |                                ^
+  18 |  const FriendsGroup = ({
+  19 |    friendships,[39m
+      at formatError (file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:44055:46)
+      at TransformContext.error (file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:44051:19)
+      at normalizeUrl (file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:41837:33)
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at async file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:41991:47
+      at async Promise.all (index 4)
+      at async TransformContext.transform (file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:41907:13)
+      at async Object.transform (file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:44345:30)
+      at async loadAndTransform (file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:55015:29)
+Failed to resolve import "models" from "src/features/dashboard/components/social/FriendsGroup.tsx". Does the file exist?
+[2m9:50:21 AM[22m [31m[1m[vite][22m[39m [31mInternal server error: Failed to resolve import "store/slices" from "src/features/dashboard/components/filter/SelectGender.tsx". Does the file exist?[39m
+  Plugin: [35mvite:import-analysis[39m
+  File: [36m/Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/src/features/dashboard/components/filter/SelectGender.tsx[39m:3:61
+[33m  16 |  var _s = $RefreshSig$();
+  17 |  import { useDispatch, useSelector } from "react-redux";
+  18 |  import { selectGender, changeGender } from "store/slices";
+     |                                              ^
+  19 |  const SelectGender = ({
+  20 |    type[39m
+      at formatError (file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:44055:46)
+      at TransformContext.error (file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:44051:19)
+      at normalizeUrl (file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:41837:33)
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at async file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:41991:47
+      at async Promise.all (index 4)
+      at async TransformContext.transform (file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:41907:13)
+      at async Object.transform (file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:44345:30)
+      at async loadAndTransform (file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:55015:29)
+Failed to resolve import "store/slices" from "src/features/dashboard/components/filter/SelectGender.tsx". Does the file exist?
+[2m9:50:21 AM[22m [31m[1m[vite][22m[39m [31mInternal server error: Failed to resolve import "store/slices" from "src/features/dashboard/components/filter/SelectTimeRange.tsx". Does the file exist?[39m
+  Plugin: [35mvite:import-analysis[39m
+  File: [36m/Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/src/features/dashboard/components/filter/SelectTimeRange.tsx[39m:8:89
+[33m  21 |  import { TimePicker } from "@mui/x-date-pickers/TimePicker";
+  22 |  import { RiArrowDownSLine } from "react-icons/ri";
+  23 |  import { selectStartTime, selectEndTime, setStartTime, setEndTime } from "store/slices";
+     |                                                                            ^
+  24 |  const SelectTimeRange = ({
+  25 |    type[39m
+      at formatError (file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:44055:46)
+      at TransformContext.error (file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:44051:19)
+      at normalizeUrl (file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:41837:33)
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at async file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:41991:47
+      at async Promise.all (index 9)
+      at async TransformContext.transform (file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:41907:13)
+      at async Object.transform (file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:44345:30)
+      at async loadAndTransform (file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:55015:29)
+Failed to resolve import "store/slices" from "src/features/dashboard/components/filter/SelectTimeRange.tsx". Does the file exist?
+[2m9:50:21 AM[22m [31m[1m[vite][22m[39m [31mInternal server error: Failed to resolve import "services/userApi" from "src/features/dashboard/components/settings/SetProfileImg.tsx". Does the file exist?[39m
+  Plugin: [35mvite:import-analysis[39m
+  File: [36m/Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/src/features/dashboard/components/settings/SetProfileImg.tsx[39m:3:46
+[33m  16 |  var _s = $RefreshSig$();
+  17 |  import { useState, useRef } from "react";
+  18 |  import { useUploadProfileImageMutation } from "services/userApi";
+     |                                                 ^
+  19 |  import { ErrorMessage, SubmitButton } from "shared/components";
+  20 |  import userdp from "../../assets/images/user.png";[39m
+      at formatError (file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:44055:46)
+      at TransformContext.error (file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:44051:19)
+      at normalizeUrl (file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:41837:33)
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at async file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:41991:47
+      at async Promise.all (index 4)
+      at async TransformContext.transform (file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:41907:13)
+      at async Object.transform (file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:44345:30)
+      at async loadAndTransform (file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:55015:29)
+Failed to resolve import "services/userApi" from "src/features/dashboard/components/settings/SetProfileImg.tsx". Does the file exist?
+[2m9:50:21 AM[22m [31m[1m[vite][22m[39m [31mInternal server error: Failed to resolve import "shared/components" from "src/features/dashboard/components/settings/SetProfile.tsx". Does the file exist?[39m
+  Plugin: [35mvite:import-analysis[39m
+  File: [36m/Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/src/features/dashboard/components/settings/SetProfile.tsx[39m:13:7
+[33m  18 |  import * as Yup from "yup";
+  19 |  import CircularProgress from "@mui/material/CircularProgress";
+  20 |  import { SubmitButton, TextInput, MapInput, DatePickerInput, SelectInput, TextAreaInput } from "shared/components";
+     |                                                                                                  ^
+  21 |  import { useGetUserQuery, useUpdateProfileMutation } from "services/userApi";
+  22 |  import { selectGenderInputs } from "shared/constants";[39m
+      at formatError (file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:44055:46)
+      at TransformContext.error (file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:44051:19)
+      at normalizeUrl (file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:41837:33)
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at async file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:41991:47
+      at async Promise.all (index 6)
+      at async TransformContext.transform (file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:41907:13)
+      at async Object.transform (file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:44345:30)
+      at async loadAndTransform (file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:55015:29)
+Failed to resolve import "shared/components" from "src/features/dashboard/components/settings/SetProfile.tsx". Does the file exist?
+[2m9:50:21 AM[22m [31m[1m[vite][22m[39m [31mInternal server error: Failed to resolve import "store/slices" from "src/features/dashboard/components/filter/SelectLevel.tsx". Does the file exist?[39m
+  Plugin: [35mvite:import-analysis[39m
+  File: [36m/Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/src/features/dashboard/components/filter/SelectLevel.tsx[39m:4:58
+[33m  16 |  var _s = $RefreshSig$();
+  17 |  import { useDispatch, useSelector } from "react-redux";
+  18 |  import { selectLevel, changeLevel } from "store/slices";
+     |                                            ^
+  19 |  const SelectLevel = ({
+  20 |    type[39m
+      at formatError (file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:44055:46)
+      at TransformContext.error (file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:44051:19)
+      at normalizeUrl (file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:41837:33)
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at async file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:41991:47
+      at async Promise.all (index 4)
+      at async TransformContext.transform (file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:41907:13)
+      at async Object.transform (file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:44345:30)
+      at async loadAndTransform (file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:55015:29)
+Failed to resolve import "store/slices" from "src/features/dashboard/components/filter/SelectLevel.tsx". Does the file exist?
+[2m9:50:21 AM[22m [31m[1m[vite][22m[39m [31mInternal server error: Failed to resolve import "services/userApi" from "src/features/dashboard/components/settings/SetCredentials.tsx". Does the file exist?[39m
+  Plugin: [35mvite:import-analysis[39m
+  File: [36m/Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/src/features/dashboard/components/settings/SetCredentials.tsx[39m:11:58
+[33m  17 |  import { Formik, Form } from "formik";
+  18 |  import * as Yup from "yup";
+  19 |  import { useUpdateProfileMutation } from "services/userApi";
+     |                                            ^
+  20 |  import { SubmitButton, TextInput } from "shared/components";
+  21 |  const SetCredentials = () => {[39m
+      at formatError (file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:44055:46)
+      at TransformContext.error (file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:44051:19)
+      at normalizeUrl (file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:41837:33)
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at async file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:41991:47
+      at async Promise.all (index 5)
+      at async TransformContext.transform (file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:41907:13)
+      at async Object.transform (file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:44345:30)
+      at async loadAndTransform (file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:55015:29)
+Failed to resolve import "services/userApi" from "src/features/dashboard/components/settings/SetCredentials.tsx". Does the file exist?
+[2m9:50:21 AM[22m [31m[1m[vite][22m[39m [31mInternal server error: Failed to resolve import "shared/constants" from "src/features/dashboard/components/events/EventsMarkers.tsx". Does the file exist?[39m
+  Plugin: [35mvite:import-analysis[39m
+  File: [36m/Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/src/features/dashboard/components/events/EventsMarkers.tsx[39m:6:25
+[33m  19 |  import { Marker, useMap, Popup } from "react-leaflet";
+  20 |  import L from "leaflet";
+  21 |  import { MAX_ZOOM } from "shared/constants";
+     |                            ^
+  22 |  import MarkerPopup from "./MarkerPopup";
+  23 |  const icons = {};[39m
+      at formatError (file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:44055:46)
+      at TransformContext.error (file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:44051:19)
+      at normalizeUrl (file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:41837:33)
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at async file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:41991:47
+      at async Promise.all (index 7)
+      at async TransformContext.transform (file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:41907:13)
+      at async Object.transform (file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:44345:30)
+      at async loadAndTransform (file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:55015:29)
+Failed to resolve import "shared/constants" from "src/features/dashboard/components/events/EventsMarkers.tsx". Does the file exist?
+[2m9:50:21 AM[22m [31m[1m[vite][22m[39m [31mInternal server error: Failed to resolve import "models" from "src/features/dashboard/components/profile/ProUserInfo.tsx". Does the file exist?[39m
+  Plugin: [35mvite:import-analysis[39m
+  File: [36m/Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/src/features/dashboard/components/profile/ProUserInfo.tsx[39m:4:29
+[33m  17 |  import moment from "moment";
+  18 |  import { useNavigate } from "react-router-dom";
+  19 |  import { FriendStatus } from "models";
+     |                                ^
+  20 |  import { useCreateFriendshipMutation } from "services/userApi";
+  21 |  import { SLUGS } from "../../shared/constants";[39m
+      at formatError (file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:44055:46)
+      at TransformContext.error (file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:44051:19)
+      at normalizeUrl (file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:41837:33)
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at async file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:41991:47
+      at async Promise.all (index 5)
+      at async TransformContext.transform (file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:41907:13)
+      at async Object.transform (file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:44345:30)
+      at async loadAndTransform (file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:55015:29)
+Failed to resolve import "models" from "src/features/dashboard/components/profile/ProUserInfo.tsx". Does the file exist?
+[2m9:50:21 AM[22m [31m[1m[vite][22m[39m [31mInternal server error: Failed to resolve import "shared/components/Modal" from "src/features/dashboard/components/profile/ReservationTimetable.tsx". Does the file exist?[39m
+  Plugin: [35mvite:import-analysis[39m
+  File: [36m/Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/src/features/dashboard/components/profile/ReservationTimetable.tsx[39m:6:18
+[33m  19 |  import { HiOutlineChevronLeft, HiOutlineChevronRight } from "react-icons/hi";
+  20 |  import CircularProgress from "@mui/material/CircularProgress";
+  21 |  import Modal from "shared/components/Modal";
+     |                     ^
+  22 |  import { objectToParametrs, getFullWeekOfMomentDays } from "shared/utils";
+  23 |  import { useGetSlotsQuery } from "services/eventApi";[39m
+      at formatError (file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:44055:46)
+      at TransformContext.error (file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:44051:19)
+      at normalizeUrl (file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:41837:33)
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at async file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:41991:47
+      at async Promise.all (index 7)
+      at async TransformContext.transform (file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:41907:13)
+      at async Object.transform (file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:44345:30)
+      at async loadAndTransform (file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:55015:29)
+Failed to resolve import "shared/components/Modal" from "src/features/dashboard/components/profile/ReservationTimetable.tsx". Does the file exist?
+Failed to resolve import "services/userApi" from "src/features/dashboard/components/ProfileIcon.tsx". Does the file exist?
+Failed to resolve import "services/userApi" from "src/features/dashboard/components/ProfileIcon.tsx". Does the file exist?
+Failed to resolve import "services/userApi" from "src/features/dashboard/components/ProfileIcon.tsx". Does the file exist?
+Failed to resolve import "services/userApi" from "src/features/dashboard/components/ProfileIcon.tsx". Does the file exist?
+Failed to resolve import "services/userApi" from "src/features/dashboard/components/ProfileIcon.tsx". Does the file exist?
+[2m9:50:21 AM[22m [31m[1m[vite][22m[39m [31mInternal server error: Failed to resolve import "services/userApi" from "src/features/dashboard/components/ProfileIcon.tsx". Does the file exist?[39m
+  Plugin: [35mvite:import-analysis[39m
+  File: [36m/Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/src/features/dashboard/components/ProfileIcon.tsx[39m:3:32
+[33m  16 |  var _s = $RefreshSig$();
+  17 |  import { FaUserAlt } from "react-icons/fa";
+  18 |  import { useGetUserQuery } from "services/userApi";
+     |                                   ^
+  19 |  const ProfileIcon = ({
+  20 |    size = 3,[39m
+      at formatError (file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:44055:46)
+      at TransformContext.error (file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:44051:19)
+      at normalizeUrl (file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:41837:33)
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at async file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:41991:47
+      at async Promise.all (index 4)
+      at async TransformContext.transform (file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:41907:13)
+      at async Object.transform (file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:44345:30)
+      at async loadAndTransform (file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:55015:29)
+Failed to resolve import "services/userApi" from "src/features/dashboard/components/ProfileIcon.tsx". Does the file exist?
+Failed to resolve import "@mui/x-date-pickers/AdapterDateFns" from "../../libs/shared/ui/src/components/forms/TimePickerInput.jsx". Does the file exist?
+Failed to resolve import "leaflet/dist/leaflet.css" from "../../libs/shared/ui/src/components/Map.jsx". Does the file exist?
+[2m9:50:21 AM[22m [31m[1m[vite][22m[39m [31mInternal server error: Failed to resolve import "leaflet/dist/leaflet.css" from "../../libs/shared/ui/src/components/Map.jsx". Does the file exist?[39m
+  Plugin: [35mvite:import-analysis[39m
+  File: [36m/Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/libs/shared/ui/src/components/Map.jsx[39m:1:7
+[33m  15 |  }
+  16 |  var _s = $RefreshSig$(), _s2 = $RefreshSig$();
+  17 |  import "leaflet/dist/leaflet.css";
+     |          ^
+  18 |  import React, { useEffect, useState } from "react";
+  19 |  import L from "leaflet";[39m
+      at formatError (file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:44055:46)
+      at TransformContext.error (file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:44051:19)
+      at normalizeUrl (file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:41837:33)
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at async file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:41991:47
+      at async Promise.all (index 3)
+      at async TransformContext.transform (file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:41907:13)
+      at async Object.transform (file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:44345:30)
+      at async loadAndTransform (file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:55015:29)
+Failed to resolve import "leaflet/dist/leaflet.css" from "../../libs/shared/ui/src/components/Map.jsx". Does the file exist?
+[2m9:50:21 AM[22m [31m[1m[vite][22m[39m [31mInternal server error: Failed to resolve import "shared/constants" from "src/features/dashboard/components/layout/Sidebar.tsx". Does the file exist?[39m
+  Plugin: [35mvite:import-analysis[39m
+  File: [36m/Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/src/features/dashboard/components/layout/Sidebar.tsx[39m:3:23
+[33m  16 |  var _s = $RefreshSig$();
+  17 |  import { Link, NavLink, useLocation } from "react-router-dom";
+  18 |  import { colors } from "shared/constants";
+     |                          ^
+  19 |  import { SLUGS } from "../../shared/constants";
+  20 |  import logo from "shared/assets/images/sportfriendsLogo.svg";[39m
+      at formatError (file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:44055:46)
+      at TransformContext.error (file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:44051:19)
+      at normalizeUrl (file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:41837:33)
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at async file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:41991:47
+      at async Promise.all (index 4)
+      at async TransformContext.transform (file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:41907:13)
+      at async Object.transform (file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:44345:30)
+      at async loadAndTransform (file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:55015:29)
+      at async viteTransformMiddleware (file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:64417:32)
+[2m9:50:21 AM[22m [31m[1m[vite][22m[39m [31mInternal server error: Failed to resolve import "services/postApi" from "src/features/dashboard/components/home/PostDialog.tsx". Does the file exist?[39m
+  Plugin: [35mvite:import-analysis[39m
+  File: [36m/Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/src/features/dashboard/components/home/PostDialog.tsx[39m:6:38
+[33m  19 |  import DialogContent from "@mui/material/DialogContent";
+  20 |  import CloseIcon from "@mui/icons-material/Close";
+  21 |  import { useCreatePostMutation } from "services/postApi";
+     |                                         ^
+  22 |  const PostDialog = ({
+  23 |    open,[39m
+      at formatError (file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:44055:46)
+      at TransformContext.error (file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:44051:19)
+      at normalizeUrl (file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:41837:33)
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at async file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:41991:47
+      at async Promise.all (index 7)
+      at async TransformContext.transform (file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:41907:13)
+      at async Object.transform (file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:44345:30)
+      at async loadAndTransform (file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:55015:29)
+Failed to resolve import "services/postApi" from "src/features/dashboard/components/home/PostDialog.tsx". Does the file exist?
+[2m9:50:21 AM[22m [31m[1m[vite][22m[39m [31mInternal server error: Failed to resolve import "store/slices" from "src/features/dashboard/components/home/BottomPost.tsx". Does the file exist?[39m
+  Plugin: [35mvite:import-analysis[39m
+  File: [36m/Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/src/features/dashboard/components/home/BottomPost.tsx[39m:6:29
+[33m  18 |  import { GoTriangleUp, GoTriangleDown } from "react-icons/go";
+  19 |  import { useSelector } from "react-redux";
+  20 |  import { selectAuthId } from "store/slices";
+     |                                ^
+  21 |  import { useLikePostMutation, useUnlikePostMutation, useSendPostCommentMutation } from "services/postApi";
+  22 |  import { colors } from "shared/constants";[39m
+      at formatError (file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:44055:46)
+      at TransformContext.error (file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:44051:19)
+      at normalizeUrl (file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:41837:33)
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at async file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:41991:47
+      at async Promise.all (index 6)
+      at async TransformContext.transform (file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:41907:13)
+      at async Object.transform (file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:44345:30)
+      at async loadAndTransform (file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:55015:29)
+Failed to resolve import "store/slices" from "src/features/dashboard/components/home/BottomPost.tsx". Does the file exist?
+Failed to resolve import "services/userApi" from "src/features/dashboard/components/social/FriendsCard.tsx". Does the file exist?
+Failed to resolve import "models" from "src/features/dashboard/shared/utils/index.ts". Does the file exist?
+Failed to resolve import "services/userApi" from "src/features/dashboard/components/RectangleProfileIcon.tsx". Does the file exist?
+[2m9:50:21 AM[22m [31m[1m[vite][22m[39m [31mInternal server error: Failed to resolve import "@mui/x-date-pickers/AdapterDateFns" from "../../libs/shared/ui/src/components/forms/TimePickerInput.jsx". Does the file exist?[39m
+  Plugin: [35mvite:import-analysis[39m
+  File: [36m/Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/libs/shared/ui/src/components/forms/TimePickerInput.jsx[39m:6:31
+[33m  20 |  import { useField, useFormikContext } from "formik";
+  21 |  import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
+  22 |  import { AdapterDateFns } from "@mui/x-date-pickers/AdapterDateFns";
+     |                                  ^
+  23 |  import ErrorMessage from "../ErrorMessage";
+  24 |  export default function TimePickerInput({[39m
+      at formatError (file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:44055:46)
+      at TransformContext.error (file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:44051:19)
+      at normalizeUrl (file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:41837:33)
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at async file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:41991:47
+      at async Promise.all (index 8)
+      at async TransformContext.transform (file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:41907:13)
+      at async Object.transform (file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:44345:30)
+      at async loadAndTransform (file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:55015:29)
+      at async viteTransformMiddleware (file:///Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/vite/dist/node/chunks/dep-2b82a1ce.js:64417:32)
+Failed to resolve import "services/userApi" from "src/features/dashboard/components/ProfileIcon.tsx". Does the file exist?

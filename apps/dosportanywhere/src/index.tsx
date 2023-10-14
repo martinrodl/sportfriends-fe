@@ -4,8 +4,8 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import { ThemeProvider } from '@mui/material/styles';
 
-import { SLUGS } from 'shared/constants';
-import { ProtectedRoutes } from 'shared/components';
+import { SLUGS } from '@sportfriends-fe/shared/constants';
+import { ProtectedRoutes } from '@sportfriends-fe/shared/ui';
 
 import { theme } from './muiTheme';
 import Dashboard from './features/dashboard';

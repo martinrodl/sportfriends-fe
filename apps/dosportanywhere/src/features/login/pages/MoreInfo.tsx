@@ -1,9 +1,15 @@
 import { Formik, Form } from 'formik';
 import { useNavigate, Link } from 'react-router-dom';
 
-import { Button, TextAreaInput, ErrorMessage, SelectInput, DatePickerInput } from 'shared/components';
-import { SLUGS, selectGenderInputs } from 'shared/constants';
-import { useUpdateProfileMutation } from 'services/userApi';
+import {
+  Button,
+  TextAreaInput,
+  ErrorMessage,
+  SelectInput,
+  DatePickerInput,
+} from '@sportfriends-fe/shared/ui';
+import { SLUGS, selectGenderInputs } from '@sportfriends-fe/shared/constants';
+import { useUpdateProfileMutation } from '@sportfriends-fe/shared/data/services';
 
 import PageLayout from '../components/PageLayout';
 
@@ -46,10 +52,19 @@ const MoreInfo = () => {
                 <SelectInput label="gender" inputs={selectGenderInputs} />
               </div>
               <div className="relative">
-                <TextAreaInput label="description" placeholder="Description" rows={3} />
+                <TextAreaInput
+                  label="description"
+                  placeholder="Description"
+                  rows={3}
+                />
               </div>
-              {error?.data?.errors && <ErrorMessage apiErrors={error.data.errors} />}
-              <Button type="submit" className="mt-[40px] text-white w-full min-h-[60px]">
+              {error?.data?.errors && (
+                <ErrorMessage apiErrors={error.data.errors} />
+              )}
+              <Button
+                type="submit"
+                className="mt-[40px] text-white w-full min-h-[60px]"
+              >
                 ALMOST DONE!
               </Button>
             </Form>

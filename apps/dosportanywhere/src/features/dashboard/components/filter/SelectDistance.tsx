@@ -1,7 +1,11 @@
 import Slider from '@mui/material/Slider';
 import { useDispatch, useSelector } from 'react-redux';
 
-import { selectDistance, changeDistance, allFilterType } from 'store/slices';
+import {
+  selectDistance,
+  changeDistance,
+  allFilterType,
+} from '@sportfriends-fe/shared/data/store';
 interface SelectDistanceProps {
   type: allFilterType;
 }
@@ -10,8 +14,10 @@ const SelectDistance = ({ type }: SelectDistanceProps) => {
   const dispatch = useDispatch();
   const distance = useSelector(selectDistance(type));
 
-  const getFilterValue = (value: number) => marks.filter((item) => item.filterValue === value);
-  const getMarkValue = (value: number) => marks.filter((item) => item.value === value);
+  const getFilterValue = (value: number) =>
+    marks.filter((item) => item.filterValue === value);
+  const getMarkValue = (value: number) =>
+    marks.filter((item) => item.value === value);
 
   return (
     <div className="flex flex-col max-w-[340px] h-40 rounded-3xl p-5 bg-white border border-primary">
@@ -24,7 +30,12 @@ const SelectDistance = ({ type }: SelectDistanceProps) => {
           color="primary"
           onChange={(_, newValue) => {
             console.log('distance ', _, newValue);
-            dispatch(changeDistance({ type: type, value: getMarkValue(Number(newValue))[0].filterValue }));
+            dispatch(
+              changeDistance({
+                type: type,
+                value: getMarkValue(Number(newValue))[0].filterValue,
+              }),
+            );
           }}
           step={null}
           min={0}

@@ -1,0 +1,52 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "allowSyntheticDefaultImports": true,
+    "rootDir": ".",
+    "sourceMap": true,
+    "declaration": false,
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "resolveJsonModule": true,
+    "importHelpers": true,
+    "noImplicitAny": false,
+    "target": "ESNext",
+    "module": "ESNext",
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    "skipLibCheck": true,
+    "skipDefaultLibCheck": true,
+    "baseUrl": ".",
+    "paths": {
+      "@sportfriends-fe/shared/constants": [
+        "libs/shared/constants/src/index.ts"
+      ],
+      "@sportfriends-fe/shared/data": [
+        "libs/shared/data/src/index.ts"
+      ],
+      "@sportfriends-fe/shared/data/services": [
+        "libs/shared/data/services/src/index.ts"
+      ],
+      "@sportfriends-fe/shared/data/store": [
+        "libs/shared/data/store/src/index.ts"
+      ],
+      "@sportfriends-fe/shared/models": [
+        "libs/shared/models/src/index.ts"
+      ],
+      "@sportfriends-fe/shared/services": [
+        "libs/shared/services/src/index.ts"
+      ],
+      "@sportfriends-fe/shared/ui": [
+        "libs/shared/ui/src/index.ts"
+      ],
+      "@sportfriends-fe/shared/utils": [
+        "libs/shared/utils/src/index.ts"
+      ]
+    }
+  },
+  "exclude": []
+}

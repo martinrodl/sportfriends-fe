@@ -9,10 +9,10 @@ import {
   ErrorMessage,
   TextInput,
   CheckboxInput,
-} from 'shared/components';
-import { SLUGS } from 'shared/constants';
-import { setCredentials } from 'store/slices';
-import { useSigninUserMutation } from 'services/authApi';
+} from '@sportfriends-fe/shared/ui';
+import { SLUGS } from '@sportfriends-fe/shared/constants';
+import { setCredentials } from '@sportfriends-fe/shared/data/store';
+import { useSigninUserMutation } from '@sportfriends-fe/shared/services';
 
 import PageLayout from '../components/PageLayout';
 

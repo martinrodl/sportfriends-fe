@@ -1,6 +1,6 @@
 import { FaUserAlt } from 'react-icons/fa';
 
-import { useGetUserQuery } from 'services/userApi';
+import { useGetUserQuery } from '@sportfriends-fe/shared/data/services';
 
 interface ProfileIconPros {
   size?: number;

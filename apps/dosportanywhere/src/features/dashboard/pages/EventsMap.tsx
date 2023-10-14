@@ -1,9 +1,11 @@
 import { MapContainer, Marker, Popup, TileLayer } from 'react-leaflet';
 import CircularProgress from '@mui/material/CircularProgress';
 
-import { useGetUserQuery } from 'services/userApi';
-import { useGetEventsQuery } from 'services/eventApi';
-import { MAX_ZOOM } from 'shared/constants';
+import {
+  useGetUserQuery,
+  useGetEventsQuery,
+} from '@sportfriends-fe/shared/data/services';
+import { MAX_ZOOM } from '@sportfriends-fe/shared/constants';
 
 // import Filter from '../components/filter/Filter';
 import EventsMarkers from '../components/events/EventsMarkers';
@@ -13,7 +15,12 @@ interface MapOptions {
 }
 
 export default function EventsMap() {
-  const { data: userData, isLoading: userLoading, isSuccess: userSuccess, error: userError } = useGetUserQuery('');
+  const {
+    data: userData,
+    isLoading: userLoading,
+    isSuccess: userSuccess,
+    error: userError,
+  } = useGetUserQuery('');
   const {
     data: eventsData,
     isLoading: eventsLoading,
@@ -30,7 +37,9 @@ export default function EventsMap() {
   return (
     <div className="max-w-7xl  mx-auto px-4 mt-12 self-start">
       <div className="max-w-7xl mx-auto p-8">
-        <div className="mb-8">{/* <Filter enableFilters={['sport', 'distance', 'date', 'startTime']} /> */}</div>
+        <div className="mb-8">
+          {/* <Filter enableFilters={['sport', 'distance', 'date', 'startTime']} /> */}
+        </div>
 
         <MapContainer
           center={position}

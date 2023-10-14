@@ -3,22 +3,32 @@ import { Navigate } from 'react-router-dom';
 import { Formik, Form } from 'formik';
 import * as Yup from 'yup';
 
-import { useCreateDatingPostMutation } from 'services/datingApi';
-import { TextInput, SelectSearchInput, TextAreaInput, SubmitButton, ErrorMessage } from 'shared/components';
+import { useCreateDatingPostMutation } from '@sportfriends-fe/shared/data/services';
+import {
+  TextInput,
+  SelectSearchInput,
+  TextAreaInput,
+  SubmitButton,
+  ErrorMessage,
+} from '@sportfriends-fe/shared/ui';
 
 import { SLUGS } from '../shared/constants';
 
 export default function CreateSportsPartnerForm() {
-  const [createPost, { isSuccess, error, isLoading }] = useCreateDatingPostMutation();
+  const [createPost, { isSuccess, error, isLoading }] =
+    useCreateDatingPostMutation();
 
   if (isSuccess) {
     return <Navigate to={'/dashboard/' + SLUGS.MyActions} replace={true} />;
   }
   return (
     <div className="w-full min-h-screen md:px-10 px-5 md:py-20 py-14 max-w-7xl mx-auto">
-      <h1 className="text-[22px] text-xl font-semibold text-[#505050] text-center mb-4">Find a Sport partner</h1>
+      <h1 className="text-[22px] text-xl font-semibold text-[#505050] text-center mb-4">
+        Find a Sport partner
+      </h1>
       <p className="text-xl text-center font-normal text-[#9A9A9A] mb-10 max-w-[525px] mx-auto">
-        Fill neccessary details of the sport partner dating and find sport buddies.
+        Fill neccessary details of the sport partner dating and find sport
+        buddies.
       </p>
       <Formik
         initialValues={{
@@ -32,10 +42,16 @@ export default function CreateSportsPartnerForm() {
             .max(250, 'Must be at least 4 characters')
             .required('Required'),
           sport: Yup.string().required('Required'),
-          description: Yup.string().min(20, 'Must be at least 20 characters').required('Required'),
+          description: Yup.string()
+            .min(20, 'Must be at least 20 characters')
+            .required('Required'),
         })}
         onSubmit={(formData) => {
-          const data = { title: formData.title, description: formData.description, sports: [formData.sport] };
+          const data = {
+            title: formData.title,
+            description: formData.description,
+            sports: [formData.sport],
+          };
           createPost(data);
         }}
       >
@@ -48,7 +64,9 @@ export default function CreateSportsPartnerForm() {
               <SelectSearchInput placeholder="Type of Sport" label="sport" />
             </div>
             <TextAreaInput label="description" placeholder="Description" />
-            {error?.data?.errors && <ErrorMessage apiErrors={error.data.errors} />}
+            {error?.data?.errors && (
+              <ErrorMessage apiErrors={error.data.errors} />
+            )}
             <SubmitButton text="Submit" isLoading={isLoading} />
           </div>
         </Form>

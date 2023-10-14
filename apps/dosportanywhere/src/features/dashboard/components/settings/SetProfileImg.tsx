@@ -1,13 +1,14 @@
 import React, { useState, useRef } from 'react';
 
-import { useUploadProfileImageMutation } from 'services/userApi';
-import { ErrorMessage, SubmitButton } from 'shared/components';
+import { useUploadProfileImageMutation } from '@sportfriends-fe/shared/data/services';
+import { ErrorMessage, SubmitButton } from '@sportfriends-fe/shared/ui';
 
 import userdp from '../../assets/images/user.png';
 import upload from '../../assets/images/upload.png';
 
 const SetProfileImg = () => {
-  const [updateProfile, { isSuccess, error, isError, isLoading }] = useUploadProfileImageMutation();
+  const [updateProfile, { isSuccess, error, isError, isLoading }] =
+    useUploadProfileImageMutation();
 
   const [img, setImg] = useState(userdp);
   const imageUploader = useRef(null);
@@ -35,20 +36,39 @@ const SetProfileImg = () => {
         <form onSubmit={onSubmit}>
           <div className="flex md:flex-row flex-col gap-[26px] md:gap-[40px] items-center">
             <div>
-              <img className="rounded-full" src={img} width={150} height={150} alt="user" />
+              <img
+                className="rounded-full"
+                src={img}
+                width={150}
+                height={150}
+                alt="user"
+              />
             </div>
             <div className="flex gap-[13px] items-center">
-              <div className="cursor-pointer" onClick={() => imageUploader.current.click()}>
+              <div
+                className="cursor-pointer"
+                onClick={() => imageUploader.current.click()}
+              >
                 <img src={upload} alt="upload" />
               </div>
-              <input type="file" accept="image/*" onChange={handleImageUpload} ref={imageUploader} className="hidden" />
+              <input
+                type="file"
+                accept="image/*"
+                onChange={handleImageUpload}
+                ref={imageUploader}
+                className="hidden"
+              />
 
-              <p className="text-lg font-semibold text-[#505050]">Upload profile picture</p>
+              <p className="text-lg font-semibold text-[#505050]">
+                Upload profile picture
+              </p>
             </div>
           </div>
           {/* {error?.data?.errors && <ErrorMessage apiErrors={error.data.errors} />} */}
 
-          <div className="mb-5">{isError && <ErrorMessage message={'Skip it and try it later'} />}</div>
+          <div className="mb-5">
+            {isError && <ErrorMessage message={'Skip it and try it later'} />}
+          </div>
           <SubmitButton text="Update" isLoading={isLoading} />
         </form>
       </div>

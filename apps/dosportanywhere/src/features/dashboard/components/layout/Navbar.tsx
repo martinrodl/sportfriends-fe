@@ -4,10 +4,10 @@ import { FiSearch } from 'react-icons/fi';
 import { FaUserAlt } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 
-import { setCredentials } from 'store/slices';
-import { useGetUserQuery } from 'services/userApi';
-import Modal2 from 'shared/components/Modal2';
-import { colors } from 'shared/constants';
+import { setCredentials } from '@sportfriends-fe/shared/data/store';
+import { useGetUserQuery } from '@sportfriends-fe/shared/data/services';
+import { Modal2 } from '@sportfriends-fe/shared/ui';
+import { colors } from '@sportfriends-fe/shared/constants';
 
 import { SLUGS } from '../../shared/constants';
 import ProfileIcon from '../ProfileIcon';

@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import moment from 'moment';
 import { HiOutlineChevronLeft, HiOutlineChevronRight } from 'react-icons/hi';
 
-import { getFullWeekOfMomentDays } from 'shared/utils';
+import { getFullWeekOfMomentDays } from '@sportfriends-fe/shared/utils';
 interface CalendarProps {
   getPickedDate?: (pickedDay: moment.Moment) => void;
   dates?: moment.Moment[];

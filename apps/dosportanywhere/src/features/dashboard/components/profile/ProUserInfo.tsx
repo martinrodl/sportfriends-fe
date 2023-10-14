@@ -1,12 +1,12 @@
 import moment from 'moment';
 import { useParams, useNavigate } from 'react-router-dom';
 
-import { FriendStatus } from 'models';
+import { FriendStatus } from '@sportfriends-fe/shared/models';
 import {
   useGetSpecificUserQuery,
   useGetUserQuery,
   useCreateFriendshipMutation,
-} from 'services/userApi';
+} from '@sportfriends-fe/shared/data/services';
 
 import { SLUGS } from '../../shared/constants';
 

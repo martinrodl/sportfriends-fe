@@ -1,9 +1,9 @@
 import { Link, NavLink, useLocation } from 'react-router-dom';
 
-import { colors } from 'shared/constants';
+import { colors } from '@sportfriends-fe/shared/constants';
 
 import { SLUGS } from '../../shared/constants';
-import logo from 'shared/assets/images/sportfriendsLogo.svg';
+import { svgLogo } from '@sportfriends-fe/shared/ui';
 import homeIcon from '../../assets/new/Home.svg';
 import userProfileIcon from '../../assets/new/User.svg';
 import eventListIcon from '../../assets/new/Calendar.svg';
@@ -28,7 +28,7 @@ const Sidebar = ({ onClose, isClosed }: SideBarProps) => {
     <div>
       <div className="flex flex-col align-items bg-white h-full w-60 px-3.5 py-5 rounded-3xl shadow-xl">
         <Link to="/" className="mt-4 mb-10 w-3/4">
-          <img src={logo} alt="" />
+          <img src={svgLogo} alt="" />
         </Link>
         {links.map((item, index) => {
           return (
@@ -36,10 +36,14 @@ const Sidebar = ({ onClose, isClosed }: SideBarProps) => {
               <NavLink
                 to={item.slug}
                 className="flex items-center px-4 py-3 gap-x-3 transition-all rounded-xl duration-300 hover:bg-primary"
-                style={{ backgroundColor: getMatch(item.slug) ? colors.primary : '' }}
+                style={{
+                  backgroundColor: getMatch(item.slug) ? colors.primary : '',
+                }}
               >
                 {<img src={item.icon} alt="" className="h-5 w-5 fill-black" />}
-                <span className="text-black body3 font-semibold flex-1">{item.title}</span>
+                <span className="text-black body3 font-semibold flex-1">
+                  {item.title}
+                </span>
                 <div className="bg-white rounded-full h-2 w-2" />
               </NavLink>
             </div>

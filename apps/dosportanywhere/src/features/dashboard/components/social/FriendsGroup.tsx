@@ -1,7 +1,5 @@
-import { Friendship } from 'models';
-
 import FriendsCard from './FriendsCard';
-import { FriendStatus } from 'models';
+import { FriendStatus, Friendship } from '@sportfriends-fe/shared/models';
 
 interface FriendsGroupProps {
   friendships: Friendship[];
@@ -23,13 +21,19 @@ const FriendsGroup = ({ friendships, groupType }: FriendsGroupProps) => {
   return (
     <div>
       <div className="flex justify-between py-5">
-        <h3 className="text-xl font-semibold text-main2">{getText(groupType)}</h3>
+        <h3 className="text-xl font-semibold text-main2">
+          {getText(groupType)}
+        </h3>
         {/* <h3 className="text-xl font-medium text-primary pb-7 cursor-pointer">See all</h3> */}
       </div>
       {friendships?.length ? (
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-5">
           {friendships?.map((friendShip) => (
-            <FriendsCard status={groupType} friendShip={friendShip} key={'friendscard' + friendShip.id} />
+            <FriendsCard
+              status={groupType}
+              friendShip={friendShip}
+              key={'friendscard' + friendShip.id}
+            />
           ))}
         </div>
       ) : (

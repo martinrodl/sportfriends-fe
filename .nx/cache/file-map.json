@@ -2,11 +2,82 @@
   "version": "6.0",
   "nxVersion": "16.10.0",
   "deps": {
+    "@emotion/react": "^11.11.1",
+    "@emotion/styled": "^11.11.0",
+    "@mui/lab": "^5.0.0-alpha.148",
+    "@mui/material": "^5.14.13",
+    "@mui/x-date-pickers": "^6.16.2",
+    "@reduxjs/toolkit": "^1.9.7",
+    "@swc/helpers": "~0.5.2",
+    "date-fns": "^2.30.0",
+    "formik": "^2.4.5",
+    "leaflet": "^1.9.4",
+    "moment": "^2.29.4",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-icons": "^4.11.0",
+    "react-leaflet": "^4.2.1",
+    "react-redux": "^8.1.3",
+    "redux": "^4.2.1",
+    "tslib": "^2.3.0",
+    "use-debounce": "^9.0.4",
+    "@babel/core": "^7.14.5",
+    "@babel/preset-react": "^7.14.5",
+    "@nx/cypress": "16.10.0",
     "@nx/js": "16.10.0",
+    "@nx/react": "^16.10.0",
+    "@nx/vite": "16.10.0",
     "@nx/workspace": "16.10.0",
-    "nx": "16.10.0"
+    "@swc/cli": "~0.1.62",
+    "@swc/core": "~1.3.85",
+    "@testing-library/react": "14.0.0",
+    "@types/leaflet": "^1.9.6",
+    "@types/node": "18.14.2",
+    "@types/react": "18.2.24",
+    "@types/react-dom": "18.2.9",
+    "@types/react-redux": "^7.1.27",
+    "@vitejs/plugin-react": "~4.0.0",
+    "@vitest/coverage-c8": "~0.32.0",
+    "@vitest/ui": "~0.32.0",
+    "cypress": "^13.0.0",
+    "eslint-plugin-cypress": "^2.13.4",
+    "eslint-plugin-import": "2.27.5",
+    "eslint-plugin-jsx-a11y": "6.7.1",
+    "eslint-plugin-react": "7.32.2",
+    "eslint-plugin-react-hooks": "4.6.0",
+    "jsdom": "~22.1.0",
+    "nx": "16.10.0",
+    "prettier": "^2.6.2",
+    "typescript": "~5.1.3",
+    "vite": "~4.3.9",
+    "vitest": "~0.32.0"
   },
-  "pathMappings": {},
+  "pathMappings": {
+    "@sportfriends-fe/shared/constants": [
+      "libs/shared/constants/src/index.ts"
+    ],
+    "@sportfriends-fe/shared/data": [
+      "libs/shared/data/src/index.ts"
+    ],
+    "@sportfriends-fe/shared/data/services": [
+      "libs/shared/data/services/src/index.ts"
+    ],
+    "@sportfriends-fe/shared/data/store": [
+      "libs/shared/data/store/src/index.ts"
+    ],
+    "@sportfriends-fe/shared/models": [
+      "libs/shared/models/src/index.ts"
+    ],
+    "@sportfriends-fe/shared/services": [
+      "libs/shared/services/src/index.ts"
+    ],
+    "@sportfriends-fe/shared/ui": [
+      "libs/shared/ui/src/index.ts"
+    ],
+    "@sportfriends-fe/shared/utils": [
+      "libs/shared/utils/src/index.ts"
+    ]
+  },
   "nxJsonPlugins": [],
   "fileMap": {
     "nonProjectFiles": [
@@ -27,16 +98,52 @@
         "hash": "17834934085349565314"
       },
       {
+        "file": ".nx/cache/15723252097764323665/code",
+        "hash": "1838281907459330133"
+      },
+      {
+        "file": ".nx/cache/15723252097764323665/source",
+        "hash": "15593255495193516247"
+      },
+      {
+        "file": ".nx/cache/15723252097764323665/terminalOutput",
+        "hash": "2587659214510130627"
+      },
+      {
+        "file": ".nx/cache/15723252097764323665.commit",
+        "hash": "4664556114322093609"
+      },
+      {
+        "file": ".nx/cache/17808346907779146522/code",
+        "hash": "1838281907459330133"
+      },
+      {
+        "file": ".nx/cache/17808346907779146522/source",
+        "hash": "15593255495193516247"
+      },
+      {
+        "file": ".nx/cache/17808346907779146522/terminalOutput",
+        "hash": "17570698921016022539"
+      },
+      {
+        "file": ".nx/cache/17808346907779146522.commit",
+        "hash": "4664556114322093609"
+      },
+      {
         "file": ".nx/cache/d/daemon.log",
-        "hash": "16987098516766979503"
+        "hash": "17426342718597640157"
       },
       {
         "file": ".nx/cache/d/server-process.json",
-        "hash": "1234773391567367266"
+        "hash": "344835078604144045"
       },
       {
         "file": ".nx/cache/file-map.json",
-        "hash": "6217512515425154469"
+        "hash": "7812126678274121068"
+      },
+      {
+        "file": ".nx/cache/lockfile.hash",
+        "hash": "3682792705967876857"
       },
       {
         "file": ".nx/cache/nx-console-project-graph/project-graph.html",
@@ -48,7 +155,7 @@
       },
       {
         "file": ".nx/cache/nx-console-project-graph/static/environment.js",
-        "hash": "12567023232044855403"
+        "hash": "3740760591305217632"
       },
       {
         "file": ".nx/cache/nx-console-project-graph/static/favicon.ico",
@@ -75,8 +182,152 @@
         "hash": "13596360365094399219"
       },
       {
+        "file": ".nx/cache/parsed-lock-file.json",
+        "hash": "2917762292949568908"
+      },
+      {
         "file": ".nx/cache/project-graph.json",
-        "hash": "17289852913997677231"
+        "hash": "11490136060786275904"
+      },
+      {
+        "file": ".nx/cache/run.json",
+        "hash": "5638716515594940467"
+      },
+      {
+        "file": ".nx/cache/terminalOutputs/10052090155007705627",
+        "hash": "13509074206857439899"
+      },
+      {
+        "file": ".nx/cache/terminalOutputs/10150669408601379841",
+        "hash": "855661044229374171"
+      },
+      {
+        "file": ".nx/cache/terminalOutputs/10430114265966596330",
+        "hash": "15586592800308561686"
+      },
+      {
+        "file": ".nx/cache/terminalOutputs/11676482989367477976",
+        "hash": "11905912996699117373"
+      },
+      {
+        "file": ".nx/cache/terminalOutputs/12136012003406285951",
+        "hash": "951075285566350204"
+      },
+      {
+        "file": ".nx/cache/terminalOutputs/13357750936669123091",
+        "hash": "3787492788130721062"
+      },
+      {
+        "file": ".nx/cache/terminalOutputs/13865296645567744620",
+        "hash": "18373413597394234570"
+      },
+      {
+        "file": ".nx/cache/terminalOutputs/14350487444136875791",
+        "hash": "1610432304969972446"
+      },
+      {
+        "file": ".nx/cache/terminalOutputs/15723252097764323665",
+        "hash": "2587659214510130627"
+      },
+      {
+        "file": ".nx/cache/terminalOutputs/16021820460631433877",
+        "hash": "12483317368965621348"
+      },
+      {
+        "file": ".nx/cache/terminalOutputs/17050721726870820472",
+        "hash": "8955121207656077073"
+      },
+      {
+        "file": ".nx/cache/terminalOutputs/17490850522547543934",
+        "hash": "15469565048589625915"
+      },
+      {
+        "file": ".nx/cache/terminalOutputs/17808346907779146522",
+        "hash": "17570698921016022539"
+      },
+      {
+        "file": ".nx/cache/terminalOutputs/18077850774142931703",
+        "hash": "10857363287016327323"
+      },
+      {
+        "file": ".nx/cache/terminalOutputs/2018967339484163064",
+        "hash": "2248403118302458484"
+      },
+      {
+        "file": ".nx/cache/terminalOutputs/2359637808426803384",
+        "hash": "17042975706787659322"
+      },
+      {
+        "file": ".nx/cache/terminalOutputs/2825440199528850511",
+        "hash": "5524914517368391732"
+      },
+      {
+        "file": ".nx/cache/terminalOutputs/3210441962611422586",
+        "hash": "18163081282208879704"
+      },
+      {
+        "file": ".nx/cache/terminalOutputs/3689243685387953892",
+        "hash": "18311665649102204518"
+      },
+      {
+        "file": ".nx/cache/terminalOutputs/3734093839792822568",
+        "hash": "5247749908245052391"
+      },
+      {
+        "file": ".nx/cache/terminalOutputs/3965885892687721217",
+        "hash": "3495742554238357287"
+      },
+      {
+        "file": ".nx/cache/terminalOutputs/4492560931019567417",
+        "hash": "13880740765231926277"
+      },
+      {
+        "file": ".nx/cache/terminalOutputs/5109808559183030502",
+        "hash": "6342812887719035262"
+      },
+      {
+        "file": ".nx/cache/terminalOutputs/5669656283893792697",
+        "hash": "15586592800308561686"
+      },
+      {
+        "file": ".nx/cache/terminalOutputs/5756554900314837776",
+        "hash": "4037724943231760390"
+      },
+      {
+        "file": ".nx/cache/terminalOutputs/6565060048380833832",
+        "hash": "3787492788130721062"
+      },
+      {
+        "file": ".nx/cache/terminalOutputs/6784427597575037606",
+        "hash": "13407379032294591918"
+      },
+      {
+        "file": ".nx/cache/terminalOutputs/7372202713049868081",
+        "hash": "16127119334248429355"
+      },
+      {
+        "file": ".nx/cache/terminalOutputs/8211033337594103165",
+        "hash": "2897312019062181546"
+      },
+      {
+        "file": ".nx/cache/terminalOutputs/8296922696904554837",
+        "hash": "9953062592693839015"
+      },
+      {
+        "file": ".nx/cache/terminalOutputs/8712584779597659987",
+        "hash": "1652572200208258700"
+      },
+      {
+        "file": ".nx/cache/terminalOutputs/9717287085596998395",
+        "hash": "3310939544700888849"
+      },
+      {
+        "file": ".nx/cache/terminalOutputs/9935508005292475180",
+        "hash": "8860658209671791380"
+      },
+      {
+        "file": ".prettierignore",
+        "hash": "8865097869854018350"
       },
       {
         "file": ".prettierrc",
@@ -84,993 +335,2299 @@
       },
       {
         "file": ".vscode/extensions.json",
-        "hash": "3833545590435012078"
-      },
-      {
-        "file": "apps/dosportanywhere/.dockerignore",
-        "hash": "4406726806561618152"
-      },
-      {
-        "file": "apps/dosportanywhere/Dockerfile",
-        "hash": "4747388368160028292"
-      },
-      {
-        "file": "apps/dosportanywhere/README.md",
-        "hash": "17524295600495787358"
-      },
-      {
-        "file": "apps/dosportanywhere/index.html",
-        "hash": "17924205786837828528"
-      },
-      {
-        "file": "apps/dosportanywhere/package-lock.json",
-        "hash": "11106025753016932775"
-      },
-      {
-        "file": "apps/dosportanywhere/package.json",
-        "hash": "3708858728732379687"
-      },
-      {
-        "file": "apps/dosportanywhere/postcss.config.js",
-        "hash": "1579725330904862112"
-      },
-      {
-        "file": "apps/dosportanywhere/public/favicon.ico",
-        "hash": "924510235732928172"
-      },
-      {
-        "file": "apps/dosportanywhere/public/manifest.json",
-        "hash": "8528690344418497343"
-      },
-      {
-        "file": "apps/dosportanywhere/public/robots.txt",
-        "hash": "2790380794362165217"
-      },
-      {
-        "file": "apps/dosportanywhere/src/custom.d.ts",
-        "hash": "12109487586429375174"
-      },
-      {
-        "file": "apps/dosportanywhere/src/features/dashboard/assets/images/BsChat.svg",
-        "hash": "13585863565265545391"
-      },
-      {
-        "file": "apps/dosportanywhere/src/features/dashboard/assets/images/avatar.png",
-        "hash": "16174976836153657074"
-      },
-      {
-        "file": "apps/dosportanywhere/src/features/dashboard/assets/images/bandy.svg",
-        "hash": "15671265971302306986"
-      },
-      {
-        "file": "apps/dosportanywhere/src/features/dashboard/assets/images/bell.svg",
-        "hash": "17628620583618178551"
-      },
-      {
-        "file": "apps/dosportanywhere/src/features/dashboard/assets/images/bubble.svg",
-        "hash": "3159610170074652497"
-      },
-      {
-        "file": "apps/dosportanywhere/src/features/dashboard/assets/images/bx_bx-trash.svg",
-        "hash": "15421543259260283214"
-      },
-      {
-        "file": "apps/dosportanywhere/src/features/dashboard/assets/images/calendr.svg",
-        "hash": "12285921493734759431"
-      },
-      {
-        "file": "apps/dosportanywhere/src/features/dashboard/assets/images/calnder.svg",
-        "hash": "10118570314748109877"
-      },
-      {
-        "file": "apps/dosportanywhere/src/features/dashboard/assets/images/create-outline.svg",
-        "hash": "12585072500440072849"
-      },
-      {
-        "file": "apps/dosportanywhere/src/features/dashboard/assets/images/cross.svg",
-        "hash": "4481954826648739270"
-      },
-      {
-        "file": "apps/dosportanywhere/src/features/dashboard/assets/images/dropdown.svg",
-        "hash": "1028256190931889163"
-      },
-      {
-        "file": "apps/dosportanywhere/src/features/dashboard/assets/images/eva_message-circle-fill.svg",
-        "hash": "10936246488478987161"
-      },
-      {
-        "file": "apps/dosportanywhere/src/features/dashboard/assets/images/events.svg",
-        "hash": "343021843675458830"
-      },
-      {
-        "file": "apps/dosportanywhere/src/features/dashboard/assets/images/fe_search.svg",
-        "hash": "12913073330543639844"
-      },
-      {
-        "file": "apps/dosportanywhere/src/features/dashboard/assets/images/feather_edit-2.svg",
-        "hash": "11740323458630965876"
-      },
-      {
-        "file": "apps/dosportanywhere/src/features/dashboard/assets/images/filters.svg",
-        "hash": "11637224037490230347"
-      },
-      {
-        "file": "apps/dosportanywhere/src/features/dashboard/assets/images/fluent_home-16-regular.svg",
-        "hash": "5330747658524006000"
-      },
-      {
-        "file": "apps/dosportanywhere/src/features/dashboard/assets/images/friends.svg",
-        "hash": "3414202507413495020"
-      },
-      {
-        "file": "apps/dosportanywhere/src/features/dashboard/assets/images/heart.svg",
-        "hash": "13094444526073943395"
-      },
-      {
-        "file": "apps/dosportanywhere/src/features/dashboard/assets/images/horidot.svg",
-        "hash": "13852699150238044230"
-      },
-      {
-        "file": "apps/dosportanywhere/src/features/dashboard/assets/images/ion_notifications-circle.svg",
-        "hash": "1758542332393897693"
-      },
-      {
-        "file": "apps/dosportanywhere/src/features/dashboard/assets/images/logo.svg",
-        "hash": "17880607162470096598"
-      },
-      {
-        "file": "apps/dosportanywhere/src/features/dashboard/assets/images/particpents.svg",
-        "hash": "12824485205048851556"
-      },
-      {
-        "file": "apps/dosportanywhere/src/features/dashboard/assets/images/pin.svg",
-        "hash": "11864806371174209362"
-      },
-      {
-        "file": "apps/dosportanywhere/src/features/dashboard/assets/images/placeholder.svg",
-        "hash": "17726969933017192112"
-      },
-      {
-        "file": "apps/dosportanywhere/src/features/dashboard/assets/images/settings.svg",
-        "hash": "15673493093796561277"
-      },
-      {
-        "file": "apps/dosportanywhere/src/features/dashboard/assets/images/upload.png",
-        "hash": "14206611200923485169"
-      },
-      {
-        "file": "apps/dosportanywhere/src/features/dashboard/assets/images/user.png",
-        "hash": "14875505719362037675"
-      },
-      {
-        "file": "apps/dosportanywhere/src/features/dashboard/assets/images/user.svg",
-        "hash": "12269670816964411925"
-      },
-      {
-        "file": "apps/dosportanywhere/src/features/dashboard/assets/images/users.svg",
-        "hash": "7162752979760480904"
-      },
-      {
-        "file": "apps/dosportanywhere/src/features/dashboard/assets/new/Add.svg",
-        "hash": "13743764729613286509"
-      },
-      {
-        "file": "apps/dosportanywhere/src/features/dashboard/assets/new/Calendar.svg",
-        "hash": "17629646484892624217"
-      },
-      {
-        "file": "apps/dosportanywhere/src/features/dashboard/assets/new/Chat.svg",
-        "hash": "2493988392359797429"
-      },
-      {
-        "file": "apps/dosportanywhere/src/features/dashboard/assets/new/ChatMessage.svg",
-        "hash": "8419150615869460639"
-      },
-      {
-        "file": "apps/dosportanywhere/src/features/dashboard/assets/new/CommentButton.svg",
-        "hash": "11714279846273035788"
-      },
-      {
-        "file": "apps/dosportanywhere/src/features/dashboard/assets/new/CreateEventIcon.svg",
-        "hash": "13610883318685591614"
-      },
-      {
-        "file": "apps/dosportanywhere/src/features/dashboard/assets/new/CreateOrganizationIcon.svg",
-        "hash": "4302893167490067179"
-      },
-      {
-        "file": "apps/dosportanywhere/src/features/dashboard/assets/new/CreateSportparnerIcon.svg",
-        "hash": "17907500491568181224"
-      },
-      {
-        "file": "apps/dosportanywhere/src/features/dashboard/assets/new/CreateTeamIcon.svg",
-        "hash": "11892821449500212823"
-      },
-      {
-        "file": "apps/dosportanywhere/src/features/dashboard/assets/new/CredentialsMenuIcon.svg",
-        "hash": "262652867280724981"
-      },
-      {
-        "file": "apps/dosportanywhere/src/features/dashboard/assets/new/Home.svg",
-        "hash": "7306142757385059181"
-      },
-      {
-        "file": "apps/dosportanywhere/src/features/dashboard/assets/new/Like.svg",
-        "hash": "11379621901342511140"
-      },
-      {
-        "file": "apps/dosportanywhere/src/features/dashboard/assets/new/LikeButton.svg",
-        "hash": "556362471756851249"
-      },
-      {
-        "file": "apps/dosportanywhere/src/features/dashboard/assets/new/LogoutMenuIcon.svg",
-        "hash": "8464779809850717752"
-      },
-      {
-        "file": "apps/dosportanywhere/src/features/dashboard/assets/new/MapPointer.svg",
-        "hash": "10860265715978251973"
-      },
-      {
-        "file": "apps/dosportanywhere/src/features/dashboard/assets/new/Menu.svg",
-        "hash": "5794619064608361932"
-      },
-      {
-        "file": "apps/dosportanywhere/src/features/dashboard/assets/new/Message.svg",
-        "hash": "5165443825244064044"
-      },
-      {
-        "file": "apps/dosportanywhere/src/features/dashboard/assets/new/Notification.svg",
-        "hash": "11913639789919104752"
-      },
-      {
-        "file": "apps/dosportanywhere/src/features/dashboard/assets/new/Point.svg",
-        "hash": "10838278920498742749"
-      },
-      {
-        "file": "apps/dosportanywhere/src/features/dashboard/assets/new/ProfileMenuIcon.svg",
-        "hash": "10270111909362468200"
-      },
-      {
-        "file": "apps/dosportanywhere/src/features/dashboard/assets/new/SetProfileMenuIcon.svg",
-        "hash": "16996891409695034413"
-      },
-      {
-        "file": "apps/dosportanywhere/src/features/dashboard/assets/new/SettingsMenuIcon.svg",
-        "hash": "14321770318388009247"
-      },
-      {
-        "file": "apps/dosportanywhere/src/features/dashboard/assets/new/ShareButton.svg",
-        "hash": "17008062805163792543"
-      },
-      {
-        "file": "apps/dosportanywhere/src/features/dashboard/assets/new/Social.svg",
-        "hash": "2215861823567862043"
-      },
-      {
-        "file": "apps/dosportanywhere/src/features/dashboard/assets/new/SportPartner.svg",
-        "hash": "15317037310140718989"
-      },
-      {
-        "file": "apps/dosportanywhere/src/features/dashboard/assets/new/User.svg",
-        "hash": "423404366672196438"
-      },
-      {
-        "file": "apps/dosportanywhere/src/features/dashboard/assets/new/Watch.svg",
-        "hash": "257756903915165019"
-      },
-      {
-        "file": "apps/dosportanywhere/src/features/dashboard/components/Calendar.tsx",
-        "hash": "6724887353370074707"
-      },
-      {
-        "file": "apps/dosportanywhere/src/features/dashboard/components/Event.tsx",
-        "hash": "12630987474095947736"
-      },
-      {
-        "file": "apps/dosportanywhere/src/features/dashboard/components/ProfileIcon.tsx",
-        "hash": "10656948236310331568"
-      },
-      {
-        "file": "apps/dosportanywhere/src/features/dashboard/components/RectangleProfileIcon.tsx",
-        "hash": "14461135144398706649"
-      },
-      {
-        "file": "apps/dosportanywhere/src/features/dashboard/components/chat/ChatBox.jsx",
-        "hash": "15463778437772727185"
-      },
-      {
-        "file": "apps/dosportanywhere/src/features/dashboard/components/chat/ChatList.jsx",
-        "hash": "7141494191316995769"
-      },
-      {
-        "file": "apps/dosportanywhere/src/features/dashboard/components/chat/Message.jsx",
-        "hash": "14627685554524023023"
-      },
-      {
-        "file": "apps/dosportanywhere/src/features/dashboard/components/events/EventFullCard.tsx",
-        "hash": "10778567405669998053"
-      },
-      {
-        "file": "apps/dosportanywhere/src/features/dashboard/components/events/EventsMarkers.tsx",
-        "hash": "15843668379667764583"
-      },
-      {
-        "file": "apps/dosportanywhere/src/features/dashboard/components/events/MarkerPopup.tsx",
-        "hash": "13557953136807186066"
-      },
-      {
-        "file": "apps/dosportanywhere/src/features/dashboard/components/events/PartnerCard.tsx",
-        "hash": "10735047495063409685"
-      },
-      {
-        "file": "apps/dosportanywhere/src/features/dashboard/components/filter/SelectDateRange.tsx",
-        "hash": "3330856860755855057"
-      },
-      {
-        "file": "apps/dosportanywhere/src/features/dashboard/components/filter/SelectDistance.tsx",
-        "hash": "3216191599397673849"
-      },
-      {
-        "file": "apps/dosportanywhere/src/features/dashboard/components/filter/SelectGender.tsx",
-        "hash": "7277015595005477691"
-      },
-      {
-        "file": "apps/dosportanywhere/src/features/dashboard/components/filter/SelectLevel.tsx",
-        "hash": "16992296009617442197"
-      },
-      {
-        "file": "apps/dosportanywhere/src/features/dashboard/components/filter/SelectSports.tsx",
-        "hash": "727907215021379583"
-      },
-      {
-        "file": "apps/dosportanywhere/src/features/dashboard/components/filter/SelectTimeRange.tsx",
-        "hash": "12119446277234408171"
-      },
-      {
-        "file": "apps/dosportanywhere/src/features/dashboard/components/home/BottomPost.tsx",
-        "hash": "5109720458184613891"
-      },
-      {
-        "file": "apps/dosportanywhere/src/features/dashboard/components/home/Comment.tsx",
-        "hash": "15780485043051358812"
-      },
-      {
-        "file": "apps/dosportanywhere/src/features/dashboard/components/home/EventPost.tsx",
-        "hash": "6269524943572760998"
-      },
-      {
-        "file": "apps/dosportanywhere/src/features/dashboard/components/home/PostCreation.tsx",
-        "hash": "2288120958691667566"
-      },
-      {
-        "file": "apps/dosportanywhere/src/features/dashboard/components/home/PostDialog.tsx",
-        "hash": "4367479583407157745"
-      },
-      {
-        "file": "apps/dosportanywhere/src/features/dashboard/components/home/UserPost.tsx",
-        "hash": "2477048933342636746"
-      },
-      {
-        "file": "apps/dosportanywhere/src/features/dashboard/components/layout/DashboardLayout.tsx",
-        "hash": "631403207331523880"
-      },
-      {
-        "file": "apps/dosportanywhere/src/features/dashboard/components/layout/Navbar.tsx",
-        "hash": "5850044438436425947"
-      },
-      {
-        "file": "apps/dosportanywhere/src/features/dashboard/components/layout/Sidebar.tsx",
-        "hash": "10458021571960506636"
-      },
-      {
-        "file": "apps/dosportanywhere/src/features/dashboard/components/myactions/EventCard.tsx",
-        "hash": "11826142498854018052"
-      },
-      {
-        "file": "apps/dosportanywhere/src/features/dashboard/components/myactions/PartnerCard.tsx",
-        "hash": "5588749995434225755"
-      },
-      {
-        "file": "apps/dosportanywhere/src/features/dashboard/components/myactions/SportPartner.tsx",
-        "hash": "15565339409733466269"
-      },
-      {
-        "file": "apps/dosportanywhere/src/features/dashboard/components/profile/ProUserInfo.tsx",
-        "hash": "17690678661974249656"
-      },
-      {
-        "file": "apps/dosportanywhere/src/features/dashboard/components/profile/ReservationTimetable.tsx",
-        "hash": "8894316505499795988"
-      },
-      {
-        "file": "apps/dosportanywhere/src/features/dashboard/components/profile/UserInfo.tsx",
-        "hash": "14368241458398901711"
-      },
-      {
-        "file": "apps/dosportanywhere/src/features/dashboard/components/settings/SetCredentials.tsx",
-        "hash": "17318797719843353249"
-      },
-      {
-        "file": "apps/dosportanywhere/src/features/dashboard/components/settings/SetProfile.tsx",
-        "hash": "17745105674558011534"
-      },
-      {
-        "file": "apps/dosportanywhere/src/features/dashboard/components/settings/SetProfileImg.tsx",
-        "hash": "16493091961256253725"
-      },
-      {
-        "file": "apps/dosportanywhere/src/features/dashboard/components/social/FriendsCard.tsx",
-        "hash": "2440179853287375405"
-      },
-      {
-        "file": "apps/dosportanywhere/src/features/dashboard/components/social/FriendsGroup.tsx",
-        "hash": "7297269903867615729"
-      },
-      {
-        "file": "apps/dosportanywhere/src/features/dashboard/index.tsx",
-        "hash": "8130681226505840113"
-      },
-      {
-        "file": "apps/dosportanywhere/src/features/dashboard/pages/Chat.tsx",
-        "hash": "10505523056979446891"
-      },
-      {
-        "file": "apps/dosportanywhere/src/features/dashboard/pages/CreateEventForm.jsx",
-        "hash": "3485870398585476098"
-      },
-      {
-        "file": "apps/dosportanywhere/src/features/dashboard/pages/CreateSportsPartnerForm.jsx",
-        "hash": "7852729778177493427"
-      },
-      {
-        "file": "apps/dosportanywhere/src/features/dashboard/pages/CreateTimeSlot.tsx",
-        "hash": "11965794019488630772"
-      },
-      {
-        "file": "apps/dosportanywhere/src/features/dashboard/pages/EventDetail.tsx",
-        "hash": "5430758557691096543"
-      },
-      {
-        "file": "apps/dosportanywhere/src/features/dashboard/pages/EventsList.tsx",
-        "hash": "12621772674734878858"
-      },
-      {
-        "file": "apps/dosportanywhere/src/features/dashboard/pages/EventsMap.tsx",
-        "hash": "9246978248552778660"
-      },
-      {
-        "file": "apps/dosportanywhere/src/features/dashboard/pages/Home.tsx",
-        "hash": "3105812080702187287"
-      },
-      {
-        "file": "apps/dosportanywhere/src/features/dashboard/pages/MyActions.tsx",
-        "hash": "478757284836910503"
-      },
-      {
-        "file": "apps/dosportanywhere/src/features/dashboard/pages/Settings.tsx",
-        "hash": "16680125586415576360"
-      },
-      {
-        "file": "apps/dosportanywhere/src/features/dashboard/pages/Social.tsx",
-        "hash": "5991494578560594289"
-      },
-      {
-        "file": "apps/dosportanywhere/src/features/dashboard/pages/SportPartner.tsx",
-        "hash": "8053801814134391432"
-      },
-      {
-        "file": "apps/dosportanywhere/src/features/dashboard/pages/UserProfile.tsx",
-        "hash": "7698391635739525972"
-      },
-      {
-        "file": "apps/dosportanywhere/src/features/dashboard/shared/constants/index.ts",
-        "hash": "1219370315432317901"
-      },
-      {
-        "file": "apps/dosportanywhere/src/features/dashboard/shared/utils/index.ts",
-        "hash": "14914938518065783875"
-      },
-      {
-        "file": "apps/dosportanywhere/src/features/login/assets/images/Ellipse 53.svg",
-        "hash": "2282335285961463365"
-      },
-      {
-        "file": "apps/dosportanywhere/src/features/login/assets/images/Ellipse 60.png",
-        "hash": "2834947500085412311"
-      },
-      {
-        "file": "apps/dosportanywhere/src/features/login/assets/images/Frame (1).svg",
-        "hash": "18227477108892700784"
-      },
-      {
-        "file": "apps/dosportanywhere/src/features/login/assets/images/Frame 2.svg",
-        "hash": "2637639371138297362"
-      },
-      {
-        "file": "apps/dosportanywhere/src/features/login/assets/images/Frame 3.svg",
-        "hash": "13094444526073943395"
-      },
-      {
-        "file": "apps/dosportanywhere/src/features/login/assets/images/Frame copy.svg",
-        "hash": "16391116654962590944"
-      },
-      {
-        "file": "apps/dosportanywhere/src/features/login/assets/images/Frame.png",
-        "hash": "8774589733517234750"
-      },
-      {
-        "file": "apps/dosportanywhere/src/features/login/assets/images/Frame.svg",
-        "hash": "14529010224196481973"
-      },
-      {
-        "file": "apps/dosportanywhere/src/features/login/assets/images/Group 162901.svg",
-        "hash": "187324309175870576"
-      },
-      {
-        "file": "apps/dosportanywhere/src/features/login/assets/images/Group 162902.svg",
-        "hash": "12373668087790753917"
-      },
-      {
-        "file": "apps/dosportanywhere/src/features/login/assets/images/Group 162903.svg",
-        "hash": "17107818090564819060"
-      },
-      {
-        "file": "apps/dosportanywhere/src/features/login/assets/images/Group 162904.svg",
-        "hash": "5978760447350401716"
-      },
-      {
-        "file": "apps/dosportanywhere/src/features/login/assets/images/Group 162905.svg",
-        "hash": "18113189799338977142"
-      },
-      {
-        "file": "apps/dosportanywhere/src/features/login/assets/images/Group 162906.svg",
-        "hash": "1102375441733067310"
-      },
-      {
-        "file": "apps/dosportanywhere/src/features/login/assets/images/Group 4560.png",
-        "hash": "15453934031202578178"
-      },
-      {
-        "file": "apps/dosportanywhere/src/features/login/assets/images/Group 4616.png",
-        "hash": "9290764089915604212"
-      },
-      {
-        "file": "apps/dosportanywhere/src/features/login/assets/images/Group 4616.svg",
-        "hash": "6956496244355628358"
-      },
-      {
-        "file": "apps/dosportanywhere/src/features/login/assets/images/Group 4688.svg",
-        "hash": "12503362537325894056"
-      },
-      {
-        "file": "apps/dosportanywhere/src/features/login/assets/images/Jogging.svg",
-        "hash": "11306849046936158796"
-      },
-      {
-        "file": "apps/dosportanywhere/src/features/login/assets/images/Tennis.svg",
-        "hash": "11530701258184100996"
-      },
-      {
-        "file": "apps/dosportanywhere/src/features/login/assets/images/Vector.svg",
-        "hash": "16023721007480629380"
-      },
-      {
-        "file": "apps/dosportanywhere/src/features/login/assets/images/avatar.png",
-        "hash": "16174976836153657074"
-      },
-      {
-        "file": "apps/dosportanywhere/src/features/login/assets/images/bandy.svg",
-        "hash": "15671265971302306986"
-      },
-      {
-        "file": "apps/dosportanywhere/src/features/login/assets/images/bell.svg",
-        "hash": "17628620583618178551"
-      },
-      {
-        "file": "apps/dosportanywhere/src/features/login/assets/images/bubble.svg",
-        "hash": "3159610170074652497"
-      },
-      {
-        "file": "apps/dosportanywhere/src/features/login/assets/images/bx_bx-trash.svg",
-        "hash": "15421543259260283214"
-      },
-      {
-        "file": "apps/dosportanywhere/src/features/login/assets/images/calendr.svg",
-        "hash": "12285921493734759431"
-      },
-      {
-        "file": "apps/dosportanywhere/src/features/login/assets/images/calnder.svg",
-        "hash": "10118570314748109877"
-      },
-      {
-        "file": "apps/dosportanywhere/src/features/login/assets/images/cross.svg",
-        "hash": "17626707802618694830"
-      },
-      {
-        "file": "apps/dosportanywhere/src/features/login/assets/images/dark-haired-man-in-brown-leather-jacket 2.png",
-        "hash": "9851260796806101264"
-      },
-      {
-        "file": "apps/dosportanywhere/src/features/login/assets/images/dropdown.svg",
-        "hash": "1028256190931889163"
-      },
-      {
-        "file": "apps/dosportanywhere/src/features/login/assets/images/eva_message-circle-fill.svg",
-        "hash": "10936246488478987161"
-      },
-      {
-        "file": "apps/dosportanywhere/src/features/login/assets/images/events.svg",
-        "hash": "343021843675458830"
-      },
-      {
-        "file": "apps/dosportanywhere/src/features/login/assets/images/fe_search.png",
-        "hash": "14808725002720504815"
-      },
-      {
-        "file": "apps/dosportanywhere/src/features/login/assets/images/fe_search.svg",
-        "hash": "12913073330543639844"
-      },
-      {
-        "file": "apps/dosportanywhere/src/features/login/assets/images/feather_edit-2.svg",
-        "hash": "11740323458630965876"
-      },
-      {
-        "file": "apps/dosportanywhere/src/features/login/assets/images/filters.svg",
-        "hash": "11637224037490230347"
-      },
-      {
-        "file": "apps/dosportanywhere/src/features/login/assets/images/fluent_home-16-regular.svg",
-        "hash": "5330747658524006000"
-      },
-      {
-        "file": "apps/dosportanywhere/src/features/login/assets/images/friends.svg",
-        "hash": "3414202507413495020"
-      },
-      {
-        "file": "apps/dosportanywhere/src/features/login/assets/images/heaert.svg",
-        "hash": "8167610984355553082"
-      },
-      {
-        "file": "apps/dosportanywhere/src/features/login/assets/images/heart.svg",
-        "hash": "13094444526073943395"
-      },
-      {
-        "file": "apps/dosportanywhere/src/features/login/assets/images/ion_notifications-circle.svg",
-        "hash": "1758542332393897693"
-      },
-      {
-        "file": "apps/dosportanywhere/src/features/login/assets/images/layers-2x.png",
-        "hash": "9344261028423700841"
-      },
-      {
-        "file": "apps/dosportanywhere/src/features/login/assets/images/layers.png",
-        "hash": "9282921627250197590"
-      },
-      {
-        "file": "apps/dosportanywhere/src/features/login/assets/images/logo.png",
-        "hash": "10364594544373108556"
-      },
-      {
-        "file": "apps/dosportanywhere/src/features/login/assets/images/logo.svg",
-        "hash": "17880607162470096598"
-      },
-      {
-        "file": "apps/dosportanywhere/src/features/login/assets/images/marker-icon-2x.png",
-        "hash": "16225105066935018559"
-      },
-      {
-        "file": "apps/dosportanywhere/src/features/login/assets/images/marker-icon.png",
-        "hash": "12839574698303764257"
-      },
-      {
-        "file": "apps/dosportanywhere/src/features/login/assets/images/marker-shadow.png",
-        "hash": "13400201256143088927"
-      },
-      {
-        "file": "apps/dosportanywhere/src/features/login/assets/images/particpents.svg",
-        "hash": "12824485205048851556"
-      },
-      {
-        "file": "apps/dosportanywhere/src/features/login/assets/images/pin.svg",
-        "hash": "11864806371174209362"
-      },
-      {
-        "file": "apps/dosportanywhere/src/features/login/assets/images/placeholder 1 copy.svg",
-        "hash": "2260350929484749841"
-      },
-      {
-        "file": "apps/dosportanywhere/src/features/login/assets/images/placeholder 1.svg",
-        "hash": "17726969933017192112"
-      },
-      {
-        "file": "apps/dosportanywhere/src/features/login/assets/images/screen-shot-2019-08-16-at-6.52 2.png",
-        "hash": "16875167072925531763"
-      },
-      {
-        "file": "apps/dosportanywhere/src/features/login/assets/images/settings.svg",
-        "hash": "15673493093796561277"
-      },
-      {
-        "file": "apps/dosportanywhere/src/features/login/assets/images/slide1.png",
-        "hash": "1623518317715620621"
-      },
-      {
-        "file": "apps/dosportanywhere/src/features/login/assets/images/slide2.png",
-        "hash": "2493465160084339353"
-      },
-      {
-        "file": "apps/dosportanywhere/src/features/login/assets/images/slide3.png",
-        "hash": "14401195442878474702"
-      },
-      {
-        "file": "apps/dosportanywhere/src/features/login/assets/images/slider-img.png",
-        "hash": "2493465160084339353"
-      },
-      {
-        "file": "apps/dosportanywhere/src/features/login/assets/images/slider-img2.png",
-        "hash": "14401195442878474702"
-      },
-      {
-        "file": "apps/dosportanywhere/src/features/login/assets/images/slider-img3.png",
-        "hash": "2745229774631104056"
-      },
-      {
-        "file": "apps/dosportanywhere/src/features/login/assets/images/upload.png",
-        "hash": "14206611200923485169"
-      },
-      {
-        "file": "apps/dosportanywhere/src/features/login/assets/images/user.png",
-        "hash": "14875505719362037675"
-      },
-      {
-        "file": "apps/dosportanywhere/src/features/login/assets/images/user.svg",
-        "hash": "12269670816964411925"
-      },
-      {
-        "file": "apps/dosportanywhere/src/features/login/assets/images/users.svg",
-        "hash": "7162752979760480904"
-      },
-      {
-        "file": "apps/dosportanywhere/src/features/login/components/PageLayout.jsx",
-        "hash": "1808002236175526561"
-      },
-      {
-        "file": "apps/dosportanywhere/src/features/login/components/Slider.jsx",
-        "hash": "16770343550880912392"
-      },
-      {
-        "file": "apps/dosportanywhere/src/features/login/components/Steps.jsx",
-        "hash": "6606599528145560285"
-      },
-      {
-        "file": "apps/dosportanywhere/src/features/login/index.jsx",
-        "hash": "10267273082050906633"
-      },
-      {
-        "file": "apps/dosportanywhere/src/features/login/pages/AddProfileImg.tsx",
-        "hash": "6251713816770280072"
-      },
-      {
-        "file": "apps/dosportanywhere/src/features/login/pages/Login.tsx",
-        "hash": "4970325285880012489"
-      },
-      {
-        "file": "apps/dosportanywhere/src/features/login/pages/MoreInfo.tsx",
-        "hash": "16561511772319023631"
-      },
-      {
-        "file": "apps/dosportanywhere/src/features/login/pages/PasswordPage.tsx",
-        "hash": "6295464081498443828"
-      },
-      {
-        "file": "apps/dosportanywhere/src/features/login/pages/SignUp.jsx",
-        "hash": "8555602754575897703"
-      },
-      {
-        "file": "apps/dosportanywhere/src/index.css",
-        "hash": "10227601047777506583"
-      },
-      {
-        "file": "apps/dosportanywhere/src/index.tsx",
-        "hash": "2976014544677821427"
-      },
-      {
-        "file": "apps/dosportanywhere/src/models/index.ts",
-        "hash": "14630908799335692898"
-      },
-      {
-        "file": "apps/dosportanywhere/src/muiTheme.ts",
-        "hash": "2955865247023393529"
-      },
-      {
-        "file": "apps/dosportanywhere/src/services/authApi.js",
-        "hash": "3914775077885059736"
-      },
-      {
-        "file": "apps/dosportanywhere/src/services/chatApi.js",
-        "hash": "8407798631540996426"
-      },
-      {
-        "file": "apps/dosportanywhere/src/services/datingApi.ts",
-        "hash": "11430548809678515282"
-      },
-      {
-        "file": "apps/dosportanywhere/src/services/eventApi.ts",
-        "hash": "16115981788880813076"
-      },
-      {
-        "file": "apps/dosportanywhere/src/services/index.ts",
-        "hash": "16285237759011459183"
-      },
-      {
-        "file": "apps/dosportanywhere/src/services/postApi.ts",
-        "hash": "10423075989019747004"
-      },
-      {
-        "file": "apps/dosportanywhere/src/services/userApi.ts",
-        "hash": "2303408086992426237"
-      },
-      {
-        "file": "apps/dosportanywhere/src/shared/assets/images/marker-icon.png",
-        "hash": "12839574698303764257"
-      },
-      {
-        "file": "apps/dosportanywhere/src/shared/assets/images/sportfriendsLogo.svg",
-        "hash": "6819413265187906632"
-      },
-      {
-        "file": "apps/dosportanywhere/src/shared/components/Button.tsx",
-        "hash": "15463749224571846193"
-      },
-      {
-        "file": "apps/dosportanywhere/src/shared/components/ErrorMessage.tsx",
-        "hash": "11845177981325869724"
-      },
-      {
-        "file": "apps/dosportanywhere/src/shared/components/Map.jsx",
-        "hash": "10989018618509928460"
-      },
-      {
-        "file": "apps/dosportanywhere/src/shared/components/Modal.jsx",
-        "hash": "1396779157224696905"
-      },
-      {
-        "file": "apps/dosportanywhere/src/shared/components/Modal2.tsx",
-        "hash": "12100930194267504550"
-      },
-      {
-        "file": "apps/dosportanywhere/src/shared/components/ProtectedRoutes.jsx",
-        "hash": "3945999609334698330"
-      },
-      {
-        "file": "apps/dosportanywhere/src/shared/components/ShadowModal.tsx",
-        "hash": "8116888171543234318"
-      },
-      {
-        "file": "apps/dosportanywhere/src/shared/components/SwitchMenu.tsx",
-        "hash": "17763520227123505663"
-      },
-      {
-        "file": "apps/dosportanywhere/src/shared/components/forms/CheckboxInput.jsx",
-        "hash": "12085854717882161303"
-      },
-      {
-        "file": "apps/dosportanywhere/src/shared/components/forms/DatePickerInput.jsx",
-        "hash": "7521613973636475461"
-      },
-      {
-        "file": "apps/dosportanywhere/src/shared/components/forms/MapInput.jsx",
-        "hash": "3069521531052809385"
-      },
-      {
-        "file": "apps/dosportanywhere/src/shared/components/forms/RangeInput.jsx",
-        "hash": "11542520519799338607"
-      },
-      {
-        "file": "apps/dosportanywhere/src/shared/components/forms/SelectInput.tsx",
-        "hash": "10462564170973790714"
-      },
-      {
-        "file": "apps/dosportanywhere/src/shared/components/forms/SelectSearchInput.jsx",
-        "hash": "18239011075151645034"
-      },
-      {
-        "file": "apps/dosportanywhere/src/shared/components/forms/SubmitButton.jsx",
-        "hash": "5286072006490140106"
-      },
-      {
-        "file": "apps/dosportanywhere/src/shared/components/forms/TextAreaInput.jsx",
-        "hash": "16692802437186045675"
-      },
-      {
-        "file": "apps/dosportanywhere/src/shared/components/forms/TextInput.jsx",
-        "hash": "11946323987416030949"
-      },
-      {
-        "file": "apps/dosportanywhere/src/shared/components/forms/TimePickerInput.jsx",
-        "hash": "2098026696987192773"
-      },
-      {
-        "file": "apps/dosportanywhere/src/shared/components/forms/TimeRangeInput.jsx",
-        "hash": "2410230969506495225"
-      },
-      {
-        "file": "apps/dosportanywhere/src/shared/components/index.js",
-        "hash": "16246863068015740077"
-      },
-      {
-        "file": "apps/dosportanywhere/src/shared/constants/colors.ts",
-        "hash": "13937010780628745541"
-      },
-      {
-        "file": "apps/dosportanywhere/src/shared/constants/index.ts",
-        "hash": "4895423685859433861"
-      },
-      {
-        "file": "apps/dosportanywhere/src/shared/constants/slugs.ts",
-        "hash": "11115692568791118144"
-      },
-      {
-        "file": "apps/dosportanywhere/src/shared/hooks/useClickOutside.ts",
-        "hash": "8315954759861560288"
-      },
-      {
-        "file": "apps/dosportanywhere/src/shared/utils/index.ts",
-        "hash": "281137923799799631"
-      },
-      {
-        "file": "apps/dosportanywhere/src/store/index.ts",
-        "hash": "13858171742383394920"
-      },
-      {
-        "file": "apps/dosportanywhere/src/store/slices/auth.js",
-        "hash": "8267207765133235955"
-      },
-      {
-        "file": "apps/dosportanywhere/src/store/slices/filter.ts",
-        "hash": "1084751370998980508"
-      },
-      {
-        "file": "apps/dosportanywhere/src/store/slices/index.ts",
-        "hash": "1435960020832426809"
-      },
-      {
-        "file": "apps/dosportanywhere/tailwind.config.js",
-        "hash": "10950955995620572924"
-      },
-      {
-        "file": "apps/dosportanywhere/vite-env.d.ts",
-        "hash": "12946363841406869089"
-      },
-      {
-        "file": "apps/dosportanywhere/vite.config.ts",
-        "hash": "989273210743892513"
-      },
-      {
-        "file": "apps/dosportanywhere/yaml/client-depl.yaml",
-        "hash": "5540922929040737646"
-      },
-      {
-        "file": "fe/package-lock.json",
-        "hash": "17037334900817579180"
-      },
-      {
-        "file": "nx.json",
-        "hash": "11274056137621334090"
-      },
-      {
-        "file": "package.json",
-        "hash": "8680370108686945124"
-      },
-      {
-        "file": "tsconfig.json",
-        "hash": "4623959788291817970"
+        "hash": "7748806264869661196"
       },
       {
         "file": "README.md",
         "hash": "8822892800995134243"
+      },
+      {
+        "file": "babel.config.json",
+        "hash": "5546405625092116747"
+      },
+      {
+        "file": "nx.json",
+        "hash": "15665042283666050597"
+      },
+      {
+        "file": "package-lock.json",
+        "hash": "6214901850440998478"
+      },
+      {
+        "file": "package.json",
+        "hash": "7814520640601544464"
+      },
+      {
+        "file": "tsconfig.base.json",
+        "hash": "13136329562626034439"
+      },
+      {
+        "file": "tsconfig.json",
+        "hash": "578821591718463001"
+      },
+      {
+        "file": ".nx/cache/terminalOutputs/11043246814161347914",
+        "hash": "2210746489390677709"
       }
     ],
-    "projectFileMap": {}
+    "projectFileMap": {
+      "shared-data-services": [
+        {
+          "file": "libs/shared/data/services/.babelrc",
+          "hash": "2946678488919325452"
+        },
+        {
+          "file": "libs/shared/data/services/.eslintrc.json",
+          "hash": "1971349432268748966"
+        },
+        {
+          "file": "libs/shared/data/services/README.md",
+          "hash": "17352671894075208265"
+        },
+        {
+          "file": "libs/shared/data/services/project.json",
+          "hash": "1655558161667490855"
+        },
+        {
+          "file": "libs/shared/data/services/src/api/authApi.ts",
+          "hash": "16792216036365151974",
+          "deps": [
+            "npm:@reduxjs/toolkit",
+            "shared-constants"
+          ]
+        },
+        {
+          "file": "libs/shared/data/services/src/api/chatApi.ts",
+          "hash": "16476214878673712125",
+          "deps": [
+            "npm:@reduxjs/toolkit",
+            "shared-models",
+            "shared-constants"
+          ]
+        },
+        {
+          "file": "libs/shared/data/services/src/api/datingApi.ts",
+          "hash": "12892422047075272479",
+          "deps": [
+            "npm:@reduxjs/toolkit",
+            "shared-models",
+            "shared-constants"
+          ]
+        },
+        {
+          "file": "libs/shared/data/services/src/api/eventApi.ts",
+          "hash": "9426624743963562070",
+          "deps": [
+            "npm:@reduxjs/toolkit",
+            "shared-constants",
+            "shared-models"
+          ]
+        },
+        {
+          "file": "libs/shared/data/services/src/api/index.ts",
+          "hash": "8350240016350476410"
+        },
+        {
+          "file": "libs/shared/data/services/src/api/postApi.ts",
+          "hash": "8154900696268129348",
+          "deps": [
+            "npm:@reduxjs/toolkit",
+            "shared-constants",
+            "shared-models"
+          ]
+        },
+        {
+          "file": "libs/shared/data/services/src/api/test.tsx",
+          "hash": "6139697017284472007",
+          "deps": [
+            "npm:react",
+            "ui"
+          ]
+        },
+        {
+          "file": "libs/shared/data/services/src/api/userApi.ts",
+          "hash": "3659111185464451320",
+          "deps": [
+            "npm:@reduxjs/toolkit",
+            "shared-constants",
+            "shared-models"
+          ]
+        },
+        {
+          "file": "libs/shared/data/services/src/index.ts",
+          "hash": "13443657969788988525"
+        },
+        {
+          "file": "libs/shared/data/services/tsconfig.json",
+          "hash": "13090035453275662468"
+        },
+        {
+          "file": "libs/shared/data/services/tsconfig.lib.json",
+          "hash": "3190359746942612580"
+        }
+      ],
+      "ui": [
+        {
+          "file": "libs/shared/ui/.babelrc",
+          "hash": "2946678488919325452"
+        },
+        {
+          "file": "libs/shared/ui/.eslintrc.json",
+          "hash": "15601404045350863983"
+        },
+        {
+          "file": "libs/shared/ui/README.md",
+          "hash": "14385783101149144467"
+        },
+        {
+          "file": "libs/shared/ui/project.json",
+          "hash": "5256831083727992726"
+        },
+        {
+          "file": "libs/shared/ui/src/assets/images/marker-icon.png",
+          "hash": "12839574698303764257"
+        },
+        {
+          "file": "libs/shared/ui/src/assets/images/sportfriendsLogo.svg",
+          "hash": "6819413265187906632"
+        },
+        {
+          "file": "libs/shared/ui/src/components/Button.tsx",
+          "hash": "15463749224571846193",
+          "deps": [
+            "npm:react"
+          ]
+        },
+        {
+          "file": "libs/shared/ui/src/components/ErrorMessage.tsx",
+          "hash": "15311583814696850326"
+        },
+        {
+          "file": "libs/shared/ui/src/components/Map.jsx",
+          "hash": "2400224378971435629",
+          "deps": [
+            "npm:leaflet",
+            "npm:react",
+            "npm:react-leaflet"
+          ]
+        },
+        {
+          "file": "libs/shared/ui/src/components/Modal.jsx",
+          "hash": "1396779157224696905",
+          "deps": [
+            "npm:react",
+            "npm:@mui/icons-material/Close"
+          ]
+        },
+        {
+          "file": "libs/shared/ui/src/components/Modal2.tsx",
+          "hash": "14247468334321994221",
+          "deps": [
+            "npm:react",
+            "npm:use-debounce",
+            "shared-utils"
+          ]
+        },
+        {
+          "file": "libs/shared/ui/src/components/ProtectedRoutes.jsx",
+          "hash": "2579585709832810721",
+          "deps": [
+            "npm:react-router-dom",
+            "npm:react-redux",
+            "shared-constants",
+            "shared-data-store"
+          ]
+        },
+        {
+          "file": "libs/shared/ui/src/components/ShadowModal.tsx",
+          "hash": "13390754894759229440",
+          "deps": [
+            "npm:react",
+            "npm:react-icons",
+            "shared-utils",
+            "shared-constants"
+          ]
+        },
+        {
+          "file": "libs/shared/ui/src/components/SwitchMenu.tsx",
+          "hash": "17763520227123505663"
+        },
+        {
+          "file": "libs/shared/ui/src/components/forms/CheckboxInput.jsx",
+          "hash": "17247320014812800314",
+          "deps": [
+            "npm:react",
+            "npm:formik",
+            "npm:@mui/material/FormGroup",
+            "npm:@mui/material/FormControlLabel",
+            "npm:@mui/material/Checkbox"
+          ]
+        },
+        {
+          "file": "libs/shared/ui/src/components/forms/DatePickerInput.jsx",
+          "hash": "8981100346327155201",
+          "deps": [
+            "npm:react",
+            "npm:formik",
+            "npm:react-icons",
+            "npm:@mui/material/TextField"
+          ]
+        },
+        {
+          "file": "libs/shared/ui/src/components/forms/MapInput.jsx",
+          "hash": "196770674571865179",
+          "deps": [
+            "npm:react",
+            "npm:formik",
+            "npm:react-icons",
+            "npm:@mui/material/TextField"
+          ]
+        },
+        {
+          "file": "libs/shared/ui/src/components/forms/RangeInput.jsx",
+          "hash": "4977694725955558366",
+          "deps": [
+            "npm:react",
+            "npm:formik",
+            "npm:@mui/material/Slider"
+          ]
+        },
+        {
+          "file": "libs/shared/ui/src/components/forms/SelectInput.tsx",
+          "hash": "1007235723065573387",
+          "deps": [
+            "npm:react",
+            "npm:formik",
+            "npm:@mui/material/MenuItem",
+            "npm:@mui/material/Select"
+          ]
+        },
+        {
+          "file": "libs/shared/ui/src/components/forms/SelectSearchInput.jsx",
+          "hash": "7861897399637392831",
+          "deps": [
+            "npm:react",
+            "npm:@mui/material",
+            "npm:formik"
+          ]
+        },
+        {
+          "file": "libs/shared/ui/src/components/forms/SubmitButton.jsx",
+          "hash": "5286072006490140106",
+          "deps": [
+            "npm:react",
+            "npm:@mui/material/CircularProgress"
+          ]
+        },
+        {
+          "file": "libs/shared/ui/src/components/forms/TextAreaInput.jsx",
+          "hash": "7715568858298138107",
+          "deps": [
+            "npm:react",
+            "npm:formik",
+            "npm:@mui/material"
+          ]
+        },
+        {
+          "file": "libs/shared/ui/src/components/forms/TextInput.jsx",
+          "hash": "8335729262158334639",
+          "deps": [
+            "npm:react",
+            "npm:formik",
+            "npm:@mui/material"
+          ]
+        },
+        {
+          "file": "libs/shared/ui/src/components/forms/TimePickerInput.jsx",
+          "hash": "3248207632876592435",
+          "deps": [
+            "npm:react",
+            "npm:@mui/x-date-pickers",
+            "npm:@mui/material",
+            "npm:formik"
+          ]
+        },
+        {
+          "file": "libs/shared/ui/src/components/forms/TimeRangeInput.jsx",
+          "hash": "6924890648239156658",
+          "deps": [
+            "npm:react",
+            "npm:formik",
+            "npm:@mui/material",
+            "npm:moment"
+          ]
+        },
+        {
+          "file": "libs/shared/ui/src/components/index.ts",
+          "hash": "16438722403057652499"
+        },
+        {
+          "file": "libs/shared/ui/src/index.ts",
+          "hash": "10310030362865231564"
+        },
+        {
+          "file": "libs/shared/ui/tsconfig.json",
+          "hash": "3673471672798372201"
+        },
+        {
+          "file": "libs/shared/ui/tsconfig.lib.json",
+          "hash": "14726341148183481257"
+        }
+      ],
+      "shared-services": [
+        {
+          "file": "libs/shared/services/.babelrc",
+          "hash": "2946678488919325452"
+        },
+        {
+          "file": "libs/shared/services/.eslintrc.json",
+          "hash": "6756409493353113423"
+        },
+        {
+          "file": "libs/shared/services/README.md",
+          "hash": "939962868482993865"
+        },
+        {
+          "file": "libs/shared/services/project.json",
+          "hash": "5529077975189244190"
+        },
+        {
+          "file": "libs/shared/services/src/api/authApi.ts",
+          "hash": "16792216036365151974",
+          "deps": [
+            "npm:@reduxjs/toolkit",
+            "shared-constants"
+          ]
+        },
+        {
+          "file": "libs/shared/services/src/api/chatApi.ts",
+          "hash": "16476214878673712125",
+          "deps": [
+            "npm:@reduxjs/toolkit",
+            "shared-models",
+            "shared-constants"
+          ]
+        },
+        {
+          "file": "libs/shared/services/src/api/datingApi.ts",
+          "hash": "12892422047075272479",
+          "deps": [
+            "npm:@reduxjs/toolkit",
+            "shared-models",
+            "shared-constants"
+          ]
+        },
+        {
+          "file": "libs/shared/services/src/api/eventApi.ts",
+          "hash": "15324725081385004582",
+          "deps": [
+            "npm:@reduxjs/toolkit",
+            "shared-constants",
+            "shared-models"
+          ]
+        },
+        {
+          "file": "libs/shared/services/src/api/index.ts",
+          "hash": "8350240016350476410"
+        },
+        {
+          "file": "libs/shared/services/src/api/postApi.ts",
+          "hash": "8154900696268129348",
+          "deps": [
+            "npm:@reduxjs/toolkit",
+            "shared-constants",
+            "shared-models"
+          ]
+        },
+        {
+          "file": "libs/shared/services/src/api/test.tsx",
+          "hash": "6139697017284472007",
+          "deps": [
+            "npm:react",
+            "ui"
+          ]
+        },
+        {
+          "file": "libs/shared/services/src/api/userApi.ts",
+          "hash": "3659111185464451320",
+          "deps": [
+            "npm:@reduxjs/toolkit",
+            "shared-constants",
+            "shared-models"
+          ]
+        },
+        {
+          "file": "libs/shared/services/src/index.ts",
+          "hash": "3529808020449516973"
+        },
+        {
+          "file": "libs/shared/services/src/slices/auth.js",
+          "hash": "8267207765133235955",
+          "deps": [
+            "npm:@reduxjs/toolkit"
+          ]
+        },
+        {
+          "file": "libs/shared/services/src/slices/filter.ts",
+          "hash": "4117741940993323736",
+          "deps": [
+            "npm:@reduxjs/toolkit",
+            "npm:moment"
+          ]
+        },
+        {
+          "file": "libs/shared/services/src/slices/index.ts",
+          "hash": "1435960020832426809"
+        },
+        {
+          "file": "libs/shared/services/tsconfig.json",
+          "hash": "3673471672798372201"
+        },
+        {
+          "file": "libs/shared/services/tsconfig.lib.json",
+          "hash": "12782505187182166395"
+        }
+      ],
+      "dosportanywhere": [
+        {
+          "file": "apps/dosportanywhere/.dockerignore",
+          "hash": "4406726806561618152"
+        },
+        {
+          "file": "apps/dosportanywhere/.eslintrc.json",
+          "hash": "14764650611592978016"
+        },
+        {
+          "file": "apps/dosportanywhere/Dockerfile",
+          "hash": "4747388368160028292"
+        },
+        {
+          "file": "apps/dosportanywhere/README.md",
+          "hash": "17524295600495787358"
+        },
+        {
+          "file": "apps/dosportanywhere/index.html",
+          "hash": "2305555892525302370"
+        },
+        {
+          "file": "apps/dosportanywhere/package-lock.json",
+          "hash": "854923045500968099"
+        },
+        {
+          "file": "apps/dosportanywhere/package.json",
+          "hash": "3929024820615645432",
+          "deps": [
+            "npm:@emotion/react",
+            "npm:@emotion/styled",
+            "npm:@mui/x-date-pickers",
+            "npm:@reduxjs/toolkit",
+            "npm:@testing-library/react",
+            "npm:@types/node",
+            "npm:date-fns",
+            "npm:formik",
+            "npm:leaflet",
+            "npm:moment",
+            "npm:react",
+            "npm:react-dom",
+            "npm:react-icons",
+            "npm:react-leaflet",
+            "npm:react-redux",
+            "npm:typescript",
+            "npm:use-debounce",
+            "npm:@types/react",
+            "npm:@types/react-dom",
+            "npm:@vitejs/plugin-react",
+            "npm:eslint",
+            "npm:eslint-plugin-import",
+            "npm:eslint-plugin-react",
+            "npm:postcss",
+            "npm:prettier",
+            "npm:vite"
+          ]
+        },
+        {
+          "file": "apps/dosportanywhere/postcss.config.js",
+          "hash": "1579725330904862112"
+        },
+        {
+          "file": "apps/dosportanywhere/project.json",
+          "hash": "14871469481024529764"
+        },
+        {
+          "file": "apps/dosportanywhere/public/favicon.ico",
+          "hash": "9303420814833116677"
+        },
+        {
+          "file": "apps/dosportanywhere/public/manifest.json",
+          "hash": "8528690344418497343"
+        },
+        {
+          "file": "apps/dosportanywhere/public/robots.txt",
+          "hash": "2790380794362165217"
+        },
+        {
+          "file": "apps/dosportanywhere/src/assets/.gitkeep",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "apps/dosportanywhere/src/custom.d.ts",
+          "hash": "12109487586429375174"
+        },
+        {
+          "file": "apps/dosportanywhere/src/features/dashboard/assets/images/BsChat.svg",
+          "hash": "13585863565265545391"
+        },
+        {
+          "file": "apps/dosportanywhere/src/features/dashboard/assets/images/avatar.png",
+          "hash": "16174976836153657074"
+        },
+        {
+          "file": "apps/dosportanywhere/src/features/dashboard/assets/images/bandy.svg",
+          "hash": "15671265971302306986"
+        },
+        {
+          "file": "apps/dosportanywhere/src/features/dashboard/assets/images/bell.svg",
+          "hash": "17628620583618178551"
+        },
+        {
+          "file": "apps/dosportanywhere/src/features/dashboard/assets/images/bubble.svg",
+          "hash": "3159610170074652497"
+        },
+        {
+          "file": "apps/dosportanywhere/src/features/dashboard/assets/images/bx_bx-trash.svg",
+          "hash": "15421543259260283214"
+        },
+        {
+          "file": "apps/dosportanywhere/src/features/dashboard/assets/images/calendr.svg",
+          "hash": "12285921493734759431"
+        },
+        {
+          "file": "apps/dosportanywhere/src/features/dashboard/assets/images/calnder.svg",
+          "hash": "10118570314748109877"
+        },
+        {
+          "file": "apps/dosportanywhere/src/features/dashboard/assets/images/create-outline.svg",
+          "hash": "12585072500440072849"
+        },
+        {
+          "file": "apps/dosportanywhere/src/features/dashboard/assets/images/cross.svg",
+          "hash": "4481954826648739270"
+        },
+        {
+          "file": "apps/dosportanywhere/src/features/dashboard/assets/images/dropdown.svg",
+          "hash": "1028256190931889163"
+        },
+        {
+          "file": "apps/dosportanywhere/src/features/dashboard/assets/images/eva_message-circle-fill.svg",
+          "hash": "10936246488478987161"
+        },
+        {
+          "file": "apps/dosportanywhere/src/features/dashboard/assets/images/events.svg",
+          "hash": "343021843675458830"
+        },
+        {
+          "file": "apps/dosportanywhere/src/features/dashboard/assets/images/fe_search.svg",
+          "hash": "12913073330543639844"
+        },
+        {
+          "file": "apps/dosportanywhere/src/features/dashboard/assets/images/feather_edit-2.svg",
+          "hash": "11740323458630965876"
+        },
+        {
+          "file": "apps/dosportanywhere/src/features/dashboard/assets/images/filters.svg",
+          "hash": "11637224037490230347"
+        },
+        {
+          "file": "apps/dosportanywhere/src/features/dashboard/assets/images/fluent_home-16-regular.svg",
+          "hash": "5330747658524006000"
+        },
+        {
+          "file": "apps/dosportanywhere/src/features/dashboard/assets/images/friends.svg",
+          "hash": "3414202507413495020"
+        },
+        {
+          "file": "apps/dosportanywhere/src/features/dashboard/assets/images/heart.svg",
+          "hash": "13094444526073943395"
+        },
+        {
+          "file": "apps/dosportanywhere/src/features/dashboard/assets/images/horidot.svg",
+          "hash": "13852699150238044230"
+        },
+        {
+          "file": "apps/dosportanywhere/src/features/dashboard/assets/images/ion_notifications-circle.svg",
+          "hash": "1758542332393897693"
+        },
+        {
+          "file": "apps/dosportanywhere/src/features/dashboard/assets/images/logo.svg",
+          "hash": "17880607162470096598"
+        },
+        {
+          "file": "apps/dosportanywhere/src/features/dashboard/assets/images/particpents.svg",
+          "hash": "12824485205048851556"
+        },
+        {
+          "file": "apps/dosportanywhere/src/features/dashboard/assets/images/pin.svg",
+          "hash": "11864806371174209362"
+        },
+        {
+          "file": "apps/dosportanywhere/src/features/dashboard/assets/images/placeholder.svg",
+          "hash": "17726969933017192112"
+        },
+        {
+          "file": "apps/dosportanywhere/src/features/dashboard/assets/images/settings.svg",
+          "hash": "15673493093796561277"
+        },
+        {
+          "file": "apps/dosportanywhere/src/features/dashboard/assets/images/upload.png",
+          "hash": "14206611200923485169"
+        },
+        {
+          "file": "apps/dosportanywhere/src/features/dashboard/assets/images/user.png",
+          "hash": "14875505719362037675"
+        },
+        {
+          "file": "apps/dosportanywhere/src/features/dashboard/assets/images/user.svg",
+          "hash": "12269670816964411925"
+        },
+        {
+          "file": "apps/dosportanywhere/src/features/dashboard/assets/images/users.svg",
+          "hash": "7162752979760480904"
+        },
+        {
+          "file": "apps/dosportanywhere/src/features/dashboard/assets/new/Add.svg",
+          "hash": "13743764729613286509"
+        },
+        {
+          "file": "apps/dosportanywhere/src/features/dashboard/assets/new/Calendar.svg",
+          "hash": "17629646484892624217"
+        },
+        {
+          "file": "apps/dosportanywhere/src/features/dashboard/assets/new/Chat.svg",
+          "hash": "2493988392359797429"
+        },
+        {
+          "file": "apps/dosportanywhere/src/features/dashboard/assets/new/ChatMessage.svg",
+          "hash": "8419150615869460639"
+        },
+        {
+          "file": "apps/dosportanywhere/src/features/dashboard/assets/new/CommentButton.svg",
+          "hash": "11714279846273035788"
+        },
+        {
+          "file": "apps/dosportanywhere/src/features/dashboard/assets/new/CreateEventIcon.svg",
+          "hash": "13610883318685591614"
+        },
+        {
+          "file": "apps/dosportanywhere/src/features/dashboard/assets/new/CreateOrganizationIcon.svg",
+          "hash": "4302893167490067179"
+        },
+        {
+          "file": "apps/dosportanywhere/src/features/dashboard/assets/new/CreateSportparnerIcon.svg",
+          "hash": "17907500491568181224"
+        },
+        {
+          "file": "apps/dosportanywhere/src/features/dashboard/assets/new/CreateTeamIcon.svg",
+          "hash": "11892821449500212823"
+        },
+        {
+          "file": "apps/dosportanywhere/src/features/dashboard/assets/new/CredentialsMenuIcon.svg",
+          "hash": "262652867280724981"
+        },
+        {
+          "file": "apps/dosportanywhere/src/features/dashboard/assets/new/Home.svg",
+          "hash": "7306142757385059181"
+        },
+        {
+          "file": "apps/dosportanywhere/src/features/dashboard/assets/new/Like.svg",
+          "hash": "11379621901342511140"
+        },
+        {
+          "file": "apps/dosportanywhere/src/features/dashboard/assets/new/LikeButton.svg",
+          "hash": "556362471756851249"
+        },
+        {
+          "file": "apps/dosportanywhere/src/features/dashboard/assets/new/LogoutMenuIcon.svg",
+          "hash": "8464779809850717752"
+        },
+        {
+          "file": "apps/dosportanywhere/src/features/dashboard/assets/new/MapPointer.svg",
+          "hash": "10860265715978251973"
+        },
+        {
+          "file": "apps/dosportanywhere/src/features/dashboard/assets/new/Menu.svg",
+          "hash": "5794619064608361932"
+        },
+        {
+          "file": "apps/dosportanywhere/src/features/dashboard/assets/new/Message.svg",
+          "hash": "5165443825244064044"
+        },
+        {
+          "file": "apps/dosportanywhere/src/features/dashboard/assets/new/Notification.svg",
+          "hash": "11913639789919104752"
+        },
+        {
+          "file": "apps/dosportanywhere/src/features/dashboard/assets/new/Point.svg",
+          "hash": "10838278920498742749"
+        },
+        {
+          "file": "apps/dosportanywhere/src/features/dashboard/assets/new/ProfileMenuIcon.svg",
+          "hash": "10270111909362468200"
+        },
+        {
+          "file": "apps/dosportanywhere/src/features/dashboard/assets/new/SetProfileMenuIcon.svg",
+          "hash": "16996891409695034413"
+        },
+        {
+          "file": "apps/dosportanywhere/src/features/dashboard/assets/new/SettingsMenuIcon.svg",
+          "hash": "14321770318388009247"
+        },
+        {
+          "file": "apps/dosportanywhere/src/features/dashboard/assets/new/ShareButton.svg",
+          "hash": "17008062805163792543"
+        },
+        {
+          "file": "apps/dosportanywhere/src/features/dashboard/assets/new/Social.svg",
+          "hash": "2215861823567862043"
+        },
+        {
+          "file": "apps/dosportanywhere/src/features/dashboard/assets/new/SportPartner.svg",
+          "hash": "15317037310140718989"
+        },
+        {
+          "file": "apps/dosportanywhere/src/features/dashboard/assets/new/User.svg",
+          "hash": "423404366672196438"
+        },
+        {
+          "file": "apps/dosportanywhere/src/features/dashboard/assets/new/Watch.svg",
+          "hash": "257756903915165019"
+        },
+        {
+          "file": "apps/dosportanywhere/src/features/dashboard/components/Calendar.tsx",
+          "hash": "12876273929233287180",
+          "deps": [
+            "npm:react",
+            "npm:moment",
+            "npm:react-icons/hi",
+            "shared-utils"
+          ]
+        },
+        {
+          "file": "apps/dosportanywhere/src/features/dashboard/components/Event.tsx",
+          "hash": "12630987474095947736",
+          "deps": [
+            "npm:moment",
+            "npm:react-router-dom",
+            "npm:models"
+          ]
+        },
+        {
+          "file": "apps/dosportanywhere/src/features/dashboard/components/ProfileIcon.tsx",
+          "hash": "3638878459793674703",
+          "deps": [
+            "npm:react-icons",
+            "shared-data-services"
+          ]
+        },
+        {
+          "file": "apps/dosportanywhere/src/features/dashboard/components/RectangleProfileIcon.tsx",
+          "hash": "14133140166762753221",
+          "deps": [
+            "npm:react-icons",
+            "shared-data-services"
+          ]
+        },
+        {
+          "file": "apps/dosportanywhere/src/features/dashboard/components/chat/ChatBox.jsx",
+          "hash": "15463778437772727185",
+          "deps": [
+            "npm:react",
+            "npm:react-icons/io",
+            "npm:react-icons/ai",
+            "npm:react-icons/bs",
+            "npm:bson-objectid"
+          ]
+        },
+        {
+          "file": "apps/dosportanywhere/src/features/dashboard/components/chat/ChatList.jsx",
+          "hash": "7141494191316995769",
+          "deps": [
+            "npm:react"
+          ]
+        },
+        {
+          "file": "apps/dosportanywhere/src/features/dashboard/components/chat/Message.jsx",
+          "hash": "14627685554524023023",
+          "deps": [
+            "npm:react"
+          ]
+        },
+        {
+          "file": "apps/dosportanywhere/src/features/dashboard/components/events/EventFullCard.tsx",
+          "hash": "10778567405669998053",
+          "deps": [
+            "npm:react-router-dom",
+            "npm:moment",
+            "npm:react-redux",
+            "npm:react-icons/fi",
+            "npm:react-icons/bs",
+            "npm:services/eventApi",
+            "npm:shared/components",
+            "npm:store/slices"
+          ]
+        },
+        {
+          "file": "apps/dosportanywhere/src/features/dashboard/components/events/EventsMarkers.tsx",
+          "hash": "16644300543558799897",
+          "deps": [
+            "npm:react",
+            "npm:use-supercluster",
+            "npm:react-leaflet",
+            "npm:leaflet",
+            "shared-constants"
+          ]
+        },
+        {
+          "file": "apps/dosportanywhere/src/features/dashboard/components/events/MarkerPopup.tsx",
+          "hash": "13557953136807186066",
+          "deps": [
+            "npm:moment",
+            "npm:react-router-dom",
+            "npm:models"
+          ]
+        },
+        {
+          "file": "apps/dosportanywhere/src/features/dashboard/components/events/PartnerCard.tsx",
+          "hash": "10735047495063409685",
+          "deps": [
+            "npm:react-router-dom",
+            "npm:moment",
+            "npm:models"
+          ]
+        },
+        {
+          "file": "apps/dosportanywhere/src/features/dashboard/components/filter/SelectDateRange.tsx",
+          "hash": "15825924371785408335",
+          "deps": [
+            "npm:moment",
+            "npm:react-redux",
+            "npm:@mui/x-date-pickers",
+            "npm:react-icons",
+            "shared-data-store"
+          ]
+        },
+        {
+          "file": "apps/dosportanywhere/src/features/dashboard/components/filter/SelectDistance.tsx",
+          "hash": "12961204275236000163",
+          "deps": [
+            "npm:@mui/material/Slider",
+            "npm:react-redux",
+            "shared-data-store"
+          ]
+        },
+        {
+          "file": "apps/dosportanywhere/src/features/dashboard/components/filter/SelectGender.tsx",
+          "hash": "3783787092341923062",
+          "deps": [
+            "npm:react-redux",
+            "shared-data-store"
+          ]
+        },
+        {
+          "file": "apps/dosportanywhere/src/features/dashboard/components/filter/SelectLevel.tsx",
+          "hash": "5039416442192458734",
+          "deps": [
+            "npm:react",
+            "npm:react-redux",
+            "shared-data-store"
+          ]
+        },
+        {
+          "file": "apps/dosportanywhere/src/features/dashboard/components/filter/SelectSports.tsx",
+          "hash": "9341046129051101695",
+          "deps": [
+            "npm:react",
+            "npm:@mui/material",
+            "npm:react-icons",
+            "npm:react-redux",
+            "shared-data-store",
+            "shared-constants"
+          ]
+        },
+        {
+          "file": "apps/dosportanywhere/src/features/dashboard/components/filter/SelectTimeRange.tsx",
+          "hash": "17455942952572967053",
+          "deps": [
+            "npm:moment",
+            "npm:react-redux",
+            "npm:@mui/x-date-pickers",
+            "npm:react-icons",
+            "shared-data-store"
+          ]
+        },
+        {
+          "file": "apps/dosportanywhere/src/features/dashboard/components/home/BottomPost.tsx",
+          "hash": "7973128827017757328",
+          "deps": [
+            "npm:react",
+            "npm:react-icons",
+            "npm:react-redux",
+            "shared-models",
+            "shared-data-store",
+            "shared-data-services",
+            "shared-constants"
+          ]
+        },
+        {
+          "file": "apps/dosportanywhere/src/features/dashboard/components/home/Comment.tsx",
+          "hash": "15780485043051358812",
+          "deps": [
+            "npm:moment",
+            "npm:models"
+          ]
+        },
+        {
+          "file": "apps/dosportanywhere/src/features/dashboard/components/home/EventPost.tsx",
+          "hash": "6269524943572760998"
+        },
+        {
+          "file": "apps/dosportanywhere/src/features/dashboard/components/home/PostCreation.tsx",
+          "hash": "2288120958691667566",
+          "deps": [
+            "npm:react"
+          ]
+        },
+        {
+          "file": "apps/dosportanywhere/src/features/dashboard/components/home/PostDialog.tsx",
+          "hash": "13309835133384522910",
+          "deps": [
+            "npm:react",
+            "npm:@mui/material",
+            "npm:@mui/icons-material/Close",
+            "shared-data-services"
+          ]
+        },
+        {
+          "file": "apps/dosportanywhere/src/features/dashboard/components/home/UserPost.tsx",
+          "hash": "2477048933342636746",
+          "deps": [
+            "npm:react",
+            "npm:moment",
+            "npm:models"
+          ]
+        },
+        {
+          "file": "apps/dosportanywhere/src/features/dashboard/components/layout/DashboardLayout.tsx",
+          "hash": "14947311581822084153",
+          "deps": [
+            "npm:react",
+            "ui"
+          ]
+        },
+        {
+          "file": "apps/dosportanywhere/src/features/dashboard/components/layout/Navbar.tsx",
+          "hash": "4957637185902157858",
+          "deps": [
+            "npm:react",
+            "npm:react-router-dom",
+            "npm:react-icons",
+            "shared-data-store",
+            "shared-data-services",
+            "ui",
+            "shared-constants"
+          ]
+        },
+        {
+          "file": "apps/dosportanywhere/src/features/dashboard/components/layout/Sidebar.tsx",
+          "hash": "13122515337494030642",
+          "deps": [
+            "npm:react-router-dom",
+            "shared-constants",
+            "ui"
+          ]
+        },
+        {
+          "file": "apps/dosportanywhere/src/features/dashboard/components/myactions/EventCard.tsx",
+          "hash": "11826142498854018052",
+          "deps": [
+            "npm:react-router-dom",
+            "npm:moment",
+            "npm:react-icons/fi",
+            "npm:react-icons/bs"
+          ]
+        },
+        {
+          "file": "apps/dosportanywhere/src/features/dashboard/components/myactions/PartnerCard.tsx",
+          "hash": "5588749995434225755",
+          "deps": [
+            "npm:@mui/material/CircularProgress",
+            "npm:react-icons/sl",
+            "npm:shared/components",
+            "npm:services/datingApi"
+          ]
+        },
+        {
+          "file": "apps/dosportanywhere/src/features/dashboard/components/myactions/SportPartner.tsx",
+          "hash": "15565339409733466269",
+          "deps": [
+            "npm:react-router-dom",
+            "npm:services/datingApi"
+          ]
+        },
+        {
+          "file": "apps/dosportanywhere/src/features/dashboard/components/profile/ProUserInfo.tsx",
+          "hash": "16419333293230122084",
+          "deps": [
+            "npm:moment",
+            "npm:react-router-dom",
+            "shared-models",
+            "shared-data-services"
+          ]
+        },
+        {
+          "file": "apps/dosportanywhere/src/features/dashboard/components/profile/ReservationTimetable.tsx",
+          "hash": "12141389969478597808",
+          "deps": [
+            "npm:react",
+            "npm:moment",
+            "npm:react-icons",
+            "npm:@mui/material",
+            "ui",
+            "shared-models",
+            "shared-utils",
+            "shared-services"
+          ]
+        },
+        {
+          "file": "apps/dosportanywhere/src/features/dashboard/components/profile/UserInfo.tsx",
+          "hash": "14368241458398901711",
+          "deps": [
+            "npm:moment",
+            "npm:react-router-dom",
+            "npm:models",
+            "npm:services/userApi"
+          ]
+        },
+        {
+          "file": "apps/dosportanywhere/src/features/dashboard/components/settings/SetCredentials.tsx",
+          "hash": "12944444802872636954",
+          "deps": [
+            "npm:react",
+            "npm:react-icons",
+            "npm:@mui/material",
+            "npm:formik",
+            "npm:yup",
+            "shared-data-services",
+            "ui"
+          ]
+        },
+        {
+          "file": "apps/dosportanywhere/src/features/dashboard/components/settings/SetProfile.tsx",
+          "hash": "297017899375063955",
+          "deps": [
+            "npm:formik",
+            "npm:yup",
+            "npm:@mui/material",
+            "ui",
+            "shared-data-services",
+            "shared-constants"
+          ]
+        },
+        {
+          "file": "apps/dosportanywhere/src/features/dashboard/components/settings/SetProfileImg.tsx",
+          "hash": "1761509011159743871",
+          "deps": [
+            "npm:react",
+            "shared-data-services",
+            "ui"
+          ]
+        },
+        {
+          "file": "apps/dosportanywhere/src/features/dashboard/components/social/FriendsCard.tsx",
+          "hash": "1435852983300794841",
+          "deps": [
+            "npm:@mui/material",
+            "shared-data-services",
+            "shared-models"
+          ]
+        },
+        {
+          "file": "apps/dosportanywhere/src/features/dashboard/components/social/FriendsGroup.tsx",
+          "hash": "10605666793638546091",
+          "deps": [
+            "shared-models"
+          ]
+        },
+        {
+          "file": "apps/dosportanywhere/src/features/dashboard/index.tsx",
+          "hash": "8130681226505840113",
+          "deps": [
+            "npm:react-router-dom"
+          ]
+        },
+        {
+          "file": "apps/dosportanywhere/src/features/dashboard/pages/Chat.tsx",
+          "hash": "11135889335568342792",
+          "deps": [
+            "npm:react",
+            "npm:react-router-dom",
+            "npm:socket.io-client",
+            "npm:react-redux",
+            "shared-services"
+          ]
+        },
+        {
+          "file": "apps/dosportanywhere/src/features/dashboard/pages/CreateEventForm.jsx",
+          "hash": "12403511698185019222",
+          "deps": [
+            "npm:react",
+            "npm:react-router-dom",
+            "npm:formik",
+            "npm:yup",
+            "npm:moment",
+            "shared-data-services",
+            "ui"
+          ]
+        },
+        {
+          "file": "apps/dosportanywhere/src/features/dashboard/pages/CreateSportsPartnerForm.jsx",
+          "hash": "15169195274679061027",
+          "deps": [
+            "npm:react",
+            "npm:react-router-dom",
+            "npm:formik",
+            "npm:yup",
+            "shared-data-services",
+            "ui"
+          ]
+        },
+        {
+          "file": "apps/dosportanywhere/src/features/dashboard/pages/CreateTimeSlot.tsx",
+          "hash": "13255028406750592870",
+          "deps": [
+            "npm:react",
+            "npm:react-router-dom",
+            "npm:formik",
+            "npm:yup",
+            "npm:moment",
+            "shared-services",
+            "ui"
+          ]
+        },
+        {
+          "file": "apps/dosportanywhere/src/features/dashboard/pages/EventDetail.tsx",
+          "hash": "6069031897112709538",
+          "deps": [
+            "npm:react",
+            "npm:@mui/material/CircularProgress",
+            "npm:moment",
+            "npm:react-router-dom",
+            "npm:react-redux",
+            "shared-data-store",
+            "shared-data-services"
+          ]
+        },
+        {
+          "file": "apps/dosportanywhere/src/features/dashboard/pages/EventsList.tsx",
+          "hash": "15770445510345500261",
+          "deps": [
+            "npm:react",
+            "npm:react-redux",
+            "npm:react-icons",
+            "shared-services",
+            "shared-utils",
+            "shared-constants",
+            "ui"
+          ]
+        },
+        {
+          "file": "apps/dosportanywhere/src/features/dashboard/pages/EventsMap.tsx",
+          "hash": "14751306080171584611",
+          "deps": [
+            "npm:react-leaflet",
+            "npm:@mui/material/CircularProgress",
+            "shared-data-services",
+            "shared-constants"
+          ]
+        },
+        {
+          "file": "apps/dosportanywhere/src/features/dashboard/pages/Home.tsx",
+          "hash": "10312261435059234784",
+          "deps": [
+            "shared-services"
+          ]
+        },
+        {
+          "file": "apps/dosportanywhere/src/features/dashboard/pages/MyActions.tsx",
+          "hash": "7425776389599953898",
+          "deps": [
+            "npm:react",
+            "shared-data-services",
+            "shared-models",
+            "npm:moment"
+          ]
+        },
+        {
+          "file": "apps/dosportanywhere/src/features/dashboard/pages/Settings.tsx",
+          "hash": "18301141258193494047",
+          "deps": [
+            "npm:react",
+            "ui"
+          ]
+        },
+        {
+          "file": "apps/dosportanywhere/src/features/dashboard/pages/Social.tsx",
+          "hash": "14308742748567973532",
+          "deps": [
+            "npm:@mui/material/CircularProgress",
+            "shared-data-services",
+            "shared-models"
+          ]
+        },
+        {
+          "file": "apps/dosportanywhere/src/features/dashboard/pages/SportPartner.tsx",
+          "hash": "17548264570091971173",
+          "deps": [
+            "npm:react",
+            "npm:react-redux",
+            "npm:react-icons",
+            "shared-data-services",
+            "shared-utils",
+            "shared-data-store",
+            "shared-constants",
+            "ui"
+          ]
+        },
+        {
+          "file": "apps/dosportanywhere/src/features/dashboard/pages/UserProfile.tsx",
+          "hash": "8141205579373848673",
+          "deps": [
+            "npm:moment",
+            "npm:react-router-dom",
+            "shared-data-services"
+          ]
+        },
+        {
+          "file": "apps/dosportanywhere/src/features/dashboard/shared/constants/index.ts",
+          "hash": "1219370315432317901"
+        },
+        {
+          "file": "apps/dosportanywhere/src/features/dashboard/shared/utils/index.ts",
+          "hash": "5760392466830953352",
+          "deps": [
+            "shared-models"
+          ]
+        },
+        {
+          "file": "apps/dosportanywhere/src/features/login/assets/images/Ellipse 53.svg",
+          "hash": "2282335285961463365"
+        },
+        {
+          "file": "apps/dosportanywhere/src/features/login/assets/images/Ellipse 60.png",
+          "hash": "2834947500085412311"
+        },
+        {
+          "file": "apps/dosportanywhere/src/features/login/assets/images/Frame (1).svg",
+          "hash": "18227477108892700784"
+        },
+        {
+          "file": "apps/dosportanywhere/src/features/login/assets/images/Frame 2.svg",
+          "hash": "2637639371138297362"
+        },
+        {
+          "file": "apps/dosportanywhere/src/features/login/assets/images/Frame 3.svg",
+          "hash": "13094444526073943395"
+        },
+        {
+          "file": "apps/dosportanywhere/src/features/login/assets/images/Frame copy.svg",
+          "hash": "16391116654962590944"
+        },
+        {
+          "file": "apps/dosportanywhere/src/features/login/assets/images/Frame.png",
+          "hash": "8774589733517234750"
+        },
+        {
+          "file": "apps/dosportanywhere/src/features/login/assets/images/Frame.svg",
+          "hash": "14529010224196481973"
+        },
+        {
+          "file": "apps/dosportanywhere/src/features/login/assets/images/Group 162901.svg",
+          "hash": "187324309175870576"
+        },
+        {
+          "file": "apps/dosportanywhere/src/features/login/assets/images/Group 162902.svg",
+          "hash": "12373668087790753917"
+        },
+        {
+          "file": "apps/dosportanywhere/src/features/login/assets/images/Group 162903.svg",
+          "hash": "17107818090564819060"
+        },
+        {
+          "file": "apps/dosportanywhere/src/features/login/assets/images/Group 162904.svg",
+          "hash": "5978760447350401716"
+        },
+        {
+          "file": "apps/dosportanywhere/src/features/login/assets/images/Group 162905.svg",
+          "hash": "18113189799338977142"
+        },
+        {
+          "file": "apps/dosportanywhere/src/features/login/assets/images/Group 162906.svg",
+          "hash": "1102375441733067310"
+        },
+        {
+          "file": "apps/dosportanywhere/src/features/login/assets/images/Group 4560.png",
+          "hash": "15453934031202578178"
+        },
+        {
+          "file": "apps/dosportanywhere/src/features/login/assets/images/Group 4616.png",
+          "hash": "9290764089915604212"
+        },
+        {
+          "file": "apps/dosportanywhere/src/features/login/assets/images/Group 4616.svg",
+          "hash": "6956496244355628358"
+        },
+        {
+          "file": "apps/dosportanywhere/src/features/login/assets/images/Group 4688.svg",
+          "hash": "12503362537325894056"
+        },
+        {
+          "file": "apps/dosportanywhere/src/features/login/assets/images/Jogging.svg",
+          "hash": "11306849046936158796"
+        },
+        {
+          "file": "apps/dosportanywhere/src/features/login/assets/images/Tennis.svg",
+          "hash": "11530701258184100996"
+        },
+        {
+          "file": "apps/dosportanywhere/src/features/login/assets/images/Vector.svg",
+          "hash": "16023721007480629380"
+        },
+        {
+          "file": "apps/dosportanywhere/src/features/login/assets/images/avatar.png",
+          "hash": "16174976836153657074"
+        },
+        {
+          "file": "apps/dosportanywhere/src/features/login/assets/images/bandy.svg",
+          "hash": "15671265971302306986"
+        },
+        {
+          "file": "apps/dosportanywhere/src/features/login/assets/images/bell.svg",
+          "hash": "17628620583618178551"
+        },
+        {
+          "file": "apps/dosportanywhere/src/features/login/assets/images/bubble.svg",
+          "hash": "3159610170074652497"
+        },
+        {
+          "file": "apps/dosportanywhere/src/features/login/assets/images/bx_bx-trash.svg",
+          "hash": "15421543259260283214"
+        },
+        {
+          "file": "apps/dosportanywhere/src/features/login/assets/images/calendr.svg",
+          "hash": "12285921493734759431"
+        },
+        {
+          "file": "apps/dosportanywhere/src/features/login/assets/images/calnder.svg",
+          "hash": "10118570314748109877"
+        },
+        {
+          "file": "apps/dosportanywhere/src/features/login/assets/images/cross.svg",
+          "hash": "17626707802618694830"
+        },
+        {
+          "file": "apps/dosportanywhere/src/features/login/assets/images/dark-haired-man-in-brown-leather-jacket 2.png",
+          "hash": "9851260796806101264"
+        },
+        {
+          "file": "apps/dosportanywhere/src/features/login/assets/images/dropdown.svg",
+          "hash": "1028256190931889163"
+        },
+        {
+          "file": "apps/dosportanywhere/src/features/login/assets/images/eva_message-circle-fill.svg",
+          "hash": "10936246488478987161"
+        },
+        {
+          "file": "apps/dosportanywhere/src/features/login/assets/images/events.svg",
+          "hash": "343021843675458830"
+        },
+        {
+          "file": "apps/dosportanywhere/src/features/login/assets/images/fe_search.png",
+          "hash": "14808725002720504815"
+        },
+        {
+          "file": "apps/dosportanywhere/src/features/login/assets/images/fe_search.svg",
+          "hash": "12913073330543639844"
+        },
+        {
+          "file": "apps/dosportanywhere/src/features/login/assets/images/feather_edit-2.svg",
+          "hash": "11740323458630965876"
+        },
+        {
+          "file": "apps/dosportanywhere/src/features/login/assets/images/filters.svg",
+          "hash": "11637224037490230347"
+        },
+        {
+          "file": "apps/dosportanywhere/src/features/login/assets/images/fluent_home-16-regular.svg",
+          "hash": "5330747658524006000"
+        },
+        {
+          "file": "apps/dosportanywhere/src/features/login/assets/images/friends.svg",
+          "hash": "3414202507413495020"
+        },
+        {
+          "file": "apps/dosportanywhere/src/features/login/assets/images/heaert.svg",
+          "hash": "8167610984355553082"
+        },
+        {
+          "file": "apps/dosportanywhere/src/features/login/assets/images/heart.svg",
+          "hash": "13094444526073943395"
+        },
+        {
+          "file": "apps/dosportanywhere/src/features/login/assets/images/ion_notifications-circle.svg",
+          "hash": "1758542332393897693"
+        },
+        {
+          "file": "apps/dosportanywhere/src/features/login/assets/images/layers-2x.png",
+          "hash": "9344261028423700841"
+        },
+        {
+          "file": "apps/dosportanywhere/src/features/login/assets/images/layers.png",
+          "hash": "9282921627250197590"
+        },
+        {
+          "file": "apps/dosportanywhere/src/features/login/assets/images/logo.png",
+          "hash": "10364594544373108556"
+        },
+        {
+          "file": "apps/dosportanywhere/src/features/login/assets/images/logo.svg",
+          "hash": "17880607162470096598"
+        },
+        {
+          "file": "apps/dosportanywhere/src/features/login/assets/images/marker-icon-2x.png",
+          "hash": "16225105066935018559"
+        },
+        {
+          "file": "apps/dosportanywhere/src/features/login/assets/images/marker-icon.png",
+          "hash": "12839574698303764257"
+        },
+        {
+          "file": "apps/dosportanywhere/src/features/login/assets/images/marker-shadow.png",
+          "hash": "13400201256143088927"
+        },
+        {
+          "file": "apps/dosportanywhere/src/features/login/assets/images/particpents.svg",
+          "hash": "12824485205048851556"
+        },
+        {
+          "file": "apps/dosportanywhere/src/features/login/assets/images/pin.svg",
+          "hash": "11864806371174209362"
+        },
+        {
+          "file": "apps/dosportanywhere/src/features/login/assets/images/placeholder 1 copy.svg",
+          "hash": "2260350929484749841"
+        },
+        {
+          "file": "apps/dosportanywhere/src/features/login/assets/images/placeholder 1.svg",
+          "hash": "17726969933017192112"
+        },
+        {
+          "file": "apps/dosportanywhere/src/features/login/assets/images/screen-shot-2019-08-16-at-6.52 2.png",
+          "hash": "16875167072925531763"
+        },
+        {
+          "file": "apps/dosportanywhere/src/features/login/assets/images/settings.svg",
+          "hash": "15673493093796561277"
+        },
+        {
+          "file": "apps/dosportanywhere/src/features/login/assets/images/slide1.png",
+          "hash": "1623518317715620621"
+        },
+        {
+          "file": "apps/dosportanywhere/src/features/login/assets/images/slide2.png",
+          "hash": "2493465160084339353"
+        },
+        {
+          "file": "apps/dosportanywhere/src/features/login/assets/images/slide3.png",
+          "hash": "14401195442878474702"
+        },
+        {
+          "file": "apps/dosportanywhere/src/features/login/assets/images/slider-img.png",
+          "hash": "2493465160084339353"
+        },
+        {
+          "file": "apps/dosportanywhere/src/features/login/assets/images/slider-img2.png",
+          "hash": "14401195442878474702"
+        },
+        {
+          "file": "apps/dosportanywhere/src/features/login/assets/images/slider-img3.png",
+          "hash": "2745229774631104056"
+        },
+        {
+          "file": "apps/dosportanywhere/src/features/login/assets/images/upload.png",
+          "hash": "14206611200923485169"
+        },
+        {
+          "file": "apps/dosportanywhere/src/features/login/assets/images/user.png",
+          "hash": "14875505719362037675"
+        },
+        {
+          "file": "apps/dosportanywhere/src/features/login/assets/images/user.svg",
+          "hash": "12269670816964411925"
+        },
+        {
+          "file": "apps/dosportanywhere/src/features/login/assets/images/users.svg",
+          "hash": "7162752979760480904"
+        },
+        {
+          "file": "apps/dosportanywhere/src/features/login/components/PageLayout.jsx",
+          "hash": "1808002236175526561",
+          "deps": [
+            "npm:react"
+          ]
+        },
+        {
+          "file": "apps/dosportanywhere/src/features/login/components/Slider.jsx",
+          "hash": "16770343550880912392",
+          "deps": [
+            "npm:react"
+          ]
+        },
+        {
+          "file": "apps/dosportanywhere/src/features/login/components/Steps.jsx",
+          "hash": "6606599528145560285"
+        },
+        {
+          "file": "apps/dosportanywhere/src/features/login/index.jsx",
+          "hash": "5926012110036092914",
+          "deps": [
+            "npm:react",
+            "npm:react-router-dom",
+            "shared-constants",
+            "ui"
+          ]
+        },
+        {
+          "file": "apps/dosportanywhere/src/features/login/pages/AddProfileImg.tsx",
+          "hash": "17926127825976500478",
+          "deps": [
+            "npm:react",
+            "npm:react-router-dom",
+            "ui",
+            "shared-constants",
+            "shared-data-services"
+          ]
+        },
+        {
+          "file": "apps/dosportanywhere/src/features/login/pages/Login.tsx",
+          "hash": "3654082778305319778",
+          "deps": [
+            "npm:react",
+            "npm:formik",
+            "npm:yup",
+            "npm:react-router-dom",
+            "npm:react-redux",
+            "ui",
+            "shared-constants",
+            "shared-data-store",
+            "shared-services"
+          ]
+        },
+        {
+          "file": "apps/dosportanywhere/src/features/login/pages/MoreInfo.tsx",
+          "hash": "10896327141852528322",
+          "deps": [
+            "npm:formik",
+            "npm:react-router-dom",
+            "ui",
+            "shared-constants",
+            "shared-data-services"
+          ]
+        },
+        {
+          "file": "apps/dosportanywhere/src/features/login/pages/PasswordPage.tsx",
+          "hash": "13525438372221949375",
+          "deps": [
+            "npm:react",
+            "npm:formik",
+            "npm:yup",
+            "npm:react-router-dom",
+            "ui",
+            "shared-constants"
+          ]
+        },
+        {
+          "file": "apps/dosportanywhere/src/features/login/pages/SignUp.jsx",
+          "hash": "1032954845912616418",
+          "deps": [
+            "npm:formik",
+            "npm:yup",
+            "npm:react-redux",
+            "npm:react-router-dom",
+            "ui",
+            "shared-constants",
+            "shared-data-store",
+            "shared-data-services"
+          ]
+        },
+        {
+          "file": "apps/dosportanywhere/src/index.css",
+          "hash": "10227601047777506583"
+        },
+        {
+          "file": "apps/dosportanywhere/src/index.tsx",
+          "hash": "17771060004447668183",
+          "deps": [
+            "npm:react",
+            "npm:react-dom",
+            "npm:react-router-dom",
+            "npm:react-redux",
+            "npm:@mui/material/styles",
+            "shared-constants",
+            "ui"
+          ]
+        },
+        {
+          "file": "apps/dosportanywhere/src/models/index.ts",
+          "hash": "14630908799335692898"
+        },
+        {
+          "file": "apps/dosportanywhere/src/muiTheme.ts",
+          "hash": "2955865247023393529",
+          "deps": [
+            "npm:@mui/material/styles"
+          ]
+        },
+        {
+          "file": "apps/dosportanywhere/src/services/authApi.js",
+          "hash": "3914775077885059736",
+          "deps": [
+            "npm:@reduxjs/toolkit",
+            "npm:shared/constants"
+          ]
+        },
+        {
+          "file": "apps/dosportanywhere/src/services/chatApi.ts",
+          "hash": "18348000453307092092",
+          "deps": [
+            "npm:@reduxjs/toolkit",
+            "shared-constants"
+          ]
+        },
+        {
+          "file": "apps/dosportanywhere/src/services/datingApi.ts",
+          "hash": "11430548809678515282",
+          "deps": [
+            "npm:@reduxjs/toolkit",
+            "npm:models",
+            "npm:shared/constants"
+          ]
+        },
+        {
+          "file": "apps/dosportanywhere/src/services/eventApi.ts",
+          "hash": "6889743002970170246",
+          "deps": [
+            "npm:@reduxjs/toolkit",
+            "npm:shared/constants",
+            "shared-models"
+          ]
+        },
+        {
+          "file": "apps/dosportanywhere/src/services/index.ts",
+          "hash": "16285237759011459183"
+        },
+        {
+          "file": "apps/dosportanywhere/src/services/postApi.ts",
+          "hash": "10423075989019747004",
+          "deps": [
+            "npm:@reduxjs/toolkit",
+            "npm:shared/constants",
+            "npm:models"
+          ]
+        },
+        {
+          "file": "apps/dosportanywhere/src/services/userApi.ts",
+          "hash": "2303408086992426237",
+          "deps": [
+            "npm:@reduxjs/toolkit",
+            "npm:shared/constants",
+            "npm:models"
+          ]
+        },
+        {
+          "file": "apps/dosportanywhere/src/shared/assets/images/marker-icon.png",
+          "hash": "12839574698303764257"
+        },
+        {
+          "file": "apps/dosportanywhere/src/shared/assets/images/sportfriendsLogo.svg",
+          "hash": "6819413265187906632"
+        },
+        {
+          "file": "apps/dosportanywhere/src/shared/components/Button.tsx",
+          "hash": "15463749224571846193",
+          "deps": [
+            "npm:react"
+          ]
+        },
+        {
+          "file": "apps/dosportanywhere/src/shared/components/ErrorMessage.tsx",
+          "hash": "11845177981325869724",
+          "deps": [
+            "npm:react"
+          ]
+        },
+        {
+          "file": "apps/dosportanywhere/src/shared/components/Map.jsx",
+          "hash": "10989018618509928460",
+          "deps": [
+            "npm:leaflet/dist/leaflet.css",
+            "npm:react",
+            "npm:leaflet",
+            "npm:react-leaflet",
+            "npm:leaflet/dist/images/marker-icon.png",
+            "npm:shared/components/Modal"
+          ]
+        },
+        {
+          "file": "apps/dosportanywhere/src/shared/components/Modal.jsx",
+          "hash": "1396779157224696905",
+          "deps": [
+            "npm:react",
+            "npm:@mui/icons-material/Close"
+          ]
+        },
+        {
+          "file": "apps/dosportanywhere/src/shared/components/Modal2.tsx",
+          "hash": "9956753938946815630",
+          "deps": [
+            "npm:react",
+            "npm:use-debounce",
+            "shared-utils"
+          ]
+        },
+        {
+          "file": "apps/dosportanywhere/src/shared/components/ProtectedRoutes.jsx",
+          "hash": "3945999609334698330",
+          "deps": [
+            "npm:react-router-dom",
+            "npm:react-redux",
+            "npm:shared/constants",
+            "npm:store/slices"
+          ]
+        },
+        {
+          "file": "apps/dosportanywhere/src/shared/components/ShadowModal.tsx",
+          "hash": "2146919383436934615",
+          "deps": [
+            "npm:react",
+            "npm:react-icons",
+            "shared-utils"
+          ]
+        },
+        {
+          "file": "apps/dosportanywhere/src/shared/components/SwitchMenu.tsx",
+          "hash": "17763520227123505663"
+        },
+        {
+          "file": "apps/dosportanywhere/src/shared/components/forms/CheckboxInput.jsx",
+          "hash": "12085854717882161303",
+          "deps": [
+            "npm:react",
+            "npm:formik",
+            "npm:@mui/material/FormGroup",
+            "npm:@mui/material/FormControlLabel",
+            "npm:@mui/material/Checkbox",
+            "npm:shared/components"
+          ]
+        },
+        {
+          "file": "apps/dosportanywhere/src/shared/components/forms/DatePickerInput.jsx",
+          "hash": "7521613973636475461",
+          "deps": [
+            "npm:react",
+            "npm:formik",
+            "npm:react-icons/bs",
+            "npm:@mui/material/TextField",
+            "npm:shared/components"
+          ]
+        },
+        {
+          "file": "apps/dosportanywhere/src/shared/components/forms/MapInput.jsx",
+          "hash": "3069521531052809385",
+          "deps": [
+            "npm:react",
+            "npm:formik",
+            "npm:react-icons/gr",
+            "npm:@mui/material/TextField",
+            "npm:shared/components"
+          ]
+        },
+        {
+          "file": "apps/dosportanywhere/src/shared/components/forms/RangeInput.jsx",
+          "hash": "11542520519799338607",
+          "deps": [
+            "npm:react",
+            "npm:formik",
+            "npm:@mui/material/Slider",
+            "npm:shared/components"
+          ]
+        },
+        {
+          "file": "apps/dosportanywhere/src/shared/components/forms/SelectInput.tsx",
+          "hash": "10462564170973790714",
+          "deps": [
+            "npm:react",
+            "npm:formik",
+            "npm:@mui/material/MenuItem",
+            "npm:@mui/material/Select",
+            "npm:shared/components"
+          ]
+        },
+        {
+          "file": "apps/dosportanywhere/src/shared/components/forms/SelectSearchInput.jsx",
+          "hash": "18239011075151645034",
+          "deps": [
+            "npm:react",
+            "npm:@mui/material/TextField",
+            "npm:@mui/material/Autocomplete",
+            "npm:formik",
+            "npm:shared/components"
+          ]
+        },
+        {
+          "file": "apps/dosportanywhere/src/shared/components/forms/SubmitButton.jsx",
+          "hash": "5286072006490140106",
+          "deps": [
+            "npm:react",
+            "npm:@mui/material/CircularProgress"
+          ]
+        },
+        {
+          "file": "apps/dosportanywhere/src/shared/components/forms/TextAreaInput.jsx",
+          "hash": "16692802437186045675",
+          "deps": [
+            "npm:react",
+            "npm:formik",
+            "npm:@mui/material/TextField",
+            "npm:shared/components"
+          ]
+        },
+        {
+          "file": "apps/dosportanywhere/src/shared/components/forms/TextInput.jsx",
+          "hash": "11946323987416030949",
+          "deps": [
+            "npm:react",
+            "npm:formik",
+            "npm:@mui/material/TextField",
+            "npm:shared/components"
+          ]
+        },
+        {
+          "file": "apps/dosportanywhere/src/shared/components/forms/TimePickerInput.jsx",
+          "hash": "11847341638373273462",
+          "deps": [
+            "npm:react",
+            "npm:@mui/x-date-pickers",
+            "npm:@mui/material",
+            "npm:formik",
+            "npm:shared/components"
+          ]
+        },
+        {
+          "file": "apps/dosportanywhere/src/shared/components/forms/TimeRangeInput.jsx",
+          "hash": "2410230969506495225",
+          "deps": [
+            "npm:react",
+            "npm:formik",
+            "npm:@mui/material/Slider",
+            "npm:moment",
+            "npm:shared/components"
+          ]
+        },
+        {
+          "file": "apps/dosportanywhere/src/shared/components/index.js",
+          "hash": "16246863068015740077"
+        },
+        {
+          "file": "apps/dosportanywhere/src/shared/constants/colors.ts",
+          "hash": "13937010780628745541"
+        },
+        {
+          "file": "apps/dosportanywhere/src/shared/constants/index.ts",
+          "hash": "4895423685859433861"
+        },
+        {
+          "file": "apps/dosportanywhere/src/shared/constants/slugs.ts",
+          "hash": "11115692568791118144"
+        },
+        {
+          "file": "apps/dosportanywhere/src/shared/hooks/useClickOutside.ts",
+          "hash": "1157991281624713522",
+          "deps": [
+            "npm:react"
+          ]
+        },
+        {
+          "file": "apps/dosportanywhere/src/shared/utils/index.ts",
+          "hash": "281137923799799631",
+          "deps": [
+            "npm:moment"
+          ]
+        },
+        {
+          "file": "apps/dosportanywhere/src/store/index.ts",
+          "hash": "17875580804956490163",
+          "deps": [
+            "npm:@reduxjs/toolkit",
+            "shared-data-services",
+            "shared-data-store"
+          ]
+        },
+        {
+          "file": "apps/dosportanywhere/src/store/slices/auth.js",
+          "hash": "8267207765133235955",
+          "deps": [
+            "npm:@reduxjs/toolkit"
+          ]
+        },
+        {
+          "file": "apps/dosportanywhere/src/store/slices/filter.ts",
+          "hash": "9428264200251041392",
+          "deps": [
+            "npm:@reduxjs/toolkit",
+            "npm:moment"
+          ]
+        },
+        {
+          "file": "apps/dosportanywhere/src/store/slices/index.ts",
+          "hash": "1435960020832426809"
+        },
+        {
+          "file": "apps/dosportanywhere/src/styles.css",
+          "hash": "5195668842064076916"
+        },
+        {
+          "file": "apps/dosportanywhere/tailwind.config.js",
+          "hash": "10950955995620572924",
+          "deps": [
+            "npm:tailwindcss/plugin"
+          ]
+        },
+        {
+          "file": "apps/dosportanywhere/tsconfig.app.json",
+          "hash": "7232119452847825095"
+        },
+        {
+          "file": "apps/dosportanywhere/tsconfig.json",
+          "hash": "12971041898951954831"
+        },
+        {
+          "file": "apps/dosportanywhere/tsconfig.spec.json",
+          "hash": "3002542424277687948"
+        },
+        {
+          "file": "apps/dosportanywhere/vite-env.d.ts",
+          "hash": "12946363841406869089"
+        },
+        {
+          "file": "apps/dosportanywhere/vite.config.ts",
+          "hash": "5844696335304581545",
+          "deps": [
+            "npm:vite",
+            "npm:@vitejs/plugin-react",
+            "npm:vite-tsconfig-paths",
+            "npm:vite-plugin-svgr",
+            "npm:@nx/vite"
+          ]
+        },
+        {
+          "file": "apps/dosportanywhere/yaml/client-depl.yaml",
+          "hash": "5540922929040737646"
+        }
+      ],
+      "test": [
+        {
+          "file": "apps/test/.eslintrc.json",
+          "hash": "13948411440134303961"
+        },
+        {
+          "file": "apps/test/index.html",
+          "hash": "17917722969464812187"
+        },
+        {
+          "file": "apps/test/project.json",
+          "hash": "16010256767243837321"
+        },
+        {
+          "file": "apps/test/public/favicon.ico",
+          "hash": "9303420814833116677"
+        },
+        {
+          "file": "apps/test/src/app/app.module.css",
+          "hash": "8887387885984320532"
+        },
+        {
+          "file": "apps/test/src/app/app.spec.tsx",
+          "hash": "7092791250241971682",
+          "deps": [
+            "npm:@testing-library/react"
+          ]
+        },
+        {
+          "file": "apps/test/src/app/app.tsx",
+          "hash": "5587657950755410558"
+        },
+        {
+          "file": "apps/test/src/app/nx-welcome.tsx",
+          "hash": "4389251527819925043"
+        },
+        {
+          "file": "apps/test/src/assets/.gitkeep",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "apps/test/src/main.tsx",
+          "hash": "1827405544493565599",
+          "deps": [
+            "npm:react",
+            "npm:react-dom"
+          ]
+        },
+        {
+          "file": "apps/test/src/styles.css",
+          "hash": "5195668842064076916"
+        },
+        {
+          "file": "apps/test/tsconfig.app.json",
+          "hash": "7232119452847825095"
+        },
+        {
+          "file": "apps/test/tsconfig.json",
+          "hash": "11166545116916107487"
+        },
+        {
+          "file": "apps/test/tsconfig.spec.json",
+          "hash": "17874504027954657085"
+        },
+        {
+          "file": "apps/test/vite.config.ts",
+          "hash": "1962388885336080260",
+          "deps": [
+            "npm:vite",
+            "npm:@vitejs/plugin-react",
+            "npm:@nx/vite"
+          ]
+        }
+      ],
+      "shared-data": [
+        {
+          "file": "libs/shared/data/.babelrc",
+          "hash": "2946678488919325452"
+        },
+        {
+          "file": "libs/shared/data/.eslintrc.json",
+          "hash": "6756409493353113423"
+        },
+        {
+          "file": "libs/shared/data/README.md",
+          "hash": "7826564834098531271"
+        },
+        {
+          "file": "libs/shared/data/project.json",
+          "hash": "11760914798195666692"
+        },
+        {
+          "file": "libs/shared/data/src/index.ts",
+          "hash": "3068653069792293996"
+        },
+        {
+          "file": "libs/shared/data/src/lib/shared-data.module.css",
+          "hash": "125145030238681982"
+        },
+        {
+          "file": "libs/shared/data/src/lib/shared-data.tsx",
+          "hash": "9522294834712909614"
+        },
+        {
+          "file": "libs/shared/data/tsconfig.json",
+          "hash": "9466653708934095578"
+        },
+        {
+          "file": "libs/shared/data/tsconfig.lib.json",
+          "hash": "12782505187182166395"
+        }
+      ],
+      "shared-models": [
+        {
+          "file": "libs/shared/models/.babelrc",
+          "hash": "2946678488919325452"
+        },
+        {
+          "file": "libs/shared/models/.eslintrc.json",
+          "hash": "6756409493353113423"
+        },
+        {
+          "file": "libs/shared/models/README.md",
+          "hash": "18175043920999896166"
+        },
+        {
+          "file": "libs/shared/models/project.json",
+          "hash": "18004130404383658618"
+        },
+        {
+          "file": "libs/shared/models/src/index.ts",
+          "hash": "12954640855103947404"
+        },
+        {
+          "file": "libs/shared/models/src/models/index.ts",
+          "hash": "14630908799335692898"
+        },
+        {
+          "file": "libs/shared/models/tsconfig.json",
+          "hash": "9466653708934095578"
+        },
+        {
+          "file": "libs/shared/models/tsconfig.lib.json",
+          "hash": "14726341148183481257"
+        }
+      ],
+      "shared-utils": [
+        {
+          "file": "libs/shared/utils/.babelrc",
+          "hash": "2946678488919325452"
+        },
+        {
+          "file": "libs/shared/utils/.eslintrc.json",
+          "hash": "6756409493353113423"
+        },
+        {
+          "file": "libs/shared/utils/README.md",
+          "hash": "7693910817612845176"
+        },
+        {
+          "file": "libs/shared/utils/project.json",
+          "hash": "14131596521761290886"
+        },
+        {
+          "file": "libs/shared/utils/src/hooks/index.ts",
+          "hash": "1325535887428868993"
+        },
+        {
+          "file": "libs/shared/utils/src/hooks/useClickOutside.ts",
+          "hash": "1157991281624713522",
+          "deps": [
+            "npm:react"
+          ]
+        },
+        {
+          "file": "libs/shared/utils/src/index.ts",
+          "hash": "16779626196484232740",
+          "deps": [
+            "npm:moment"
+          ]
+        },
+        {
+          "file": "libs/shared/utils/tsconfig.json",
+          "hash": "9466653708934095578"
+        },
+        {
+          "file": "libs/shared/utils/tsconfig.lib.json",
+          "hash": "12782505187182166395"
+        }
+      ],
+      "shared-data-store": [
+        {
+          "file": "libs/shared/data/store/.babelrc",
+          "hash": "2946678488919325452"
+        },
+        {
+          "file": "libs/shared/data/store/.eslintrc.json",
+          "hash": "1971349432268748966"
+        },
+        {
+          "file": "libs/shared/data/store/README.md",
+          "hash": "10990479049613461456"
+        },
+        {
+          "file": "libs/shared/data/store/project.json",
+          "hash": "1090982659178069723"
+        },
+        {
+          "file": "libs/shared/data/store/src/index.ts",
+          "hash": "4688297270410943277"
+        },
+        {
+          "file": "libs/shared/data/store/src/slices/auth.js",
+          "hash": "8267207765133235955",
+          "deps": [
+            "npm:@reduxjs/toolkit"
+          ]
+        },
+        {
+          "file": "libs/shared/data/store/src/slices/filter.ts",
+          "hash": "9428264200251041392",
+          "deps": [
+            "npm:@reduxjs/toolkit",
+            "npm:moment"
+          ]
+        },
+        {
+          "file": "libs/shared/data/store/src/slices/index.ts",
+          "hash": "1435960020832426809"
+        },
+        {
+          "file": "libs/shared/data/store/tsconfig.json",
+          "hash": "13090035453275662468"
+        },
+        {
+          "file": "libs/shared/data/store/tsconfig.lib.json",
+          "hash": "3190359746942612580"
+        }
+      ],
+      "shared-constants": [
+        {
+          "file": "libs/shared/constants/.babelrc",
+          "hash": "2946678488919325452"
+        },
+        {
+          "file": "libs/shared/constants/.eslintrc.json",
+          "hash": "6756409493353113423"
+        },
+        {
+          "file": "libs/shared/constants/README.md",
+          "hash": "2383847177722204033"
+        },
+        {
+          "file": "libs/shared/constants/project.json",
+          "hash": "16888929611476942821"
+        },
+        {
+          "file": "libs/shared/constants/src/colors.ts",
+          "hash": "13937010780628745541"
+        },
+        {
+          "file": "libs/shared/constants/src/index.ts",
+          "hash": "4895423685859433861"
+        },
+        {
+          "file": "libs/shared/constants/src/slugs.ts",
+          "hash": "11115692568791118144"
+        },
+        {
+          "file": "libs/shared/constants/src/test.tsx",
+          "hash": "6139697017284472007",
+          "deps": [
+            "npm:react",
+            "ui"
+          ]
+        },
+        {
+          "file": "libs/shared/constants/tsconfig.json",
+          "hash": "9466653708934095578"
+        },
+        {
+          "file": "libs/shared/constants/tsconfig.lib.json",
+          "hash": "12782505187182166395"
+        }
+      ]
+    }
   }
 }

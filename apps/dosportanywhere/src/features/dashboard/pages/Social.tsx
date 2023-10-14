@@ -1,13 +1,17 @@
 import CircularProgress from '@mui/material/CircularProgress';
 
-import { useGetFriendshipsQuery } from 'services/userApi';
+import { useGetFriendshipsQuery } from '@sportfriends-fe/shared/data/services';
 
 import FriendsGroup from '../components/social/FriendsGroup';
-import { FriendStatus } from 'models';
+import { FriendStatus } from '@sportfriends-fe/shared/models';
 
 export default function Friends() {
   const { data, isLoading, isSuccess, error } = useGetFriendshipsQuery('');
-  const { waitingResponseFriendships, requestedFriendships, confirmedFriendships } = data || {};
+  const {
+    waitingResponseFriendships,
+    requestedFriendships,
+    confirmedFriendships,
+  } = data || {};
 
   if (isLoading) {
     <CircularProgress />;
@@ -18,12 +22,23 @@ export default function Friends() {
   return (
     <div className="w-full max-w-4xl mx-auto px-4 mt-12 min-h-screen">
       {waitingResponseFriendships?.length ? (
-        <FriendsGroup friendships={waitingResponseFriendships} groupType={FriendStatus.WaitingResponse} />
+        <FriendsGroup
+          friendships={waitingResponseFriendships}
+          groupType={FriendStatus.WaitingResponse}
+        />
       ) : null}
       {requestedFriendships?.length ? (
-        <FriendsGroup friendships={requestedFriendships} groupType={FriendStatus.Requested} />
+        <FriendsGroup
+          friendships={requestedFriendships}
+          groupType={FriendStatus.Requested}
+        />
       ) : null}
-      {<FriendsGroup friendships={confirmedFriendships} groupType={FriendStatus.Confirmend} />}
+      {
+        <FriendsGroup
+          friendships={confirmedFriendships}
+          groupType={FriendStatus.Confirmend}
+        />
+      }
     </div>
   );
 }

@@ -1,9 +1,16 @@
 import { configureStore } from '@reduxjs/toolkit';
 import { setupListeners } from '@reduxjs/toolkit/query';
 
-import { authApi, userApi, datingApi, eventApi, chatApi, postApi } from 'services/index';
+import {
+  authApi,
+  userApi,
+  datingApi,
+  eventApi,
+  chatApi,
+  postApi,
+} from '@sportfriends-fe/shared/data/services';
 
-import { authReducer, filterReducer } from './slices';
+import { authReducer, filterReducer } from '@sportfriends-fe/shared/data/store';
 
 export const store = configureStore({
   reducer: {

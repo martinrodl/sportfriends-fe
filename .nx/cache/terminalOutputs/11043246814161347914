@@ -1,0 +1,50 @@
+
+> fe@0.1.0 start
+> vite
+
+
+  [32m[1mVITE[22m v4.4.11[39m  [2mready in [0m[1m2286[22m[2m[0m ms[22m
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m3000[22m/[39m
+  [32m➜[39m  [1mNetwork[22m: [36mhttp://192.168.1.36:[1m3000[22m/[39m
+[2m[32m  ➜[39m[22m[2m  press [22m[1mh[22m[2m to show help[22m
+Browserslist: caniuse-lite is outdated. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+[2m12:02:03 PM[22m [36m[1m[vite][22m[39m [32mpage reload [39m[2msrc/shared/components/forms/SelectSearchInput.jsx[22m
+[2m12:02:03 PM[22m [36m[1m[vite][22m[39m [32mpage reload [39m[2msrc/shared/components/forms/SelectInput.tsx[22m
+[2m12:02:03 PM[22m [36m[1m[vite][22m[39m [32mpage reload [39m[2msrc/shared/components/forms/MapInput.jsx[22m
+[2m12:02:03 PM[22m [36m[1m[vite][22m[39m [32mpage reload [39m[2msrc/shared/components/forms/SubmitButton.jsx[22m
+[2m12:02:03 PM[22m [36m[1m[vite][22m[39m [32mpage reload [39m[2msrc/shared/components/forms/RangeInput.jsx[22m
+[2m12:02:03 PM[22m [36m[1m[vite][22m[39m [32mpage reload [39m[2msrc/shared/components/forms/DatePickerInput.jsx[22m
+[2m12:02:03 PM[22m [36m[1m[vite][22m[39m [32mpage reload [39m[2msrc/shared/components/forms/TextAreaInput.jsx[22m
+[2m12:02:03 PM[22m [36m[1m[vite][22m[39m [32mpage reload [39m[2msrc/shared/components/Modal2.tsx[22m
+[2m12:02:03 PM[22m [36m[1m[vite][22m[39m [32mpage reload [39m[2msrc/shared/components/forms/CheckboxInput.jsx[22m
+[2m12:02:03 PM[22m [36m[1m[vite][22m[39m [32mpage reload [39m[2msrc/shared/components/forms/TextInput.jsx[22m
+[2m12:02:03 PM[22m [36m[1m[vite][22m[39m [32mpage reload [39m[2msrc/shared/components/Map.jsx[22m
+[2m12:02:03 PM[22m [36m[1m[vite][22m[39m [32mpage reload [39m[2msrc/shared/constants/colors.ts[22m
+[2m12:02:03 PM[22m [36m[1m[vite][22m[39m [32mpage reload [39m[2msrc/shared/components/ErrorMessage.tsx[22m
+[2m12:02:03 PM[22m [36m[1m[vite][22m[39m [32mpage reload [39m[2msrc/shared/components/forms/TimePickerInput.jsx[22m
+[2m12:02:03 PM[22m [36m[1m[vite][22m[39m [32mpage reload [39m[2msrc/shared/constants/slugs.ts[22m
+[2m12:02:03 PM[22m [36m[1m[vite][22m[39m [32mpage reload [39m[2msrc/shared/components/index.js[22m
+[2m12:02:03 PM[22m [36m[1m[vite][22m[39m [32mpage reload [39m[2msrc/shared/constants/index.ts[22m
+[2m12:02:03 PM[22m [36m[1m[vite][22m[39m [32mpage reload [39m[2msrc/shared/utils/index.ts[22m
+[2m12:02:03 PM[22m [36m[1m[vite][22m[39m [32mpage reload [39m[2msrc/shared/components/SwitchMenu.tsx[22m
+[2m12:02:03 PM[22m [36m[1m[vite][22m[39m [32mpage reload [39m[2msrc/shared/components/ProtectedRoutes.jsx[22m
+[2m12:02:03 PM[22m [36m[1m[vite][22m[39m [32mpage reload [39m[2msrc/shared/components/Button.tsx[22m
+[2m12:02:03 PM[22m [36m[1m[vite][22m[39m [32mpage reload [39m[2msrc/shared/components/forms/TimeRangeInput.jsx[22m
+[2m12:02:03 PM[22m [36m[1m[vite][22m[39m [32mpage reload [39m[2msrc/shared/components/Modal.jsx[22m
+[2m12:02:03 PM[22m [36m[1m[vite][22m[39m [32mpage reload [39m[2msrc/shared/hooks/useClickOutside.ts[22m
+[2m12:02:03 PM[22m [36m[1m[vite][22m[39m [32mpage reload [39m[2msrc/shared/components/ShadowModal.tsx[22m
+[2m12:02:19 PM[22m [36m[1m[vite][22m[39m server restarted.
+[2m12:04:12 PM[22m [36m[1m[vite][22m[39m [32mpage reload [39m[2msrc/models/index.ts[22m
+[2m12:04:43 PM[22m [36m[1m[vite][22m[39m [32mpage reload [39m[2msrc/store/slices/auth.js[22m
+[2m12:04:43 PM[22m [36m[1m[vite][22m[39m [32mpage reload [39m[2msrc/store/slices/filter.ts[22m
+[2m12:04:43 PM[22m [36m[1m[vite][22m[39m [32mpage reload [39m[2msrc/store/slices/index.ts[22m
+[2m12:10:32 PM[22m [36m[1m[vite][22m[39m [32mpage reload [39m[2msrc/services/postApi.ts[22m
+[2m12:10:32 PM[22m [36m[1m[vite][22m[39m [32mpage reload [39m[2msrc/services/datingApi.ts[22m
+[2m12:10:32 PM[22m [36m[1m[vite][22m[39m [32mpage reload [39m[2msrc/services/chatApi.ts[22m
+[2m12:10:32 PM[22m [36m[1m[vite][22m[39m [32mpage reload [39m[2msrc/services/userApi.ts[22m
+[2m12:10:32 PM[22m [36m[1m[vite][22m[39m [32mpage reload [39m[2msrc/services/authApi.js[22m
+[2m12:10:32 PM[22m [36m[1m[vite][22m[39m [32mpage reload [39m[2msrc/services/eventApi.ts[22m
+[2m12:10:32 PM[22m [36m[1m[vite][22m[39m [32mpage reload [39m[2msrc/services/index.ts[22m

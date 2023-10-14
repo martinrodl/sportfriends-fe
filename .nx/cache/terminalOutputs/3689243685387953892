@@ -1,0 +1,36 @@
+
+> fe@0.1.0 start
+> vite
+
+
+  [32m[1mVITE[22m v4.4.11[39m  [2mready in [0m[1m2673[22m[2m[0m ms[22m
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m3000[22m/[39m
+  [32m➜[39m  [1mNetwork[22m: [36mhttp://192.168.0.101:[1m3000[22m/[39m
+  [32m➜[39m  [1mNetwork[22m: [36mhttp://10.214.0.190:[1m3000[22m/[39m
+[2m[32m  ➜[39m[22m[2m  press [22m[1mh[22m[2m to show help[22m
+Error: [31m  Failed to scan for dependencies from entries:
+  /Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/index.html
+
+  [39m[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mExpected ";" but found "as"[0m
+
+    ../../libs/shared/data/services/src/api/chatApi.js:13:31:
+[37m      13 │       const state = getState() [32mas[37m State;
+         │                                [32m~~[37m
+         ╵                                [32m;[0m
+
+
+    at failureErrorWithLog (/Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/esbuild/lib/main.js:1649:15)
+    at /Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/esbuild/lib/main.js:1058:25
+    at runOnEndCallbacks (/Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/esbuild/lib/main.js:1484:45)
+    at buildResponseToResult (/Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/esbuild/lib/main.js:1056:7)
+    at /Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/esbuild/lib/main.js:1068:9
+    at new Promise (<anonymous>)
+    at requestCallbacks.on-end (/Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/esbuild/lib/main.js:1067:54)
+    at handleRequest (/Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/esbuild/lib/main.js:729:19)
+    at handleIncomingPacket (/Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/esbuild/lib/main.js:755:7)
+    at Socket.readFromStdout (/Users/martin/Desktop/Programy/sportfriends/sportfriends-fe/apps/dosportanywhere/node_modules/esbuild/lib/main.js:679:7)
+[2m11:15:57 AM[22m [36m[1m[vite][22m[39m server restarted.
+Browserslist: caniuse-lite is outdated. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme

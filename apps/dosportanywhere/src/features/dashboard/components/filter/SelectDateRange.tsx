@@ -5,7 +5,13 @@ import { AdapterMoment } from '@mui/x-date-pickers/AdapterMoment';
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 import { DatePicker } from '@mui/x-date-pickers/DatePicker';
 import { RiArrowDownSLine } from 'react-icons/ri';
-import { selectStartTime, selectEndTime, setStartTime, setEndTime, timeFilterType } from 'store/slices';
+import {
+  selectStartTime,
+  selectEndTime,
+  setStartTime,
+  setEndTime,
+  timeFilterType,
+} from '@sportfriends-fe/shared/data/store';
 
 interface SelectDateRangeProps {
   type: timeFilterType;
@@ -24,7 +30,11 @@ const SelectDateRange = ({ type }: SelectDateRangeProps) => {
           <DatePicker
             value={moment(startTime)}
             onChange={(newValue) => {
-              let newDate = moment(moment(newValue).format('YYYY-MM-DD') + ' ' + moment(startTime).format('HH:mm'));
+              let newDate = moment(
+                moment(newValue).format('YYYY-MM-DD') +
+                  ' ' +
+                  moment(startTime).format('HH:mm'),
+              );
               newDate = newDate.isBefore(moment()) ? moment() : newDate;
               dispatch(
                 setStartTime({
@@ -63,8 +73,14 @@ const SelectDateRange = ({ type }: SelectDateRangeProps) => {
           <DatePicker
             value={moment(endTime)}
             onChange={(newValue) => {
-              let newDate = moment(moment(newValue).format('YYYY-MM-DD') + ' ' + moment(startTime).format('HH:mm'));
-              newDate = newDate.isBefore(moment()) ? moment() : newDate.add(1, 'hour');
+              let newDate = moment(
+                moment(newValue).format('YYYY-MM-DD') +
+                  ' ' +
+                  moment(startTime).format('HH:mm'),
+              );
+              newDate = newDate.isBefore(moment())
+                ? moment()
+                : newDate.add(1, 'hour');
               dispatch(
                 setEndTime({
                   type,

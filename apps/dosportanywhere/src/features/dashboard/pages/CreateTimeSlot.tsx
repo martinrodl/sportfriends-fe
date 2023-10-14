@@ -4,7 +4,7 @@ import { Formik, Form } from 'formik';
 import * as Yup from 'yup';
 import moment from 'moment';
 
-import { useCreateSlotMutation } from 'services/eventApi';
+import { useCreateSlotMutation } from '@sportfriends-fe/shared/services';
 import {
   TextInput,
   DatePickerInput,
@@ -15,7 +15,7 @@ import {
   SubmitButton,
   ErrorMessage,
   TimeRangeInput,
-} from 'shared/components';
+} from '@sportfriends-fe/shared/ui';
 
 import { SLUGS } from '../shared/constants';
 

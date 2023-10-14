@@ -1,8 +1,11 @@
 import Avatar from '@mui/material/Avatar';
 import AvatarGroup from '@mui/material/AvatarGroup';
 
-import { useConfirmFriendshipMutation, useRejectFriendshipMutation } from 'services/userApi';
-import { Friendship, FriendStatus } from 'models';
+import {
+  useConfirmFriendshipMutation,
+  useRejectFriendshipMutation,
+} from '@sportfriends-fe/shared/data/services';
+import { Friendship, FriendStatus } from '@sportfriends-fe/shared/models';
 
 interface FriendCardProps {
   friendShip: Friendship;
@@ -12,7 +15,8 @@ interface FriendCardProps {
 export default function FriendsCard({ friendShip, status }: FriendCardProps) {
   const { id, name } = friendShip;
 
-  const [confirmedFriendship, { isSuccess, error }] = useConfirmFriendshipMutation();
+  const [confirmedFriendship, { isSuccess, error }] =
+    useConfirmFriendshipMutation();
   const [rejectFriendship] = useRejectFriendshipMutation();
 
   const confirmCallback = () => {
@@ -44,7 +48,10 @@ export default function FriendsCard({ friendShip, status }: FriendCardProps) {
   };
 
   return (
-    <div className="min-w-[153px] shadow-xl rounded-lg flex flex-col items-center gap-y-2 p-2" key={id}>
+    <div
+      className="min-w-[153px] shadow-xl rounded-lg flex flex-col items-center gap-y-2 p-2"
+      key={id}
+    >
       <div className="w-full flex justify-center">
         <Avatar sx={{ width: 56, height: 56 }} />
       </div>

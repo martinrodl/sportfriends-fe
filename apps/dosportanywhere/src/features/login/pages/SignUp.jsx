@@ -3,15 +3,21 @@ import * as Yup from 'yup';
 import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 
-import { ErrorMessage, SubmitButton, TextInput, MapInput } from 'shared/components';
-import { SLUGS } from 'shared/constants';
-import { setCredentials } from 'store/slices';
-import { useSignupUserMutation } from 'services/authApi';
+import {
+  ErrorMessage,
+  SubmitButton,
+  TextInput,
+  MapInput,
+} from '@sportfriends-fe/shared/ui';
+import { SLUGS } from '@sportfriends-fe/shared/constants';
+import { setCredentials } from '@sportfriends-fe/shared/data/store';
+import { useSignupUserMutation } from '@sportfriends-fe/shared/data/services';
 
 import PageLayout from '../components/PageLayout';
 
 const SignUp = () => {
-  const [signupUser, { data, isSuccess, error, isLoading }] = useSignupUserMutation();
+  const [signupUser, { data, isSuccess, error, isLoading }] =
+    useSignupUserMutation();
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
@@ -47,11 +53,18 @@ const SignUp = () => {
               confirmPassword: '',
             }}
             validationSchema={Yup.object({
-              email: Yup.string().max(50, 'Must be 20 chracters or less').required('Email is required'),
-              name: Yup.string().max(20, 'Must be 10 chracters or less').required('Name is required'),
+              email: Yup.string()
+                .max(50, 'Must be 20 chracters or less')
+                .required('Email is required'),
+              name: Yup.string()
+                .max(20, 'Must be 10 chracters or less')
+                .required('Name is required'),
               address: Yup.object().required('Address is required'),
               password: Yup.string().required('Password is required'),
-              confirmPassword: Yup.string().oneOf([Yup.ref('password'), null], 'Passwords must match'),
+              confirmPassword: Yup.string().oneOf(
+                [Yup.ref('password'), null],
+                'Passwords must match',
+              ),
             })}
             onSubmit={(values) => {
               const credentials = {
@@ -75,12 +88,22 @@ const SignUp = () => {
                 <MapInput label="address" />
               </div>
               <div className="mb-5">
-                <TextInput label="password" placeholder="Password" type="password" />
+                <TextInput
+                  label="password"
+                  placeholder="Password"
+                  type="password"
+                />
               </div>
               <div className="mb-5">
-                <TextInput label="confirmPassword" placeholder="Confirm Password" type="password" />
+                <TextInput
+                  label="confirmPassword"
+                  placeholder="Confirm Password"
+                  type="password"
+                />
               </div>
-              {error?.data?.errors && <ErrorMessage apiErrors={error.data.errors} />}
+              {error?.data?.errors && (
+                <ErrorMessage apiErrors={error.data.errors} />
+              )}
               <SubmitButton text="Next" isLoading={isLoading} />
             </Form>
           </Formik>

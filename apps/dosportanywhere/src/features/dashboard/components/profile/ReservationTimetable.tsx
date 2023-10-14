@@ -3,10 +3,13 @@ import moment, { Moment } from 'moment';
 import { HiOutlineChevronLeft, HiOutlineChevronRight } from 'react-icons/hi';
 import CircularProgress from '@mui/material/CircularProgress';
 
-import Modal from 'shared/components/Modal';
-import { Slot } from 'models';
-import { objectToParametrs, getFullWeekOfMomentDays } from 'shared/utils';
-import { useGetSlotsQuery } from 'services/eventApi';
+import { Modal } from '@sportfriends-fe/shared/ui';
+import { Slot } from '@sportfriends-fe/shared/models';
+import {
+  objectToParametrs,
+  getFullWeekOfMomentDays,
+} from '@sportfriends-fe/shared/utils';
+import { useGetSlotsQuery } from '@sportfriends-fe/shared/services';
 
 interface ReservationDayProps {
   slots: Slot;

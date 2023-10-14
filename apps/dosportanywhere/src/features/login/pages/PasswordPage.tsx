@@ -3,8 +3,8 @@ import { Formik, Form } from 'formik';
 import * as Yup from 'yup';
 import { useNavigate } from 'react-router-dom';
 
-import { SubmitButton, TextInput } from 'shared/components';
-import { SLUGS } from 'shared/constants';
+import { SubmitButton, TextInput } from '@sportfriends-fe/shared/ui';
+import { SLUGS } from '@sportfriends-fe/shared/constants';
 
 import PageLayout from '../components/PageLayout';
 

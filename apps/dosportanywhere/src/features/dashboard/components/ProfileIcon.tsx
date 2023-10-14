@@ -1,6 +1,6 @@
 import { FaUserAlt } from 'react-icons/fa';
 
-import { useGetUserQuery } from 'services/userApi';
+import { useGetUserQuery } from '@sportfriends-fe/shared/data/services';
 
 interface ProfileIconPros {
   size?: number;
@@ -13,7 +13,9 @@ const ProfileIcon = ({ size = 3, sizeDesktop = 5 }: ProfileIconPros) => {
 
   return (
     <div
-      className={`flex md:w-${2 * sizeDesktop} md:h-${2 * sizeDesktop} w-${2 * size} h-${
+      className={`flex md:w-${2 * sizeDesktop} md:h-${2 * sizeDesktop} w-${
+        2 * size
+      } h-${
         2 * size
       }  flex-col justify-center items-center bg-white rounded-full border flex-shrink-0`}
     >

@@ -1,7 +1,11 @@
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
-import { selectLevel, changeLevel, levelFilterType } from 'store/slices';
+import {
+  selectLevel,
+  changeLevel,
+  levelFilterType,
+} from '@sportfriends-fe/shared/data/store';
 
 interface VariantI {
   label: string;
@@ -22,16 +26,26 @@ const SelectLevel = ({ type }: SelectLevelProps) => {
       onClick={() => {
         dispatch(changeLevel({ type, value: variant.value }));
       }}
-      className={`h-11 px-3 ${variant.value === level ? 'bg-primary' : 'bg-slate-100 '} rounded-2xl`}
+      className={`h-11 px-3 ${
+        variant.value === level ? 'bg-primary' : 'bg-slate-100 '
+      } rounded-2xl`}
     >
-      <p className={`body1 ${variant.value === level ? 'text-white' : 'text-black'}`}>{variant.label}</p>
+      <p
+        className={`body1 ${
+          variant.value === level ? 'text-white' : 'text-black'
+        }`}
+      >
+        {variant.label}
+      </p>
     </button>
   );
 
   return (
     <div className="flex flex-col max-w-[340px] rounded-3xl p-5 bg-white border border-primary">
       <h4 className="mb-2">Select Level</h4>
-      <div className="flex gap-x-2 gap-y-2 flex-wrap">{levelVariants.map((variant) => generateButton(variant))}</div>
+      <div className="flex gap-x-2 gap-y-2 flex-wrap">
+        {levelVariants.map((variant) => generateButton(variant))}
+      </div>
     </div>
   );
 };

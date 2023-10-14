@@ -3,15 +3,15 @@ import { useSelector } from 'react-redux';
 import { GoTriangleUp, GoTriangleDown } from 'react-icons/go';
 
 import React from 'react';
-import { useGetEventsQuery } from 'services/eventApi';
+import { useGetEventsQuery } from '@sportfriends-fe/shared/services';
 import {
   selectSpecificFilter,
   filterTypeEnum,
   selectDistance,
-} from 'store/slices';
-import { objectToParametrs } from 'shared/utils';
-import { colors } from 'shared/constants';
-import Modal from 'shared/components/ShadowModal';
+} from '@sportfriends-fe/shared/services';
+import { objectToParametrs } from '@sportfriends-fe/shared/utils';
+import { colors } from '@sportfriends-fe/shared/constants';
+import { ShadowModal } from '@sportfriends-fe/shared/ui';
 
 import Event from '../components/Event';
 import SelectSports from '../components/filter/SelectSports';
@@ -67,9 +67,9 @@ const Events = () => {
         <h3 className="font-semibold mb-2">Filters</h3>
         {getFilters()}
       </div>
-      <Modal isOpened={isFilterOpened} onRequestClose={closeFilterModal}>
+      <ShadowModal isOpened={isFilterOpened} onRequestClose={closeFilterModal}>
         <div className="flex flex-col gap-y-2 p-3 w-full">{getFilters()}</div>
-      </Modal>
+      </ShadowModal>
     </div>
   );
 };

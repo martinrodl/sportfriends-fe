@@ -5,9 +5,9 @@ import {
   useGetSpecificUserQuery,
   useGetUserQuery,
   useCreateFriendshipMutation,
-} from 'services/userApi';
-import { useGetSpecificUserEventsQuery } from 'services/eventApi';
-import { useGetUserPostsQuery } from 'services/postApi';
+} from '@sportfriends-fe/shared/data/services';
+import { useGetSpecificUserEventsQuery } from '@sportfriends-fe/shared/data/services';
+import { useGetUserPostsQuery } from '@sportfriends-fe/shared/data/services';
 
 import Event from '../components/Event';
 import UserPost from '../components/home/UserPost';
@@ -17,7 +17,7 @@ import ReservationTimetable from '../components/profile/ReservationTimetable';
 
 const UserProfile = () => {
   const { data: loggedUser } = useGetUserQuery('');
-  const { id: userId = loggedUser.id } = useParams();
+  const { id: userId = loggedUser!.id } = useParams();
   const {
     data: user,
     isLoading,
@@ -28,17 +28,17 @@ const UserProfile = () => {
     useGetSpecificUserEventsQuery(userId);
   const { data: posts, isSuccess: isPostsSuccess } =
     useGetUserPostsQuery(userId);
-  console.log('userid ', user?.id || loggedUser.id);
+  console.log('userid ', user?.id || loggedUser!.id);
   return (
     <div className="w-full flex-col p-2">
       <div className="flex flex-col gap-2">
         <ProUserInfo
           user={user}
           loggedUser={loggedUser}
-          self={loggedUser.id === userId}
+          self={loggedUser!.id === userId}
         />
 
-        <ReservationTimetable userId={user?.id || loggedUser.id} />
+        <ReservationTimetable userId={user?.id || loggedUser!.id} />
         {/* <UserInfo
           user={user}
           loggedUser={loggedUser}

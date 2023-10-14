@@ -3,7 +3,7 @@ import Dialog from '@mui/material/Dialog';
 import DialogContent from '@mui/material/DialogContent';
 import CloseIcon from '@mui/icons-material/Close';
 
-import { useCreatePostMutation } from 'services/postApi';
+import { useCreatePostMutation } from '@sportfriends-fe/shared/data/services';
 
 interface PostDialogProps {
   open: boolean;

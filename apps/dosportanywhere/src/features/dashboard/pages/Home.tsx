@@ -2,7 +2,7 @@ import UserPost from '../components/home/UserPost';
 import PostCreation from '../components/home/PostCreation';
 import EventPost from '../components/home/EventPost';
 
-import { useGetPostsQuery } from 'services/postApi';
+import { useGetPostsQuery } from '@sportfriends-fe/shared/services';
 
 const Home = () => {
   const { data, isLoading, isSuccess, error } = useGetPostsQuery('');
@@ -15,7 +15,10 @@ const Home = () => {
         </div>
         <div className="flex flex-col flex-auto mx-4">
           <EventPost />
-          {isSuccess && data.map((post, index) => <UserPost key={index + post.id} post={post} />)}
+          {isSuccess &&
+            data.map((post, index) => (
+              <UserPost key={index + post.id} post={post} />
+            ))}
         </div>
       </div>
     </div>

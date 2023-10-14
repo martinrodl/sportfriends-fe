@@ -2,14 +2,14 @@ import { useState } from 'react';
 import { GoTriangleUp, GoTriangleDown } from 'react-icons/go';
 import { useSelector } from 'react-redux';
 
-import { Comment as CommentI } from 'models';
-import { selectAuthId } from 'store/slices';
+import { Comment as CommentI } from '@sportfriends-fe/shared/models';
+import { selectAuthId } from '@sportfriends-fe/shared/data/store';
 import {
   useLikePostMutation,
   useUnlikePostMutation,
   useSendPostCommentMutation,
-} from 'services/postApi';
-import { colors } from 'shared/constants';
+} from '@sportfriends-fe/shared/data/services';
+import { colors } from '@sportfriends-fe/shared/constants';
 
 import like from '../../assets/new/Like.svg';
 import { ReactComponent as LikeButton } from '../../assets/new/LikeButton.svg';

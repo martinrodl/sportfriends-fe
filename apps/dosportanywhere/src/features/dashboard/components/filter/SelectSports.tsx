@@ -3,8 +3,13 @@ import Autocomplete from '@mui/material/Autocomplete';
 import { RxCross2 } from 'react-icons/rx';
 import { useDispatch, useSelector } from 'react-redux';
 
-import { selectSports, allFilterType, addSports, removeSport } from 'store/slices';
-import { SPORTS } from 'shared/constants';
+import {
+  selectSports,
+  allFilterType,
+  addSports,
+  removeSport,
+} from '@sportfriends-fe/shared/data/store';
+import { SPORTS } from '@sportfriends-fe/shared/constants';
 
 interface SelectSportsProps {
   type: allFilterType;
@@ -71,7 +76,9 @@ const SelectSports = ({ type }: SelectSportsProps) => {
           <h4 className="text-white ml-1 mr-2">Add</h4>
         </button>
       </div>
-      <div className="flex flex-wrap gap-2">{filteredSports.map((item) => renderSport(item))}</div>
+      <div className="flex flex-wrap gap-2">
+        {filteredSports.map((item) => renderSport(item))}
+      </div>
     </div>
   );
 };

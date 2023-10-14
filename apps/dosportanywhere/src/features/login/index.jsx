@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import { Link, Routes, Route, useLocation } from 'react-router-dom';
 
-import { SLUGS } from 'shared/constants';
-import { ProtectedRoutes } from 'shared/components';
+import { SLUGS } from '@sportfriends-fe/shared/constants';
+import { ProtectedRoutes } from '@sportfriends-fe/shared/ui';
 
 import PassowordPage from './pages/PasswordPage';
 import Login from './pages/Login';

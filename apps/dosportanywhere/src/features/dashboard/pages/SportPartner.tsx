@@ -2,11 +2,14 @@ import React, { useState } from 'react';
 import { useSelector } from 'react-redux';
 import { GoTriangleUp, GoTriangleDown } from 'react-icons/go';
 
-import { useGetDatingPostsQuery } from 'services/datingApi';
-import { objectToParametrs } from 'shared/utils';
-import { selectSpecificFilter, filterTypeEnum } from 'store/slices';
-import { colors } from 'shared/constants';
-import Modal from 'shared/components/ShadowModal';
+import { useGetDatingPostsQuery } from '@sportfriends-fe/shared/data/services';
+import { objectToParametrs } from '@sportfriends-fe/shared/utils';
+import {
+  selectSpecificFilter,
+  filterTypeEnum,
+} from '@sportfriends-fe/shared/data/store';
+import { colors } from '@sportfriends-fe/shared/constants';
+import { ShadowModal } from '@sportfriends-fe/shared/ui';
 
 import PartnerCard from '../components/events/PartnerCard';
 import SelectGender from '../components/filter/SelectGender';
@@ -66,9 +69,9 @@ export default function SportPartner() {
         <h3 className="font-semibold mb-2">Filters</h3>
         {getFilters()}
       </div>
-      <Modal isOpened={isFilterOpened} onRequestClose={closeFilterModal}>
+      <ShadowModal isOpened={isFilterOpened} onRequestClose={closeFilterModal}>
         <div className="flex flex-col gap-y-2 p-3 w-full">{getFilters()}</div>
-      </Modal>
+      </ShadowModal>
     </div>
   );
 }

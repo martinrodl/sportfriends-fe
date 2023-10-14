@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-import Modal from 'shared/components/ShadowModal';
+import { ShadowModal } from '@sportfriends-fe/shared/ui';
 
 import Navbar from './Navbar';
 import Sidebar from './Sidebar';
@@ -19,9 +19,9 @@ const DashboardLayout = ({ children }: DashboardLayoutProps) => {
   };
   return (
     <div className="w-screen h-1">
-      <Modal isOpened={sidebarOpen} onRequestClose={closeSideBar}>
+      <ShadowModal isOpened={sidebarOpen} onRequestClose={closeSideBar}>
         <Sidebar isClosed={sidebarOpen} onClose={closeSideBar} />
-      </Modal>
+      </ShadowModal>
       <div className="flex flex-row flex-1 bg-[#FDFDFD]">
         <div className="hidden md:block mt-5 ml-5">
           <Sidebar isClosed={sidebarOpen} onClose={closeSideBar} />

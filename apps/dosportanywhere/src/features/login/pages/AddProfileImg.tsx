@@ -1,16 +1,17 @@
 import { useState, useRef } from 'react';
 import { Navigate, Link } from 'react-router-dom';
 
-import { Button, ErrorMessage } from 'shared/components';
-import { SLUGS } from 'shared/constants';
-import { useUploadProfileImageMutation } from 'services/userApi';
+import { Button, ErrorMessage } from '@sportfriends-fe/shared/ui';
+import { SLUGS } from '@sportfriends-fe/shared/constants';
+import { useUploadProfileImageMutation } from '@sportfriends-fe/shared/data/services';
 
 import userdp from '../assets/images/user.png';
 import upload from '../assets/images/upload.png';
 import PageLayout from '../components/PageLayout';
 
 const AddProfileImg = () => {
-  const [updateProfile, { isSuccess, error, isError }] = useUploadProfileImageMutation();
+  const [updateProfile, { isSuccess, error, isError }] =
+    useUploadProfileImageMutation();
 
   const [img, setImg] = useState(userdp);
   const imageUploader = useRef(null);
@@ -53,13 +54,22 @@ const AddProfileImg = () => {
           <form>
             <div className="flex md:flex-row flex-col gap-[26px] md:gap-[40px] items-center">
               <div>
-                <img className="rounded-full" src={img} width={150} height={150} alt="user" />
+                <img
+                  className="rounded-full"
+                  src={img}
+                  width={150}
+                  height={150}
+                  alt="user"
+                />
               </div>{' '}
               <p className="text-[#9A9A9A] text-center md:hidden block md:text-xl mb-[42px]">
                 Add your photo otherwise only avatar will be shown
               </p>
               <div className="flex gap-[13px] items-center">
-                <div className="cursor-pointer" onClick={() => imageUploader.current.click()}>
+                <div
+                  className="cursor-pointer"
+                  onClick={() => imageUploader.current.click()}
+                >
                   <img src={upload} alt="upload" />
                 </div>
                 <input
@@ -70,14 +80,24 @@ const AddProfileImg = () => {
                   className="hidden"
                 />
 
-                <p className="text-lg font-semibold text-[#505050]">Upload profile picture</p>
+                <p className="text-lg font-semibold text-[#505050]">
+                  Upload profile picture
+                </p>
               </div>
             </div>
-            {error?.data?.errors && <ErrorMessage apiErrors={error.data.errors} />}
-            <Button onClick={onSubmit} className="mt-[36px] md:mt-[110px] text-white w-full min-h-[60px]" type="submit">
+            {error?.data?.errors && (
+              <ErrorMessage apiErrors={error.data.errors} />
+            )}
+            <Button
+              onClick={onSubmit}
+              className="mt-[36px] md:mt-[110px] text-white w-full min-h-[60px]"
+              type="submit"
+            >
               Next
             </Button>
-            <div>{isError && <ErrorMessage message={'Skip it and try it later'} />}</div>
+            <div>
+              {isError && <ErrorMessage message={'Skip it and try it later'} />}
+            </div>
           </form>
         </div>
 
