@@ -1,0 +1,78 @@
+{
+  "name": "sportfriends_backup",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/sportfriends_backup/src",
+  "projectType": "application",
+  "targets": {
+    "build": {
+      "executor": "@nx/vite:build",
+      "outputs": ["{options.outputPath}"],
+      "defaultConfiguration": "production",
+      "options": {
+        "outputPath": "dist/apps/sportfriends_backup"
+      },
+      "configurations": {
+        "development": {
+          "mode": "development"
+        },
+        "production": {
+          "mode": "production"
+        }
+      }
+    },
+    "serve": {
+      "executor": "@nx/vite:dev-server",
+      "defaultConfiguration": "development",
+      "options": {
+        "buildTarget": "sportfriends_backup:build"
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "sportfriends_backup:build:development",
+          "hmr": true
+        },
+        "production": {
+          "buildTarget": "sportfriends_backup:build:production",
+          "hmr": false
+        }
+      }
+    },
+    "preview": {
+      "executor": "@nx/vite:preview-server",
+      "defaultConfiguration": "development",
+      "options": {
+        "buildTarget": "sportfriends_backup:build"
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "sportfriends_backup:build:development"
+        },
+        "production": {
+          "buildTarget": "sportfriends_backup:build:production"
+        }
+      }
+    },
+    "test": {
+      "executor": "@nx/vite:test",
+      "outputs": ["{options.reportsDirectory}"],
+      "options": {
+        "passWithNoTests": true,
+        "reportsDirectory": "../../coverage/apps/sportfriends_backup"
+      }
+    },
+    "lint": {
+      "executor": "@nx/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/sportfriends_backup/**/*.{ts,tsx,js,jsx}"]
+      }
+    },
+    "serve-static": {
+      "executor": "@nx/web:file-server",
+      "options": {
+        "buildTarget": "sportfriends_backup:build"
+      }
+    }
+  },
+  "tags": []
+}

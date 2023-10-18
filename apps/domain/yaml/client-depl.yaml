@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: fedomain-depl
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: fedomain
+  template:
+    metadata:
+      labels:
+        app: fedomain
+    spec:
+      containers:
+        - name: fedomain
+          image: mrodl/sportfriends-fedomain
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: fedomain-srv
+spec:
+  type: NodePort
+  selector:
+    app: fedomain
+  ports:
+    - name: fedomain
+      protocol: TCP
+      port: 3000
+      targetPort: 3000
+      nodePort: 30088

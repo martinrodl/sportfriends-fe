@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  margin: 0;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.p2 {
+  font-size: 13px;
+}
+
+.body1 {
+  font-size: 14px;
+}
+.body2 {
+  font-size: 13px;
+}
+.body3 {
+  font-size: 12px;
+}
+.body4 {
+  font-size: 12px;
+}
+.body5 {
+  font-size: 10px;
+}
+
+@media only screen and (min-width: 768px) {
+  .body1 {
+    font-size: 16px;
+  }
+
+  .body2 {
+    font-size: 15px;
+  }
+  .body3 {
+    font-size: 13px;
+  }
+  .body4 {
+    font-size: 12px;
+  }
+  .body5 {
+    font-size: 10px;
+  }
+}
+
+.leaflet-div-icon {
+  background: none !important;
+  border: none !important;
+}
+
+.cluster-marker {
+  color: #54d2e0;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cluster-marker-text {
+  color: #54d2e0;
+  font-weight: 500;
+}
+
+.leaflet-popup-close-button {
+  display: none;
+}
+
+div .leaflet-popup-content {
+  padding: 0;
+  margin: 0;
+}
+
+.leaflet-popup-content-wrapper {
+  all: initial;
+  position: relative;
+  background-color: transparent !important;
+  top: -11px;
+}
+
+.leaflet-popup-tip {
+  position: relative;
+  right: -3px;
+}
+
+.cluster-marker-table {
+  position: relative;
+  right: 7px;
+}
