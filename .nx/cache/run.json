@@ -1,18 +1,18 @@
 {
   "run": {
-    "command": "nx run dosportanywhere:start",
-    "startTime": "2023-10-14T10:00:42.818Z",
-    "endTime": "2023-10-14T10:16:33.717Z",
+    "command": "nx run sportfriends:preview",
+    "startTime": "2023-10-18T07:42:44.394Z",
+    "endTime": "2023-10-18T07:43:04.451Z",
     "inner": false
   },
   "tasks": [
     {
-      "taskId": "dosportanywhere:start",
-      "target": "start",
-      "projectName": "dosportanywhere",
-      "hash": "11043246814161347914",
-      "startTime": "2023-10-14T10:00:42.824Z",
-      "endTime": "2023-10-14T10:16:33.716Z",
+      "taskId": "sportfriends:preview:development",
+      "target": "preview",
+      "projectName": "sportfriends",
+      "hash": "6840038330444135938",
+      "startTime": "2023-10-18T07:42:44.399Z",
+      "endTime": "2023-10-18T07:43:04.450Z",
       "params": "",
       "cacheStatus": "cache-miss",
       "status": 1

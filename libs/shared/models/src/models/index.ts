@@ -97,8 +97,8 @@ export interface User {
   id: string;
   name: string;
   version: number;
-  birthDay?: Date;
-  gender?: boolean;
+  dateOfBirth?: string;
+  gender?: string;
   address: string;
   friendships: Friendship[];
   location: { coordinates: [number, number] };

@@ -23,7 +23,7 @@ export const datingApi = createApi({
       },
       providesTags: () => ['posts'],
     }),
-    getUserDatingPosts: builder.query<PartnerPost[], string>({
+    getUserDatingPosts: builder.query<{ posts: PartnerPost[] }, void>({
       query: () => ({
         url: 'userposts',
       }),

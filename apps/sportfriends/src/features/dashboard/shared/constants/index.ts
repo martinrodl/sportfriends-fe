@@ -1,0 +1,16 @@
+export const SLUGS = {
+  Home: 'home',
+  MyActions: 'my-actions',
+  Event: 'event',
+  Events: 'events',
+  EventsMap: 'event-map',
+  CreateEvent: 'create-event',
+  SportsPartner: 'sports-partner',
+  CreateSportsPartnerPost: 'create-partner-post',
+  Social: 'social',
+  Settings: 'settings',
+  UserProfile: 'user-profile',
+  Chat: 'chat',
+  Dashboard: 'dashboard',
+  CreateSlot: 'create-slot',
+};

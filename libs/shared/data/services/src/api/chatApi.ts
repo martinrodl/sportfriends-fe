@@ -17,16 +17,16 @@ export const chatApi = createApi({
   }),
 
   endpoints: (builder) => ({
-    getUserChats: builder.query({
+    getUserChats: builder.query<any, void>({
       query: () => {
         return {
           url: `chats`,
         };
       },
-      transformResponse: (response) => {
+      transformResponse: (response: any) => {
         return response.data;
       },
-      providesTags: () => ['userChats'],
+      // providesTags: () => ['userChats'],
     }),
     getChatMessages: builder.query({
       query: (id) => {
@@ -34,7 +34,7 @@ export const chatApi = createApi({
           url: `chat/${id}/messages`,
         };
       },
-      providesTags: () => ['chatMessages'],
+      // providesTags: () => ['chatMessages'],
     }),
   }),
 });

@@ -2,13 +2,18 @@
   "version": "6.0",
   "nxVersion": "16.10.0",
   "deps": {
+    "@date-io/date-fns": "^2.17.0",
     "@emotion/react": "^11.11.1",
     "@emotion/styled": "^11.11.0",
+    "@material-ui/core": "^4.12.4",
+    "@material-ui/pickers": "^3.3.11",
+    "@mui/icons-material": "^5.14.14",
     "@mui/lab": "^5.0.0-alpha.148",
     "@mui/material": "^5.14.13",
     "@mui/x-date-pickers": "^6.16.2",
     "@reduxjs/toolkit": "^1.9.7",
     "@swc/helpers": "~0.5.2",
+    "bson-objectid": "^2.0.4",
     "date-fns": "^2.30.0",
     "formik": "^2.4.5",
     "leaflet": "^1.9.4",
@@ -18,9 +23,14 @@
     "react-icons": "^4.11.0",
     "react-leaflet": "^4.2.1",
     "react-redux": "^8.1.3",
+    "react-router-dom": "^6.17.0",
     "redux": "^4.2.1",
+    "socket.io-client": "^4.7.2",
+    "supercluster": "^8.0.1",
     "tslib": "^2.3.0",
     "use-debounce": "^9.0.4",
+    "use-supercluster": "^1.1.0",
+    "yup": "^1.3.2",
     "@babel/core": "^7.14.5",
     "@babel/preset-react": "^7.14.5",
     "@nx/cypress": "16.10.0",
@@ -39,6 +49,7 @@
     "@vitejs/plugin-react": "~4.0.0",
     "@vitest/coverage-c8": "~0.32.0",
     "@vitest/ui": "~0.32.0",
+    "autoprefixer": "10.4.13",
     "cypress": "^13.0.0",
     "eslint-plugin-cypress": "^2.13.4",
     "eslint-plugin-import": "2.27.5",
@@ -47,7 +58,9 @@
     "eslint-plugin-react-hooks": "4.6.0",
     "jsdom": "~22.1.0",
     "nx": "16.10.0",
+    "postcss": "8.4.21",
     "prettier": "^2.6.2",
+    "tailwindcss": "^3.2.7",
     "typescript": "~5.1.3",
     "vite": "~4.3.9",
     "vitest": "~0.32.0"
@@ -131,19 +144,19 @@
       },
       {
         "file": ".nx/cache/d/daemon.log",
-        "hash": "17426342718597640157"
+        "hash": "2576213081318259082"
       },
       {
         "file": ".nx/cache/d/server-process.json",
-        "hash": "344835078604144045"
+        "hash": "14637204432164245099"
       },
       {
         "file": ".nx/cache/file-map.json",
-        "hash": "7812126678274121068"
+        "hash": "3732297687433317219"
       },
       {
         "file": ".nx/cache/lockfile.hash",
-        "hash": "3682792705967876857"
+        "hash": "14061767844251630669"
       },
       {
         "file": ".nx/cache/nx-console-project-graph/project-graph.html",
@@ -155,7 +168,7 @@
       },
       {
         "file": ".nx/cache/nx-console-project-graph/static/environment.js",
-        "hash": "3740760591305217632"
+        "hash": "9643125574274467540"
       },
       {
         "file": ".nx/cache/nx-console-project-graph/static/favicon.ico",
@@ -183,55 +196,139 @@
       },
       {
         "file": ".nx/cache/parsed-lock-file.json",
-        "hash": "2917762292949568908"
+        "hash": "5440784006970865614"
       },
       {
         "file": ".nx/cache/project-graph.json",
-        "hash": "11490136060786275904"
+        "hash": "11725134954335758714"
       },
       {
         "file": ".nx/cache/run.json",
-        "hash": "5638716515594940467"
+        "hash": "2554132563798211759"
       },
       {
         "file": ".nx/cache/terminalOutputs/10052090155007705627",
         "hash": "13509074206857439899"
       },
       {
+        "file": ".nx/cache/terminalOutputs/10088831222319905987",
+        "hash": "16160353351996130137"
+      },
+      {
         "file": ".nx/cache/terminalOutputs/10150669408601379841",
         "hash": "855661044229374171"
+      },
+      {
+        "file": ".nx/cache/terminalOutputs/10306750722483646607",
+        "hash": "11452865251509453534"
       },
       {
         "file": ".nx/cache/terminalOutputs/10430114265966596330",
         "hash": "15586592800308561686"
       },
       {
+        "file": ".nx/cache/terminalOutputs/10434672883259424818",
+        "hash": "1206074211334672074"
+      },
+      {
+        "file": ".nx/cache/terminalOutputs/10733544447145796631",
+        "hash": "16503268574974895051"
+      },
+      {
+        "file": ".nx/cache/terminalOutputs/11043246814161347914",
+        "hash": "2210746489390677709"
+      },
+      {
+        "file": ".nx/cache/terminalOutputs/114000650814170809",
+        "hash": "10437199503549595798"
+      },
+      {
+        "file": ".nx/cache/terminalOutputs/11422854465987156194",
+        "hash": "17909762977953614535"
+      },
+      {
         "file": ".nx/cache/terminalOutputs/11676482989367477976",
         "hash": "11905912996699117373"
+      },
+      {
+        "file": ".nx/cache/terminalOutputs/11993158914084803068",
+        "hash": "14191239444508639621"
       },
       {
         "file": ".nx/cache/terminalOutputs/12136012003406285951",
         "hash": "951075285566350204"
       },
       {
+        "file": ".nx/cache/terminalOutputs/12621903050322996896",
+        "hash": "9080062439368361562"
+      },
+      {
+        "file": ".nx/cache/terminalOutputs/13110628715438077751",
+        "hash": "13979756404026946695"
+      },
+      {
         "file": ".nx/cache/terminalOutputs/13357750936669123091",
         "hash": "3787492788130721062"
+      },
+      {
+        "file": ".nx/cache/terminalOutputs/13769818473534006078",
+        "hash": "5648725804573231237"
+      },
+      {
+        "file": ".nx/cache/terminalOutputs/13829431097547600514",
+        "hash": "11610618592610216590"
+      },
+      {
+        "file": ".nx/cache/terminalOutputs/13861007039045872498",
+        "hash": "15015642629819520349"
       },
       {
         "file": ".nx/cache/terminalOutputs/13865296645567744620",
         "hash": "18373413597394234570"
       },
       {
+        "file": ".nx/cache/terminalOutputs/1395002558495219352",
+        "hash": "9592547112151956973"
+      },
+      {
+        "file": ".nx/cache/terminalOutputs/14141653802795102372",
+        "hash": "11610618592610216590"
+      },
+      {
         "file": ".nx/cache/terminalOutputs/14350487444136875791",
         "hash": "1610432304969972446"
+      },
+      {
+        "file": ".nx/cache/terminalOutputs/14540168034302006443",
+        "hash": "12661958011286805691"
+      },
+      {
+        "file": ".nx/cache/terminalOutputs/15585791714678134994",
+        "hash": "11610618592610216590"
       },
       {
         "file": ".nx/cache/terminalOutputs/15723252097764323665",
         "hash": "2587659214510130627"
       },
       {
+        "file": ".nx/cache/terminalOutputs/15833981476286146590",
+        "hash": "14125690026390550299"
+      },
+      {
+        "file": ".nx/cache/terminalOutputs/15867396442897815862",
+        "hash": "5440926461358644872"
+      },
+      {
+        "file": ".nx/cache/terminalOutputs/1591785366422953258",
+        "hash": "4100838455075038722"
+      },
+      {
         "file": ".nx/cache/terminalOutputs/16021820460631433877",
         "hash": "12483317368965621348"
+      },
+      {
+        "file": ".nx/cache/terminalOutputs/16489658611911426650",
+        "hash": "18016342169339120529"
       },
       {
         "file": ".nx/cache/terminalOutputs/17050721726870820472",
@@ -242,12 +339,32 @@
         "hash": "15469565048589625915"
       },
       {
+        "file": ".nx/cache/terminalOutputs/17564732183903839146",
+        "hash": "15519165262947154374"
+      },
+      {
+        "file": ".nx/cache/terminalOutputs/17675811508335845792",
+        "hash": "16230007082753621298"
+      },
+      {
         "file": ".nx/cache/terminalOutputs/17808346907779146522",
         "hash": "17570698921016022539"
       },
       {
+        "file": ".nx/cache/terminalOutputs/17932010590084915029",
+        "hash": "18220960292475500042"
+      },
+      {
         "file": ".nx/cache/terminalOutputs/18077850774142931703",
         "hash": "10857363287016327323"
+      },
+      {
+        "file": ".nx/cache/terminalOutputs/18252823656877120110",
+        "hash": "10437199503549595798"
+      },
+      {
+        "file": ".nx/cache/terminalOutputs/1851292497293029092",
+        "hash": "2364543938341954670"
       },
       {
         "file": ".nx/cache/terminalOutputs/2018967339484163064",
@@ -258,12 +375,24 @@
         "hash": "17042975706787659322"
       },
       {
+        "file": ".nx/cache/terminalOutputs/2668523619877950244",
+        "hash": "9230978314990674459"
+      },
+      {
         "file": ".nx/cache/terminalOutputs/2825440199528850511",
         "hash": "5524914517368391732"
       },
       {
         "file": ".nx/cache/terminalOutputs/3210441962611422586",
         "hash": "18163081282208879704"
+      },
+      {
+        "file": ".nx/cache/terminalOutputs/347506166984071865",
+        "hash": "11610618592610216590"
+      },
+      {
+        "file": ".nx/cache/terminalOutputs/36643447934237411",
+        "hash": "5009357101559469861"
       },
       {
         "file": ".nx/cache/terminalOutputs/3689243685387953892",
@@ -274,8 +403,28 @@
         "hash": "5247749908245052391"
       },
       {
+        "file": ".nx/cache/terminalOutputs/3744205456278165458",
+        "hash": "18220960292475500042"
+      },
+      {
         "file": ".nx/cache/terminalOutputs/3965885892687721217",
         "hash": "3495742554238357287"
+      },
+      {
+        "file": ".nx/cache/terminalOutputs/4085904384823690331",
+        "hash": "16503268574974895051"
+      },
+      {
+        "file": ".nx/cache/terminalOutputs/4140531151221064466",
+        "hash": "7893019728397363137"
+      },
+      {
+        "file": ".nx/cache/terminalOutputs/4165573939341939565",
+        "hash": "14319452008166658503"
+      },
+      {
+        "file": ".nx/cache/terminalOutputs/4196677581110091814",
+        "hash": "15519165262947154374"
       },
       {
         "file": ".nx/cache/terminalOutputs/4492560931019567417",
@@ -286,6 +435,14 @@
         "hash": "6342812887719035262"
       },
       {
+        "file": ".nx/cache/terminalOutputs/5432642611250550919",
+        "hash": "16503268574974895051"
+      },
+      {
+        "file": ".nx/cache/terminalOutputs/5560035827505644700",
+        "hash": "5668981279091557588"
+      },
+      {
         "file": ".nx/cache/terminalOutputs/5669656283893792697",
         "hash": "15586592800308561686"
       },
@@ -294,16 +451,52 @@
         "hash": "4037724943231760390"
       },
       {
+        "file": ".nx/cache/terminalOutputs/5849178506862478045",
+        "hash": "11610618592610216590"
+      },
+      {
+        "file": ".nx/cache/terminalOutputs/5933775233360003610",
+        "hash": "3512284214357881694"
+      },
+      {
         "file": ".nx/cache/terminalOutputs/6565060048380833832",
         "hash": "3787492788130721062"
+      },
+      {
+        "file": ".nx/cache/terminalOutputs/6764455463192309510",
+        "hash": "16503268574974895051"
       },
       {
         "file": ".nx/cache/terminalOutputs/6784427597575037606",
         "hash": "13407379032294591918"
       },
       {
+        "file": ".nx/cache/terminalOutputs/7365312178135426628",
+        "hash": "8579431874001310783"
+      },
+      {
+        "file": ".nx/cache/terminalOutputs/7371741999208922412",
+        "hash": "11610618592610216590"
+      },
+      {
         "file": ".nx/cache/terminalOutputs/7372202713049868081",
         "hash": "16127119334248429355"
+      },
+      {
+        "file": ".nx/cache/terminalOutputs/7504585716685920353",
+        "hash": "13230103803519368395"
+      },
+      {
+        "file": ".nx/cache/terminalOutputs/7632541636397545304",
+        "hash": "11610618592610216590"
+      },
+      {
+        "file": ".nx/cache/terminalOutputs/7886377707200584045",
+        "hash": "15267482838048197191"
+      },
+      {
+        "file": ".nx/cache/terminalOutputs/8196141398714505651",
+        "hash": "14319452008166658503"
       },
       {
         "file": ".nx/cache/terminalOutputs/8211033337594103165",
@@ -314,8 +507,16 @@
         "hash": "9953062592693839015"
       },
       {
+        "file": ".nx/cache/terminalOutputs/8303115692877260818",
+        "hash": "4100838455075038722"
+      },
+      {
         "file": ".nx/cache/terminalOutputs/8712584779597659987",
         "hash": "1652572200208258700"
+      },
+      {
+        "file": ".nx/cache/terminalOutputs/9118643385330322072",
+        "hash": "11610618592610216590"
       },
       {
         "file": ".nx/cache/terminalOutputs/9717287085596998395",
@@ -351,327 +552,84 @@
       },
       {
         "file": "package-lock.json",
-        "hash": "6214901850440998478"
+        "hash": "3503967229122203926"
       },
       {
         "file": "package.json",
-        "hash": "7814520640601544464"
+        "hash": "11444280483905390498"
       },
       {
         "file": "tsconfig.base.json",
-        "hash": "13136329562626034439"
+        "hash": "2745474054589590730"
       },
       {
         "file": "tsconfig.json",
         "hash": "578821591718463001"
       },
       {
-        "file": ".nx/cache/terminalOutputs/11043246814161347914",
-        "hash": "2210746489390677709"
+        "file": ".nx/cache/terminalOutputs/17592434596116000695",
+        "hash": "6131553736295588119"
+      },
+      {
+        "file": ".nx/cache/terminalOutputs/348582543792111364",
+        "hash": "4928827420760875554"
+      },
+      {
+        "file": ".nx/cache/terminalOutputs/3387118383539589854",
+        "hash": "12034603853684990993"
+      },
+      {
+        "file": ".nx/cache/terminalOutputs/13929325811806543987",
+        "hash": "8283283218758487362"
+      },
+      {
+        "file": ".nx/cache/terminalOutputs/6840038330444135938",
+        "hash": "5500208578642338817"
       }
     ],
     "projectFileMap": {
-      "shared-data-services": [
+      "shared-utils": [
         {
-          "file": "libs/shared/data/services/.babelrc",
+          "file": "libs/shared/utils/.babelrc",
           "hash": "2946678488919325452"
         },
         {
-          "file": "libs/shared/data/services/.eslintrc.json",
-          "hash": "1971349432268748966"
+          "file": "libs/shared/utils/.eslintrc.json",
+          "hash": "6756409493353113423"
         },
         {
-          "file": "libs/shared/data/services/README.md",
-          "hash": "17352671894075208265"
+          "file": "libs/shared/utils/README.md",
+          "hash": "7693910817612845176"
         },
         {
-          "file": "libs/shared/data/services/project.json",
-          "hash": "1655558161667490855"
+          "file": "libs/shared/utils/project.json",
+          "hash": "14131596521761290886"
         },
         {
-          "file": "libs/shared/data/services/src/api/authApi.ts",
-          "hash": "16792216036365151974",
-          "deps": [
-            "npm:@reduxjs/toolkit",
-            "shared-constants"
-          ]
+          "file": "libs/shared/utils/src/hooks/index.ts",
+          "hash": "1325535887428868993"
         },
         {
-          "file": "libs/shared/data/services/src/api/chatApi.ts",
-          "hash": "16476214878673712125",
-          "deps": [
-            "npm:@reduxjs/toolkit",
-            "shared-models",
-            "shared-constants"
-          ]
-        },
-        {
-          "file": "libs/shared/data/services/src/api/datingApi.ts",
-          "hash": "12892422047075272479",
-          "deps": [
-            "npm:@reduxjs/toolkit",
-            "shared-models",
-            "shared-constants"
-          ]
-        },
-        {
-          "file": "libs/shared/data/services/src/api/eventApi.ts",
-          "hash": "9426624743963562070",
-          "deps": [
-            "npm:@reduxjs/toolkit",
-            "shared-constants",
-            "shared-models"
-          ]
-        },
-        {
-          "file": "libs/shared/data/services/src/api/index.ts",
-          "hash": "8350240016350476410"
-        },
-        {
-          "file": "libs/shared/data/services/src/api/postApi.ts",
-          "hash": "8154900696268129348",
-          "deps": [
-            "npm:@reduxjs/toolkit",
-            "shared-constants",
-            "shared-models"
-          ]
-        },
-        {
-          "file": "libs/shared/data/services/src/api/test.tsx",
-          "hash": "6139697017284472007",
-          "deps": [
-            "npm:react",
-            "ui"
-          ]
-        },
-        {
-          "file": "libs/shared/data/services/src/api/userApi.ts",
-          "hash": "3659111185464451320",
-          "deps": [
-            "npm:@reduxjs/toolkit",
-            "shared-constants",
-            "shared-models"
-          ]
-        },
-        {
-          "file": "libs/shared/data/services/src/index.ts",
-          "hash": "13443657969788988525"
-        },
-        {
-          "file": "libs/shared/data/services/tsconfig.json",
-          "hash": "13090035453275662468"
-        },
-        {
-          "file": "libs/shared/data/services/tsconfig.lib.json",
-          "hash": "3190359746942612580"
-        }
-      ],
-      "ui": [
-        {
-          "file": "libs/shared/ui/.babelrc",
-          "hash": "2946678488919325452"
-        },
-        {
-          "file": "libs/shared/ui/.eslintrc.json",
-          "hash": "15601404045350863983"
-        },
-        {
-          "file": "libs/shared/ui/README.md",
-          "hash": "14385783101149144467"
-        },
-        {
-          "file": "libs/shared/ui/project.json",
-          "hash": "5256831083727992726"
-        },
-        {
-          "file": "libs/shared/ui/src/assets/images/marker-icon.png",
-          "hash": "12839574698303764257"
-        },
-        {
-          "file": "libs/shared/ui/src/assets/images/sportfriendsLogo.svg",
-          "hash": "6819413265187906632"
-        },
-        {
-          "file": "libs/shared/ui/src/components/Button.tsx",
-          "hash": "15463749224571846193",
+          "file": "libs/shared/utils/src/hooks/useClickOutside.ts",
+          "hash": "1157991281624713522",
           "deps": [
             "npm:react"
           ]
         },
         {
-          "file": "libs/shared/ui/src/components/ErrorMessage.tsx",
-          "hash": "15311583814696850326"
-        },
-        {
-          "file": "libs/shared/ui/src/components/Map.jsx",
-          "hash": "2400224378971435629",
+          "file": "libs/shared/utils/src/index.ts",
+          "hash": "16779626196484232740",
           "deps": [
-            "npm:leaflet",
-            "npm:react",
-            "npm:react-leaflet"
-          ]
-        },
-        {
-          "file": "libs/shared/ui/src/components/Modal.jsx",
-          "hash": "1396779157224696905",
-          "deps": [
-            "npm:react",
-            "npm:@mui/icons-material/Close"
-          ]
-        },
-        {
-          "file": "libs/shared/ui/src/components/Modal2.tsx",
-          "hash": "14247468334321994221",
-          "deps": [
-            "npm:react",
-            "npm:use-debounce",
-            "shared-utils"
-          ]
-        },
-        {
-          "file": "libs/shared/ui/src/components/ProtectedRoutes.jsx",
-          "hash": "2579585709832810721",
-          "deps": [
-            "npm:react-router-dom",
-            "npm:react-redux",
-            "shared-constants",
-            "shared-data-store"
-          ]
-        },
-        {
-          "file": "libs/shared/ui/src/components/ShadowModal.tsx",
-          "hash": "13390754894759229440",
-          "deps": [
-            "npm:react",
-            "npm:react-icons",
-            "shared-utils",
-            "shared-constants"
-          ]
-        },
-        {
-          "file": "libs/shared/ui/src/components/SwitchMenu.tsx",
-          "hash": "17763520227123505663"
-        },
-        {
-          "file": "libs/shared/ui/src/components/forms/CheckboxInput.jsx",
-          "hash": "17247320014812800314",
-          "deps": [
-            "npm:react",
-            "npm:formik",
-            "npm:@mui/material/FormGroup",
-            "npm:@mui/material/FormControlLabel",
-            "npm:@mui/material/Checkbox"
-          ]
-        },
-        {
-          "file": "libs/shared/ui/src/components/forms/DatePickerInput.jsx",
-          "hash": "8981100346327155201",
-          "deps": [
-            "npm:react",
-            "npm:formik",
-            "npm:react-icons",
-            "npm:@mui/material/TextField"
-          ]
-        },
-        {
-          "file": "libs/shared/ui/src/components/forms/MapInput.jsx",
-          "hash": "196770674571865179",
-          "deps": [
-            "npm:react",
-            "npm:formik",
-            "npm:react-icons",
-            "npm:@mui/material/TextField"
-          ]
-        },
-        {
-          "file": "libs/shared/ui/src/components/forms/RangeInput.jsx",
-          "hash": "4977694725955558366",
-          "deps": [
-            "npm:react",
-            "npm:formik",
-            "npm:@mui/material/Slider"
-          ]
-        },
-        {
-          "file": "libs/shared/ui/src/components/forms/SelectInput.tsx",
-          "hash": "1007235723065573387",
-          "deps": [
-            "npm:react",
-            "npm:formik",
-            "npm:@mui/material/MenuItem",
-            "npm:@mui/material/Select"
-          ]
-        },
-        {
-          "file": "libs/shared/ui/src/components/forms/SelectSearchInput.jsx",
-          "hash": "7861897399637392831",
-          "deps": [
-            "npm:react",
-            "npm:@mui/material",
-            "npm:formik"
-          ]
-        },
-        {
-          "file": "libs/shared/ui/src/components/forms/SubmitButton.jsx",
-          "hash": "5286072006490140106",
-          "deps": [
-            "npm:react",
-            "npm:@mui/material/CircularProgress"
-          ]
-        },
-        {
-          "file": "libs/shared/ui/src/components/forms/TextAreaInput.jsx",
-          "hash": "7715568858298138107",
-          "deps": [
-            "npm:react",
-            "npm:formik",
-            "npm:@mui/material"
-          ]
-        },
-        {
-          "file": "libs/shared/ui/src/components/forms/TextInput.jsx",
-          "hash": "8335729262158334639",
-          "deps": [
-            "npm:react",
-            "npm:formik",
-            "npm:@mui/material"
-          ]
-        },
-        {
-          "file": "libs/shared/ui/src/components/forms/TimePickerInput.jsx",
-          "hash": "3248207632876592435",
-          "deps": [
-            "npm:react",
-            "npm:@mui/x-date-pickers",
-            "npm:@mui/material",
-            "npm:formik"
-          ]
-        },
-        {
-          "file": "libs/shared/ui/src/components/forms/TimeRangeInput.jsx",
-          "hash": "6924890648239156658",
-          "deps": [
-            "npm:react",
-            "npm:formik",
-            "npm:@mui/material",
             "npm:moment"
           ]
         },
         {
-          "file": "libs/shared/ui/src/components/index.ts",
-          "hash": "16438722403057652499"
+          "file": "libs/shared/utils/tsconfig.json",
+          "hash": "9466653708934095578"
         },
         {
-          "file": "libs/shared/ui/src/index.ts",
-          "hash": "10310030362865231564"
-        },
-        {
-          "file": "libs/shared/ui/tsconfig.json",
-          "hash": "3673471672798372201"
-        },
-        {
-          "file": "libs/shared/ui/tsconfig.lib.json",
-          "hash": "14726341148183481257"
+          "file": "libs/shared/utils/tsconfig.lib.json",
+          "hash": "12782505187182166395"
         }
       ],
       "shared-services": [
@@ -701,7 +659,7 @@
         },
         {
           "file": "libs/shared/services/src/api/chatApi.ts",
-          "hash": "16476214878673712125",
+          "hash": "14164615127579958712",
           "deps": [
             "npm:@reduxjs/toolkit",
             "shared-models",
@@ -710,7 +668,7 @@
         },
         {
           "file": "libs/shared/services/src/api/datingApi.ts",
-          "hash": "12892422047075272479",
+          "hash": "16783970681891057023",
           "deps": [
             "npm:@reduxjs/toolkit",
             "shared-models",
@@ -785,6 +743,1625 @@
         },
         {
           "file": "libs/shared/services/tsconfig.lib.json",
+          "hash": "12782505187182166395"
+        }
+      ],
+      "sportfriends": [
+        {
+          "file": "apps/sportfriends/.dockerignore",
+          "hash": "4406726806561618152"
+        },
+        {
+          "file": "apps/sportfriends/.eslintrc.json",
+          "hash": "13948411440134303961"
+        },
+        {
+          "file": "apps/sportfriends/Dockerfile",
+          "hash": "4747388368160028292"
+        },
+        {
+          "file": "apps/sportfriends/index.html",
+          "hash": "2305555892525302370"
+        },
+        {
+          "file": "apps/sportfriends/postcss.config.js",
+          "hash": "2759402739052110475",
+          "deps": [
+            "npm:path"
+          ]
+        },
+        {
+          "file": "apps/sportfriends/project.json",
+          "hash": "5767129915480960559"
+        },
+        {
+          "file": "apps/sportfriends/public/favicon.ico",
+          "hash": "9303420814833116677"
+        },
+        {
+          "file": "apps/sportfriends/src/custom.d.ts",
+          "hash": "15068994938668733248",
+          "deps": [
+            "npm:@reduxjs/toolkit"
+          ]
+        },
+        {
+          "file": "apps/sportfriends/src/features/dashboard/assets/images/BsChat.svg",
+          "hash": "13585863565265545391"
+        },
+        {
+          "file": "apps/sportfriends/src/features/dashboard/assets/images/avatar.png",
+          "hash": "16174976836153657074"
+        },
+        {
+          "file": "apps/sportfriends/src/features/dashboard/assets/images/bandy.svg",
+          "hash": "15671265971302306986"
+        },
+        {
+          "file": "apps/sportfriends/src/features/dashboard/assets/images/bell.svg",
+          "hash": "17628620583618178551"
+        },
+        {
+          "file": "apps/sportfriends/src/features/dashboard/assets/images/bubble.svg",
+          "hash": "3159610170074652497"
+        },
+        {
+          "file": "apps/sportfriends/src/features/dashboard/assets/images/bx_bx-trash.svg",
+          "hash": "15421543259260283214"
+        },
+        {
+          "file": "apps/sportfriends/src/features/dashboard/assets/images/calendr.svg",
+          "hash": "12285921493734759431"
+        },
+        {
+          "file": "apps/sportfriends/src/features/dashboard/assets/images/calnder.svg",
+          "hash": "10118570314748109877"
+        },
+        {
+          "file": "apps/sportfriends/src/features/dashboard/assets/images/create-outline.svg",
+          "hash": "12585072500440072849"
+        },
+        {
+          "file": "apps/sportfriends/src/features/dashboard/assets/images/cross.svg",
+          "hash": "4481954826648739270"
+        },
+        {
+          "file": "apps/sportfriends/src/features/dashboard/assets/images/dropdown.svg",
+          "hash": "1028256190931889163"
+        },
+        {
+          "file": "apps/sportfriends/src/features/dashboard/assets/images/eva_message-circle-fill.svg",
+          "hash": "10936246488478987161"
+        },
+        {
+          "file": "apps/sportfriends/src/features/dashboard/assets/images/events.svg",
+          "hash": "343021843675458830"
+        },
+        {
+          "file": "apps/sportfriends/src/features/dashboard/assets/images/fe_search.svg",
+          "hash": "12913073330543639844"
+        },
+        {
+          "file": "apps/sportfriends/src/features/dashboard/assets/images/feather_edit-2.svg",
+          "hash": "11740323458630965876"
+        },
+        {
+          "file": "apps/sportfriends/src/features/dashboard/assets/images/filters.svg",
+          "hash": "11637224037490230347"
+        },
+        {
+          "file": "apps/sportfriends/src/features/dashboard/assets/images/fluent_home-16-regular.svg",
+          "hash": "5330747658524006000"
+        },
+        {
+          "file": "apps/sportfriends/src/features/dashboard/assets/images/friends.svg",
+          "hash": "3414202507413495020"
+        },
+        {
+          "file": "apps/sportfriends/src/features/dashboard/assets/images/heart.svg",
+          "hash": "13094444526073943395"
+        },
+        {
+          "file": "apps/sportfriends/src/features/dashboard/assets/images/horidot.svg",
+          "hash": "13852699150238044230"
+        },
+        {
+          "file": "apps/sportfriends/src/features/dashboard/assets/images/ion_notifications-circle.svg",
+          "hash": "1758542332393897693"
+        },
+        {
+          "file": "apps/sportfriends/src/features/dashboard/assets/images/logo.svg",
+          "hash": "17880607162470096598"
+        },
+        {
+          "file": "apps/sportfriends/src/features/dashboard/assets/images/particpents.svg",
+          "hash": "12824485205048851556"
+        },
+        {
+          "file": "apps/sportfriends/src/features/dashboard/assets/images/pin.svg",
+          "hash": "11864806371174209362"
+        },
+        {
+          "file": "apps/sportfriends/src/features/dashboard/assets/images/placeholder.svg",
+          "hash": "17726969933017192112"
+        },
+        {
+          "file": "apps/sportfriends/src/features/dashboard/assets/images/settings.svg",
+          "hash": "15673493093796561277"
+        },
+        {
+          "file": "apps/sportfriends/src/features/dashboard/assets/images/upload.png",
+          "hash": "14206611200923485169"
+        },
+        {
+          "file": "apps/sportfriends/src/features/dashboard/assets/images/user.png",
+          "hash": "14875505719362037675"
+        },
+        {
+          "file": "apps/sportfriends/src/features/dashboard/assets/images/user.svg",
+          "hash": "12269670816964411925"
+        },
+        {
+          "file": "apps/sportfriends/src/features/dashboard/assets/images/users.svg",
+          "hash": "7162752979760480904"
+        },
+        {
+          "file": "apps/sportfriends/src/features/dashboard/assets/new/Add.svg",
+          "hash": "13743764729613286509"
+        },
+        {
+          "file": "apps/sportfriends/src/features/dashboard/assets/new/Calendar.svg",
+          "hash": "17629646484892624217"
+        },
+        {
+          "file": "apps/sportfriends/src/features/dashboard/assets/new/Chat.svg",
+          "hash": "2493988392359797429"
+        },
+        {
+          "file": "apps/sportfriends/src/features/dashboard/assets/new/ChatMessage.svg",
+          "hash": "8419150615869460639"
+        },
+        {
+          "file": "apps/sportfriends/src/features/dashboard/assets/new/CommentButton.svg",
+          "hash": "11714279846273035788"
+        },
+        {
+          "file": "apps/sportfriends/src/features/dashboard/assets/new/CreateEventIcon.svg",
+          "hash": "13610883318685591614"
+        },
+        {
+          "file": "apps/sportfriends/src/features/dashboard/assets/new/CreateOrganizationIcon.svg",
+          "hash": "4302893167490067179"
+        },
+        {
+          "file": "apps/sportfriends/src/features/dashboard/assets/new/CreateSportparnerIcon.svg",
+          "hash": "17907500491568181224"
+        },
+        {
+          "file": "apps/sportfriends/src/features/dashboard/assets/new/CreateTeamIcon.svg",
+          "hash": "11892821449500212823"
+        },
+        {
+          "file": "apps/sportfriends/src/features/dashboard/assets/new/CredentialsMenuIcon.svg",
+          "hash": "262652867280724981"
+        },
+        {
+          "file": "apps/sportfriends/src/features/dashboard/assets/new/Home.svg",
+          "hash": "7306142757385059181"
+        },
+        {
+          "file": "apps/sportfriends/src/features/dashboard/assets/new/Like.svg",
+          "hash": "11379621901342511140"
+        },
+        {
+          "file": "apps/sportfriends/src/features/dashboard/assets/new/LikeButton.svg",
+          "hash": "556362471756851249"
+        },
+        {
+          "file": "apps/sportfriends/src/features/dashboard/assets/new/LogoutMenuIcon.svg",
+          "hash": "8464779809850717752"
+        },
+        {
+          "file": "apps/sportfriends/src/features/dashboard/assets/new/MapPointer.svg",
+          "hash": "10860265715978251973"
+        },
+        {
+          "file": "apps/sportfriends/src/features/dashboard/assets/new/Menu.svg",
+          "hash": "5794619064608361932"
+        },
+        {
+          "file": "apps/sportfriends/src/features/dashboard/assets/new/Message.svg",
+          "hash": "5165443825244064044"
+        },
+        {
+          "file": "apps/sportfriends/src/features/dashboard/assets/new/Notification.svg",
+          "hash": "11913639789919104752"
+        },
+        {
+          "file": "apps/sportfriends/src/features/dashboard/assets/new/Point.svg",
+          "hash": "10838278920498742749"
+        },
+        {
+          "file": "apps/sportfriends/src/features/dashboard/assets/new/ProfileMenuIcon.svg",
+          "hash": "10270111909362468200"
+        },
+        {
+          "file": "apps/sportfriends/src/features/dashboard/assets/new/SetProfileMenuIcon.svg",
+          "hash": "16996891409695034413"
+        },
+        {
+          "file": "apps/sportfriends/src/features/dashboard/assets/new/SettingsMenuIcon.svg",
+          "hash": "14321770318388009247"
+        },
+        {
+          "file": "apps/sportfriends/src/features/dashboard/assets/new/ShareButton.svg",
+          "hash": "17008062805163792543"
+        },
+        {
+          "file": "apps/sportfriends/src/features/dashboard/assets/new/Social.svg",
+          "hash": "2215861823567862043"
+        },
+        {
+          "file": "apps/sportfriends/src/features/dashboard/assets/new/SportPartner.svg",
+          "hash": "15317037310140718989"
+        },
+        {
+          "file": "apps/sportfriends/src/features/dashboard/assets/new/User.svg",
+          "hash": "423404366672196438"
+        },
+        {
+          "file": "apps/sportfriends/src/features/dashboard/assets/new/Watch.svg",
+          "hash": "257756903915165019"
+        },
+        {
+          "file": "apps/sportfriends/src/features/dashboard/components/Calendar.tsx",
+          "hash": "12876273929233287180",
+          "deps": [
+            "npm:react",
+            "npm:moment",
+            "npm:react-icons",
+            "shared-utils"
+          ]
+        },
+        {
+          "file": "apps/sportfriends/src/features/dashboard/components/Event.tsx",
+          "hash": "3476872366147243372",
+          "deps": [
+            "npm:moment",
+            "npm:react-router-dom",
+            "shared-models"
+          ]
+        },
+        {
+          "file": "apps/sportfriends/src/features/dashboard/components/ProfileIcon.tsx",
+          "hash": "3638878459793674703",
+          "deps": [
+            "npm:react-icons",
+            "shared-data-services"
+          ]
+        },
+        {
+          "file": "apps/sportfriends/src/features/dashboard/components/RectangleProfileIcon.tsx",
+          "hash": "14133140166762753221",
+          "deps": [
+            "npm:react-icons",
+            "shared-data-services"
+          ]
+        },
+        {
+          "file": "apps/sportfriends/src/features/dashboard/components/chat/ChatBox.jsx",
+          "hash": "15463778437772727185",
+          "deps": [
+            "npm:react",
+            "npm:react-icons",
+            "npm:bson-objectid"
+          ]
+        },
+        {
+          "file": "apps/sportfriends/src/features/dashboard/components/chat/ChatList.jsx",
+          "hash": "7141494191316995769",
+          "deps": [
+            "npm:react"
+          ]
+        },
+        {
+          "file": "apps/sportfriends/src/features/dashboard/components/chat/Message.jsx",
+          "hash": "14627685554524023023",
+          "deps": [
+            "npm:react"
+          ]
+        },
+        {
+          "file": "apps/sportfriends/src/features/dashboard/components/events/EventFullCard.tsx",
+          "hash": "16856774506412421473",
+          "deps": [
+            "npm:react-router-dom",
+            "npm:moment",
+            "npm:react-redux",
+            "npm:react-icons",
+            "shared-services",
+            "ui",
+            "shared-data-store"
+          ]
+        },
+        {
+          "file": "apps/sportfriends/src/features/dashboard/components/events/EventsMarkers.tsx",
+          "hash": "16644300543558799897",
+          "deps": [
+            "npm:react",
+            "npm:use-supercluster",
+            "npm:react-leaflet",
+            "npm:leaflet",
+            "shared-constants"
+          ]
+        },
+        {
+          "file": "apps/sportfriends/src/features/dashboard/components/events/MarkerPopup.tsx",
+          "hash": "16174274022843904506",
+          "deps": [
+            "npm:moment",
+            "npm:react-router-dom",
+            "shared-models"
+          ]
+        },
+        {
+          "file": "apps/sportfriends/src/features/dashboard/components/events/PartnerCard.tsx",
+          "hash": "10103034154581339199",
+          "deps": [
+            "npm:react-router-dom",
+            "npm:moment",
+            "shared-models"
+          ]
+        },
+        {
+          "file": "apps/sportfriends/src/features/dashboard/components/filter/SelectDateRange.tsx",
+          "hash": "16571933717256122177",
+          "deps": [
+            "npm:react",
+            "npm:@material-ui/pickers",
+            "npm:@date-io/date-fns",
+            "npm:react-icons"
+          ]
+        },
+        {
+          "file": "apps/sportfriends/src/features/dashboard/components/filter/SelectDistance.tsx",
+          "hash": "12961204275236000163",
+          "deps": [
+            "npm:@mui/material",
+            "npm:react-redux",
+            "shared-data-store"
+          ]
+        },
+        {
+          "file": "apps/sportfriends/src/features/dashboard/components/filter/SelectGender.tsx",
+          "hash": "3783787092341923062",
+          "deps": [
+            "npm:react-redux",
+            "shared-data-store"
+          ]
+        },
+        {
+          "file": "apps/sportfriends/src/features/dashboard/components/filter/SelectLevel.tsx",
+          "hash": "5039416442192458734",
+          "deps": [
+            "npm:react",
+            "npm:react-redux",
+            "shared-data-store"
+          ]
+        },
+        {
+          "file": "apps/sportfriends/src/features/dashboard/components/filter/SelectSports.tsx",
+          "hash": "9341046129051101695",
+          "deps": [
+            "npm:react",
+            "npm:@mui/material",
+            "npm:react-icons",
+            "npm:react-redux",
+            "shared-data-store",
+            "shared-constants"
+          ]
+        },
+        {
+          "file": "apps/sportfriends/src/features/dashboard/components/filter/SelectTimeRange.tsx",
+          "hash": "9342577434634998665",
+          "deps": [
+            "npm:moment",
+            "npm:react-redux",
+            "npm:@mui/x-date-pickers",
+            "npm:react-icons",
+            "shared-data-store"
+          ]
+        },
+        {
+          "file": "apps/sportfriends/src/features/dashboard/components/home/BottomPost.tsx",
+          "hash": "17097442398610768276",
+          "deps": [
+            "npm:react",
+            "npm:react-icons",
+            "npm:react-redux",
+            "shared-models",
+            "shared-data-store",
+            "shared-data-services",
+            "shared-constants"
+          ]
+        },
+        {
+          "file": "apps/sportfriends/src/features/dashboard/components/home/Comment.tsx",
+          "hash": "3933780517843151602",
+          "deps": [
+            "npm:moment",
+            "shared-models"
+          ]
+        },
+        {
+          "file": "apps/sportfriends/src/features/dashboard/components/home/EventPost.tsx",
+          "hash": "6269524943572760998"
+        },
+        {
+          "file": "apps/sportfriends/src/features/dashboard/components/home/PostCreation.tsx",
+          "hash": "2288120958691667566",
+          "deps": [
+            "npm:react"
+          ]
+        },
+        {
+          "file": "apps/sportfriends/src/features/dashboard/components/home/PostDialog.tsx",
+          "hash": "13309835133384522910",
+          "deps": [
+            "npm:react",
+            "npm:@mui/material",
+            "npm:@mui/icons-material/Close",
+            "shared-data-services"
+          ]
+        },
+        {
+          "file": "apps/sportfriends/src/features/dashboard/components/home/UserPost.tsx",
+          "hash": "12995967176599485951",
+          "deps": [
+            "npm:react",
+            "npm:moment",
+            "shared-models"
+          ]
+        },
+        {
+          "file": "apps/sportfriends/src/features/dashboard/components/layout/DashboardLayout.tsx",
+          "hash": "14947311581822084153",
+          "deps": [
+            "npm:react",
+            "ui"
+          ]
+        },
+        {
+          "file": "apps/sportfriends/src/features/dashboard/components/layout/Navbar.tsx",
+          "hash": "10978288034065836684",
+          "deps": [
+            "npm:react",
+            "npm:react-router-dom",
+            "npm:react-icons",
+            "shared-data-store",
+            "shared-data-services",
+            "ui",
+            "shared-constants"
+          ]
+        },
+        {
+          "file": "apps/sportfriends/src/features/dashboard/components/layout/Sidebar.tsx",
+          "hash": "13122515337494030642",
+          "deps": [
+            "npm:react-router-dom",
+            "shared-constants",
+            "ui"
+          ]
+        },
+        {
+          "file": "apps/sportfriends/src/features/dashboard/components/myactions/EventCard.tsx",
+          "hash": "11826142498854018052",
+          "deps": [
+            "npm:react-router-dom",
+            "npm:moment",
+            "npm:react-icons"
+          ]
+        },
+        {
+          "file": "apps/sportfriends/src/features/dashboard/components/myactions/PartnerCard.tsx",
+          "hash": "1402078057183084288",
+          "deps": [
+            "npm:@mui/material",
+            "npm:react-icons",
+            "ui",
+            "shared-services"
+          ]
+        },
+        {
+          "file": "apps/sportfriends/src/features/dashboard/components/myactions/SportPartner.tsx",
+          "hash": "9664166521205126869",
+          "deps": [
+            "npm:react-router-dom",
+            "shared-services"
+          ]
+        },
+        {
+          "file": "apps/sportfriends/src/features/dashboard/components/profile/ProUserInfo.tsx",
+          "hash": "1819946724138851738",
+          "deps": [
+            "npm:moment",
+            "npm:react-router-dom",
+            "shared-models",
+            "shared-data-services"
+          ]
+        },
+        {
+          "file": "apps/sportfriends/src/features/dashboard/components/profile/ReservationTimetable.tsx",
+          "hash": "12141389969478597808",
+          "deps": [
+            "npm:react",
+            "npm:moment",
+            "npm:react-icons",
+            "npm:@mui/material",
+            "ui",
+            "shared-models",
+            "shared-utils",
+            "shared-services"
+          ]
+        },
+        {
+          "file": "apps/sportfriends/src/features/dashboard/components/profile/UserInfo.tsx",
+          "hash": "6822253916772010144",
+          "deps": [
+            "npm:moment",
+            "npm:react-router-dom",
+            "shared-models",
+            "shared-data-services"
+          ]
+        },
+        {
+          "file": "apps/sportfriends/src/features/dashboard/components/settings/SetCredentials.tsx",
+          "hash": "12944444802872636954",
+          "deps": [
+            "npm:react",
+            "npm:react-icons",
+            "npm:@mui/material",
+            "npm:formik",
+            "npm:yup",
+            "shared-data-services",
+            "ui"
+          ]
+        },
+        {
+          "file": "apps/sportfriends/src/features/dashboard/components/settings/SetProfile.tsx",
+          "hash": "297017899375063955",
+          "deps": [
+            "npm:formik",
+            "npm:yup",
+            "npm:@mui/material",
+            "ui",
+            "shared-data-services",
+            "shared-constants"
+          ]
+        },
+        {
+          "file": "apps/sportfriends/src/features/dashboard/components/settings/SetProfileImg.tsx",
+          "hash": "10382855053052853050",
+          "deps": [
+            "npm:react",
+            "shared-data-services",
+            "ui"
+          ]
+        },
+        {
+          "file": "apps/sportfriends/src/features/dashboard/components/social/FriendsCard.tsx",
+          "hash": "1435852983300794841",
+          "deps": [
+            "npm:@mui/material",
+            "shared-data-services",
+            "shared-models"
+          ]
+        },
+        {
+          "file": "apps/sportfriends/src/features/dashboard/components/social/FriendsGroup.tsx",
+          "hash": "10605666793638546091",
+          "deps": [
+            "shared-models"
+          ]
+        },
+        {
+          "file": "apps/sportfriends/src/features/dashboard/index.tsx",
+          "hash": "8130681226505840113",
+          "deps": [
+            "npm:react-router-dom"
+          ]
+        },
+        {
+          "file": "apps/sportfriends/src/features/dashboard/pages/Chat.tsx",
+          "hash": "11135889335568342792",
+          "deps": [
+            "npm:react",
+            "npm:react-router-dom",
+            "npm:socket.io-client",
+            "npm:react-redux",
+            "shared-services"
+          ]
+        },
+        {
+          "file": "apps/sportfriends/src/features/dashboard/pages/CreateEventForm.tsx",
+          "hash": "7558948953336968170",
+          "deps": [
+            "npm:react",
+            "npm:react-router-dom",
+            "npm:formik",
+            "npm:yup",
+            "npm:moment",
+            "shared-data-services",
+            "ui"
+          ]
+        },
+        {
+          "file": "apps/sportfriends/src/features/dashboard/pages/CreateSportsPartnerForm.tsx",
+          "hash": "6537222084978945090",
+          "deps": [
+            "npm:react",
+            "npm:react-router-dom",
+            "npm:formik",
+            "npm:yup",
+            "shared-data-services",
+            "ui"
+          ]
+        },
+        {
+          "file": "apps/sportfriends/src/features/dashboard/pages/CreateTimeSlot.tsx",
+          "hash": "13255028406750592870",
+          "deps": [
+            "npm:react",
+            "npm:react-router-dom",
+            "npm:formik",
+            "npm:yup",
+            "npm:moment",
+            "shared-services",
+            "ui"
+          ]
+        },
+        {
+          "file": "apps/sportfriends/src/features/dashboard/pages/EventDetail.tsx",
+          "hash": "6069031897112709538",
+          "deps": [
+            "npm:react",
+            "npm:@mui/material",
+            "npm:moment",
+            "npm:react-router-dom",
+            "npm:react-redux",
+            "shared-data-store",
+            "shared-data-services"
+          ]
+        },
+        {
+          "file": "apps/sportfriends/src/features/dashboard/pages/EventsList.tsx",
+          "hash": "15770445510345500261",
+          "deps": [
+            "npm:react",
+            "npm:react-redux",
+            "npm:react-icons",
+            "shared-services",
+            "shared-utils",
+            "shared-constants",
+            "ui"
+          ]
+        },
+        {
+          "file": "apps/sportfriends/src/features/dashboard/pages/EventsMap.tsx",
+          "hash": "14751306080171584611",
+          "deps": [
+            "npm:react-leaflet",
+            "npm:@mui/material",
+            "shared-data-services",
+            "shared-constants"
+          ]
+        },
+        {
+          "file": "apps/sportfriends/src/features/dashboard/pages/Home.tsx",
+          "hash": "10312261435059234784",
+          "deps": [
+            "shared-services"
+          ]
+        },
+        {
+          "file": "apps/sportfriends/src/features/dashboard/pages/MyActions.tsx",
+          "hash": "7425776389599953898",
+          "deps": [
+            "npm:react",
+            "shared-data-services",
+            "shared-models",
+            "npm:moment"
+          ]
+        },
+        {
+          "file": "apps/sportfriends/src/features/dashboard/pages/Settings.tsx",
+          "hash": "18301141258193494047",
+          "deps": [
+            "npm:react",
+            "ui"
+          ]
+        },
+        {
+          "file": "apps/sportfriends/src/features/dashboard/pages/Social.tsx",
+          "hash": "14308742748567973532",
+          "deps": [
+            "npm:@mui/material",
+            "shared-data-services",
+            "shared-models"
+          ]
+        },
+        {
+          "file": "apps/sportfriends/src/features/dashboard/pages/SportPartner.tsx",
+          "hash": "17548264570091971173",
+          "deps": [
+            "npm:react",
+            "npm:react-redux",
+            "npm:react-icons",
+            "shared-data-services",
+            "shared-utils",
+            "shared-data-store",
+            "shared-constants",
+            "ui"
+          ]
+        },
+        {
+          "file": "apps/sportfriends/src/features/dashboard/pages/UserProfile.tsx",
+          "hash": "8141205579373848673",
+          "deps": [
+            "npm:moment",
+            "npm:react-router-dom",
+            "shared-data-services"
+          ]
+        },
+        {
+          "file": "apps/sportfriends/src/features/dashboard/shared/constants/index.ts",
+          "hash": "1219370315432317901"
+        },
+        {
+          "file": "apps/sportfriends/src/features/dashboard/shared/utils/index.ts",
+          "hash": "5760392466830953352",
+          "deps": [
+            "shared-models"
+          ]
+        },
+        {
+          "file": "apps/sportfriends/src/features/login/assets/images/Ellipse 53.svg",
+          "hash": "2282335285961463365"
+        },
+        {
+          "file": "apps/sportfriends/src/features/login/assets/images/Ellipse 60.png",
+          "hash": "2834947500085412311"
+        },
+        {
+          "file": "apps/sportfriends/src/features/login/assets/images/Frame (1).svg",
+          "hash": "18227477108892700784"
+        },
+        {
+          "file": "apps/sportfriends/src/features/login/assets/images/Frame 2.svg",
+          "hash": "2637639371138297362"
+        },
+        {
+          "file": "apps/sportfriends/src/features/login/assets/images/Frame 3.svg",
+          "hash": "13094444526073943395"
+        },
+        {
+          "file": "apps/sportfriends/src/features/login/assets/images/Frame copy.svg",
+          "hash": "16391116654962590944"
+        },
+        {
+          "file": "apps/sportfriends/src/features/login/assets/images/Frame.png",
+          "hash": "8774589733517234750"
+        },
+        {
+          "file": "apps/sportfriends/src/features/login/assets/images/Frame.svg",
+          "hash": "14529010224196481973"
+        },
+        {
+          "file": "apps/sportfriends/src/features/login/assets/images/Group 162901.svg",
+          "hash": "187324309175870576"
+        },
+        {
+          "file": "apps/sportfriends/src/features/login/assets/images/Group 162902.svg",
+          "hash": "12373668087790753917"
+        },
+        {
+          "file": "apps/sportfriends/src/features/login/assets/images/Group 162903.svg",
+          "hash": "17107818090564819060"
+        },
+        {
+          "file": "apps/sportfriends/src/features/login/assets/images/Group 162904.svg",
+          "hash": "5978760447350401716"
+        },
+        {
+          "file": "apps/sportfriends/src/features/login/assets/images/Group 162905.svg",
+          "hash": "18113189799338977142"
+        },
+        {
+          "file": "apps/sportfriends/src/features/login/assets/images/Group 162906.svg",
+          "hash": "1102375441733067310"
+        },
+        {
+          "file": "apps/sportfriends/src/features/login/assets/images/Group 4560.png",
+          "hash": "15453934031202578178"
+        },
+        {
+          "file": "apps/sportfriends/src/features/login/assets/images/Group 4616.png",
+          "hash": "9290764089915604212"
+        },
+        {
+          "file": "apps/sportfriends/src/features/login/assets/images/Group 4616.svg",
+          "hash": "6956496244355628358"
+        },
+        {
+          "file": "apps/sportfriends/src/features/login/assets/images/Group 4688.svg",
+          "hash": "12503362537325894056"
+        },
+        {
+          "file": "apps/sportfriends/src/features/login/assets/images/Jogging.svg",
+          "hash": "11306849046936158796"
+        },
+        {
+          "file": "apps/sportfriends/src/features/login/assets/images/Tennis.svg",
+          "hash": "11530701258184100996"
+        },
+        {
+          "file": "apps/sportfriends/src/features/login/assets/images/Vector.svg",
+          "hash": "16023721007480629380"
+        },
+        {
+          "file": "apps/sportfriends/src/features/login/assets/images/avatar.png",
+          "hash": "16174976836153657074"
+        },
+        {
+          "file": "apps/sportfriends/src/features/login/assets/images/bandy.svg",
+          "hash": "15671265971302306986"
+        },
+        {
+          "file": "apps/sportfriends/src/features/login/assets/images/bell.svg",
+          "hash": "17628620583618178551"
+        },
+        {
+          "file": "apps/sportfriends/src/features/login/assets/images/bubble.svg",
+          "hash": "3159610170074652497"
+        },
+        {
+          "file": "apps/sportfriends/src/features/login/assets/images/bx_bx-trash.svg",
+          "hash": "15421543259260283214"
+        },
+        {
+          "file": "apps/sportfriends/src/features/login/assets/images/calendr.svg",
+          "hash": "12285921493734759431"
+        },
+        {
+          "file": "apps/sportfriends/src/features/login/assets/images/calnder.svg",
+          "hash": "10118570314748109877"
+        },
+        {
+          "file": "apps/sportfriends/src/features/login/assets/images/cross.svg",
+          "hash": "17626707802618694830"
+        },
+        {
+          "file": "apps/sportfriends/src/features/login/assets/images/dark-haired-man-in-brown-leather-jacket 2.png",
+          "hash": "9851260796806101264"
+        },
+        {
+          "file": "apps/sportfriends/src/features/login/assets/images/dropdown.svg",
+          "hash": "1028256190931889163"
+        },
+        {
+          "file": "apps/sportfriends/src/features/login/assets/images/eva_message-circle-fill.svg",
+          "hash": "10936246488478987161"
+        },
+        {
+          "file": "apps/sportfriends/src/features/login/assets/images/events.svg",
+          "hash": "343021843675458830"
+        },
+        {
+          "file": "apps/sportfriends/src/features/login/assets/images/fe_search.png",
+          "hash": "14808725002720504815"
+        },
+        {
+          "file": "apps/sportfriends/src/features/login/assets/images/fe_search.svg",
+          "hash": "12913073330543639844"
+        },
+        {
+          "file": "apps/sportfriends/src/features/login/assets/images/feather_edit-2.svg",
+          "hash": "11740323458630965876"
+        },
+        {
+          "file": "apps/sportfriends/src/features/login/assets/images/filters.svg",
+          "hash": "11637224037490230347"
+        },
+        {
+          "file": "apps/sportfriends/src/features/login/assets/images/fluent_home-16-regular.svg",
+          "hash": "5330747658524006000"
+        },
+        {
+          "file": "apps/sportfriends/src/features/login/assets/images/friends.svg",
+          "hash": "3414202507413495020"
+        },
+        {
+          "file": "apps/sportfriends/src/features/login/assets/images/heaert.svg",
+          "hash": "8167610984355553082"
+        },
+        {
+          "file": "apps/sportfriends/src/features/login/assets/images/heart.svg",
+          "hash": "13094444526073943395"
+        },
+        {
+          "file": "apps/sportfriends/src/features/login/assets/images/ion_notifications-circle.svg",
+          "hash": "1758542332393897693"
+        },
+        {
+          "file": "apps/sportfriends/src/features/login/assets/images/layers-2x.png",
+          "hash": "9344261028423700841"
+        },
+        {
+          "file": "apps/sportfriends/src/features/login/assets/images/layers.png",
+          "hash": "9282921627250197590"
+        },
+        {
+          "file": "apps/sportfriends/src/features/login/assets/images/logo.png",
+          "hash": "10364594544373108556"
+        },
+        {
+          "file": "apps/sportfriends/src/features/login/assets/images/logo.svg",
+          "hash": "17880607162470096598"
+        },
+        {
+          "file": "apps/sportfriends/src/features/login/assets/images/marker-icon-2x.png",
+          "hash": "16225105066935018559"
+        },
+        {
+          "file": "apps/sportfriends/src/features/login/assets/images/marker-icon.png",
+          "hash": "12839574698303764257"
+        },
+        {
+          "file": "apps/sportfriends/src/features/login/assets/images/marker-shadow.png",
+          "hash": "13400201256143088927"
+        },
+        {
+          "file": "apps/sportfriends/src/features/login/assets/images/particpents.svg",
+          "hash": "12824485205048851556"
+        },
+        {
+          "file": "apps/sportfriends/src/features/login/assets/images/pin.svg",
+          "hash": "11864806371174209362"
+        },
+        {
+          "file": "apps/sportfriends/src/features/login/assets/images/placeholder 1 copy.svg",
+          "hash": "2260350929484749841"
+        },
+        {
+          "file": "apps/sportfriends/src/features/login/assets/images/placeholder 1.svg",
+          "hash": "17726969933017192112"
+        },
+        {
+          "file": "apps/sportfriends/src/features/login/assets/images/screen-shot-2019-08-16-at-6.52 2.png",
+          "hash": "16875167072925531763"
+        },
+        {
+          "file": "apps/sportfriends/src/features/login/assets/images/settings.svg",
+          "hash": "15673493093796561277"
+        },
+        {
+          "file": "apps/sportfriends/src/features/login/assets/images/slide1.png",
+          "hash": "1623518317715620621"
+        },
+        {
+          "file": "apps/sportfriends/src/features/login/assets/images/slide2.png",
+          "hash": "2493465160084339353"
+        },
+        {
+          "file": "apps/sportfriends/src/features/login/assets/images/slide3.png",
+          "hash": "14401195442878474702"
+        },
+        {
+          "file": "apps/sportfriends/src/features/login/assets/images/slider-img.png",
+          "hash": "2493465160084339353"
+        },
+        {
+          "file": "apps/sportfriends/src/features/login/assets/images/slider-img2.png",
+          "hash": "14401195442878474702"
+        },
+        {
+          "file": "apps/sportfriends/src/features/login/assets/images/slider-img3.png",
+          "hash": "2745229774631104056"
+        },
+        {
+          "file": "apps/sportfriends/src/features/login/assets/images/upload.png",
+          "hash": "14206611200923485169"
+        },
+        {
+          "file": "apps/sportfriends/src/features/login/assets/images/user.png",
+          "hash": "14875505719362037675"
+        },
+        {
+          "file": "apps/sportfriends/src/features/login/assets/images/user.svg",
+          "hash": "12269670816964411925"
+        },
+        {
+          "file": "apps/sportfriends/src/features/login/assets/images/users.svg",
+          "hash": "7162752979760480904"
+        },
+        {
+          "file": "apps/sportfriends/src/features/login/components/PageLayout.jsx",
+          "hash": "1808002236175526561",
+          "deps": [
+            "npm:react"
+          ]
+        },
+        {
+          "file": "apps/sportfriends/src/features/login/components/Slider.jsx",
+          "hash": "16770343550880912392",
+          "deps": [
+            "npm:react"
+          ]
+        },
+        {
+          "file": "apps/sportfriends/src/features/login/components/Steps.jsx",
+          "hash": "6606599528145560285"
+        },
+        {
+          "file": "apps/sportfriends/src/features/login/index.tsx",
+          "hash": "5926012110036092914",
+          "deps": [
+            "npm:react",
+            "npm:react-router-dom",
+            "shared-constants",
+            "ui"
+          ]
+        },
+        {
+          "file": "apps/sportfriends/src/features/login/pages/AddProfileImg.tsx",
+          "hash": "9669784862626254241",
+          "deps": [
+            "npm:react",
+            "npm:react-router-dom",
+            "ui",
+            "shared-constants",
+            "shared-data-services"
+          ]
+        },
+        {
+          "file": "apps/sportfriends/src/features/login/pages/Login.tsx",
+          "hash": "15158658558500837015",
+          "deps": [
+            "npm:react",
+            "npm:formik",
+            "npm:yup",
+            "npm:react-router-dom",
+            "npm:react-redux",
+            "ui",
+            "shared-constants",
+            "shared-data-store",
+            "shared-services"
+          ]
+        },
+        {
+          "file": "apps/sportfriends/src/features/login/pages/MoreInfo.tsx",
+          "hash": "14943042782957783134",
+          "deps": [
+            "npm:formik",
+            "npm:react-router-dom",
+            "ui",
+            "shared-constants",
+            "shared-data-services"
+          ]
+        },
+        {
+          "file": "apps/sportfriends/src/features/login/pages/PasswordPage.tsx",
+          "hash": "13525438372221949375",
+          "deps": [
+            "npm:react",
+            "npm:formik",
+            "npm:yup",
+            "npm:react-router-dom",
+            "ui",
+            "shared-constants"
+          ]
+        },
+        {
+          "file": "apps/sportfriends/src/features/login/pages/SignUp.tsx",
+          "hash": "11806597410533961132",
+          "deps": [
+            "npm:formik",
+            "npm:yup",
+            "npm:react-redux",
+            "npm:react-router-dom",
+            "ui",
+            "shared-constants",
+            "shared-data-store",
+            "shared-data-services"
+          ]
+        },
+        {
+          "file": "apps/sportfriends/src/index.css",
+          "hash": "10227601047777506583"
+        },
+        {
+          "file": "apps/sportfriends/src/index.tsx",
+          "hash": "17771060004447668183",
+          "deps": [
+            "npm:react",
+            "npm:react-dom",
+            "npm:react-router-dom",
+            "npm:react-redux",
+            "npm:@mui/material",
+            "shared-constants",
+            "ui"
+          ]
+        },
+        {
+          "file": "apps/sportfriends/src/muiTheme.ts",
+          "hash": "17429748235896276056",
+          "deps": [
+            "npm:@mui/material"
+          ]
+        },
+        {
+          "file": "apps/sportfriends/src/store/index.ts",
+          "hash": "17875580804956490163",
+          "deps": [
+            "npm:@reduxjs/toolkit",
+            "shared-data-services",
+            "shared-data-store"
+          ]
+        },
+        {
+          "file": "apps/sportfriends/src/styles.css",
+          "hash": "9540575453073076294"
+        },
+        {
+          "file": "apps/sportfriends/tailwind.config.js",
+          "hash": "10950955995620572924",
+          "deps": [
+            "npm:tailwindcss/plugin"
+          ]
+        },
+        {
+          "file": "apps/sportfriends/tsconfig.app.json",
+          "hash": "1105429349945414231"
+        },
+        {
+          "file": "apps/sportfriends/tsconfig.json",
+          "hash": "5662628666866003355"
+        },
+        {
+          "file": "apps/sportfriends/tsconfig.spec.json",
+          "hash": "17874504027954657085"
+        },
+        {
+          "file": "apps/sportfriends/vite.config.ts",
+          "hash": "9374756508240678050",
+          "deps": [
+            "npm:vite",
+            "npm:@vitejs/plugin-react",
+            "npm:@nx/vite"
+          ]
+        },
+        {
+          "file": "apps/sportfriends/yaml/client-depl.yaml",
+          "hash": "5540922929040737646"
+        }
+      ],
+      "shared-models": [
+        {
+          "file": "libs/shared/models/.babelrc",
+          "hash": "2946678488919325452"
+        },
+        {
+          "file": "libs/shared/models/.eslintrc.json",
+          "hash": "6756409493353113423"
+        },
+        {
+          "file": "libs/shared/models/README.md",
+          "hash": "18175043920999896166"
+        },
+        {
+          "file": "libs/shared/models/project.json",
+          "hash": "18004130404383658618"
+        },
+        {
+          "file": "libs/shared/models/src/index.ts",
+          "hash": "12954640855103947404"
+        },
+        {
+          "file": "libs/shared/models/src/models/index.ts",
+          "hash": "13228792593277947694"
+        },
+        {
+          "file": "libs/shared/models/tsconfig.json",
+          "hash": "9466653708934095578"
+        },
+        {
+          "file": "libs/shared/models/tsconfig.lib.json",
+          "hash": "14726341148183481257"
+        }
+      ],
+      "shared-data-store": [
+        {
+          "file": "libs/shared/data/store/.babelrc",
+          "hash": "2946678488919325452"
+        },
+        {
+          "file": "libs/shared/data/store/.eslintrc.json",
+          "hash": "1971349432268748966"
+        },
+        {
+          "file": "libs/shared/data/store/README.md",
+          "hash": "10990479049613461456"
+        },
+        {
+          "file": "libs/shared/data/store/project.json",
+          "hash": "1090982659178069723"
+        },
+        {
+          "file": "libs/shared/data/store/src/index.ts",
+          "hash": "4688297270410943277"
+        },
+        {
+          "file": "libs/shared/data/store/src/slices/auth.js",
+          "hash": "8267207765133235955",
+          "deps": [
+            "npm:@reduxjs/toolkit"
+          ]
+        },
+        {
+          "file": "libs/shared/data/store/src/slices/filter.ts",
+          "hash": "9428264200251041392",
+          "deps": [
+            "npm:@reduxjs/toolkit",
+            "npm:moment"
+          ]
+        },
+        {
+          "file": "libs/shared/data/store/src/slices/index.ts",
+          "hash": "1435960020832426809"
+        },
+        {
+          "file": "libs/shared/data/store/tsconfig.json",
+          "hash": "13090035453275662468"
+        },
+        {
+          "file": "libs/shared/data/store/tsconfig.lib.json",
+          "hash": "3190359746942612580"
+        }
+      ],
+      "shared-constants": [
+        {
+          "file": "libs/shared/constants/.babelrc",
+          "hash": "2946678488919325452"
+        },
+        {
+          "file": "libs/shared/constants/.eslintrc.json",
+          "hash": "6756409493353113423"
+        },
+        {
+          "file": "libs/shared/constants/README.md",
+          "hash": "2383847177722204033"
+        },
+        {
+          "file": "libs/shared/constants/project.json",
+          "hash": "16888929611476942821"
+        },
+        {
+          "file": "libs/shared/constants/src/colors.ts",
+          "hash": "13937010780628745541"
+        },
+        {
+          "file": "libs/shared/constants/src/index.ts",
+          "hash": "4895423685859433861"
+        },
+        {
+          "file": "libs/shared/constants/src/slugs.ts",
+          "hash": "11115692568791118144"
+        },
+        {
+          "file": "libs/shared/constants/src/test.tsx",
+          "hash": "6139697017284472007",
+          "deps": [
+            "npm:react",
+            "ui"
+          ]
+        },
+        {
+          "file": "libs/shared/constants/tsconfig.json",
+          "hash": "9466653708934095578"
+        },
+        {
+          "file": "libs/shared/constants/tsconfig.lib.json",
+          "hash": "12782505187182166395"
+        }
+      ],
+      "shared-data-services": [
+        {
+          "file": "libs/shared/data/services/.babelrc",
+          "hash": "2946678488919325452"
+        },
+        {
+          "file": "libs/shared/data/services/.eslintrc.json",
+          "hash": "1971349432268748966"
+        },
+        {
+          "file": "libs/shared/data/services/README.md",
+          "hash": "17352671894075208265"
+        },
+        {
+          "file": "libs/shared/data/services/project.json",
+          "hash": "1655558161667490855"
+        },
+        {
+          "file": "libs/shared/data/services/src/api/authApi.ts",
+          "hash": "16792216036365151974",
+          "deps": [
+            "npm:@reduxjs/toolkit",
+            "shared-constants"
+          ]
+        },
+        {
+          "file": "libs/shared/data/services/src/api/chatApi.ts",
+          "hash": "16541749122016729286",
+          "deps": [
+            "npm:@reduxjs/toolkit",
+            "shared-models",
+            "shared-constants"
+          ]
+        },
+        {
+          "file": "libs/shared/data/services/src/api/datingApi.ts",
+          "hash": "12892422047075272479",
+          "deps": [
+            "npm:@reduxjs/toolkit",
+            "shared-models",
+            "shared-constants"
+          ]
+        },
+        {
+          "file": "libs/shared/data/services/src/api/eventApi.ts",
+          "hash": "9426624743963562070",
+          "deps": [
+            "npm:@reduxjs/toolkit",
+            "shared-constants",
+            "shared-models"
+          ]
+        },
+        {
+          "file": "libs/shared/data/services/src/api/index.ts",
+          "hash": "8350240016350476410"
+        },
+        {
+          "file": "libs/shared/data/services/src/api/postApi.ts",
+          "hash": "8154900696268129348",
+          "deps": [
+            "npm:@reduxjs/toolkit",
+            "shared-constants",
+            "shared-models"
+          ]
+        },
+        {
+          "file": "libs/shared/data/services/src/api/test.tsx",
+          "hash": "6139697017284472007",
+          "deps": [
+            "npm:react",
+            "ui"
+          ]
+        },
+        {
+          "file": "libs/shared/data/services/src/api/userApi.ts",
+          "hash": "3659111185464451320",
+          "deps": [
+            "npm:@reduxjs/toolkit",
+            "shared-constants",
+            "shared-models"
+          ]
+        },
+        {
+          "file": "libs/shared/data/services/src/index.ts",
+          "hash": "13443657969788988525"
+        },
+        {
+          "file": "libs/shared/data/services/tsconfig.json",
+          "hash": "13090035453275662468"
+        },
+        {
+          "file": "libs/shared/data/services/tsconfig.lib.json",
+          "hash": "3190359746942612580"
+        }
+      ],
+      "test": [
+        {
+          "file": "apps/test/.eslintrc.json",
+          "hash": "13948411440134303961"
+        },
+        {
+          "file": "apps/test/index.html",
+          "hash": "17917722969464812187"
+        },
+        {
+          "file": "apps/test/project.json",
+          "hash": "16010256767243837321"
+        },
+        {
+          "file": "apps/test/public/favicon.ico",
+          "hash": "9303420814833116677"
+        },
+        {
+          "file": "apps/test/src/app/app.module.css",
+          "hash": "8887387885984320532"
+        },
+        {
+          "file": "apps/test/src/app/app.spec.tsx",
+          "hash": "7092791250241971682",
+          "deps": [
+            "npm:@testing-library/react"
+          ]
+        },
+        {
+          "file": "apps/test/src/app/app.tsx",
+          "hash": "5587657950755410558"
+        },
+        {
+          "file": "apps/test/src/app/nx-welcome.tsx",
+          "hash": "4389251527819925043"
+        },
+        {
+          "file": "apps/test/src/assets/.gitkeep",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "apps/test/src/main.tsx",
+          "hash": "1827405544493565599",
+          "deps": [
+            "npm:react",
+            "npm:react-dom"
+          ]
+        },
+        {
+          "file": "apps/test/src/styles.css",
+          "hash": "5195668842064076916"
+        },
+        {
+          "file": "apps/test/tsconfig.app.json",
+          "hash": "7232119452847825095"
+        },
+        {
+          "file": "apps/test/tsconfig.json",
+          "hash": "11166545116916107487"
+        },
+        {
+          "file": "apps/test/tsconfig.spec.json",
+          "hash": "17874504027954657085"
+        },
+        {
+          "file": "apps/test/vite.config.ts",
+          "hash": "1962388885336080260",
+          "deps": [
+            "npm:vite",
+            "npm:@vitejs/plugin-react",
+            "npm:@nx/vite"
+          ]
+        }
+      ],
+      "domain": [
+        {
+          "file": "apps/domain/.eslintrc.json",
+          "hash": "13948411440134303961"
+        },
+        {
+          "file": "apps/domain/index.html",
+          "hash": "13526736219328701644"
+        },
+        {
+          "file": "apps/domain/postcss.config.js",
+          "hash": "2759402739052110475",
+          "deps": [
+            "npm:path"
+          ]
+        },
+        {
+          "file": "apps/domain/project.json",
+          "hash": "5971857072375188554"
+        },
+        {
+          "file": "apps/domain/public/favicon.ico",
+          "hash": "9303420814833116677"
+        },
+        {
+          "file": "apps/domain/src/app/app.module.css",
+          "hash": "8887387885984320532"
+        },
+        {
+          "file": "apps/domain/src/app/app.tsx",
+          "hash": "13603630688904775454",
+          "deps": [
+            [
+              "npm:@testing-library/react",
+              "dynamic"
+            ]
+          ]
+        },
+        {
+          "file": "apps/domain/src/assets/.gitkeep",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "apps/domain/src/main.tsx",
+          "hash": "1827405544493565599",
+          "deps": [
+            "npm:react",
+            "npm:react-dom"
+          ]
+        },
+        {
+          "file": "apps/domain/src/styles.css",
+          "hash": "9540575453073076294"
+        },
+        {
+          "file": "apps/domain/tailwind.config.js",
+          "hash": "9530210127227690419",
+          "deps": [
+            "npm:@nx/react",
+            "npm:path"
+          ]
+        },
+        {
+          "file": "apps/domain/tsconfig.app.json",
+          "hash": "1618790124706180962"
+        },
+        {
+          "file": "apps/domain/tsconfig.json",
+          "hash": "11166545116916107487"
+        },
+        {
+          "file": "apps/domain/tsconfig.spec.json",
+          "hash": "17874504027954657085"
+        },
+        {
+          "file": "apps/domain/vite.config.ts",
+          "hash": "3872900023937065594",
+          "deps": [
+            "npm:vite",
+            "npm:@vitejs/plugin-react",
+            "npm:@nx/vite"
+          ]
+        }
+      ],
+      "shared-data": [
+        {
+          "file": "libs/shared/data/.babelrc",
+          "hash": "2946678488919325452"
+        },
+        {
+          "file": "libs/shared/data/.eslintrc.json",
+          "hash": "6756409493353113423"
+        },
+        {
+          "file": "libs/shared/data/README.md",
+          "hash": "7826564834098531271"
+        },
+        {
+          "file": "libs/shared/data/project.json",
+          "hash": "11760914798195666692"
+        },
+        {
+          "file": "libs/shared/data/src/index.ts",
+          "hash": "3068653069792293996"
+        },
+        {
+          "file": "libs/shared/data/src/lib/shared-data.module.css",
+          "hash": "125145030238681982"
+        },
+        {
+          "file": "libs/shared/data/src/lib/shared-data.tsx",
+          "hash": "9522294834712909614"
+        },
+        {
+          "file": "libs/shared/data/tsconfig.json",
+          "hash": "9466653708934095578"
+        },
+        {
+          "file": "libs/shared/data/tsconfig.lib.json",
           "hash": "12782505187182166395"
         }
       ],
@@ -864,10 +2441,6 @@
         {
           "file": "apps/dosportanywhere/public/robots.txt",
           "hash": "2790380794362165217"
-        },
-        {
-          "file": "apps/dosportanywhere/src/assets/.gitkeep",
-          "hash": "3244421341483603138"
         },
         {
           "file": "apps/dosportanywhere/src/custom.d.ts",
@@ -1107,7 +2680,7 @@
           "deps": [
             "npm:react",
             "npm:moment",
-            "npm:react-icons/hi",
+            "npm:react-icons",
             "shared-utils"
           ]
         },
@@ -1141,9 +2714,7 @@
           "hash": "15463778437772727185",
           "deps": [
             "npm:react",
-            "npm:react-icons/io",
-            "npm:react-icons/ai",
-            "npm:react-icons/bs",
+            "npm:react-icons",
             "npm:bson-objectid"
           ]
         },
@@ -1168,8 +2739,7 @@
             "npm:react-router-dom",
             "npm:moment",
             "npm:react-redux",
-            "npm:react-icons/fi",
-            "npm:react-icons/bs",
+            "npm:react-icons",
             "npm:services/eventApi",
             "npm:shared/components",
             "npm:store/slices"
@@ -1219,7 +2789,7 @@
           "file": "apps/dosportanywhere/src/features/dashboard/components/filter/SelectDistance.tsx",
           "hash": "12961204275236000163",
           "deps": [
-            "npm:@mui/material/Slider",
+            "npm:@mui/material",
             "npm:react-redux",
             "shared-data-store"
           ]
@@ -1351,16 +2921,15 @@
           "deps": [
             "npm:react-router-dom",
             "npm:moment",
-            "npm:react-icons/fi",
-            "npm:react-icons/bs"
+            "npm:react-icons"
           ]
         },
         {
           "file": "apps/dosportanywhere/src/features/dashboard/components/myactions/PartnerCard.tsx",
           "hash": "5588749995434225755",
           "deps": [
-            "npm:@mui/material/CircularProgress",
-            "npm:react-icons/sl",
+            "npm:@mui/material",
+            "npm:react-icons",
             "npm:shared/components",
             "npm:services/datingApi"
           ]
@@ -1518,7 +3087,7 @@
           "hash": "6069031897112709538",
           "deps": [
             "npm:react",
-            "npm:@mui/material/CircularProgress",
+            "npm:@mui/material",
             "npm:moment",
             "npm:react-router-dom",
             "npm:react-redux",
@@ -1544,7 +3113,7 @@
           "hash": "14751306080171584611",
           "deps": [
             "npm:react-leaflet",
-            "npm:@mui/material/CircularProgress",
+            "npm:@mui/material",
             "shared-data-services",
             "shared-constants"
           ]
@@ -1578,7 +3147,7 @@
           "file": "apps/dosportanywhere/src/features/dashboard/pages/Social.tsx",
           "hash": "14308742748567973532",
           "deps": [
-            "npm:@mui/material/CircularProgress",
+            "npm:@mui/material",
             "shared-data-services",
             "shared-models"
           ]
@@ -1980,296 +3549,16 @@
             "npm:react-dom",
             "npm:react-router-dom",
             "npm:react-redux",
-            "npm:@mui/material/styles",
+            "npm:@mui/material",
             "shared-constants",
             "ui"
           ]
         },
         {
-          "file": "apps/dosportanywhere/src/models/index.ts",
-          "hash": "14630908799335692898"
-        },
-        {
           "file": "apps/dosportanywhere/src/muiTheme.ts",
           "hash": "2955865247023393529",
           "deps": [
-            "npm:@mui/material/styles"
-          ]
-        },
-        {
-          "file": "apps/dosportanywhere/src/services/authApi.js",
-          "hash": "3914775077885059736",
-          "deps": [
-            "npm:@reduxjs/toolkit",
-            "npm:shared/constants"
-          ]
-        },
-        {
-          "file": "apps/dosportanywhere/src/services/chatApi.ts",
-          "hash": "18348000453307092092",
-          "deps": [
-            "npm:@reduxjs/toolkit",
-            "shared-constants"
-          ]
-        },
-        {
-          "file": "apps/dosportanywhere/src/services/datingApi.ts",
-          "hash": "11430548809678515282",
-          "deps": [
-            "npm:@reduxjs/toolkit",
-            "npm:models",
-            "npm:shared/constants"
-          ]
-        },
-        {
-          "file": "apps/dosportanywhere/src/services/eventApi.ts",
-          "hash": "6889743002970170246",
-          "deps": [
-            "npm:@reduxjs/toolkit",
-            "npm:shared/constants",
-            "shared-models"
-          ]
-        },
-        {
-          "file": "apps/dosportanywhere/src/services/index.ts",
-          "hash": "16285237759011459183"
-        },
-        {
-          "file": "apps/dosportanywhere/src/services/postApi.ts",
-          "hash": "10423075989019747004",
-          "deps": [
-            "npm:@reduxjs/toolkit",
-            "npm:shared/constants",
-            "npm:models"
-          ]
-        },
-        {
-          "file": "apps/dosportanywhere/src/services/userApi.ts",
-          "hash": "2303408086992426237",
-          "deps": [
-            "npm:@reduxjs/toolkit",
-            "npm:shared/constants",
-            "npm:models"
-          ]
-        },
-        {
-          "file": "apps/dosportanywhere/src/shared/assets/images/marker-icon.png",
-          "hash": "12839574698303764257"
-        },
-        {
-          "file": "apps/dosportanywhere/src/shared/assets/images/sportfriendsLogo.svg",
-          "hash": "6819413265187906632"
-        },
-        {
-          "file": "apps/dosportanywhere/src/shared/components/Button.tsx",
-          "hash": "15463749224571846193",
-          "deps": [
-            "npm:react"
-          ]
-        },
-        {
-          "file": "apps/dosportanywhere/src/shared/components/ErrorMessage.tsx",
-          "hash": "11845177981325869724",
-          "deps": [
-            "npm:react"
-          ]
-        },
-        {
-          "file": "apps/dosportanywhere/src/shared/components/Map.jsx",
-          "hash": "10989018618509928460",
-          "deps": [
-            "npm:leaflet/dist/leaflet.css",
-            "npm:react",
-            "npm:leaflet",
-            "npm:react-leaflet",
-            "npm:leaflet/dist/images/marker-icon.png",
-            "npm:shared/components/Modal"
-          ]
-        },
-        {
-          "file": "apps/dosportanywhere/src/shared/components/Modal.jsx",
-          "hash": "1396779157224696905",
-          "deps": [
-            "npm:react",
-            "npm:@mui/icons-material/Close"
-          ]
-        },
-        {
-          "file": "apps/dosportanywhere/src/shared/components/Modal2.tsx",
-          "hash": "9956753938946815630",
-          "deps": [
-            "npm:react",
-            "npm:use-debounce",
-            "shared-utils"
-          ]
-        },
-        {
-          "file": "apps/dosportanywhere/src/shared/components/ProtectedRoutes.jsx",
-          "hash": "3945999609334698330",
-          "deps": [
-            "npm:react-router-dom",
-            "npm:react-redux",
-            "npm:shared/constants",
-            "npm:store/slices"
-          ]
-        },
-        {
-          "file": "apps/dosportanywhere/src/shared/components/ShadowModal.tsx",
-          "hash": "2146919383436934615",
-          "deps": [
-            "npm:react",
-            "npm:react-icons",
-            "shared-utils"
-          ]
-        },
-        {
-          "file": "apps/dosportanywhere/src/shared/components/SwitchMenu.tsx",
-          "hash": "17763520227123505663"
-        },
-        {
-          "file": "apps/dosportanywhere/src/shared/components/forms/CheckboxInput.jsx",
-          "hash": "12085854717882161303",
-          "deps": [
-            "npm:react",
-            "npm:formik",
-            "npm:@mui/material/FormGroup",
-            "npm:@mui/material/FormControlLabel",
-            "npm:@mui/material/Checkbox",
-            "npm:shared/components"
-          ]
-        },
-        {
-          "file": "apps/dosportanywhere/src/shared/components/forms/DatePickerInput.jsx",
-          "hash": "7521613973636475461",
-          "deps": [
-            "npm:react",
-            "npm:formik",
-            "npm:react-icons/bs",
-            "npm:@mui/material/TextField",
-            "npm:shared/components"
-          ]
-        },
-        {
-          "file": "apps/dosportanywhere/src/shared/components/forms/MapInput.jsx",
-          "hash": "3069521531052809385",
-          "deps": [
-            "npm:react",
-            "npm:formik",
-            "npm:react-icons/gr",
-            "npm:@mui/material/TextField",
-            "npm:shared/components"
-          ]
-        },
-        {
-          "file": "apps/dosportanywhere/src/shared/components/forms/RangeInput.jsx",
-          "hash": "11542520519799338607",
-          "deps": [
-            "npm:react",
-            "npm:formik",
-            "npm:@mui/material/Slider",
-            "npm:shared/components"
-          ]
-        },
-        {
-          "file": "apps/dosportanywhere/src/shared/components/forms/SelectInput.tsx",
-          "hash": "10462564170973790714",
-          "deps": [
-            "npm:react",
-            "npm:formik",
-            "npm:@mui/material/MenuItem",
-            "npm:@mui/material/Select",
-            "npm:shared/components"
-          ]
-        },
-        {
-          "file": "apps/dosportanywhere/src/shared/components/forms/SelectSearchInput.jsx",
-          "hash": "18239011075151645034",
-          "deps": [
-            "npm:react",
-            "npm:@mui/material/TextField",
-            "npm:@mui/material/Autocomplete",
-            "npm:formik",
-            "npm:shared/components"
-          ]
-        },
-        {
-          "file": "apps/dosportanywhere/src/shared/components/forms/SubmitButton.jsx",
-          "hash": "5286072006490140106",
-          "deps": [
-            "npm:react",
-            "npm:@mui/material/CircularProgress"
-          ]
-        },
-        {
-          "file": "apps/dosportanywhere/src/shared/components/forms/TextAreaInput.jsx",
-          "hash": "16692802437186045675",
-          "deps": [
-            "npm:react",
-            "npm:formik",
-            "npm:@mui/material/TextField",
-            "npm:shared/components"
-          ]
-        },
-        {
-          "file": "apps/dosportanywhere/src/shared/components/forms/TextInput.jsx",
-          "hash": "11946323987416030949",
-          "deps": [
-            "npm:react",
-            "npm:formik",
-            "npm:@mui/material/TextField",
-            "npm:shared/components"
-          ]
-        },
-        {
-          "file": "apps/dosportanywhere/src/shared/components/forms/TimePickerInput.jsx",
-          "hash": "11847341638373273462",
-          "deps": [
-            "npm:react",
-            "npm:@mui/x-date-pickers",
-            "npm:@mui/material",
-            "npm:formik",
-            "npm:shared/components"
-          ]
-        },
-        {
-          "file": "apps/dosportanywhere/src/shared/components/forms/TimeRangeInput.jsx",
-          "hash": "2410230969506495225",
-          "deps": [
-            "npm:react",
-            "npm:formik",
-            "npm:@mui/material/Slider",
-            "npm:moment",
-            "npm:shared/components"
-          ]
-        },
-        {
-          "file": "apps/dosportanywhere/src/shared/components/index.js",
-          "hash": "16246863068015740077"
-        },
-        {
-          "file": "apps/dosportanywhere/src/shared/constants/colors.ts",
-          "hash": "13937010780628745541"
-        },
-        {
-          "file": "apps/dosportanywhere/src/shared/constants/index.ts",
-          "hash": "4895423685859433861"
-        },
-        {
-          "file": "apps/dosportanywhere/src/shared/constants/slugs.ts",
-          "hash": "11115692568791118144"
-        },
-        {
-          "file": "apps/dosportanywhere/src/shared/hooks/useClickOutside.ts",
-          "hash": "1157991281624713522",
-          "deps": [
-            "npm:react"
-          ]
-        },
-        {
-          "file": "apps/dosportanywhere/src/shared/utils/index.ts",
-          "hash": "281137923799799631",
-          "deps": [
-            "npm:moment"
+            "npm:@mui/material"
           ]
         },
         {
@@ -2280,25 +3569,6 @@
             "shared-data-services",
             "shared-data-store"
           ]
-        },
-        {
-          "file": "apps/dosportanywhere/src/store/slices/auth.js",
-          "hash": "8267207765133235955",
-          "deps": [
-            "npm:@reduxjs/toolkit"
-          ]
-        },
-        {
-          "file": "apps/dosportanywhere/src/store/slices/filter.ts",
-          "hash": "9428264200251041392",
-          "deps": [
-            "npm:@reduxjs/toolkit",
-            "npm:moment"
-          ]
-        },
-        {
-          "file": "apps/dosportanywhere/src/store/slices/index.ts",
-          "hash": "1435960020832426809"
         },
         {
           "file": "apps/dosportanywhere/src/styles.css",
@@ -2313,7 +3583,7 @@
         },
         {
           "file": "apps/dosportanywhere/tsconfig.app.json",
-          "hash": "7232119452847825095"
+          "hash": "10731306078719093482"
         },
         {
           "file": "apps/dosportanywhere/tsconfig.json",
@@ -2343,289 +3613,209 @@
           "hash": "5540922929040737646"
         }
       ],
-      "test": [
+      "ui": [
         {
-          "file": "apps/test/.eslintrc.json",
-          "hash": "13948411440134303961"
-        },
-        {
-          "file": "apps/test/index.html",
-          "hash": "17917722969464812187"
-        },
-        {
-          "file": "apps/test/project.json",
-          "hash": "16010256767243837321"
-        },
-        {
-          "file": "apps/test/public/favicon.ico",
-          "hash": "9303420814833116677"
-        },
-        {
-          "file": "apps/test/src/app/app.module.css",
-          "hash": "8887387885984320532"
-        },
-        {
-          "file": "apps/test/src/app/app.spec.tsx",
-          "hash": "7092791250241971682",
-          "deps": [
-            "npm:@testing-library/react"
-          ]
-        },
-        {
-          "file": "apps/test/src/app/app.tsx",
-          "hash": "5587657950755410558"
-        },
-        {
-          "file": "apps/test/src/app/nx-welcome.tsx",
-          "hash": "4389251527819925043"
-        },
-        {
-          "file": "apps/test/src/assets/.gitkeep",
-          "hash": "3244421341483603138"
-        },
-        {
-          "file": "apps/test/src/main.tsx",
-          "hash": "1827405544493565599",
-          "deps": [
-            "npm:react",
-            "npm:react-dom"
-          ]
-        },
-        {
-          "file": "apps/test/src/styles.css",
-          "hash": "5195668842064076916"
-        },
-        {
-          "file": "apps/test/tsconfig.app.json",
-          "hash": "7232119452847825095"
-        },
-        {
-          "file": "apps/test/tsconfig.json",
-          "hash": "11166545116916107487"
-        },
-        {
-          "file": "apps/test/tsconfig.spec.json",
-          "hash": "17874504027954657085"
-        },
-        {
-          "file": "apps/test/vite.config.ts",
-          "hash": "1962388885336080260",
-          "deps": [
-            "npm:vite",
-            "npm:@vitejs/plugin-react",
-            "npm:@nx/vite"
-          ]
-        }
-      ],
-      "shared-data": [
-        {
-          "file": "libs/shared/data/.babelrc",
+          "file": "libs/shared/ui/.babelrc",
           "hash": "2946678488919325452"
         },
         {
-          "file": "libs/shared/data/.eslintrc.json",
-          "hash": "6756409493353113423"
+          "file": "libs/shared/ui/.eslintrc.json",
+          "hash": "15601404045350863983"
         },
         {
-          "file": "libs/shared/data/README.md",
-          "hash": "7826564834098531271"
+          "file": "libs/shared/ui/README.md",
+          "hash": "14385783101149144467"
         },
         {
-          "file": "libs/shared/data/project.json",
-          "hash": "11760914798195666692"
+          "file": "libs/shared/ui/project.json",
+          "hash": "5256831083727992726"
         },
         {
-          "file": "libs/shared/data/src/index.ts",
-          "hash": "3068653069792293996"
+          "file": "libs/shared/ui/src/assets/images/marker-icon.png",
+          "hash": "12839574698303764257"
         },
         {
-          "file": "libs/shared/data/src/lib/shared-data.module.css",
-          "hash": "125145030238681982"
+          "file": "libs/shared/ui/src/assets/images/sportfriendsLogo.svg",
+          "hash": "6819413265187906632"
         },
         {
-          "file": "libs/shared/data/src/lib/shared-data.tsx",
-          "hash": "9522294834712909614"
-        },
-        {
-          "file": "libs/shared/data/tsconfig.json",
-          "hash": "9466653708934095578"
-        },
-        {
-          "file": "libs/shared/data/tsconfig.lib.json",
-          "hash": "12782505187182166395"
-        }
-      ],
-      "shared-models": [
-        {
-          "file": "libs/shared/models/.babelrc",
-          "hash": "2946678488919325452"
-        },
-        {
-          "file": "libs/shared/models/.eslintrc.json",
-          "hash": "6756409493353113423"
-        },
-        {
-          "file": "libs/shared/models/README.md",
-          "hash": "18175043920999896166"
-        },
-        {
-          "file": "libs/shared/models/project.json",
-          "hash": "18004130404383658618"
-        },
-        {
-          "file": "libs/shared/models/src/index.ts",
-          "hash": "12954640855103947404"
-        },
-        {
-          "file": "libs/shared/models/src/models/index.ts",
-          "hash": "14630908799335692898"
-        },
-        {
-          "file": "libs/shared/models/tsconfig.json",
-          "hash": "9466653708934095578"
-        },
-        {
-          "file": "libs/shared/models/tsconfig.lib.json",
-          "hash": "14726341148183481257"
-        }
-      ],
-      "shared-utils": [
-        {
-          "file": "libs/shared/utils/.babelrc",
-          "hash": "2946678488919325452"
-        },
-        {
-          "file": "libs/shared/utils/.eslintrc.json",
-          "hash": "6756409493353113423"
-        },
-        {
-          "file": "libs/shared/utils/README.md",
-          "hash": "7693910817612845176"
-        },
-        {
-          "file": "libs/shared/utils/project.json",
-          "hash": "14131596521761290886"
-        },
-        {
-          "file": "libs/shared/utils/src/hooks/index.ts",
-          "hash": "1325535887428868993"
-        },
-        {
-          "file": "libs/shared/utils/src/hooks/useClickOutside.ts",
-          "hash": "1157991281624713522",
+          "file": "libs/shared/ui/src/components/Button.tsx",
+          "hash": "15463749224571846193",
           "deps": [
             "npm:react"
           ]
         },
         {
-          "file": "libs/shared/utils/src/index.ts",
-          "hash": "16779626196484232740",
+          "file": "libs/shared/ui/src/components/ErrorMessage.tsx",
+          "hash": "15311583814696850326"
+        },
+        {
+          "file": "libs/shared/ui/src/components/Map.jsx",
+          "hash": "2400224378971435629",
           "deps": [
-            "npm:moment"
+            "npm:leaflet",
+            "npm:react",
+            "npm:react-leaflet"
           ]
         },
         {
-          "file": "libs/shared/utils/tsconfig.json",
-          "hash": "9466653708934095578"
-        },
-        {
-          "file": "libs/shared/utils/tsconfig.lib.json",
-          "hash": "12782505187182166395"
-        }
-      ],
-      "shared-data-store": [
-        {
-          "file": "libs/shared/data/store/.babelrc",
-          "hash": "2946678488919325452"
-        },
-        {
-          "file": "libs/shared/data/store/.eslintrc.json",
-          "hash": "1971349432268748966"
-        },
-        {
-          "file": "libs/shared/data/store/README.md",
-          "hash": "10990479049613461456"
-        },
-        {
-          "file": "libs/shared/data/store/project.json",
-          "hash": "1090982659178069723"
-        },
-        {
-          "file": "libs/shared/data/store/src/index.ts",
-          "hash": "4688297270410943277"
-        },
-        {
-          "file": "libs/shared/data/store/src/slices/auth.js",
-          "hash": "8267207765133235955",
-          "deps": [
-            "npm:@reduxjs/toolkit"
-          ]
-        },
-        {
-          "file": "libs/shared/data/store/src/slices/filter.ts",
-          "hash": "9428264200251041392",
-          "deps": [
-            "npm:@reduxjs/toolkit",
-            "npm:moment"
-          ]
-        },
-        {
-          "file": "libs/shared/data/store/src/slices/index.ts",
-          "hash": "1435960020832426809"
-        },
-        {
-          "file": "libs/shared/data/store/tsconfig.json",
-          "hash": "13090035453275662468"
-        },
-        {
-          "file": "libs/shared/data/store/tsconfig.lib.json",
-          "hash": "3190359746942612580"
-        }
-      ],
-      "shared-constants": [
-        {
-          "file": "libs/shared/constants/.babelrc",
-          "hash": "2946678488919325452"
-        },
-        {
-          "file": "libs/shared/constants/.eslintrc.json",
-          "hash": "6756409493353113423"
-        },
-        {
-          "file": "libs/shared/constants/README.md",
-          "hash": "2383847177722204033"
-        },
-        {
-          "file": "libs/shared/constants/project.json",
-          "hash": "16888929611476942821"
-        },
-        {
-          "file": "libs/shared/constants/src/colors.ts",
-          "hash": "13937010780628745541"
-        },
-        {
-          "file": "libs/shared/constants/src/index.ts",
-          "hash": "4895423685859433861"
-        },
-        {
-          "file": "libs/shared/constants/src/slugs.ts",
-          "hash": "11115692568791118144"
-        },
-        {
-          "file": "libs/shared/constants/src/test.tsx",
-          "hash": "6139697017284472007",
+          "file": "libs/shared/ui/src/components/Modal.jsx",
+          "hash": "1396779157224696905",
           "deps": [
             "npm:react",
-            "ui"
+            "npm:@mui/icons-material/Close"
           ]
         },
         {
-          "file": "libs/shared/constants/tsconfig.json",
-          "hash": "9466653708934095578"
+          "file": "libs/shared/ui/src/components/Modal2.tsx",
+          "hash": "14247468334321994221",
+          "deps": [
+            "npm:react",
+            "npm:use-debounce",
+            "shared-utils"
+          ]
         },
         {
-          "file": "libs/shared/constants/tsconfig.lib.json",
-          "hash": "12782505187182166395"
+          "file": "libs/shared/ui/src/components/ProtectedRoutes.jsx",
+          "hash": "2579585709832810721",
+          "deps": [
+            "npm:react-router-dom",
+            "npm:react-redux",
+            "shared-constants",
+            "shared-data-store"
+          ]
+        },
+        {
+          "file": "libs/shared/ui/src/components/ShadowModal.tsx",
+          "hash": "13390754894759229440",
+          "deps": [
+            "npm:react",
+            "npm:react-icons",
+            "shared-utils",
+            "shared-constants"
+          ]
+        },
+        {
+          "file": "libs/shared/ui/src/components/SwitchMenu.tsx",
+          "hash": "17763520227123505663"
+        },
+        {
+          "file": "libs/shared/ui/src/components/forms/CheckboxInput.jsx",
+          "hash": "17247320014812800314",
+          "deps": [
+            "npm:react",
+            "npm:formik",
+            "npm:@mui/material"
+          ]
+        },
+        {
+          "file": "libs/shared/ui/src/components/forms/DatePickerInput.jsx",
+          "hash": "8981100346327155201",
+          "deps": [
+            "npm:react",
+            "npm:formik",
+            "npm:react-icons",
+            "npm:@mui/material"
+          ]
+        },
+        {
+          "file": "libs/shared/ui/src/components/forms/MapInput.jsx",
+          "hash": "196770674571865179",
+          "deps": [
+            "npm:react",
+            "npm:formik",
+            "npm:react-icons",
+            "npm:@mui/material"
+          ]
+        },
+        {
+          "file": "libs/shared/ui/src/components/forms/RangeInput.jsx",
+          "hash": "4977694725955558366",
+          "deps": [
+            "npm:react",
+            "npm:formik",
+            "npm:@mui/material"
+          ]
+        },
+        {
+          "file": "libs/shared/ui/src/components/forms/SelectInput.tsx",
+          "hash": "1007235723065573387",
+          "deps": [
+            "npm:react",
+            "npm:formik",
+            "npm:@mui/material"
+          ]
+        },
+        {
+          "file": "libs/shared/ui/src/components/forms/SelectSearchInput.jsx",
+          "hash": "7861897399637392831",
+          "deps": [
+            "npm:react",
+            "npm:@mui/material",
+            "npm:formik"
+          ]
+        },
+        {
+          "file": "libs/shared/ui/src/components/forms/SubmitButton.jsx",
+          "hash": "5286072006490140106",
+          "deps": [
+            "npm:react",
+            "npm:@mui/material"
+          ]
+        },
+        {
+          "file": "libs/shared/ui/src/components/forms/TextAreaInput.jsx",
+          "hash": "7715568858298138107",
+          "deps": [
+            "npm:react",
+            "npm:formik",
+            "npm:@mui/material"
+          ]
+        },
+        {
+          "file": "libs/shared/ui/src/components/forms/TextInput.jsx",
+          "hash": "8335729262158334639",
+          "deps": [
+            "npm:react",
+            "npm:formik",
+            "npm:@mui/material"
+          ]
+        },
+        {
+          "file": "libs/shared/ui/src/components/forms/TimePickerInput.jsx",
+          "hash": "3248207632876592435",
+          "deps": [
+            "npm:react",
+            "npm:@mui/x-date-pickers",
+            "npm:@mui/material",
+            "npm:formik"
+          ]
+        },
+        {
+          "file": "libs/shared/ui/src/components/forms/TimeRangeInput.jsx",
+          "hash": "6924890648239156658",
+          "deps": [
+            "npm:react",
+            "npm:formik",
+            "npm:@mui/material",
+            "npm:moment"
+          ]
+        },
+        {
+          "file": "libs/shared/ui/src/components/index.ts",
+          "hash": "16438722403057652499"
+        },
+        {
+          "file": "libs/shared/ui/src/index.ts",
+          "hash": "10310030362865231564"
+        },
+        {
+          "file": "libs/shared/ui/tsconfig.json",
+          "hash": "3673471672798372201"
+        },
+        {
+          "file": "libs/shared/ui/tsconfig.lib.json",
+          "hash": "14726341148183481257"
         }
       ]
     }
