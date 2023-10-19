@@ -9,7 +9,7 @@ import { ProtectedRoutes } from '@sportfriends-fe/shared/ui';
 
 import { theme } from './muiTheme';
 import Dashboard from './features/dashboard';
-import Login from './features/login';
+import { Login } from '@sportfriends-fe/features/login';
 import { store } from './store';
 import './index.css';
 

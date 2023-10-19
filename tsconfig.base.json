@@ -18,6 +18,10 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@sportfriends-fe/features/dashboard": [
+        "libs/features/dashboard/src/index.ts"
+      ],
+      "@sportfriends-fe/features/login": ["libs/features/login/src/index.ts"],
       "@sportfriends-fe/shared/constants": [
         "libs/shared/constants/src/index.ts"
       ],
