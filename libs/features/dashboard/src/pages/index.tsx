@@ -1,20 +1,20 @@
 import { Route, Routes, Navigate } from 'react-router-dom';
 
-import { SLUGS } from './shared/constants';
-import DashboardLayout from './components/layout/DashboardLayout';
-import Home from './pages/Home';
-import EventsList from './pages/EventsList';
-import Social from './pages/Social';
-import SportsPartner from './pages/SportPartner';
-import Settings from './pages/Settings';
-import CreateEventForm from './pages/CreateEventForm';
-import EventMap from './pages/EventsMap';
-import Chat from './pages/Chat';
-import MyActions from './pages/MyActions';
-import CreateSportsPartnerForm from './pages/CreateSportsPartnerForm';
-import EventDetail from './pages/EventDetail';
-import UserProfile from './pages/UserProfile';
-import CreateSlot from './pages/CreateTimeSlot';
+import { SLUGS } from '../shared/constants';
+import DashboardLayout from '../components/layout/DashboardLayout';
+import Home from '../pages/Home';
+import EventsList from '../pages/EventsList';
+import Social from '../pages/Social';
+import SportsPartner from '../pages/SportPartner';
+import Settings from '../pages/Settings';
+import CreateEventForm from '../pages/CreateEventForm';
+import EventMap from '../pages/EventsMap';
+import Chat from '../pages/Chat';
+import MyActions from '../pages/MyActions';
+import CreateSportsPartnerForm from '../pages/CreateSportsPartnerForm';
+import EventDetail from '../pages/EventDetail';
+import UserProfile from '../pages/UserProfile';
+import CreateSlot from '../pages/CreateTimeSlot';
 
 const Dashboard = () => {
   return (

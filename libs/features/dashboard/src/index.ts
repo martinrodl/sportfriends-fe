@@ -1,1 +1,1 @@
-export * from './lib/dashboard';
+export { default as Dashboard } from './pages';

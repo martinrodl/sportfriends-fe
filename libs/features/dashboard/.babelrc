@@ -6,6 +6,9 @@
         "runtime": "automatic",
         "useBuiltIns": "usage"
       }
+    ],
+    [
+      "@svgr/babel-preset"
     ]
   ],
   "plugins": []

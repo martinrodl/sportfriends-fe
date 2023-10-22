@@ -12,18 +12,18 @@ import { colors } from '@sportfriends-fe/shared/constants';
 import { SLUGS } from '../../shared/constants';
 import ProfileIcon from '../ProfileIcon';
 import menu from '../../assets/new/Menu.svg';
-import NotificationIcon from '../../assets/new/Notification.svg';
-import MessageIcon from '../../assets/new/Message.svg';
-import AddIcon from '../../assets/new/Add.svg';
-import CreateEventIcon from '../../assets/new/CreateEventIcon.svg';
-import CreateSportparnerIcon from '../../assets/new/CreateSportparnerIcon.svg';
-import CreateTeamIcon from '../../assets/new/CreateTeamIcon.svg';
-import CreateOrganization from '../../assets/new/CreateOrganizationIcon.svg';
-import ViewProfileIcon from '../../assets/new/ProfileMenuIcon.svg';
-import SetProfileIcon from '../../assets/new/SetProfileMenuIcon.svg';
-import CredentialsIcon from '../../assets/new/CredentialsMenuIcon.svg';
-import SettingsIcon from '../../assets/new/SettingsMenuIcon.svg';
-import LogoutIcon from '../../assets/new/LogoutMenuIcon.svg';
+import { ReactComponent as NotificationIcon } from '../../assets/new/Notification.svg';
+import { ReactComponent as MessageIcon } from '../../assets/new/Message.svg';
+import { ReactComponent as AddIcon } from '../../assets/new/Add.svg';
+import { ReactComponent as CreateEventIcon } from '../../assets/new/CreateEventIcon.svg';
+import { ReactComponent as CreateSportparnerIcon } from '../../assets/new/CreateSportparnerIcon.svg';
+import { ReactComponent as CreateTeamIcon } from '../../assets/new/CreateTeamIcon.svg';
+import { ReactComponent as CreateOrganization } from '../../assets/new/CreateOrganizationIcon.svg';
+import { ReactComponent as ViewProfileIcon } from '../../assets/new/ProfileMenuIcon.svg';
+import { ReactComponent as SetProfileIcon } from '../../assets/new/SetProfileMenuIcon.svg';
+import { ReactComponent as CredentialsIcon } from '../../assets/new/CredentialsMenuIcon.svg';
+import { ReactComponent as SettingsIcon } from '../../assets/new/SettingsMenuIcon.svg';
+import { ReactComponent as LogoutIcon } from '../../assets/new/LogoutMenuIcon.svg';
 
 type MenuI =
   | {

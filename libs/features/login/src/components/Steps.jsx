@@ -8,21 +8,21 @@ const slides = [
     mobileTitle: 'Let’s Get You Started',
     img: slide1,
     title: 'Find friends for your favourite sports ',
-    desc: 'Lorem ipsum dolor sit amet, consecte adipiscing elit.',
+    desc: 'Say goodbye to lonely solo workouts and hello to a vibrant world of sports and friendship. ',
   },
   {
     id: 2,
     mobileTitle: 'A bit more info please...',
     img: slide2,
     title: 'Easy organize sport event in your city',
-    desc: 'Lorem ipsum lorem ipsum Lorem ipsum lorem ipsum Lorem ipsum lorem ipsum Lorem ipsum lorem ipsum Lorem ipsum lorem ipsum Lorem ',
+    desc: "Bring your city's sports enthusiasts together and create a sense of unity. Encourage healthy competition, foster new friendships, and create unforgettable memories that will strengthen the bonds within your community. Our platform is your key to igniting the spirit of sports in your city.",
   },
   {
     id: 3,
     mobileTitle: 'Jazz up you profile',
     img: slide3,
     title: 'Find easy your favourite sport',
-    desc: 'Lorem ipsum lorem ipsum Lorem ipsum lorem ipsum Lorem ipsum lorem ipsum Lorem ipsum lorem ipsum Lorem ipsum lorem ipsum Lorem ',
+    desc: 'Unlock Your Athletic Potential with SportFriends – Where Finding Your Ideal Sport Buddy is Effortless! Join the Community, Discover Your Favorite Sport, and Ignite Your Passion for Active Living!',
   },
 ];
 
@@ -35,7 +35,10 @@ const Steps = ({ setIndex, index }) => {
         <div
           className={`relative min-h-[510px] md:min-h-[650px] flex w-full items-center overflow-hidden  z-1 pt-12 md:py-12`}
         >
-          <div className={`max-w-[513px] px-5 flex flex-col text-center`} key={'slider-card' + id}>
+          <div
+            className={`max-w-[513px] px-5 flex flex-col text-center`}
+            key={'slider-card' + id}
+          >
             <h3 className="text-[28px] md:hidden block md:relative text-center mx-auto  max-w-max md:text-[38px] text-primary font-semibold mb-[18px]">
               {mobileTitle}
             </h3>
@@ -54,7 +57,9 @@ const Steps = ({ setIndex, index }) => {
               <button
                 onClick={() => setIndex(PaginatioIndex)}
                 className={`${
-                  PaginatioIndex === index ? 'bg-[#F2B619] w-[38.33px] md:w-auto' : 'bg-[#DADADA] w-[10px] md:w-auto'
+                  PaginatioIndex === index
+                    ? 'bg-[#F2B619] w-[38.33px] md:w-auto'
+                    : 'bg-[#DADADA] w-[10px] md:w-auto'
                 }  h-[10px] md:h-[7px] transition-all duration-300 cursor-pointer rounded-full`}
                 key={PaginatioIndex}
               />
