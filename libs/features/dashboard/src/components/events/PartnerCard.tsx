@@ -3,7 +3,7 @@ import moment from 'moment';
 
 import { PartnerPost as PartnerPostI } from '@sportfriends-fe/shared/models';
 
-import ChatIcon from '../../assets/new/ChatMessage.svg';
+import { ReactComponent as ChatIcon } from '../../assets/new/ChatMessage.svg';
 import { SLUGS } from '../../shared/constants';
 import ProfileIcon from '../ProfileIcon';
 

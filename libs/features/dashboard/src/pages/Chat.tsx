@@ -39,7 +39,7 @@ export default function Chat() {
         const newChat = createNewChat(location.state.userId);
         setActiveChat(newChat);
       } else {
-        setActiveChat(chats[0]);
+        setActiveChat(chats && chats[0]);
       }
     }
   }, [isSuccess]);

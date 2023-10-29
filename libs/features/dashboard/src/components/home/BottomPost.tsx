@@ -11,10 +11,10 @@ import {
 } from '@sportfriends-fe/shared/data/services';
 import { colors } from '@sportfriends-fe/shared/constants';
 
-import like from '../../assets/new/Like.svg';
-import LikeButton from '../../assets/new/LikeButton.svg';
-import CommentButton from '../../assets/new/CommentButton.svg';
-import shareButton from '../../assets/new/ShareButton.svg';
+import { ReactComponent as Like } from '../../assets/new/Like.svg';
+import { ReactComponent as LikeButton } from '../../assets/new/LikeButton.svg';
+import { ReactComponent as CommentButton } from '../../assets/new/CommentButton.svg';
+import { ReactComponent as ShareButton } from '../../assets/new/ShareButton.svg';
 import Comment from './Comment';
 
 interface BottomPostProps {
@@ -24,7 +24,7 @@ interface BottomPostProps {
 }
 
 const BottomPost = ({ postId, likes, comments }: BottomPostProps) => {
-  const userId = useSelector(selectAuthId);
+  const userId = useSelector(selectAuthId) as string;
   const [comment, setComment] = useState('');
   const [isOpenedCommentsMenu, setIsOpenedCommentsMenu] = useState(false);
   const [openComments, setOpenComments] = useState(false);
@@ -63,7 +63,7 @@ const BottomPost = ({ postId, likes, comments }: BottomPostProps) => {
     <div className="flex flex-col  mx-6 bg-white">
       <div className="flex flex-1 justify-between items-center mb-5">
         <div className="flex items-center">
-          <img src={like} alt="Likes" className="w-6" />{' '}
+          <Like className="w-6" />
           <p className="ml-1 body3">{likes.length} Likes</p>
         </div>
         <p className="body3">{comments.length} Comments</p>
@@ -94,7 +94,7 @@ const BottomPost = ({ postId, likes, comments }: BottomPostProps) => {
           </p>
         </button>
         <div className="flex items-center">
-          <img src={shareButton} alt="share button" />
+          <ShareButton />
           <p className="ml-1 text-accent4 body3 font-medium">Share</p>
         </div>
       </div>
