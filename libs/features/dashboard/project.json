@@ -11,6 +11,49 @@
       "options": {
         "lintFilePatterns": ["libs/features/dashboard/**/*.{ts,tsx,js,jsx}"]
       }
+    },
+    "storybook": {
+      "executor": "@nx/storybook:storybook",
+      "options": {
+        "port": 4400,
+        "configDir": "libs/features/dashboard/.storybook"
+      },
+      "configurations": {
+        "ci": {
+          "quiet": true
+        }
+      }
+    },
+    "build-storybook": {
+      "executor": "@nx/storybook:build",
+      "outputs": ["{options.outputDir}"],
+      "options": {
+        "outputDir": "dist/storybook/dashboard",
+        "configDir": "libs/features/dashboard/.storybook"
+      },
+      "configurations": {
+        "ci": {
+          "quiet": true
+        }
+      }
+    },
+    "test-storybook": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "test-storybook -c libs/features/dashboard/.storybook --url=http://localhost:4400"
+      }
+    },
+    "static-storybook": {
+      "executor": "@nx/web:file-server",
+      "options": {
+        "buildTarget": "dashboard:build-storybook",
+        "staticFilePath": "dist/storybook/dashboard"
+      },
+      "configurations": {
+        "ci": {
+          "buildTarget": "dashboard:build-storybook:ci"
+        }
+      }
     }
   }
 }
