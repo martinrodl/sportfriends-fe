@@ -4,6 +4,7 @@
   "sourceRoot": "libs/shared/constants/src",
   "projectType": "library",
   "tags": [],
+  
   "targets": {
     "lint": {
       "executor": "@nx/linter:eslint",
