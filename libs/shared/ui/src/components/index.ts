@@ -17,3 +17,4 @@ export { default as SwitchMenu } from './SwitchMenu';
 export { default as ShadowModal } from './ShadowModal';
 export { default as Modal2 } from './Modal2';
 export { default as Modal } from './Modal';
+export { default as EventRow } from './events/EventRow';

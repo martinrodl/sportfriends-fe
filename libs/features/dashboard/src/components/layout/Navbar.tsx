@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { FiSearch } from 'react-icons/fi';
 import { FaUserAlt } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 
@@ -12,9 +11,7 @@ import { colors } from '@sportfriends-fe/shared/constants';
 import { SLUGS } from '../../shared/constants';
 import ProfileIcon from '../ProfileIcon';
 import menu from '../../assets/new/Menu.svg';
-import { ReactComponent as NotificationIcon } from '../../assets/new/Notification.svg';
-import { ReactComponent as MessageIcon } from '../../assets/new/Message.svg';
-import { ReactComponent as AddIcon } from '../../assets/new/Add.svg';
+import AddIconUrl from '../../assets/new/Add.svg';
 import { ReactComponent as CreateEventIcon } from '../../assets/new/CreateEventIcon.svg';
 import { ReactComponent as CreateSportparnerIcon } from '../../assets/new/CreateSportparnerIcon.svg';
 import { ReactComponent as CreateTeamIcon } from '../../assets/new/CreateTeamIcon.svg';
@@ -177,19 +174,6 @@ const Navbar = ({ openSideBar }: NavbarProps) => {
   return (
     <div className="w-full md:px-10 px-4 md:pt-8 pb-2 pt-6">
       <div className="flex-1 justify-between flex flex-wrap md:flex-nowrap gap-x-2 items-center gap-y-3">
-        <div className="relative md:block border-2 rounded-xl border-primary  order-last md:order-1 mx-auto flex-1 min-w-fit max-w-xs">
-          <input
-            type="text"
-            placeholder="Search friends..."
-            className="pl-10 pr-3 py-3 rounded-xl text-xs md:text-sm focus-within:outline-none placeholder-black w-full"
-          />
-          <FiSearch
-            className="absolute top-2.5 left-2"
-            size="1.5rem"
-            style={{ color: colors.secondary }}
-          />
-        </div>
-
         <div className="order-2 flex flex-1 justify-end items-center">
           <button
             onClick={openSideBar}
@@ -198,30 +182,26 @@ const Navbar = ({ openSideBar }: NavbarProps) => {
             <img src={menu} alt="menu" className="w-5 md:w-3 " />
           </button>
           <button
-            className="h-6 w-6 md:h-8 md:w-8 flex-shrink-0 ml-2"
+            className="h-6 w-6 md:h-8 md:w-8 flex-shrink-0 mx-2"
             onClick={() => {
               if (!isOpenedCreateMenu) {
                 setIsOpenedCreateMenu(true);
               }
             }}
           >
-            <AddIcon />
-            <Modal2
-              isOpened={isOpenedCreateMenu}
-              onRequestClose={() => {
-                setIsOpenedCreateMenu(false);
-              }}
-            >
-              {modalMenu(plusMenu)}
-            </Modal2>
+            <img src={AddIconUrl} />
+            <div className="relative md:right-10 right-24 top-2">
+              <Modal2
+                isOpened={isOpenedCreateMenu}
+                onRequestClose={() => {
+                  setIsOpenedCreateMenu(false);
+                }}
+              >
+                {modalMenu(plusMenu)}
+              </Modal2>
+            </div>
           </button>
-          <button className="h-6 w-6 md:h-8 md:w-8 flex-shrink-0 ml-2">
-            <NotificationIcon />
-          </button>
-          <button className="h-6 w-6 md:h-8 md:w-8 flex-shrink-0 ml-2 mr-2">
-            <MessageIcon />
-          </button>
-          <div className="lg:border-l border-l-[#DADADA] md:px-10">
+          <div className="lg:border-l border-l-[#DADADA] md:px-2">
             <div className="flex flex-col self-center  gap-x-2">
               <button
                 className="flex gap-x-2"

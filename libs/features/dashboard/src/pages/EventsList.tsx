@@ -13,7 +13,7 @@ import { objectToParametrs } from '@sportfriends-fe/shared/utils';
 import { colors } from '@sportfriends-fe/shared/constants';
 import { ShadowModal } from '@sportfriends-fe/shared/ui';
 
-import Event from '../components/Event';
+import { EventRow } from '@sportfriends-fe/shared/ui';
 import SelectSports from '../components/filter/SelectSports';
 import SelectDistance from '../components/filter/SelectDistance';
 import SelectDateRange from '../components/filter/SelectDateRange';
@@ -40,11 +40,11 @@ const Events = () => {
   };
 
   return (
-    <div className="px-5 mt-12 flex justify-around w-full">
+    <div className="md:px-5 px-2 md:mt-12 mt-2 flex justify-around w-full">
       <div className="w-full">
         <h3 className="hidden md:block font-semibold mb-2">All Events</h3>
         <button
-          className="flex md:hidden bg-white items-center"
+          className="flex md:hidden bg-white items-center mb-2"
           onClick={() => {
             setIsFilterOpened(true);
           }}
@@ -58,9 +58,11 @@ const Events = () => {
             )}
           </div>
         </button>
-        <div className="flex flex-wrap w-max-sm gap-2 w-full">
+        <div className="flex flex-col gap-0 w-full max-w-2xl divide-y">
           {Array.isArray(events) &&
-            events.map((event) => <Event event={event} key={event.id} />)}
+            events.map((event) => (
+              <EventRow event={event} slug={event.id} key={event.id} />
+            ))}
         </div>
       </div>
       <div className="hidden md:flex my-4 mx-4  flex-col gap-y-2 w-[320px] shrink-0">

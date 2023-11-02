@@ -25,8 +25,8 @@ const Sidebar = ({ onClose, isClosed }: SideBarProps) => {
   };
 
   return (
-    <div>
-      <div className="flex flex-col align-items bg-white h-full w-60 px-3.5 py-5 rounded-3xl shadow-xl">
+    <div className="h-screen">
+      <div className="flex flex-col align-items bg-white h-4/5 w-60 px-3.5 py-5 rounded-3xl shadow-xl">
         <Link to="/" className="mt-4 mb-10 w-3/4">
           <img src={svgLogo} alt="" />
         </Link>
@@ -81,11 +81,11 @@ const links = [
     slug: SLUGS.SportsPartner,
     icon: sportsPartnerIcon,
   },
-  {
-    title: 'Social',
-    slug: SLUGS.Social,
-    icon: socialIcon,
-  },
+  // {
+  //   title: 'Social',
+  //   slug: SLUGS.Social,
+  //   icon: socialIcon,
+  // },
   {
     title: 'Chat',
     slug: SLUGS.Chat,

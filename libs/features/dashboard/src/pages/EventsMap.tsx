@@ -35,8 +35,8 @@ export default function EventsMap() {
   }
 
   return (
-    <div className="max-w-7xl  mx-auto px-4 mt-12 self-start">
-      <div className="max-w-7xl mx-auto p-8">
+    <div className="max-w-7xl w-screen md:mx-auto md:px-4 md:mt-12 mt-1 self-start">
+      <div className="max-w-7xl w-screen h-full md:p-8">
         <div className="mb-8">
           {/* <Filter enableFilters={['sport', 'distance', 'date', 'startTime']} /> */}
         </div>
@@ -46,7 +46,7 @@ export default function EventsMap() {
           zoom={12}
           scrollWheelZoom={false}
           maxZoom={MAX_ZOOM}
-          className="h-[calc(70vh_-_5rem)] w-[calc(70vw_-_5rem)] z-10"
+          className="md:h-[calc(70vh_-_5rem)] h-[calc(80vh)] md:w-[calc(70vw_-_5rem)] z-10"
         >
           <TileLayer
             attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'

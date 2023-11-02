@@ -23,10 +23,10 @@ const DashboardLayout = ({ children }: DashboardLayoutProps) => {
         <Sidebar isClosed={sidebarOpen} onClose={closeSideBar} />
       </ShadowModal>
       <div className="flex flex-row flex-1 bg-[#FDFDFD]">
-        <div className="hidden md:block mt-5 ml-5">
+        <div className="hidden md:block">
           <Sidebar isClosed={sidebarOpen} onClose={closeSideBar} />
         </div>
-        <main className="flex-1 flex flex-col w-1 px-10">
+        <main className="flex-1 flex flex-col w-1 md:px-10">
           <Navbar openSideBar={openSideBar} />
           <>{children}</>
         </main>
