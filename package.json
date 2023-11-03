@@ -2,7 +2,10 @@
   "name": "@sportfriends-fe/source",
   "version": "0.0.0",
   "license": "MIT",
-  "scripts": {},
+  "scripts": {
+    "install:legacy": "npm install --legacy-peer-deps",
+    "build": "nx build sportfriends"
+  },
   "private": true,
   "devDependencies": {
     "@babel/core": "^7.14.5",
