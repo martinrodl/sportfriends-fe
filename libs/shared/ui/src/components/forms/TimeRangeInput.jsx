@@ -45,27 +45,27 @@ const DatePickerInput = ({
           setValue(newVal);
         }}
       />
-      <div className="flex justify-around">
-        <div className="flex justify-between gap-x-4 max-w-fit">
+      <div className="flex justify-around gap-x-4">
+        <div className="flex justify-between md:gap-x-4 gap-x-2  max-w-fit">
           <p className="text-[#9A9A9A] text-lg font-normal block pb-2 self-center mr-3">
             Start time
           </p>
-          <div className="relative border-[#DADADA] border  rounded-[5px]">
+          <div className="relative border-[#DADADA] border rounded-[5px]">
             <input
-              className={`text-xs md:text-lg px-4 md:px-6 py-4  w-24  bg-transparent focus:outline-none`}
+              className={`text-lg px-4 md:px-6 py-4  md:w-24 w-20  bg-transparent focus:outline-none`}
               value={countTime(value[0])}
               type="text"
               disabled
             />
           </div>
         </div>
-        <div className="flex justify-between gap-x-4 max-w-fit">
+        <div className="flex justify-between md:gap-x-4 gap-x-2 max-w-fit">
           <p className="text-[#9A9A9A] text-lg font-normal block pb-2 self-center mr-3">
             End time
           </p>
           <div className={`relative border-[#DADADA] border rounded-[5px]`}>
             <input
-              className={`text-xs md:text-lg px-4 md:px-6 py-4  w-24  bg-transparent focus:outline-none appearance-none`}
+              className={`text-lg px-4 md:px-6 py-4  md:w-24 w-20  bg-transparent focus:outline-none appearance-none`}
               type="text"
               value={countTime(value[1])}
               disabled

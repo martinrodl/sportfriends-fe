@@ -58,22 +58,6 @@ const SelectDateRange = ({ type }: SelectDateRangeProps) => {
                   );
                 }
               }}
-              // slots={{
-              //   OpenPickerIcon: <RiArrowDownSLine />,
-              //   textField: ({ inputRef, inputProps, InputProps }) => (
-              //     <div className="flex flex-col max-w-[140px]">
-              //       <label className="body1 text-primary ml-3">Till</label>
-              //       <div className="bg-slate-100 rounded-full flex py-2 pr-2 items-center">
-              //         <input
-              //           ref={inputRef}
-              //           {...inputProps}
-              //           className="bg-slate-100 body3 pl-3 rounded-full max-w-[90px] focus-within:outline-none"
-              //         />
-              //         <div className="w-8">{InputProps?.endAdornment}</div>
-              //       </div>
-              //     </div>
-              //   ),
-              // }}
             />
           </div>
           <div className="flex items-center">

@@ -30,7 +30,7 @@ const EventRow = ({ event, slug }: EventRowProps) => {
           <p className="text-main3 md:base2 base3 font-semibold">
             {moment(timeStart).format('DD MMM')}
           </p>
-          <p className="text-main3 base4">
+          <p className="text-main3 base4 truncate">
             {moment(timeStart).format('HH:mm')} -
             {moment(timeEnd).format('HH:mm')}
           </p>
@@ -39,7 +39,7 @@ const EventRow = ({ event, slug }: EventRowProps) => {
           <h4 className="font-semibold truncate">{title}</h4>
           <div className="flex items-center mb-0.5">
             <img src={point} className="h-3" />
-            <p className="text-main3 base4 px-1 font-light truncate">
+            <p className="text-main3 base4 px-1 font-light text-ellipsis">
               {address}
             </p>
           </div>

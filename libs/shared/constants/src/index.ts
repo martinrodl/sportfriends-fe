@@ -16,4 +16,7 @@ export const SPORTS = [
   { label: 'Football', value: 'football' },
   { label: 'Hockey', value: 'hockey' },
   { label: 'Cricket', value: 'cricket' },
+  { label: 'Yoga', value: 'yoga' },
+  { label: 'Running', value: 'running' },
+  { label: 'Tennis', value: 'tennis' },
 ];

@@ -124,7 +124,7 @@ const Navbar = ({ openSideBar }: NavbarProps) => {
           }
         `}
         >
-          {item.icon}
+          <div className="w-8">{item.icon}</div>
           <h4>{item.title}</h4>
         </Link>
       );

@@ -25,7 +25,7 @@ const Settings = () => {
   const [activeMenu, setActiveMenu] = useState(0);
 
   return (
-    <div className="max-w-[920px] mx-auto px-4 mt-12">
+    <div className="max-w-[920px] mx-auto px-4 mt-12 flex flex-col items-center">
       <div className="mb-6">
         <SwitchMenu
           menuItems={menuItems}

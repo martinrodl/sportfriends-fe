@@ -41,7 +41,7 @@ const SetProfile = () => {
   } = userData || {};
 
   return (
-    <div className="w-full mx-auto px-10">
+    <div className="w-full mx-auto md:px-10 px-4">
       <Formik
         initialValues={{
           name: name,

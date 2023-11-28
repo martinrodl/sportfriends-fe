@@ -63,7 +63,7 @@ const BottomPost = ({ postId, likes, comments }: BottomPostProps) => {
     <div className="flex flex-col  mx-6 bg-white">
       <div className="flex flex-1 justify-between items-center mb-5">
         <div className="flex items-center">
-          <Like className="w-6" />
+          <Like className="w-8" />
           <p className="ml-1 body3">{likes.length} Likes</p>
         </div>
         <p className="body3">{comments.length} Comments</p>

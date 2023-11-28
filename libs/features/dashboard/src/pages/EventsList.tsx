@@ -58,7 +58,7 @@ const Events = () => {
             )}
           </div>
         </button>
-        <div className="flex flex-col gap-0 w-full max-w-2xl divide-y">
+        <div className="flex flex-col gap-0 w-full max-w-2xl">
           {Array.isArray(events) &&
             events.map((event) => (
               <EventRow event={event} slug={event.id} key={event.id} />
