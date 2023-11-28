@@ -1,18 +1,18 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { withRouter } from 'storybook-addon-react-router-v6';
-import EventList from '../components/events/EventList';
+import EventRow from '../components/events/EventRow';
 
 import { within } from '@storybook/testing-library';
 import { expect } from '@storybook/jest';
 
-const meta: Meta<typeof EventList> = {
-  component: EventList,
-  title: 'Event List',
+const meta: Meta<typeof EventRow> = {
+  component: EventRow,
+  title: 'Event Row',
 };
 export default meta;
-type Story = StoryObj<typeof EventList>;
+type Story = StoryObj<typeof EventRow>;
 
-export const EventListDefault = {
+export const EventRowDefault = {
   args: {
     event: {
       id: '1',

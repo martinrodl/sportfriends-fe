@@ -57,13 +57,13 @@ module.exports = {
           },
         },
         h4: {
-          fontSize: '14px',
+          fontSize: '13px',
           '@media (min-width: 768px)': {
-            fontSize: '16px',
+            fontSize: '15px',
           },
         },
         p: {
-          fontSize: '14px',
+          fontSize: '13px',
           '@media (min-width: 768px)': {
             fontSize: '14px',
           },

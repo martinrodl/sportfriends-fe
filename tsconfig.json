@@ -10,6 +10,7 @@
     "forceConsistentCasingInFileNames": true
   },
   "include": [
+    "apps/domain/src",
     "apps/dosportanywhere/src",
     "apps/sportfriends/src",
     "libs/shared",

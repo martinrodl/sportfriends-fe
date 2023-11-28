@@ -28,6 +28,12 @@
       "@sportfriends-fe/features/login": [
         "libs/features/login/src/index.ts"
       ],
+      "@sportfriends-fe/features/profile": [
+        "libs/features/profile/src/index.ts"
+      ],
+      "@sportfriends-fe/profile": [
+        "libs/features/profile/src/index.ts"
+      ],
       "@sportfriends-fe/shared/constants": [
         "libs/shared/constants/src/index.ts"
       ],

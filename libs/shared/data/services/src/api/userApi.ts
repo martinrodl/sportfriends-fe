@@ -39,6 +39,13 @@ export const userApi = createApi({
       },
       providesTags: () => ['userProfile'],
     }),
+    getSpecificUserByName: builder.query<User, string>({
+      query: (name) => {
+        return {
+          url: `profile/name/${name}`,
+        };
+      },
+    }),
 
     getFriendships: builder.query<FriendshipsResponse, ''>({
       query: () => {
@@ -100,6 +107,7 @@ export const userApi = createApi({
 // auto-generated based on the defined endpoints
 export const {
   useGetSpecificUserQuery,
+  useGetSpecificUserByNameQuery,
   useUpdateProfileMutation,
   useUploadProfileImageMutation,
   useGetUserQuery,

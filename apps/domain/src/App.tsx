@@ -1,39 +1,39 @@
 import { useState, useEffect } from 'react';
 import NotFound from './pages/NotFound';
-import UserInfo from './pages/UserInfo';
+import { Profile } from '@sportfriends-fe/features/profile';
 
-import { getUserInfo } from './api';
-import { User } from './models';
+import {
+  useGetSpecificUserEventsQuery,
+  useGetSpecificUserByNameQuery,
+} from '@sportfriends-fe/shared/data/services';
 
 const App = () => {
-  const [user, setUser] = useState<User | null>(null);
-  const [error, setError] = useState<unknown | null>(null);
   const userName = window.location.host.split('.')[0];
+  const {
+    data: userData,
+    error,
+    isLoading,
+  } = useGetSpecificUserByNameQuery(userName);
+  const {
+    data: eventsData,
+    error: eventsError,
+    isLoading: eventsLoading,
+  } = useGetSpecificUserEventsQuery(String(userData?.id));
 
-  const getUser = async () => {
-    try {
-      const userInfo = await getUserInfo(userName);
-      setUser(userInfo);
-    } catch (e) {
-      setError(e);
-    }
-  };
-
-  useEffect(() => {
-    getUser();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  console.log('userData', userData);
+  console.log('eventsData', eventsData);
 
   if (error) {
-    return <NotFound userName={userName} />;
+    return <NotFound userName={'test'} />;
   }
 
-  if (user) {
-    console.log('*');
-    return <UserInfo user={user} />;
+  if (isLoading) {
+    return <h1>Loading</h1>;
   }
 
-  return <h1>Loading</h1>;
+  if (userData) {
+    return <Profile />;
+  }
 };
 
 export default App;

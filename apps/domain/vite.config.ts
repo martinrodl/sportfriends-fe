@@ -1,9 +1,12 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import { nxViteTsPaths } from '@nx/vite/plugins/nx-tsconfig-paths.plugin';
+import svgr from '@svgr/rollup';
+import svgrPlugin from 'vite-plugin-svgr';
+import viteTsconfigPaths from 'vite-tsconfig-paths';
 
 export default defineConfig({
-  cacheDir: '../../node_modules/.vite/domain',
+  cacheDir: '../../node_modules/.vite/sportfriends',
 
   server: {
     port: 4200,
@@ -15,7 +18,7 @@ export default defineConfig({
     host: 'localhost',
   },
 
-  plugins: [react(), nxViteTsPaths()],
+  plugins: [react(), svgr(), viteTsconfigPaths(), nxViteTsPaths()],
 
   // Uncomment this if you are using workers.
   // worker: {
